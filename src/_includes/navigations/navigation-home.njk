@@ -1,0 +1,66 @@
+
+<el-drawer>
+
+		{% include "navigations/brand.njk" %}
+
+        {% include "navigations/drawer.njk" %}
+
+		<ul slot="navbar-menu" class="menu-navbar">
+			<li>
+				<a href="#about">
+					<span class="drawered">About</span>
+				</a>
+			</li>
+			<li>
+				<a href="#skills">
+					<span class="drawered">Skills</span>
+				</a>
+			</li>
+			<li>
+				<a href="#projects">
+					<span class="drawered">Projects</span>
+				</a>
+			</li>
+			<li>
+				<a href="#chanllenge">
+					<span class="drawered">Code Challenges</span>
+				</a>
+			</li>
+			<li>
+				<a href="#contact">
+					<span class="drawered">Contact</span>
+				</a>
+			</li>
+		</ul>
+
+		<el-dropdown slot="mobil-menu" id="mobil-menu">
+			<ul slot="dropdown">
+				<li>
+					<a href="#about">
+						About
+					</a>
+				</li>
+				<li>
+					<a href="#skills">
+						Skills
+					</a>
+				</li>
+				<li>
+					<a href="#projects">
+						Projects
+					</a>
+				</li>
+				<li>
+					<a href="#chanllenge">
+						Code Challenges
+					</a>
+				</li>
+				<li>
+					<a href="#contact">
+						Contact
+					</a>
+				</li>
+			</ul>
+		</el-dropdown>
+
+	</el-drawer>

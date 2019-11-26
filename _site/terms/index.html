@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Terms</title>
+  <link rel="stylesheet" href="/_assets/css/stylesheet.css">
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
+
+    <body>
+        <el-drawer>
+
+
+    <h1 slot="drawer-brand">andrewrico</h1>
+    <h1 slot="navbar-brand">andrewrico</h1>
+
+<div slot="drawer-menu">
+    <ul class="menu-drawer">
+        <li>
+            <a href="/">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#home"></use></svg> 
+                    Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#folder"></use></svg> 
+                    Portfolio
+                </span>
+            </a>
+        </li>
+    </ul><hr>
+
+    <h3 class="drawered">Blog</h3>
+    <ul class="menu-drawer">
+        <li>
+            <a href="/templates">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#templates"></use></svg> 
+                    Templates
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/tutorials">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#tutorials"></use></svg>  
+                    Tutorials
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/apis">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#apis"></use></svg> 
+                    API Snipets
+                </span>
+            </a>
+        </li>
+    </ul><hr>
+
+    <h3 class="drawered">Contact</h3>
+    <ul class="menu-drawer">
+        <li>
+            <a href="/" target="_blank">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#linkedin"></use></svg> 
+                    LinkedIn
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/" target="_blank">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#github"></use></svg> 
+                    Github
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/drawer/_drawer.svg#contact"></use></svg>  
+                    Get In Touch
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+</el-drawer>
+        <header>
+            <el-section id="about" padding-gap="10" background=#262626 color=var(--color-primary)>
+                <el-grid column=1>
+                    <el-column attr="row" text-align="center">
+                        <el-inline max-width=30 center=auto>  
+                            <h1>
+                                BASE TEMPLATE
+                            </h1>
+                        </el-inline>  
+                    </el-column>
+                </el-grid>
+            </el-section>
+        </header>
+        <main> <el-section id="projects" padding-gap=6>
+    <el-grid auto-fit="columns" columns="3">
+        <el-inline attr="row">
+            <h1>Terms</h1>
+        </el-inline>
+    </el-grid>
+</el-section>  </main>
+        <footer>
+
+    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+        <el-grid auto-fit="columns" columns="4">
+            <el-column align-items="center" justify-content="center">
+                <h1>andrewrico</h1>
+            </el-column>
+            <el-column class="footer-column">
+                <h3>About Me</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </el-column>
+            <el-column class="footer-column">
+                <h3>Blog</h3>
+                <ul>
+                    <li><a href="/tutorials">Tutorials</a></li>
+                    <li><a href="/templates">Templates</a></li>
+                    <li><a href="/apis">API Snippets</a></li>
+                </ul>
+            </el-column>
+            <el-column class="footer-column">
+                <h3>Contact Me</h3>
+                <ul>
+                    <li><a href="/" target="_blank">Linkin</a></li>
+                    <li><a href="/" target="_blank">Github</a></li>
+                    <li><a href="/">Email</a></li>
+                    <li><a href="/contact">Get In Touch</a></li>
+                </ul>
+            </el-column>
+        </el-grid>
+    </el-section>
+
+    <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
+        <el-grid auto-fit="columns" columns="3">
+          <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
+                <span id="credits">
+                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
+                 </span> 
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <el-copyright>
+                    <span id="copyright" slot="copyright">
+                        <a href="/"> andrewrico.com </a>. All rights reserved
+                    </span>
+                </el-copyright>
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a> 
+            </el-column>
+        </el-grid>
+    </el-section>
+
+     <el-options></el-options>
+
+</footer>
+    </body>
+    <script src="/_assets/js/thisel.beta.js"></script>
+<script src="/_assets/components/drawer/_drawer.js"></script>
+
+</html>

@@ -1,0 +1,140 @@
+html {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	-ms-overflow-style: scrollbar;
+	--color-primary: #04ff00;
+	--color-secondary: #036801;
+	--color-tertiary: #5261d8;
+	--color-quaternary: #121641;
+	--color-gray: gray;
+	--color-white: white;
+	--color-black: black;
+	--color-ripple: #7596ac;
+
+	--color-gradient: -webkit-linear-gradient(to right, #0d1448, #5261d8);
+	--color-gradient: linear-gradient(to right, #0d1448, #5261d8);
+}
+
+body {
+	font-family: 'Source Code Pro', monospace;
+	margin: 0;
+}
+
+::after,
+::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+*:not(:defined) {
+	display: block;
+}
+
+#mobil-menu {
+	display: block;
+	margin-right: 1rem;
+	margin-left: auto;
+}
+
+#mobil-menu ul {
+	padding: 0;
+	margin: 0;
+}
+
+#mobil-menu li:hover {
+	width: 100%;
+	background: #ededed;
+}
+
+#mobil-menu a {
+	width: 100%;
+	padding: 1rem 0.4rem;
+	font-size: 0.8rem !important;
+}
+
+@media(min-width:1024px) {
+	#mobil-menu {
+		display: none;
+	}
+}
+
+#footer a:hover,
+#footer-bottom a:hover {
+	color: #dddd;
+}
+
+
+.footer-column {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.footer-column h3 {
+	max-width: 85%;
+	border-bottom: 1px solid var(--color-secondary);
+}
+
+.footer-column ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer-column ul li {
+	padding: 0.4rem 0;
+}
+
+.footer-column a {
+	padding: 0.5rem 1rem;
+	color: var(--color-primary) !important;
+	text-decoration: none;
+}
+
+.footer-column a:hover {
+	background: rgba(0, 0, 0, 0.78);
+	filter: drop-shadow(1px 1px 6px rgba(21, 255, 0, 0.701));
+}
+
+#footer-bottom a {
+	font-size: 0.9rem;
+	text-decoration: none;
+	margin-left: 0.75rem;
+	margin-right: 0.75rem;
+}
+
+#footer-bottom a {
+	color: var(--color-primary);
+	/* margin: 0; */
+}
+
+#credits {
+	font-size: 0.8rem;
+}
+
+#credits a {
+	margin: 0;
+}
+
+#copyright {
+	margin: 0rem 0.5rem;
+	padding: 0;
+	font-weight: 100;
+	color: var(--color-white);
+
+}
+
+#copyright a {
+	margin: 0rem !important;
+}

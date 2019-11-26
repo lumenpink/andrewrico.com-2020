@@ -1,0 +1,47 @@
+#bio {
+  background: var(--color-quaternary);
+  max-width: 24rem;
+  padding: 2rem;
+  border: 0.5px solid var(--color-primary);
+  margin: auto;
+  font-size: 0.9rem;
+  filter: drop-shadow(0 0 6px var(--color-primary));
+}
+#bio h2 {
+  font-size: 1rem;
+ color:var(--color-primary);
+}
+#bio-links {
+  display: block;
+  padding: 0 2rem;
+}
+
+#bio-links a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+#bio-links a:hover {
+  color: var(--color-white);
+}
+
+#wrapper-typying {
+  display: block;
+  background: var(--color-black);
+  width: 100%;
+  max-width: 100%;
+}
+#typying {
+  display: inline-block;
+  color: var(--color-primary);
+  border-right: .05px solid;
+  width: auto;
+  /* margin-bottom: 1rem; */
+  max-width: 100%;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
