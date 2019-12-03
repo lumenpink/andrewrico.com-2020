@@ -1,5 +1,17 @@
-@import 'https://fonts.googleapis.com/css?family=PT+Mono|Source+Code+Pro&display=swap';
 @import 'normalize.css';
 @import 'app.css';
-@import '/_assets/components/drawer/_drawer.css';
-@import '/_assets/components/bio/_bio.css';
+
+/*globals*/
+@import '/_assets/components/_drawer.css';
+@import '/_assets/components/_mobil-menu.css';
+@import '/_assets/components/_footer.css';
+@import '/_assets/components/_form.css';
+@import '/_assets/components/_options.css';
+
+/*modular*/
+@import '/_assets/components/_bio.css';
+@import '/_assets/components/_card-action.css';
+@import '/_assets/components/_card-progress.css';
+@import '/_assets/components/_card-minimal.css';
+@import '/_assets/components/_blog.css';
+@import '/_assets/components/_modal.css';

@@ -1,0 +1,27 @@
+{% include "partials/partial-head.njk" %}
+    <body>
+        {% include "navigations/navigation-singleProject.njk" %}
+        <header>
+            <el-section id="about" padding-gap="10" background=#262626 color=var(--color-primary)>
+                <el-grid column=1>
+                    <el-column attr="row" text-align="center">
+                        <el-inline max-width=30 center=auto>  
+                            <h1>
+                                Project
+                            </h1>
+                        </el-inline>  
+                    </el-column>
+                </el-grid>
+            </el-section>
+        </header>
+        <main> 
+            {% block content  %}
+               {{ content | safe }}
+            {% endblock content %}
+        </main>
+        {% include "partials/partial-footer.njk" %}
+    </body>
+    <script src="/_assets/js/thisel.beta.js"></script>
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
+</html>

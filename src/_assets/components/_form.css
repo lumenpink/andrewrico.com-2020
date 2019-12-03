@@ -1,0 +1,119 @@
+textarea,
+input {
+	display: block;
+	width: 95%;
+	text-align: left;
+	padding: .8em;
+	margin: .25em 0;
+	background: #fff;
+	border: none;
+	font-size: 1em;
+	font-family: sans-serif;
+	border-radius: 2px;
+	border: 1px solid rgba(221, 221, 221, .41);
+	-webkit-box-shadow: var(--color-shadow);
+	box-shadow: var(--color-shadow)
+}
+
+textarea {
+	min-height: 80px;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+	color: #b9b9b9
+}
+
+input:hover,
+textarea:hover {
+	background: #fafafa
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+	background: #fafafa;
+	box-shadow: 0 0 16px var(---color-primary);
+}
+
+.netliform {
+	width: 100%
+}
+
+.netliform p {
+	margin-bottom: .5em;
+	font-size: .8em;
+	color: #000
+}
+
+
+.netliform h3 {
+	color: #000
+}
+
+.netliform label {
+	opacity: 0;
+	width: 100%
+}
+
+.netliform p:nth-child(1) {
+	text-align: center;
+	color: var(--color-primary);
+	font-size: 1.1rem;
+}
+
+.themeform {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--color-quaternary);
+	max-width: 100%;
+	width: 19rem;
+	min-height: 400px;
+	padding: 2rem;
+	border: 0.5px solid var(--color-primary);
+	margin: auto;
+	font-size: 0.9rem;
+	filter: drop-shadow(0 0 6px var(--color-primary));
+}
+
+.themeform textarea,
+.themeform input {
+	width: 95%;
+}
+
+#andrewrico-SendMessageForm-homePage el-button {
+	margin-left: auto;
+}
+
+
+#andrewrico-CodeChallegeForm-homePage {
+	/* z-index: 10000; */
+
+}
+
+
+
+
+
+select {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	background: #fff;
+	border: none;
+	font-size: 1em;
+	font-family: sans-serif;
+	border-radius: 2px;
+	border: 1px solid rgba(221, 221, 221, .41);
+	-webkit-box-shadow: var(--color-shadow);
+	box-shadow: var(--color-shadow)
+}
+
+option {
+	padding: 8em;
+}

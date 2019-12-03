@@ -1,98 +1,353 @@
 ---
-layout: "layouts/home.njk"
 title: "Home"
+layout: "layouts/layout-home.njk"
+stylesheet: "/_assets/css/stylesheet.css"
+fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
 ---
-<el-section id="skills" padding-gap=6>
-    <el-grid auto-fit="columns" columns="3" gap="0.5">
-        <el-column attr="row">
-            <h2>Skills</h2>
-        </el-column>
-        <el-column>
-            <el-inline padding="4" attr="card" hover="on">Javascript</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline padding="4" attr="card" hover="on">PHP</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline padding="4" attr="card" hover="on">.NET</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline padding="4" attr="card" hover="on">Wordpress</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline padding="4" attr="card" hover="on">UI/UX</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline padding="4" attr="card" hover="on">HTML/CSS</el-inline>
-        </el-column>
+
+<el-section id="card-progress s" padding-gap=6>
+    <el-grid auto-fit="columns" columns="3" gap="3">
+        <el-inline attr="row">
+            <h2>Skills </h2>
+        </el-inline>
+        <article class="card-progress js-skills">
+            <label for="file">
+                <h4> Javascript 85% </h4>
+                <svg>
+                    <use href="_assets/media/svg/sprites.svg#js"></use>
+                </svg>
+            </label>
+            <progress id="file" class="progress" value="85" max="100"></progress>
+            <p>
+                Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
+                Javascript is the programming language of the Web. <br>
+                In recent years it has become one of the most popular programming language in the tech industry. <br>
+                Having a solid knowledged on how the DOM works is essential for any Modern Web Developer.
+            </p>
+        </article>
+        <article class="card-progress htmlcss-skills">
+            <label for="file">
+                <h4> HTML/CSS 100%</h4>
+                <span>
+                    <svg width="48" height="48">
+                        <use href="_assets/media/svg/sprites.svg#html"></use>
+                    </svg>
+                    <svg fill="#2063af" width="48" height="48">
+                        <use href="_assets/media/svg/sprites.svg#css"></use>
+                    </svg>
+                </span>
+            </label>
+            <progress id="file" class="progress" value="100" max="100"></progress>
+            <p>
+                HTML & CSS are the fondation of the Web,
+                <br>
+                while HTML is use to markup the structure of components, CSS is use to giu
+            </p>
+        </article>
+        <article class="card-progress uiux-skills">
+            <label for="file">
+                <h4> UI/UX 95%</h4>
+                <svg width="48" height="48">
+                    <use href="_assets/media/svg/sprites.svg#uiux"></use>
+                </svg>
+
+            </label>
+            <progress id="file" class="progress" value="95" max="100"></progress>
+            <p>
+                Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
+                Javascript is the programming language of the Web. <br>
+                In recent years it has become one of the most popular programming language in the tech industry. <br>
+                Having a solid knowledged on how the DOM works is essential for any Modern Web Developer.
+            </p>
+        </article>
+        <article class="card-progress wp-skills">
+            <label for="file">
+                <h4> Wordpress 95% </h4>
+                <svg width="48" height="48">
+                    <use href="_assets/media/svg/sprites.svg#wp"></use>
+                </svg>
+
+            </label>
+            <progress id="file" class="progress" value="95" max="100"></progress>
+            <p>
+                Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
+                Javascript is the programming language of the Web. <br>
+                In recent years it has become one of the most popular programming language in the tech industry. <br>
+                Having a solid knowledged on how the DOM works is essential for any Modern Web Developer.
+            </p>
+        </article>
+        <article class="card-progress php-skills">
+            <label for="file">
+                <h4> PHP 55%</h4>
+                <svg width="48" height="48">
+                    <use href="_assets/media/svg/sprites.svg#php"></use>
+                </svg>
+
+            </label>
+            <progress id="file" class="progress" value="55" max="100"></progress>
+            <p>
+                Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
+                Javascript is the programming language of the Web. <br>
+                In recent years it has become one of the most popular programming language in the tech industry. <br>
+                Having a solid knowledged on how the DOM works is essential for any Modern Web Developer.
+            </p>
+        </article>
+        <article class="card-progress  net-skills">
+            <label for="file">
+                <h4> .NET 25% </h4>
+                <svg width="48" height="48">
+                    <use href="_assets/media/svg/sprites.svg#c#"></use>
+                </svg>
+
+            </label>
+            <progress id="file" class="progress" value="25" max="100"></progress>
+            <p>
+                Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
+                Javascript is the programming language of the Web. <br>
+                In recent years it has become one of the most popular programming language in the tech industry. <br>
+                Having a solid knowledged on how the DOM works is essential for any Modern Web Developer.
+            </p>
+        </article>
     </el-grid>
 </el-section>
 
-<el-section id="projects" padding-gap=6>
-    <el-grid auto-fit="columns" columns="3">
+<el-section id="projects" padding-gap="6">
+    <el-grid auto-fit="columns" columns="3" gap="3">
         <el-inline attr="row">
             <h2>Recent Projects</h2>
         </el-inline>
-        <el-inline attr="cerd">
-            {# <img src="./img/cpanel.png" alt=""> #}
-            <h3>project 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
-                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
-                deserunt!</p>
-        </el-inline>
-        <el-inline attr="cerd">
-            {# <img src="./img/cpanel.png" alt=""> #}
-            <h3>project 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
-                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
-                deserunt!</p>
-        </el-inline>
-        <el-inline attr="cerd">
-            {# <img src="./img/cpanel.png" alt=""> #}
-            <h3>project 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
-                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
-                deserunt!</p>
-        </el-inline>
+        <article class="porfolio-project">
+            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+            <h3>Cryptopandore</h3>
+            <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+            <ul>
+                <li>
+                    <a href="/project">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                        </svg>
+                    </a>live
+                </li>
+                    <li>
+                    <a href="/">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#github"></use>
+                        </svg>
+                    </a>Code
+                </li>
+                    <li>
+                    <a href="/">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                        </svg>
+                    </a>Details
+                </li>
+            </ul>
+        </article>
+        <article class="porfolio-project">
+            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+            <h3>Cryptopandore</h3>
+             <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+            <ul>
+                <li>
+                    <a href="/project">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                        </svg>
+                    </a>live
+                </li>
+                    <li>
+                    <a href="/">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#github"></use>
+                        </svg>
+                    </a>Code
+                </li>
+                    <li>
+                    <a href="/">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                        </svg>
+                    </a>Details
+                </li>
+            </ul>
+        </article>
+        <article class="porfolio-project">
+            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+            <h3>Cryptopandore</h3>
+             <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+            <ul>
+                <li>
+                    <a href="/project">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                        </svg>
+                    </a>live
+                </li>
+                    <li>
+                    <a href="/">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#github"></use>
+                        </svg>
+                    </a>Code
+                </li>
+                    <li>
+                    <a href="/">
+                        <svg>
+                            <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                        </svg>
+                    </a>Details
+                </li>
+            </ul>
+        </article>
     </el-grid>
 </el-section>
+
 
 <el-section id="chanllenge" padding-gap=6>
-    <el-grid auto-fit="columns" columns="4" gap="2">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="4" gap="3">
+        <el-inline attr="row">
             <h2>Code Challenges</h2>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 1</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 2</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 3</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 4</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 5</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 6</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 7</el-inline>
-        </el-column>
-        <el-column>
-            <el-inline attr="card" hover="on">Card 8</el-inline>
-        </el-column>
+        </el-inline>
+
+        <el-inline class="chanllenge ckecked" padding="2" attr="card">
+            <svg width="24" height="24" fill="var(--color-tertiary)">
+                <use href="_assets/media/svg/sprites.svg#success"></use>
+            </svg>
+            <h4>Hackerrank</h4>
+            <h5>The 21 days code challenge</h5>
+            <p><b>Subject:</b> Myselft<p>
+            <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
+            <el-button>
+                <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+            </el-button>
+        </el-inline>
+
+        <el-inline class="chanllenge" padding="2" attr="card">
+            <svg width="56" height="56" fill="var(--color-transparent-primary)">
+                <use href="_assets/media/svg/sprites.svg#alert"></use>
+            </svg>
+            <b>Submit a Code Chanllenge only if you are a:</b>
+            <ol>
+                 <li>
+                   <b> Recruiter </b>looking to hide a developer.
+                </li>
+                <li>
+                  <b> Employer</b>  who wants to test my skills.
+                </li>
+            </ol>
+            <el-button>
+               <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+            </el-button>
+        </el-inline>
+
+        <el-inline class="chanllenge" padding="2" attr="card">
+            <svg width="56" height="56" fill="var(--color-transparent-primary)">
+                <use href="_assets/media/svg/sprites.svg#alert"></use>
+            </svg>
+            <b>Submit a Code Chanllenge only if you are a:</b>
+            <ol>
+                 <li>
+                   <b> Recruiter </b>looking to hide a developer.
+                </li>
+                <li>
+                  <b> Employer</b>  who wants to test my skills.
+                </li>
+            </ol>
+            <el-button>
+                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+            </el-button>
+        </el-inline>
+
+        <el-inline class="chanllenge" padding="2" attr="card">
+            <svg width="56" height="56" fill="var(--color-transparent-primary)">
+                <use href="_assets/media/svg/sprites.svg#alert"></use>
+            </svg>
+            <b>Submit a Code Chanllenge only if you are a:</b>
+            <ol>
+                 <li>
+                   <b> Recruiter </b>looking to hide a developer.
+                </li>
+                <li>
+                  <b> Employer</b>  who wants to test my skills.
+                </li>
+            </ol>
+            <el-button>
+                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+            </el-button>
+        </el-inline>
+    </el-grid>
+
+    <div id="open-modal" class="modal-window">
+        <div class="modal-content">
+            <a href="#chanllenge" title="Close Modal" class="backdrop-modal"></a>
+            <form 
+            id="andrewrico-CodeChallegeForm-homePage" 
+            name="andrewrico-CodeChallegeForm-homePage" 
+            class="netliform themeform"
+            method="POST" 
+            data-netlify="true">
+            <p>Submit a Code Challenge</p>
+                <label for="selection">You are a:</label>
+                <select name="selection"> 
+                    <option>Select</option>
+                    <option>Recruiter</option>
+                    <option>Employer </option>
+                </select>
+                <label for="name">name</label>
+                <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                <label for="email">email</label>
+                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                <label for="url">url</label>
+                <input type="url" name="url"  placeholder="URL" aria-label="url" />
+                <label for="message">message</label>
+                <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
+                <el-button>
+                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                        Submit
+                    </button>
+                </el-button>
+            </form>
+        </div>
+    </div>
+</el-section>
+
+<el-section id="contact" padding-bottom=6>
+    <el-grid auto-fit="columns" columns="2" gap="3">
+        <el-inline attr="row">
+            <h2>Contact Me</h2>
+        </el-inline>
+        <el-inline>
+            <iframe width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
+        </el-inline>
+
+        <el-inline>
+            <h4>
+                Send me a message
+            </h4>
+            <form 
+            id="andrewrico-SendMessageForm-homePage" 
+            name="andrewrico-SendMessageForm-homePage" 
+            class="netliform" 
+            method="POST" 
+            data-netlify="true">
+                <label for="name">name</label>
+                <input type="text" name="name" placeholder="Name" aria-label="name" />
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="Email" aria-label="email" />
+                <label for="phone">phone</label>
+                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                <label for="message">message</label>
+                <textarea name="message" rows="6" placeholder="In a few words, tell me about your inquiry"
+                    aria-label="message"></textarea><br><br>
+                <el-button class="cubic">
+                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                        Send Message
+                    </button>
+                </el-button>
+            </form>
+        </el-inline>
     </el-grid>
 </el-section>
 
-<el-section id="contact" padding-gap=6>
-    <el-grid>
-        <el-column>
-            <h2>Contact Me</h2>
-        </el-column>
-    </el-grid>
-</el-section>

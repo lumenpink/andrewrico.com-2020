@@ -13,16 +13,16 @@
     <body>
         <el-drawer>
 
-
+    
     <h1 slot="drawer-brand">andrewrico</h1>
     <h1 slot="navbar-brand">andrewrico</h1>
 
-<div slot="drawer-menu">
+    <div slot="drawer-menu">
     <ul class="menu-drawer">
         <li>
             <a href="/">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#home"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -30,36 +30,36 @@
         <li>
             <a href="/portfolio">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#folder"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#folder"></use></svg> 
                     Portfolio
                 </span>
             </a>
         </li>
     </ul><hr>
 
-    <h3 class="drawered">Blog</h3>
+    <h3 class="drawered">Sources</h3>
     <ul class="menu-drawer">
         <li>
             <a href="/templates">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#templates"></use></svg> 
-                    Templates
+                    <svg><use href="/_assets/components/_drawer.svg#templates"></use></svg> 
+                    Blog
                 </span>
             </a>
         </li>
         <li>
             <a href="/tutorials">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#tutorials"></use></svg>  
-                    Tutorials
+                    <svg><use href="/_assets/components/_drawer.svg#tutorials"></use></svg>  
+                    Templates
                 </span>
             </a>
         </li>
         <li>
-            <a href="/apis">
+            <a href="/snippets">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#apis"></use></svg> 
-                    API Snipets
+                    <svg><use href="/_assets/components/_drawer.svg#apis"></use></svg> 
+                    API's Snippets 
                 </span>
             </a>
         </li>
@@ -68,17 +68,17 @@
     <h3 class="drawered">Contact</h3>
     <ul class="menu-drawer">
         <li>
-            <a href="/" target="_blank">
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#linkedin"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
                     LinkedIn
                 </span>
             </a>
         </li>
         <li>
-            <a href="/" target="_blank">
+            <a href="https://github.com/Andrewrico" target="_blank">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#github"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
                     Github
                 </span>
             </a>
@@ -86,13 +86,51 @@
         <li>
             <a href="/contact">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
 </div>
+
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <a href="/templates">
+                <span class="drawered">Templates</span>
+            </a>
+        </li>
+        <li>
+            <a href="/tutorials">
+                <span class="drawered">Tutorials</span>
+            </a>
+        </li>
+        <li>
+            <a href="/snippets">
+                <span class="drawered">Snippets</span>
+            </a>
+        </li>
+    </ul>
+
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
+            <li>
+            <a href="/templates">
+             Templates
+            </a>
+        </li>
+        <li>
+            <a href="/tutorials">
+              Tutorials
+            </a>
+        </li>
+        <li>
+            <a href="/snippets">
+             Snippets
+            </a>
+        </li>
+        </ul>
+    </el-dropdown>
 
 </el-drawer>
         <header>
@@ -101,20 +139,66 @@
                     <el-column attr="row" text-align="center">
                         <el-inline max-width=30 center=auto>  
                             <h1>
-                                BASE TEMPLATE
+                                Blog
                             </h1>
                         </el-inline>  
                     </el-column>
                 </el-grid>
             </el-section>
         </header>
-        <main> <el-section id="projects" padding-gap=6>
-    <el-grid auto-fit="columns" columns="3">
-        <el-inline attr="row">
-            <h1>Tutorials</h1>
-        </el-inline>
+        <main> 
+        
+            
+               <el-section id="projects" padding-gap=6>
+
+    <el-grid auto-fit="columns" gap="2" template-columns="3fr 1fr">
+
+        <el-column attr=columns gutter=4>
+            <article>
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Post #1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!</p>
+            </article>
+            <article>
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Post #2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!</p>
+            </article>
+            <article>
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Post #3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!</p>
+            </article>
+            <article>
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Post #4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!</p>
+            </article>
+        </el-column>
+
+         <el-column display="flex" flex-direction="column" justify-content="flex-start">
+                <h4>Recent Activity</h4>
+                <ol>
+                    <li><a href="/blog/post">blog post</a></li>
+                    <li><a href="/post">post</a></li>
+                    <li><a href="/blog/2020/templates/template-post-2020">tutorials post 2020</a></li>
+                    <li><a href="/blog/2019/templates/template-post-2019">templates post 2019</a></li>
+                </ol>
+        </el-column>
+
     </el-grid>
-</el-section>  </main>
+</el-section>
+            
+            
+        </main>
         <footer>
 
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
@@ -123,27 +207,26 @@
                 <h1>andrewrico</h1>
             </el-column>
             <el-column class="footer-column">
-                <h3>About Me</h3>
+                <h3>About</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </el-column>
             <el-column class="footer-column">
-                <h3>Blog</h3>
+                <h3>Sources</h3>
                 <ul>
-                    <li><a href="/tutorials">Tutorials</a></li>
+                    <li><a href="/tutorials">Blog</a></li>
                     <li><a href="/templates">Templates</a></li>
-                    <li><a href="/apis">API Snippets</a></li>
+                    <li><a href="/snippets">API's Snippets </a></li>
                 </ul>
             </el-column>
             <el-column class="footer-column">
-                <h3>Contact Me</h3>
+                <h3>Contact</h3>
                 <ul>
-                    <li><a href="/" target="_blank">Linkin</a></li>
-                    <li><a href="/" target="_blank">Github</a></li>
-                    <li><a href="/">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
+                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
+                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
                     <li><a href="/contact">Get In Touch</a></li>
                 </ul>
             </el-column>
@@ -175,6 +258,6 @@
 </footer>
     </body>
     <script src="/_assets/js/thisel.beta.js"></script>
-<script src="/_assets/components/drawer/_drawer.js"></script>
-
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
 </html>

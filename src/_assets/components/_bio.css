@@ -1,0 +1,77 @@
+.card-online-bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 600px;
+  padding: 2rem;
+  margin: auto;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 0.5px solid var(--color-primary);
+  background: var(--color-quaternary);
+  filter: drop-shadow(0 0 6px var(--color-primary));
+}
+
+.card-online-bio h2 {
+  font-size: 1.6rem;
+  font-family: 'Dancing Script', cursive;
+}
+.card-online-bio p {
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  font-weight: 1100;
+}
+
+.card-online-bio h3 {
+  font-size: 1.8rem;
+  letter-spacing: 0.8px;
+  font-weight: 300;
+}
+
+.card-online-bio > nav > ul{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-online-bio > nav > ul > li {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.card-online-bio svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card-online-bio a:hover svg {
+  transform: translateY(-0.25rem);
+  fill: var(--color-primary);
+}
+
+.card-online-terminal {
+  display: block;
+  background: var(--color-black);
+  width: 100%;
+  max-width: 100%;
+}
+
+#typying {
+  display: inline-block;
+  color: var(--color-primary);
+  border-right: .05px solid;
+  width: auto;
+  max-width: 100%;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}

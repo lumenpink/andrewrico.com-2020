@@ -1,0 +1,63 @@
+{% include "partials/partial-head.njk" %}
+    <body>
+        {% include "navigations/navigation-home.njk" %}
+        <header>
+            <el-section id="about" height="100" display="flex" flex-align="center" background="var(--color-gradient)" color="var(--color-white)">
+                <el-grid column=1>
+                    <el-column attr="row">
+                        <div class="card-online-bio"> 
+                            <figure class="card-intro"> 
+                                <h2> Hello, I'am Andrew Rico </h2>
+                                <svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg> 
+                                <p> <svg width="16" height="16" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
+                                <h3> WEB DEVELOPER <br> UI/UX ENGINEER </h3>
+                            </figure> 
+                            <span class="card-online-terminal">
+                                <span id="typying" color=var(--color-primary)>
+                                    messages...
+                                </span> 
+                            </span>
+                            <nav class="card-online-navigation">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/andrewrico-/"> <svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a>
+                                        LinkedIn 
+                                    </li> |
+                                    <li>
+                                        <a href="https://github.com/Andrewrico"><svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg></a> 
+                                        Github
+                                    </li> |
+                                    <li>
+                                        <a href="/portfolio"><svg fill="white"><use href="_assets/media/svg/sprites.svg#lookInFolder"></use></svg></a>     
+                                        Porfolio
+                                    </li> |
+                                    <li>
+                                        <a href="/portfolio"><svg fill="white"><use href="_assets/media/svg/sprites.svg#fileInFolder"></use></svg></a>     
+                                        Blog
+                                    </li> |
+                                    <li> 
+                                        <a href="/portfolio"><svg fill="white"><use href="_assets/media/svg/sprites.svg#contact"></use></svg></a>     
+                                        Contacts
+                                    </li> 
+                                </ul>
+                             </nav>
+                            <el-button class="cubic">
+                                <a slot="button" extended="button" theme=tertiary href="/contact">Schedule  a  phone</a>
+                            </el-button>
+                        </div>  
+                    </el-column>
+                </el-grid>
+            </el-section>
+        </header>
+        <main> 
+            {{ content | safe }} 
+         </main>
+        {% include "partials/partial-footer.njk" %}
+    </body>
+    </body>
+    <script src="/_assets/js/thisel.beta.js"></script>
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
+    {# <script src="/_assets/components/_bio.js"></script> #}
+    {# <script src="/_assets/components/_modal.js"></script> #}
+</html>

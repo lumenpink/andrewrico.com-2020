@@ -1,0 +1,88 @@
+ .porfolio-project {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     font-weight: 600;
+     padding-bottom: 1rem;
+     border-bottom: 6px solid var(--color-black);
+ }
+
+ .porfolio-project h3 {
+     /* letter-spacing: 0.5px; */
+     text-transform: capitalize;
+     font-weight: 800;
+     font-size: 1.6rem;
+     font-family: 'Coda Caption', sans-serif;
+     color: var(--color-black);
+     text-align: center;
+ }
+
+ .porfolio-project>ul {
+     display: flex;
+     justify-content: space-around;
+     font-size: 0.9rem;
+     padding: 0 1rem;
+     margin-top: 1rem;
+
+ }
+
+ .porfolio-project svg {
+     /* margin-right: 1rem; */
+     width: 24px;
+     height: 24px;
+     fill: var(--color-black);
+ }
+
+ .porfolio-project a {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     color: #5b5b5b;
+     text-decoration: none;
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+ }
+
+ .porfolio-project a:hover {
+     color: var(--color-tertiary);
+     transform: translateY(-0.25rem);
+ }
+
+ .porfolio-project a:hover svg {
+     fill: var(--color-tertiary);
+ }
+
+ .project-count {
+     display: flex;
+     align-items: center;
+     font-size: 1.2rem;
+     font-weight: 600;
+ }
+
+ .project-count span {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     font-weight: 600;
+     font-size: 2rem;
+     padding: 1rem;
+     width: 2rem;
+     height: 2rem;
+     margin: 1rem;
+     background: #000;
+     border-radius: 50%;
+ }
+
+ .porfolio-aside a {
+     color:#000;
+     text-decoration: none;
+     font-size: 1rem;
+     line-height: 1.6;
+ }
+
+ .porfolio-aside a:hover {
+     color:var(--color-blue);
+ }

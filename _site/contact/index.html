@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Contact</title>
-  <link rel="stylesheet" href="/_assets/css/stylesheet.css">
+  <link href=/_assets/css/stylesheet.css rel="stylesheet" >
+  
+  <link href=https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&amp;display=swap rel="stylesheet"> 
+
 </head>
 
 <el-loading background=var(--color-gradient)></el-loading>
@@ -13,16 +18,16 @@
     <body>
         <el-drawer>
 
+    
+    <h1 slot="drawer-brand">andrew rico</h1>
+    <h1 slot="navbar-brand">andrew rico</h1>
 
-    <h1 slot="drawer-brand">andrewrico</h1>
-    <h1 slot="navbar-brand">andrewrico</h1>
-
-<div slot="drawer-menu">
+    <div slot="drawer-menu">
     <ul class="menu-drawer">
         <li>
             <a href="/">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#home"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -30,55 +35,40 @@
         <li>
             <a href="/portfolio">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#folder"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#lookInFolder"></use></svg> 
                     Portfolio
                 </span>
             </a>
         </li>
     </ul><hr>
 
-    <h3 class="drawered">Blog</h3>
+    <h3 class="drawered">Sources</h3>
     <ul class="menu-drawer">
         <li>
-            <a href="/templates">
+            <a href="/blog">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#templates"></use></svg> 
-                    Templates
+                    <svg><use href="/_assets/components/_drawer.svg#fileInFolder"></use></svg> 
+                    Blog
                 </span>
             </a>
         </li>
-        <li>
-            <a href="/tutorials">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#tutorials"></use></svg>  
-                    Tutorials
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="/apis">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#apis"></use></svg> 
-                    API Snipets
-                </span>
-            </a>
-        </li>
+        
     </ul><hr>
 
     <h3 class="drawered">Contact</h3>
     <ul class="menu-drawer">
         <li>
-            <a href="/" target="_blank">
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#linkedin"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
                     LinkedIn
                 </span>
             </a>
         </li>
         <li>
-            <a href="/" target="_blank">
+            <a href="https://github.com/Andrewrico" target="_blank">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#github"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
                     Github
                 </span>
             </a>
@@ -86,7 +76,7 @@
         <li>
             <a href="/contact">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
@@ -94,22 +84,39 @@
     </ul>
 </div>
 
-<ul slot="navbar-menu" class="menu-navbar">
-    <li>
-        <a href="/contact">
-            <span class="drawered">Get In Touch</span>
-        </a>
-    </li>
-</ul>
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <el-button>
+                <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
+            </el-button>
+        </li>
+        
+        <li>
+            <el-button>
+                <a slot="button" extended="button" href="/blog"> BLOG </a>
+            </el-button>
+        </li>
+    </ul>
+
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
+            <li>
+                <a href="/portfolio"> PORTFOLIO </a>
+            </li>
+            <li>
+                <a href="/blog"> BLOG </a>
+            </li>
+        </ul>
+    </el-dropdown>
 
 </el-drawer>
         <header>
-            <el-section id="about" padding-gap="10" background="var(--color-quaternary)" color=var(--color-primary)>
+            <el-section id="about" padding-gap="10" background="#262626" color=var(--color-primary)>
                 <el-grid columns=1>
                     <el-column attr="row" text-align="center">
                         <el-inline max-width=30 center=auto>  
                              <h1>
-                                CONTACT ME
+                                CONTACT
                             </h1>
                         </el-inline>  
                     </el-column>
@@ -117,49 +124,83 @@
             </el-section>
         </header>
         <main> 
-            <el-section id="projects" padding-gap=6>
-    <el-grid auto-fit="columns" columns="3">
-        <el-inline attr="row">
-            <h1>Contact Me</h1>
+            
+            
+               <el-section padding-gap=6>
+    <el-grid auto-fit="columns" columns="2" gap="3">
+
+        <el-inline attr="row"><h2>Get In Touch</h2></el-inline>
+
+        <el-inline>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </el-inline>
+
+        <el-inline>
+            <div class="contactPageIcons">
+                <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+                    <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+                </a>
+                <a href="https://github.com/Andrewrico" target="_blank">
+                    <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+                </a>
+                <a href="/contact">
+                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                </a>
+            </div>
+            <h4>Send me a message</h4>
+
+            <form id="andrewrico-SendMessageForm-contactPage" class="netliform" name="FormSendMessage-contact-Page" method="POST" data-netlify="true">
+                <label for="name">name</label>
+                <input type="text" name="name" placeholder="Name" aria-label="name" />
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="Email" aria-label="email" />
+                <label for="phone">phone</label>
+                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                <label for="message">message</label>
+                <textarea name="message" rows="6" placeholder="In a few words, tell me about your inquiry" aria-label="message"></textarea><br><br>
+                <el-button>
+                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                        Send Message
+                    </button>
+                </el-button>
+            </form>
+
         </el-inline>
     </el-grid>
-</el-section> 
+</el-section>
+            
+
          </main>
         <footer>
-
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>andrewrico</h1>
+                <h1>andrew rico</h1>
             </el-column>
-            <el-column class="footer-column">
-                <h3>About Me</h3>
+            <el-column class="column-menu">
+                <h3>About</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </el-column>
-            <el-column class="footer-column">
-                <h3>Blog</h3>
+            <el-column class="column-menu">
+                <h3>Sources</h3>
                 <ul>
-                    <li><a href="/tutorials">Tutorials</a></li>
-                    <li><a href="/templates">Templates</a></li>
-                    <li><a href="/apis">API Snippets</a></li>
+                    <li><a href="/blog">Blog</a></li>
                 </ul>
             </el-column>
-            <el-column class="footer-column">
-                <h3>Contact Me</h3>
+            <el-column class="column-menu">
+                <h3>Contact</h3>
                 <ul>
-                    <li><a href="/" target="_blank">Linkin</a></li>
-                    <li><a href="/" target="_blank">Github</a></li>
-                    <li><a href="/">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
+                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
+                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
                     <li><a href="/contact">Get In Touch</a></li>
                 </ul>
             </el-column>
         </el-grid>
     </el-section>
-
     <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
         <el-grid auto-fit="columns" columns="3">
           <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
@@ -175,17 +216,14 @@
                 </el-copyright>
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a> 
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/privacy"> Site Map  </a> 
             </el-column>
         </el-grid>
     </el-section>
-
      <el-options></el-options>
-
 </footer>
     </body>
     <script src="/_assets/js/thisel.beta.js"></script>
-<script src="/_assets/components/drawer/_drawer.js"></script>
-
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
 </html>
-s

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Single Post</title>
+  <link href=/_assets/css/stylesheet.css rel="stylesheet" >
+  
+  <link href=https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&amp;display=swap rel="stylesheet"> 
+
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
+
+    <body>
+        <el-drawer>
+
+    
+    <h1 slot="drawer-brand">andrew rico</h1>
+    <h1 slot="navbar-brand">andrew rico</h1>
+
+    <div slot="drawer-menu">
+    <ul class="menu-drawer">
+        <li>
+            <a href="/">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
+                    Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#lookInFolder"></use></svg> 
+                    Portfolio
+                </span>
+            </a>
+        </li>
+    </ul><hr>
+
+    <h3 class="drawered">Sources</h3>
+    <ul class="menu-drawer">
+        <li>
+            <a href="/blog">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#fileInFolder"></use></svg> 
+                    Blog
+                </span>
+            </a>
+        </li>
+        
+    </ul><hr>
+
+    <h3 class="drawered">Contact</h3>
+    <ul class="menu-drawer">
+        <li>
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
+                    LinkedIn
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Andrewrico" target="_blank">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
+                    Github
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
+                    Get In Touch
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <el-button class="cubic">
+                <a slot="button" extended="button"  href="/blog"> BLOG </a>
+            </el-button>
+        </li>
+    </ul>
+
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
+            <li>
+                <a href="/blog"> BLOG </a>
+            </li>
+        </ul>
+    </el-dropdown>
+
+</el-drawer>
+        <main> 
+            
+               
+<el-section id="single-blogpost-page" padding-gap=10>
+    <el-grid pixel-width="1024" auto-fit="columns" gap="1" template-columns="4fr 1fr">
+        
+        <el-column attr=columns gutter="4">
+            <article class="single-blogpost-article">
+                <h1 class="post-title">Post title Here</h1>
+                <h2 class="post-subtitle">Post subtitle Here</h2>
+                <p class="post-lead-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!</p>
+                <p class="post-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! <a class="post-link" href="/t">post-link</a>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! </p>
+                <p class="post-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum?.</p>
+                <p class="post-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt!.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo error iure beatae dolorum? Iure blanditiis
+                facilis omnis et assumenda. Provident eos earum incidunt cupiditate, ullam enim quae sapiente autem
+                deserunt! </p>
+                <a class="post-link" href="/t">post-link</a>
+            </article>
+        </el-column>
+
+         <el-column display="flex" flex-direction="column" align-items="center" justify-content="flex-start">
+            <svg fill="black"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+            <p>andrew rico</p>
+        </el-column>
+        
+    </el-grid>
+</el-section>
+            
+            
+        </main>
+        <footer>
+    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+        <el-grid auto-fit="columns" columns="4">
+            <el-column align-items="center" justify-content="center">
+                <h1>andrew rico</h1>
+            </el-column>
+            <el-column class="column-menu">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                </ul>
+            </el-column>
+            <el-column class="column-menu">
+                <h3>Sources</h3>
+                <ul>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </el-column>
+            <el-column class="column-menu">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
+                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
+                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
+                    <li><a href="/contact">Get In Touch</a></li>
+                </ul>
+            </el-column>
+        </el-grid>
+    </el-section>
+    <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
+        <el-grid auto-fit="columns" columns="3">
+          <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
+                <span id="credits">
+                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
+                 </span> 
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <el-copyright>
+                    <span id="copyright" slot="copyright">
+                        <a href="/"> andrewrico.com </a>. All rights reserved
+                    </span>
+                </el-copyright>
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/privacy"> Site Map  </a> 
+            </el-column>
+        </el-grid>
+    </el-section>
+     <el-options></el-options>
+</footer>
+    </body>
+    <script src="/_assets/js/thisel.beta.js"></script>
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
+</html> 

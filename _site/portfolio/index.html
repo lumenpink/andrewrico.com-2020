@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Porfolio</title>
-  <link rel="stylesheet" href="/_assets/css/stylesheet.css">
+  <link href=/_assets/css/stylesheet.css rel="stylesheet" >
+  
+  <link href=https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&amp;display=swap rel="stylesheet"> 
+
 </head>
 
 <el-loading background=var(--color-gradient)></el-loading>
@@ -14,15 +19,15 @@
         <el-drawer>
 
     
-    <h1 slot="drawer-brand">andrewrico</h1>
-    <h1 slot="navbar-brand">andrewrico</h1>
+    <h1 slot="drawer-brand">andrew rico</h1>
+    <h1 slot="navbar-brand">andrew rico</h1>
 
     <div slot="drawer-menu">
     <ul class="menu-drawer">
         <li>
             <a href="/">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#home"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -30,55 +35,40 @@
         <li>
             <a href="/portfolio">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#folder"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#lookInFolder"></use></svg> 
                     Portfolio
                 </span>
             </a>
         </li>
     </ul><hr>
 
-    <h3 class="drawered">Blog</h3>
+    <h3 class="drawered">Sources</h3>
     <ul class="menu-drawer">
         <li>
-            <a href="/templates">
+            <a href="/blog">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#templates"></use></svg> 
-                    Templates
+                    <svg><use href="/_assets/components/_drawer.svg#fileInFolder"></use></svg> 
+                    Blog
                 </span>
             </a>
         </li>
-        <li>
-            <a href="/tutorials">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#tutorials"></use></svg>  
-                    Tutorials
-                </span>
-            </a>
-        </li>
-        <li>
-            <a href="/apis">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#apis"></use></svg> 
-                    API Snipets
-                </span>
-            </a>
-        </li>
+        
     </ul><hr>
 
     <h3 class="drawered">Contact</h3>
     <ul class="menu-drawer">
         <li>
-            <a href="/" target="_blank">
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#linkedin"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
                     LinkedIn
                 </span>
             </a>
         </li>
         <li>
-            <a href="/" target="_blank">
+            <a href="https://github.com/Andrewrico" target="_blank">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#github"></use></svg> 
+                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
                     Github
                 </span>
             </a>
@@ -86,7 +76,7 @@
         <li>
             <a href="/contact">
                 <span class="drawered">
-                    <svg><use href="/_assets/components/drawer/_drawer.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
@@ -97,32 +87,27 @@
     <ul slot="navbar-menu" class="menu-navbar">
         <li>
             <a href="#Javascript">
-                <span class="drawered">Javascript</span>
+                Javascript
             </a>
         </li>
         <li>
             <a href="#PHP">
-                <span class="drawered">PHP</span>
-            </a>
-        </li>
-        <li>
-            <a href="#NET">
-                <span class="drawered">.NET</span>
+                PHP
             </a>
         </li>
         <li>
             <a href="#Wordpress">
-                <span class="drawered">Wordpress</span>
+                Wordpress
             </a>
         </li>
         <li>
             <a href="#UI-UX">
-                <span class="drawered">UI/UX</span>
+                UI/UX
             </a>
         </li>
         <li>
             <a href="#HTML-CSS">
-                <span class="drawered">HTML/CSS</span>
+                HTML/CSS
             </a>
         </li>
     </ul>
@@ -137,11 +122,6 @@
             <li>
                 <a href="#PHP">
                     PHP
-                </a>
-            </li>
-            <li>
-                <a href="#NET">
-                    .NET
                 </a>
             </li>
             <li>
@@ -164,7 +144,7 @@
 
 </el-drawer>
         <header>
-            <el-section id="about" padding-gap="10" background="var(--color-quaternary)" color=var(--color-primary)>
+            <el-section id="about" padding-gap="10" background="#262626" color=var(--color-primary)>
                 <el-grid columns=1>
                     <el-column attr="row" text-align="center">
                         <el-inline max-width=30 center=auto>  
@@ -177,49 +157,426 @@
             </el-section>
         </header>
         <main>
-            <el-section id="projects" padding-gap=6>
-    <el-grid auto-fit="columns" columns="3">
-        <el-inline attr="row">
-            <h1>Porfolio</h1>
-        </el-inline>
+            <el-section id="porfolio-page" padding-gap=6>
+
+    <el-grid id="Javascript" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="3" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptopanel</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start" align-items="center">
+            <aside class="porfolio-aside">
+                <h2>Javascript</h2>
+                <div class="project-count"><span>3</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptopandore.com</a></li>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
     </el-grid>
+
+
+    <el-grid id="PHP" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column display="flex" flex-align="center">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start" align-items="center">
+            <aside class="porfolio-aside">
+                <h2>PHP</h2>
+                <div class="project-count"><span>1</span><p>Project</p></div>
+                <ol>
+                    <li><a href="/project">cryptopandore.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
+    <el-grid id="Wordpress" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="3" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptopanel</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start" align-items="center">
+            <aside class="porfolio-aside">
+                <h2>Wordpress</h2>
+                <div class="project-count"><span>3</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
+    
+    <el-grid id="UI-UX" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="2" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start">
+             <aside class="porfolio-aside">
+                <h2>UI/UX</h2>
+                <div class="project-count"><span>2</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
+    <el-grid id="HTML-CSS" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="2" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start">
+            <aside class="porfolio-aside">
+                <h2>HTML/CSS</h2>
+                <div class="project-count"><span>2</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
 </el-section>
         </main>
         <footer>
-
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>andrewrico</h1>
+                <h1>andrew rico</h1>
             </el-column>
-            <el-column class="footer-column">
-                <h3>About Me</h3>
+            <el-column class="column-menu">
+                <h3>About</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </el-column>
-            <el-column class="footer-column">
-                <h3>Blog</h3>
+            <el-column class="column-menu">
+                <h3>Sources</h3>
                 <ul>
-                    <li><a href="/tutorials">Tutorials</a></li>
-                    <li><a href="/templates">Templates</a></li>
-                    <li><a href="/apis">API Snippets</a></li>
+                    <li><a href="/blog">Blog</a></li>
                 </ul>
             </el-column>
-            <el-column class="footer-column">
-                <h3>Contact Me</h3>
+            <el-column class="column-menu">
+                <h3>Contact</h3>
                 <ul>
-                    <li><a href="/" target="_blank">Linkin</a></li>
-                    <li><a href="/" target="_blank">Github</a></li>
-                    <li><a href="/">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
+                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
+                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
                     <li><a href="/contact">Get In Touch</a></li>
                 </ul>
             </el-column>
         </el-grid>
     </el-section>
-
     <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
         <el-grid auto-fit="columns" columns="3">
           <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
@@ -235,16 +592,14 @@
                 </el-copyright>
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a> 
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/privacy"> Site Map  </a> 
             </el-column>
         </el-grid>
     </el-section>
-
      <el-options></el-options>
-
 </footer>
     </body>
     <script src="/_assets/js/thisel.beta.js"></script>
-<script src="/_assets/components/drawer/_drawer.js"></script>
-
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
 </html>

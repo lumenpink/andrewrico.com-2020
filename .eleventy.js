@@ -1,12 +1,10 @@
-
 module.exports = function(eleventyConfig) {
-
-    // Don't process folders with static assets e.g. images
+    eleventyConfig.setBrowserSyncConfig({
+        notify: true
+      });
       eleventyConfig.addPassthroughCopy("src/_assets");
-    
         return {
-            // pathPrefix: "/",
-    
+            pathPrefix: "/",
             dir: {
                 input: "src",
                 output: "_site",
@@ -17,9 +15,10 @@ module.exports = function(eleventyConfig) {
             passthroughFileCopy: true,
             markdownTemplateEngine: "njk",
             htmlTemplateEngine: "njk",
-            // dataTemplateEngine: "njk",
+            dataTemplateEngine: "njk",
             templateFormats: ["html", "css", "js", "njk", "md"],
         };
+        
     }
-    
+
     

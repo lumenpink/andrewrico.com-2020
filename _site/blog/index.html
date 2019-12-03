@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Blog</title>
+  <link href=/_assets/css/stylesheet.css rel="stylesheet" >
+  
+  <link href=https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet"> 
+
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
+
+    <body>
+        <el-drawer>
+
+    
+    <h1 slot="drawer-brand">andrew rico</h1>
+    <h1 slot="navbar-brand">andrew rico</h1>
+
+    <div slot="drawer-menu">
+    <ul class="menu-drawer">
+        <li>
+            <a href="/">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
+                    Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#lookInFolder"></use></svg> 
+                    Portfolio
+                </span>
+            </a>
+        </li>
+    </ul><hr>
+
+    <h3 class="drawered">Sources</h3>
+    <ul class="menu-drawer">
+        <li>
+            <a href="/blog">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#fileInFolder"></use></svg> 
+                    Blog
+                </span>
+            </a>
+        </li>
+        
+    </ul><hr>
+
+    <h3 class="drawered">Contact</h3>
+    <ul class="menu-drawer">
+        <li>
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
+                    LinkedIn
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Andrewrico" target="_blank">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
+                    Github
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <span class="drawered">
+                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
+                    Get In Touch
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    
+
+</el-drawer>
+        <main> 
+            
+               <el-section id="blog-page" class="blog-article-entries" padding-gap=10 background="#ffff">
+    <el-grid pixel-width="768" columns="1">
+        <el-column attr="row">
+            <el-inline id="blog-bio">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h1>Andrew Rico</h1>
+                <h3>UX designer and educational psychology, music, & art fan. Keeps up with her dog's Instagram fans @dgtrwatson.</h3>
+                <a href="/">iure beatae dolorum? </a>
+            </el-inline>
+            <ul>
+                <li>
+                    <article class="blog-article">
+                        <h2>Making it easier to start with Gatsby Cloud for free</h2>
+                        <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
+                        you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
+                        <a href="/post">@andrwrico86</a>
+                    </article>
+                </li>
+                <li>
+                    <article class="blog-article">
+                        <h2>Making it easier to start with Gatsby Cloud for free</h2>
+                        <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
+                        you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
+                        <a href="/post">@andrwrico86</a>
+                    </article>
+                </li>
+                <li>
+                    <article class="blog-article">
+                        <h2>Making it easier to start with Gatsby Cloud for free</h2>
+                        <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
+                            you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
+                        <a href="/post">@andrwrico86</a>
+                    </article>
+                </li>
+            </ul>
+        </el-column>
+    </el-grid>
+</el-section>
+            
+        </main>
+        <footer>
+    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+        <el-grid auto-fit="columns" columns="4">
+            <el-column align-items="center" justify-content="center">
+                <h1>andrew rico</h1>
+            </el-column>
+            <el-column class="column-menu">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                </ul>
+            </el-column>
+            <el-column class="column-menu">
+                <h3>Sources</h3>
+                <ul>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </el-column>
+            <el-column class="column-menu">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
+                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
+                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
+                    <li><a href="/contact">Get In Touch</a></li>
+                </ul>
+            </el-column>
+        </el-grid>
+    </el-section>
+    <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
+        <el-grid auto-fit="columns" columns="3">
+          <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
+                <span id="credits">
+                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
+                 </span> 
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <el-copyright>
+                    <span id="copyright" slot="copyright">
+                        <a href="/"> andrewrico.com </a>. All rights reserved
+                    </span>
+                </el-copyright>
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/privacy"> Site Map  </a> 
+            </el-column>
+        </el-grid>
+    </el-section>
+     <el-options></el-options>
+</footer>
+    </body>
+    <script src="/_assets/js/thisel.beta.js"></script>
+    <script src="/_assets/js/app.js"></script>
+    <script src="/_assets/components/_drawer.js"></script>
+</html> 

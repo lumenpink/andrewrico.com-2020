@@ -1,0 +1,99 @@
+  
+el-drawer .menu-navbar {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+el-drawer .menu-drawer {
+	padding: 1rem 0;
+}
+
+el-drawer ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+el-drawer .menu-navbar li{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	padding:0 1rem;
+}
+
+el-drawer .menu-navbar a:hover {
+	color:var(--drawer-navbar-text-color)!important;
+}
+
+el-drawer a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	white-space: nowrap;
+	font-size: var(--drawer-link-font-size, 1rem);
+	color: var(--drawer-text-color, var(--color-black, #000)) !important;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+el-drawer a:hover {
+	text-decoration: none;
+}
+el-drawer a:hover ,
+el-drawer a:focus ,
+el-drawer a:active {
+	color:var(--drawer-hover-text, var(--color-white, #fff)) !important;
+	-webkit-transition: ease all 0.3s;
+	transition: ease all 0.3s;
+}
+
+el-drawer .menu-drawer a:hover {
+	background: var(--drawer-hover-color, var(--color-gray, gray)) !important;
+}
+
+el-drawer .drawered {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-right: 3.1rem;
+	margin-left: 3.1rem;
+}
+
+/* el-drawer .menu-navbar .drawered {
+	margin-right: 1rem;
+	margin-left: 1rem;
+} */
+
+el-drawer .menu-drawer .drawered {
+	padding: 1rem;
+	width: 100%;
+}
+
+el-drawer .menu-drawer svg {
+	margin-right: 2.6rem;
+	fill: var(--drawer-text-color, var(--color-black, #000)) !important;
+	width: 24px;
+	height: 24px;
+	min-width: 24px;
+	min-height: 24px;
+}
+
+el-drawer h3 {
+	font-weight: 200;
+	font-size: 1.2rem;
+	color: var(--color-gray, #000);
+	margin: 0;
+	margin-top: 1rem;
+	white-space: nowrap;
+}
+el-drawer hr {
+	border:0.6px solid #fafafa;
+}

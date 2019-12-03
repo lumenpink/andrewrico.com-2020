@@ -8,7 +8,6 @@ customElements.define('el-section',
 	class elSection extends HTMLElement {
 		constructor() {
 			super();
-			// _thisElSection = this 
 			let _thisElSection = this;
 			// open shadow.
 			const shadowRoot = _thisElSection.attachShadow({
@@ -19,7 +18,6 @@ customElements.define('el-section',
 			return _thisElSection;
 		}
 		connectedCallback() {
-			// _elSection = this 
 			let _elSection = this;
 			// inject css attributes.
 			const _sections = document.querySelectorAll("el-section");
@@ -79,7 +77,6 @@ customElements.define('el-grid',
 	class elGrid extends HTMLElement {
 		constructor() {
 			super();
-			// _thisElGrid = elGrid
 			const _thisElGrid = this;
 			// open shadowRoot.
 			const shadowRoot = _thisElGrid.attachShadow({
@@ -90,7 +87,6 @@ customElements.define('el-grid',
 			return _thisElGrid;
 		}
 		connectedCallback() {
-			// _elGrid = this
 			const _elGrid = this;
 			// inject css attributes.
 			const _grids = document.querySelectorAll('el-grid');
@@ -111,6 +107,11 @@ customElements.define('el-grid',
 					_elGrid.styleGap = _elGrid.getAttribute("gap") + "em",
 					_elGrid.style.gridGap = _elGrid.styleGap ? _elGrid.styleGap : null
 				)
+				_elGrid.hasAttribute("grid-gap") && (
+					_elGrid.stylePadding = _elGrid.getAttribute("grid-gap") + "rem",
+					_elGrid.style.paddingTop = _elGrid.stylePadding ? _elGrid.stylePadding : null,
+					_elGrid.style.paddingBottom = _elGrid.stylePadding ? _elGrid.stylePadding : null
+				)
 				_elGrid.hasAttribute("width") && (
 					_elGrid.styleWidth = _elGrid.getAttribute("width") + "%",
 					_elGrid.style.width = _elGrid.styleWidth ? _elGrid.styleWidth : null
@@ -128,7 +129,31 @@ customElements.define('el-grid',
 	}
 );
 // create el-column template.
-const elColumnCSS = `:host{display:-ms-grid;display:grid;-ms-grid-columns:1fr;grid-template-columns:repeat(1,1fr);grid-gap:var(--el-grid-gutter,.25rem);margin:var(--el-grid-gutter,.25rem);padding:var(--el-grid-gutter,.25rem)}:host([attr=row]){grid-column:1/-1}`;
+const elColumnCSS = `:host {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: var(--el-grid-gutter, .25rem);
+    margin: var(--el-grid-gutter, .25rem);
+    padding: var(--el-grid-gutter, .25rem)
+}
+
+:host([attr=row]) {
+    grid-column: 1/-1
+}
+
+@media(max-width:1268px) {
+    ::slotted([attr=auto-fit]),
+    :host([attr=auto-fit]) {
+        display: -ms-grid;
+        display: grid;
+        grid-gap: 0.225rem;
+        margin: 0;
+		grid-template-columns: 1fr!important;
+    }
+}
+`;
 const elColumnHTML = "<slot></slot>";
 const elColumnTemplate = document.createElement("template");
 elColumnTemplate.innerHTML = `<style>`.concat(elColumnCSS, `</style>`).concat(elColumnHTML);
@@ -137,7 +162,6 @@ customElements.define('el-column',
 	class elColumn extends HTMLElement {
 		constructor() {
 			super();
-			// _thisElColumn = elColumn
 			const _thisElColumn = this;
 			// open shadowRoot.
 			const shadowRoot = _thisElColumn.attachShadow({
@@ -148,7 +172,6 @@ customElements.define('el-column',
 			return _thisElColumn;
 		}
 		connectedCallback() {
-			// elColumn = this
 			const elColumn = this;
 			// inject css attributes.
 			const _elColumns = document.querySelectorAll('el-column');
@@ -211,7 +234,157 @@ customElements.define('el-column',
 	}
 );
 // create el-inline template.
-const elInlineCSS = `:host{display:inline-block}::slotted([attr=background-image]),:host([attr=background-image]){background-repeat:no-repeat;background-position:center;background-size:cover;padding:10rem;display:-webkit-box;display:-ms-flexbox;display:flex}::slotted([attr=columns]),:host([attr=columns]){display:-ms-grid;display:grid;grid-gap:1rem;margin:0;grid-template-columns:repeat(auto-fit,minmax(196px,256px))}::slotted([attr=card]),:host([attr=card]){display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;padding:.5rem;text-align:center;-webkit-box-shadow:0 0 2px #4f4f4f;box-shadow:0 0 2px #4f4f4f;border-radius:2px;font-size:16px;line-height:1.6;width:auto;height:auto;padding:1.6rem}::slotted([attr=card][hover=on]:hover),:host([attr=card][hover=on]:hover){opacity:1;-webkit-box-shadow:0 0 3px rgba(0,0,0,.99);box-shadow:0 0 3px rgba(0,0,0,.99)}::slotted([attr=chip]),:host([attr=chip]){display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;background:0 0;color:var(--color-black,#000);-webkit-box-shadow:0 0 2px #4f4f4f;box-shadow:0 0 2px #4f4f4f;width:2rem;height:2rem;padding:.2rem;border-radius:50%;-webkit-transition:ease all .5s;-o-transition:ease all .5s;transition:ease all .5s}::slotted([attr=lead]),:host([attr=lead]){font-size:1.6rem;font-weight:300;line-height:1.6}::slotted([attr=row]),:host([attr=row]){grid-column:1/-1}::slotted([dir=horizontal]),:host([dir=horizontal]){-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}::slotted([dir=vertical]),:host([dir=vertical]){-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}::slotted([attr=card]:hover),::slotted([attr=chip]:hover),:host([attr=card]:hover),:host([attr=chip]:hover){background:var(--color-quaternary,#d3d3d3);color:var(--color-primary,#fff)!important}::slotted([theme=primary]),:host([theme=primary]){background:var(--color-primary,#000);color:var(--color-white,#fff)!important;border:1px solid var(--color-primary,#000)}::slotted([theme=primary][hover=on]:hover),:host([theme=primary][hover=on]:hover){background:var(--color-quaternary,#d3d3d3);color:var(--color-primary,#fff)!important;border:1px solid var(--color-primary,#000)}::slotted([theme=secondary]),:host([theme=secondary]){background:var(--color-secondary,#fafafa);color:var(--color-white,#fff)!important;border:1px solid var(--color-secondary,#000)}::slotted([theme=secondary][hover=on]:hover),:host([theme=secondary][hover=on]:hover){background:var(--color-quaternary,#d3d3d3);color:var(--color-primary,#fff)!important;border:1px solid .5var(--color-primary,#000)}::slotted([theme=tertiary]),:host([theme=tertiary]){background:0 0;color:var(--color-primary,#000)!important;border:1px solid var(--color-primary,#000)}::slotted([theme=tertiary][hover=on]:hover),:host([theme=tertiary][hover=on]:hover){background:var(--color-quaternary,#d3d3d3);color:var(--color-primary,#fff)!important;border:1px solid var(--color-primary,#000)}`;
+const elInlineCSS = `:host {
+    display: inline-block
+}
+
+::slotted([attr=background-image]),
+:host([attr=background-image]) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+::slotted([attr=columns]),
+:host([attr=columns]) {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px))
+}
+
+::slotted([attr=card]),
+:host([attr=card]) {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: .5rem;
+    text-align: center;
+    -webkit-box-shadow: 0 0 2px #4f4f4f;
+    box-shadow: 0 0 2px #4f4f4f;
+    border-radius: 2px;
+    font-size: 16px;
+    line-height: 1.6;
+    width: auto;
+    height: auto;
+    padding: 1.6rem
+}
+
+::slotted([attr=card]:hover),
+:host([attr=card]:hover) {
+    opacity: 1;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .99);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .99)
+}
+
+::slotted([attr=chip]),
+:host([attr=chip]) {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: 0 0;
+    color: var(--color-black, #000);
+    -webkit-box-shadow: 0 0 2px #4f4f4f;
+    box-shadow: 0 0 2px #4f4f4f;
+    width: 2rem;
+    height: 2rem;
+    padding: .2rem;
+    border-radius: 50%;
+    -webkit-transition: ease all .5s;
+    -o-transition: ease all .5s;
+    transition: ease all .5s
+}
+
+::slotted([attr=lead]),
+:host([attr=lead]) {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.6
+}
+
+::slotted([attr=row]),
+:host([attr=row]) {
+    grid-column: 1/-1
+}
+::slotted([dir=horizontal]),
+:host([dir=horizontal]) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+::slotted([dir=vertical]),
+:host([dir=vertical]) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+
+::slotted([theme=primary]),
+:host([theme=primary]) {
+    background: var(--color-primary, #000);
+    color: var(--color-white, #fff) !important;
+    border: 1px solid var(--color-primary, #000)
+}
+::slotted([theme=primary][hover=on]:hover),
+:host([theme=primary][hover=on]:hover) {
+    background: var(--color-quaternary, #d3d3d3);
+    color: var(--color-primary, #fff) !important;
+    border: 1px solid var(--color-primary, #000)
+}
+
+::slotted([theme=secondary]),
+:host([theme=secondary]) {
+    background: var(--color-secondary, #fafafa);
+    color: var(--color-white, #fff) !important;
+    border: 1px solid var(--color-secondary, #000)
+}
+::slotted([theme=secondary][hover=on]:hover),
+:host([theme=secondary][hover=on]:hover) {
+    background: var(--color-quaternary, #d3d3d3);
+    color: var(--color-primary, #fff) !important;
+    border: 1px solid .5var(--color-primary, #000)
+}
+
+::slotted([theme=tertiary]),
+:host([theme=tertiary]) {
+    background: 0 0;
+    color: var(--color-primary, #000) !important;
+    border: 1px solid var(--color-primary, #000)
+}
+::slotted([theme=tertiary][hover=on]:hover),
+:host([theme=tertiary][hover=on]:hover) {
+    background: var(--color-quaternary, #d3d3d3);
+    color: var(--color-primary, #fff) !important;
+    border: 1px solid var(--color-primary, #000)
+}`;
 const elInlineHTML = `<slot></slot>`;
 const elInlineTemplate = document.createElement("template");
 elInlineTemplate.innerHTML = `<style>`.concat(elInlineCSS, `</style>`).concat(elInlineHTML);
@@ -605,7 +778,7 @@ const elButtonCSS = `:host {
 }
 
 ::slotted([theme=primary]) {
-    background: var(--color-primary, #000);
+    background: var(--color-primary, #000)!important;
     color: var(--color-white, gray) !important;
     border: 1px solid var(--color-primary, #000)
 }
@@ -617,7 +790,7 @@ const elButtonCSS = `:host {
 }
 
 ::slotted([theme=secondary]) {
-    background: var(--color-secondary, #fafafa);
+    background: var(--color-secondary, #fafafa)!important;
     color: var(--color-white, #000) !important;
     border: 1px solid var(--color-secondary, #000)
 }
@@ -640,7 +813,11 @@ const elButtonCSS = `:host {
     border: 1px solid var(--color-primary, #000)!important;
 }
 
-
+::slotted([theme=quaternary]) {
+    background: var(--color-quaternary, #000);
+    color: var(--color-primary, #000) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
 `;
 const elButtonHTML = `<slot name="button"></slot>`;
 const elButtonTemplate = document.createElement("template");
@@ -731,8 +908,6 @@ customElements.define('el-bgvideo',
 const elDropdownCSS = `:host {
 		position: relative;
 		display: inline-flex;
-		justify-content: center !important;
-		align-items: center !important
 	}
 	
 	.dropcontent {
@@ -1007,9 +1182,10 @@ const elDrawerCSS = `:host {
 			-webkit-transform: scale(2);
 			transform: scale(2);
 		}
+		::slotted(.brand) ,
 		:host .brand {
 			font-size: var(--drawer-brand-font-size, 1rem);
-			font-family: 'PT Mono', monospace;
+			font-family: var(--drawer-brand-font-family)!important;
 			width: 128px;
 			height: 56px;
 			display: -webkit-box;
@@ -1031,8 +1207,10 @@ const elDrawerCSS = `:host {
 			text-decoration: none;
 			color: var(--drawer-brand-color, var(--color-black, #000))
 		}
+		::slotted(h1) ,
 		:host .brand h1 {
-			margin: 0;
+			margin: 0!important;
+			font-family: var(--drawer-brand-font-family)!important;
 		}
 		
 		:host #navbar {
@@ -1050,9 +1228,9 @@ const elDrawerCSS = `:host {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
-			-webkit-box-pack: start;
-			-ms-flex-pack: start;
-			justify-content: flex-start;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: flex-center;
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center;

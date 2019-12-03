@@ -1,11 +1,395 @@
 ---
-layout: "layouts/portfolio.njk"
+layout: "layouts/layout-portfolio.njk"
 title: "Porfolio"
+stylesheet: "/_assets/css/stylesheet.css"
+fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&display=swap"
 ---
-<el-section id="projects" padding-gap=6>
-    <el-grid auto-fit="columns" columns="3">
-        <el-inline attr="row">
-            <h1>Porfolio</h1>
-        </el-inline>
+<el-section id="porfolio-page" padding-gap=6>
+
+    <el-grid id="Javascript" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="3" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptopanel</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start" align-items="center">
+            <aside class="porfolio-aside">
+                <h2>Javascript</h2>
+                <div class="project-count"><span>3</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptopandore.com</a></li>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
     </el-grid>
+
+
+    <el-grid id="PHP" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column display="flex" flex-align="center">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start" align-items="center">
+            <aside class="porfolio-aside">
+                <h2>PHP</h2>
+                <div class="project-count"><span>1</span><p>Project</p></div>
+                <ol>
+                    <li><a href="/project">cryptopandore.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
+    <el-grid id="Wordpress" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="3" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptopanel</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start" align-items="center">
+            <aside class="porfolio-aside">
+                <h2>Wordpress</h2>
+                <div class="project-count"><span>3</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
+    
+    <el-grid id="UI-UX" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="2" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start">
+             <aside class="porfolio-aside">
+                <h2>UI/UX</h2>
+                <div class="project-count"><span>2</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
+    <el-grid id="HTML-CSS" auto-fit="columns" grid-gap="4" gap="4" template-columns="4fr 1fr">
+        <el-column attr=auto-fit columns="2" gutter="4">
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+            <article class="porfolio-project">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h3>cryptohealines</h3>
+                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#earth"></use>
+                            </svg>
+                        </a>live
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                        </a>Code
+                    </li>
+                     <li>
+                        <a href="/">
+                            <svg>
+                                <use href="/_assets/media/svg/sprites.svg#zoom"></use>
+                            </svg>
+                        </a>Details
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" justify-content="flex-start">
+            <aside class="porfolio-aside">
+                <h2>HTML/CSS</h2>
+                <div class="project-count"><span>2</span><p>Projects</p></div>
+                <ol>
+                    <li><a href="/project">cryptohealines.com</a></li>
+                    <li> <a href="/project">cryptopanel.com</a></li>
+                </ol>
+            </aside>
+        </el-column>
+    </el-grid>
+
 </el-section>
