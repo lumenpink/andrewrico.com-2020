@@ -1,61 +1,25 @@
-#single-blogpost-page {
-    --post-title-color: var(--color-tertiary);
-    --post-subtitle-color: var(--color-quaternary);
-    --post-lead-color: var(--color-blue);
-    --post-lead-italic-color: var(--color-gray);
-    --post-paragraph-color: var(--color-black);
-    --post-link-color: var(--color-blue);
-    --post-primary-font-family: 'Coda Caption', sans-serif;
-    --post-secondary-font-family: 'PT Sans', sans-serif;
-    --post-tertiary-font-family: Helvetica, sans-serif;
+#blog-bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding-bottom: 3rem;
 }
 
-.post-title {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 1rem;
-    line-height: 1;
-    font-size: 6rem;
-    font-weight: 800;
-    font-family: var(--post-primary-font-family);
-    color: var(--post-title-color);
+#blog-bio img {
+    width: 64px !important;
+    height: 64px !important;
 }
 
-.post-subtitle {
-    font-size: 2.6rem;
-    font-weight: 200;
-    font-family: var(--post-primary-font-family);
-    color: var(--post-subtitle-color);
+#blog-bio h1 {
+    font-size: 2rem;
+    font-family: 'Coda Caption', sans-serif;
 }
 
-.post-lead-italic {
-    font-style: italic;
-    font-size: 1.8rem;
-    font-weight: 200;
-    font-family: var(--post-secondary-font-family);
-    color: var(--post-lead-italic-color);
+#blog-bio h3 {
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+    color: #151515dd;
 }
-
-.post-lead {
-    letter-spacing: -0.2px;
-    font-style: normal;
-    font-size: 1.8rem;
-    font-weight: 400;
-    font-family: var(--post-tertiary-font-family);
-    color: var(--post-lead-color);
-}
-
-.post-paragraph {
-    font-style: normal;
-    font-size: 1.4rem;
-    font-weight: 400;
-    font-family: var(--post-tertiary-font-family);
-    color: var(--post-paragraph-color);
-}
-.post-link {
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: var(--post-primary-font-family);
-    color: var(--post-link-color);
-}
-

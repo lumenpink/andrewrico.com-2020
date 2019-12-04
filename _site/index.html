@@ -151,7 +151,7 @@
                             <figure class="card-intro"> 
                                 <h2> Hello, I'am Andrew Rico </h2>
                                 <svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg> 
-                                <p> <svg width="16" height="16" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
+                                <p> <svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
                                 <h3> WEB DEVELOPER <br> UI/UX ENGINEER </h3>
                             </figure> 
                             <span class="card-online-terminal">
@@ -184,16 +184,42 @@
                                 </ul>
                              </nav>
                             <el-button class="cubic">
-                                <a slot="button" extended="button" theme=tertiary href="/contact">Schedule  a  phone</a>
+                                <a slot="button" extended="button" theme=tertiary href="#schedulePhoneCall">Schedule  a  phone</a>
                             </el-button>
                         </div>  
                     </el-column>
                 </el-grid>
+                <div id="schedulePhoneCall" class="modal-window">
+                    <div class="modal-content">
+                        <a href="#about" title="Close Modal" class="backdrop-modal"></a>
+                        <form 
+                        id="andrewrico-schedulePhoneCall-homePage" 
+                        name="andrewrico-schedulePhoneCall-homePage" 
+                        class="netliform themeform"
+                        method="POST" 
+                        data-netlify="true">
+                        <p>Schedule a Phone Call</p>
+                            <label for="name">name</label>
+                            <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                            <label for="email">email</label>
+                            <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                            <label for="url">url</label>
+                            <input type="url" name="url"  placeholder="URL" aria-label="url" />
+                            <label for="message">message</label>
+                            <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
+                            <el-button>
+                                <button type="submit" slot="button" extended="button" theme="quaternary">
+                                    Submit
+                                </button>
+                            </el-button>
+                        </form>
+                    </div>
+                </div>
             </el-section>
         </header>
         <main> 
             
-<el-section id="card-progress s" padding-gap=6>
+<el-section id="skills" padding-gap=6>
     <el-grid auto-fit="columns" columns="3" gap="3">
         <el-inline attr="row">
             <h2>Skills </h2>
@@ -304,7 +330,7 @@
         <el-inline attr="row">
             <h2>Recent Projects</h2>
         </el-inline>
-        <article class="porfolio-project">
+        <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
             <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
@@ -332,7 +358,7 @@
                 </li>
             </ul>
         </article>
-        <article class="porfolio-project">
+        <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
              <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
@@ -360,7 +386,7 @@
                 </li>
             </ul>
         </article>
-        <article class="porfolio-project">
+        <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
              <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
@@ -393,79 +419,103 @@
 
 
 <el-section id="chanllenge" padding-gap=6>
-    <el-grid auto-fit="columns" columns="4" gap="3">
+    <el-grid auto-fit="columns" columns="2" gap="2">
         <el-inline attr="row">
             <h2>Code Challenges</h2>
         </el-inline>
 
-        <el-inline class="chanllenge ckecked" padding="2" attr="card">
-            <svg width="24" height="24" fill="var(--color-tertiary)">
-                <use href="_assets/media/svg/sprites.svg#success"></use>
-            </svg>
-            <h4>Hackerrank</h4>
-            <h5>The 21 days code challenge</h5>
-            <p><b>Subject:</b> Myselft<p>
-            <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
-            <el-button>
-                <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
-            </el-button>
-        </el-inline>
+            <article class="card-action card-ckecked">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-secondary)">
+                        <use href="_assets/media/svg/sprites.svg#success"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Hackerrank</h3>
+                    <p>The 21 days code challenge</p>
+                </div>
+                <div class="card-footer">
+                    <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
+                    <el-button>
+                        <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                    </el-button>
+                </div>
+            </article>
 
-        <el-inline class="chanllenge" padding="2" attr="card">
-            <svg width="56" height="56" fill="var(--color-transparent-primary)">
-                <use href="_assets/media/svg/sprites.svg#alert"></use>
-            </svg>
-            <b>Submit a Code Chanllenge only if you are a:</b>
-            <ol>
-                 <li>
-                   <b> Recruiter </b>looking to hide a developer.
-                </li>
-                <li>
-                  <b> Employer</b>  who wants to test my skills.
-                </li>
-            </ol>
-            <el-button>
-               <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
-            </el-button>
-        </el-inline>
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                     <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                        <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                        <b> Employer</b>  who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button>
+                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                    </el-button>
+                </div>
+            </article>
 
-        <el-inline class="chanllenge" padding="2" attr="card">
-            <svg width="56" height="56" fill="var(--color-transparent-primary)">
-                <use href="_assets/media/svg/sprites.svg#alert"></use>
-            </svg>
-            <b>Submit a Code Chanllenge only if you are a:</b>
-            <ol>
-                 <li>
-                   <b> Recruiter </b>looking to hide a developer.
-                </li>
-                <li>
-                  <b> Employer</b>  who wants to test my skills.
-                </li>
-            </ol>
-            <el-button>
-                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
-            </el-button>
-        </el-inline>
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                     <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                        <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                        <b> Employer</b>  who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button>
+                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                    </el-button>
+                </div>
+            </article>
 
-        <el-inline class="chanllenge" padding="2" attr="card">
-            <svg width="56" height="56" fill="var(--color-transparent-primary)">
-                <use href="_assets/media/svg/sprites.svg#alert"></use>
-            </svg>
-            <b>Submit a Code Chanllenge only if you are a:</b>
-            <ol>
-                 <li>
-                   <b> Recruiter </b>looking to hide a developer.
-                </li>
-                <li>
-                  <b> Employer</b>  who wants to test my skills.
-                </li>
-            </ol>
-            <el-button>
-                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
-            </el-button>
-        </el-inline>
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                     <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                        <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                        <b> Employer</b>  who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button>
+                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                    </el-button>
+                </div>
+            </article>
+        
+        
     </el-grid>
-
     <div id="open-modal" class="modal-window">
         <div class="modal-content">
             <a href="#chanllenge" title="Close Modal" class="backdrop-modal"></a>
@@ -509,7 +559,6 @@
             <iframe width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
         </el-inline>
-
         <el-inline>
             <h4>
                 Send me a message
@@ -537,9 +586,7 @@
             </form>
         </el-inline>
     </el-grid>
-</el-section>
-
- 
+</el-section> 
          </main>
         <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
@@ -575,7 +622,9 @@
         <el-grid auto-fit="columns" columns="3">
           <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
                 <span id="credits">
-                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
+                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, 
+                    Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, 
+                    Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
                  </span> 
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
@@ -586,17 +635,47 @@
                 </el-copyright>
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/privacy"> Site Map  </a> 
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/sitemap"> Site Map  </a> 
             </el-column>
         </el-grid>
     </el-section>
-     <el-options></el-options>
 </footer>
-    </body>
+<nav class="navicon">
+    <ul>
+        <li>
+            <a href="/">
+                <svg> <use href="/_assets/media/svg/sprites.svg#home"></use></svg>
+                <span class="tooltip"><span>Homepage</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <svg> <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg>
+                <span class="tooltip"><span>Portfolio</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/blog">
+                <svg> <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg>
+                <span class="tooltip"><span>Blog</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>
+                <span class="tooltip"><span>Contact</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <svg width="32" height="32"><use href="/_assets/media/svg/sprites.svg#circleUp"></use></svg>
+                <span class="tooltip"><span>Scrolll Up</span></span>
+            </a>
+        </li>
+    </ul>
+</nav>
     </body>
     <script src="/_assets/js/thisel.beta.js"></script>
     <script src="/_assets/js/app.js"></script>
     <script src="/_assets/components/_drawer.js"></script>
-    
-    
 </html>

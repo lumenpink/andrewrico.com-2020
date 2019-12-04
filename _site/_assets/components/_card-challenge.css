@@ -1,4 +1,4 @@
-.chanllenge {
+.card-action {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -6,53 +6,53 @@
     transition: ease-in 0.3s;
 
 }
-.chanllenge > * {
+.card-action > * {
     margin: 0.25rem 0;
 }
-.chanllenge.ckecked:hover {
+.card-action.ckecked:hover {
     backface-visibility: hidden;
     background: var(--color-quaternary);
     filter: drop-shadow(0 0 6px var(--color-primary));
     color:white !important;
     transition: ease-out  0.4s;
 }
-.chanllenge.ckecked:hover svg {
+.card-action.ckecked:hover > svg {
     fill:var(--color-white);
     transition: ease-in 0.4s all;
 }
 
-.chanllenge h4 {
+.card-action > h4 {
     color:var(--color-tertiary);
     font-size: 1.6rem;
 }
-.chanllenge:hover h4{
+.card-action:hover > h4{
     transition: ease-in 0.3s all;
     color:var(--color-white);
     filter: drop-shadow(0 0 6px var(--color-primary));
 }
-.chanllenge h5 {
+.card-actionn > h5 {
     color:var(--color-gray);
     font-size: 1rem;
 }
-.chanllenge:hover h5{
+.card-action:hover > h5{
     transition: ease-in 0.3s all;
     color:var(--color-primary);
     filter: drop-shadow(0 0 6px var(--color-primary));
 }
 
-.chanllenge p {
+.card-action > p {
     font-size: 0.8rem;
 }
 
-.chanllenge b {
+.card-action > b {
     font-size: 0.7rem;
 }
 
-  .chanllenge ol {
+  .card-action > ol {
       text-align: left;
       font-size: 0.8rem;
   }
 
-  .chanllenge ol li {
+  .card-action > ol > li {
       padding: 0.25rem 0;
   }

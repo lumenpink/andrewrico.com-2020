@@ -9,7 +9,7 @@
                             <figure class="card-intro"> 
                                 <h2> Hello, I'am Andrew Rico </h2>
                                 <svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg> 
-                                <p> <svg width="16" height="16" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
+                                <p> <svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
                                 <h3> WEB DEVELOPER <br> UI/UX ENGINEER </h3>
                             </figure> 
                             <span class="card-online-terminal">
@@ -42,11 +42,37 @@
                                 </ul>
                              </nav>
                             <el-button class="cubic">
-                                <a slot="button" extended="button" theme=tertiary href="/contact">Schedule  a  phone</a>
+                                <a slot="button" extended="button" theme=tertiary href="#schedulePhoneCall">Schedule  a  phone</a>
                             </el-button>
                         </div>  
                     </el-column>
                 </el-grid>
+                <div id="schedulePhoneCall" class="modal-window">
+                    <div class="modal-content">
+                        <a href="#about" title="Close Modal" class="backdrop-modal"></a>
+                        <form 
+                        id="andrewrico-schedulePhoneCall-homePage" 
+                        name="andrewrico-schedulePhoneCall-homePage" 
+                        class="netliform themeform"
+                        method="POST" 
+                        data-netlify="true">
+                        <p>Schedule a Phone Call</p>
+                            <label for="name">name</label>
+                            <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                            <label for="email">email</label>
+                            <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                            <label for="url">url</label>
+                            <input type="url" name="url"  placeholder="URL" aria-label="url" />
+                            <label for="message">message</label>
+                            <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
+                            <el-button>
+                                <button type="submit" slot="button" extended="button" theme="quaternary">
+                                    Submit
+                                </button>
+                            </el-button>
+                        </form>
+                    </div>
+                </div>
             </el-section>
         </header>
         <main> 
@@ -54,10 +80,7 @@
          </main>
         {% include "partials/partial-footer.njk" %}
     </body>
-    </body>
     <script src="/_assets/js/thisel.beta.js"></script>
     <script src="/_assets/js/app.js"></script>
     <script src="/_assets/components/_drawer.js"></script>
-    {# <script src="/_assets/components/_bio.js"></script> #}
-    {# <script src="/_assets/components/_modal.js"></script> #}
 </html>

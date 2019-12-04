@@ -89,7 +89,7 @@
 </el-drawer>
         <main> 
             
-               <el-section id="blog-page" class="blog-article-entries" padding-gap=10 background="#ffff">
+               <el-section id="blog-page" class="blog-article-entries" padding-gap=10 background="#fff">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
             <el-inline id="blog-bio">
@@ -100,7 +100,7 @@
             </el-inline>
             <ul>
                 <li>
-                    <article class="blog-article">
+                    <article class="card-article">
                         <h2>Making it easier to start with Gatsby Cloud for free</h2>
                         <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
                         you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
@@ -108,7 +108,7 @@
                     </article>
                 </li>
                 <li>
-                    <article class="blog-article">
+                    <article class="card-article">
                         <h2>Making it easier to start with Gatsby Cloud for free</h2>
                         <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
                         you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
@@ -116,7 +116,7 @@
                     </article>
                 </li>
                 <li>
-                    <article class="blog-article">
+                    <article class="card-article">
                         <h2>Making it easier to start with Gatsby Cloud for free</h2>
                         <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
                             you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
@@ -163,7 +163,9 @@
         <el-grid auto-fit="columns" columns="3">
           <el-column display="inline-flex" justify-content="flex-end"  align-items="center">
                 <span id="credits">
-                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
+                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>, 
+                    Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>, 
+                    Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
                  </span> 
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
@@ -174,12 +176,45 @@
                 </el-copyright>
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/privacy"> Site Map  </a> 
+                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/sitemap"> Site Map  </a> 
             </el-column>
         </el-grid>
     </el-section>
-     <el-options></el-options>
 </footer>
+<nav class="navicon">
+    <ul>
+        <li>
+            <a href="/">
+                <svg> <use href="/_assets/media/svg/sprites.svg#home"></use></svg>
+                <span class="tooltip"><span>Homepage</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <svg> <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg>
+                <span class="tooltip"><span>Portfolio</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/blog">
+                <svg> <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg>
+                <span class="tooltip"><span>Blog</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>
+                <span class="tooltip"><span>Contact</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <svg width="32" height="32"><use href="/_assets/media/svg/sprites.svg#circleUp"></use></svg>
+                <span class="tooltip"><span>Scrolll Up</span></span>
+            </a>
+        </li>
+    </ul>
+</nav>
     </body>
     <script src="/_assets/js/thisel.beta.js"></script>
     <script src="/_assets/js/app.js"></script>

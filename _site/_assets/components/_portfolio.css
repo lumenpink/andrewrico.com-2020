@@ -1,0 +1,40 @@
+ 
+ .project-count {
+     display: flex;
+     align-items: center;
+     font-size: 1.2rem;
+     font-weight: 600;
+ }
+
+ .project-count span {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     font-weight: 600;
+     font-size: 2rem;
+     padding: 1rem;
+     width: 2rem;
+     height: 2rem;
+     margin: 1rem;
+     background: #000;
+     border-radius: 50%;
+ }
+
+ .project-count span:hover {
+    color: var(--color-primary);
+    background-image: linear-gradient(to right, var(--color-quaternary) 0%, var(--color-tertiary) 100%);
+}
+
+
+ .porfolio-aside a {
+     color:#000;
+     text-decoration: none;
+     font-size: 1rem;
+     line-height: 1.6;
+ }
+
+ .porfolio-aside a:hover {
+     color:var(--color-blue);
+ }
+

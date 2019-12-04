@@ -6,12 +6,15 @@
 @import '/_assets/components/_mobil-menu.css';
 @import '/_assets/components/_footer.css';
 @import '/_assets/components/_form.css';
-@import '/_assets/components/_options.css';
+@import '/_assets/components/_navicon.css';
 
 /*modular*/
 @import '/_assets/components/_bio.css';
+@import '/_assets/components/_card-article.css';
 @import '/_assets/components/_card-action.css';
 @import '/_assets/components/_card-progress.css';
 @import '/_assets/components/_card-minimal.css';
 @import '/_assets/components/_blog.css';
 @import '/_assets/components/_modal.css';
+@import '/_assets/components/_single-post.css';
+@import '/_assets/components/_portfolio.css';

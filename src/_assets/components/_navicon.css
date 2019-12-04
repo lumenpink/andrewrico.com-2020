@@ -47,9 +47,10 @@
 
 .navicon ul>li>a>svg {
 	pointer-events: none;
-	width: 1.4rem;
-	height: 1.4rem;
-	filter: drop-shadow(0 0 2px var(--color-light));
+	width: 1.2rem;
+	height: 1.2rem;
+	fill:#000;
+	filter: drop-shadow(0 0 1px var(--color-white));
 }
 
 .navicon ul>li>a[href="#"] svg {

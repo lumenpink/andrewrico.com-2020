@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Single Project</title>
+  <title>Site Map</title>
   <link href=/_assets/css/stylesheet.css rel="stylesheet" >
   
-  <link href=https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&amp;display=swap rel="stylesheet"> 
+  <link href=https://fonts.googleapis.com/css?family=Coda+Caption:800|PT+Sans|Source+Code+Pro|Dancing+Script&amp;display=swap rel="stylesheet"> 
 
 </head>
 
@@ -84,64 +84,6 @@
     </ul>
 </div>
 
-    <ul slot="navbar-menu" class="menu-navbar">
-        <li>
-            <a href="#situation">
-                 Situation
-            </a>
-        </li>
-        <li>
-            <a href="#problem">
-                 Problem
-            </a>
-        </li>
-        <li>
-            <a href="#approch">
-                 Approch
-            </a>
-        </li>
-        <li>
-            <a href="#solution">
-                 Solution
-            </a>
-        </li>
-        <li>
-            <a href="#conclution">
-                 Conslution
-            </a>
-        </li>
-    </ul>
-
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <ul slot="dropdown">
-            <li>
-                <a href="#situation">
-                     Situation
-                </a>
-            </li>
-            <li>
-                <a href="#problem">
-                     Problem
-                </a>
-            </li>
-            <li>
-                <a href="#approch">
-                     Approch
-                </a>
-            </li>
-            <li>
-                <a href="#solution">
-                     Solution
-                </a>
-            </li>
-            <li>
-                <a href="#conclution">
-                     Conslution
-                </a>
-            </li>
-        </ul>
-    </el-dropdown>
-
 </el-drawer>
         <header>
             <el-section id="about" padding-gap="10" background=#262626 color=var(--color-primary)>
@@ -149,7 +91,7 @@
                     <el-column attr="row" text-align="center">
                         <el-inline max-width=30 center=auto>  
                             <h1>
-                                Project
+                                BASE TEMPLATE
                             </h1>
                         </el-inline>  
                     </el-column>
@@ -159,68 +101,15 @@
         <main> 
             
                <el-section id="projects" padding-gap=6>
-
-    <el-grid id="situation" auto-fit="columns" grid-gap="1" gap="2" template-columns="3fr 1fr">
-        <el-column attr=auto-fit columns="2" gutter="2">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-        </el-column>
-        <el-column display="flex" flex-direction="column" justify-content="center">
-            <h4>The Situation:</h4>
-            <p>There is elem.matches(css) to check if elem matches the given CSS selector.There is elem.closest(css) to
-                look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked.</p>
-        </el-column>
+    <el-grid auto-fit="columns" columns="3" pixel-width="1024">
+        <el-inline attr="row">
+           
+           <h1>Site Map</h1>
+					
+        </el-inline>
     </el-grid>
-
-    <el-grid id="problem" auto-fit="columns" grid-gap="1" gap="2" template-columns="3fr 1fr">
-        <el-column attr=auto-fit columns="2" gutter="2">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-        </el-column>
-           <el-column display="flex" flex-direction="column" justify-content="center">
-            <h4>The Problem:</h4>
-            <p>There is elem.matches(css) to check if elem matches the given CSS selector.There is elem.closest(css) to
-                look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked.</p>
-        </el-column>
-    </el-grid>
-
-    <el-grid id="approch" auto-fit="columns" grid-gap="1" gap="2" template-columns="3fr 1fr">
-        <el-column attr=auto-fit columns="2" gutter="2">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-        </el-column>
-          <el-column display="flex" flex-direction="column" justify-content="center">
-            <h4>The Approch:</h4>
-            <p>There is elem.matches(css) to check if elem matches the given CSS selector.There is elem.closest(css) to
-                look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked.</p>
-        </el-column>
-    </el-grid>
-
-    <el-grid id="solution" auto-fit="columns" grid-gap="1" gap="2" template-columns="3fr 1fr">
-        <el-column attr=auto-fit columns="2" gutter="2">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-        </el-column>
-        <el-column display="flex" flex-direction="column" justify-content="center">
-            <h4>The Soution:</h4>
-            <p>There is elem.matches(css) to check if elem matches the given CSS selector.There is elem.closest(css) to
-                look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked.</p>
-        </el-column>
-    </el-grid>
-
-    <el-grid id="conclution" auto-fit="columns" grid-gap="1" gap="2" template-columns="3fr 1fr">
-        <el-column attr=auto-fit columns="2" gutter="2">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-            <img src="/_assets/media/images/placeholder.png" alt="placeholder">
-        </el-column>
-        <el-column display="flex" flex-direction="column" justify-content="center">
-            <h4>The Conclution:</h4>
-            <p>There is elem.matches(css) to check if elem matches the given CSS selector.There is elem.closest(css) to
-                look for the nearest ancestor that matches the given CSS-selector. The elem itself is also checked.</p>
-        </el-column>
-    </el-grid>
-
 </el-section>
+            
             
         </main>
         <footer>

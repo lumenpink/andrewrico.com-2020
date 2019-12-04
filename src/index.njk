@@ -5,7 +5,7 @@ stylesheet: "/_assets/css/stylesheet.css"
 fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
 ---
 
-<el-section id="card-progress s" padding-gap=6>
+<el-section id="skills" padding-gap=6>
     <el-grid auto-fit="columns" columns="3" gap="3">
         <el-inline attr="row">
             <h2>Skills </h2>
@@ -116,7 +116,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
         <el-inline attr="row">
             <h2>Recent Projects</h2>
         </el-inline>
-        <article class="porfolio-project">
+        <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
             <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
@@ -144,7 +144,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 </li>
             </ul>
         </article>
-        <article class="porfolio-project">
+        <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
              <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
@@ -172,7 +172,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 </li>
             </ul>
         </article>
-        <article class="porfolio-project">
+        <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
              <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
@@ -205,29 +205,109 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
 
 
 <el-section id="chanllenge" padding-gap=6>
-    <el-grid auto-fit="columns" columns="4" gap="3">
+    <el-grid auto-fit="columns" columns="2" gap="2">
         <el-inline attr="row">
             <h2>Code Challenges</h2>
         </el-inline>
 
-        <el-inline class="chanllenge ckecked" padding="2" attr="card">
-            <svg width="24" height="24" fill="var(--color-tertiary)">
-                <use href="_assets/media/svg/sprites.svg#success"></use>
-            </svg>
-            <h4>Hackerrank</h4>
-            <h5>The 21 days code challenge</h5>
-            <p><b>Subject:</b> Myselft<p>
-            <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
-            <el-button>
-                <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
-            </el-button>
-        </el-inline>
+            <article class="card-action card-ckecked">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-secondary)">
+                        <use href="_assets/media/svg/sprites.svg#success"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Hackerrank</h3>
+                    <p>The 21 days code challenge</p>
+                </div>
+                <div class="card-footer">
+                    <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
+                    <el-button>
+                        <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                    </el-button>
+                </div>
+            </article>
 
-        <el-inline class="chanllenge" padding="2" attr="card">
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                     <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                        <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                        <b> Employer</b>  who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button>
+                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                    </el-button>
+                </div>
+            </article>
+
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                     <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                        <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                        <b> Employer</b>  who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button>
+                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                    </el-button>
+                </div>
+            </article>
+
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                     <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                        <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                        <b> Employer</b>  who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button>
+                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                    </el-button>
+                </div>
+            </article>
+        {# </el-inline> #}
+        {# <el-inline class="card-action" padding="2" attr="card">
+
             <svg width="56" height="56" fill="var(--color-transparent-primary)">
                 <use href="_assets/media/svg/sprites.svg#alert"></use>
             </svg>
-            <b>Submit a Code Chanllenge only if you are a:</b>
+
+            <p>Submit a Code Chanllenge only if you are a:</p>
+
             <ol>
                  <li>
                    <b> Recruiter </b>looking to hide a developer.
@@ -236,12 +316,16 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                   <b> Employer</b>  who wants to test my skills.
                 </li>
             </ol>
+
             <el-button>
                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
             </el-button>
+
         </el-inline>
 
-        <el-inline class="chanllenge" padding="2" attr="card">
+
+
+        <el-inline class="card-action" padding="2" attr="card">
             <svg width="56" height="56" fill="var(--color-transparent-primary)">
                 <use href="_assets/media/svg/sprites.svg#alert"></use>
             </svg>
@@ -259,7 +343,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
             </el-button>
         </el-inline>
 
-        <el-inline class="chanllenge" padding="2" attr="card">
+        <el-inline class="card-action" padding="2" attr="card">
             <svg width="56" height="56" fill="var(--color-transparent-primary)">
                 <use href="_assets/media/svg/sprites.svg#alert"></use>
             </svg>
@@ -275,9 +359,8 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
             <el-button>
                 <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
             </el-button>
-        </el-inline>
+        </el-inline> #}
     </el-grid>
-
     <div id="open-modal" class="modal-window">
         <div class="modal-content">
             <a href="#chanllenge" title="Close Modal" class="backdrop-modal"></a>
@@ -321,7 +404,6 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
             <iframe width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
         </el-inline>
-
         <el-inline>
             <h4>
                 Send me a message
@@ -350,4 +432,3 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
         </el-inline>
     </el-grid>
 </el-section>
-
