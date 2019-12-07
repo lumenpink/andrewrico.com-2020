@@ -1,0 +1,103 @@
+el-drawer {
+	/* variables are control by el-drawer-jscss file in the js folder, if rather not using that file then use this variables */
+	--drawer-padding: initial;
+	--drawer-brand-font-size: initial;
+	--drawer-brand-font-family: initial;
+	--drawer-link-font-size: initial;
+	--drawer-hover-color: initial;
+	--drawer-hover-text: initial;
+	--drawer-background-color: initial;
+	--drawer-text-color: initial;
+	--drawer-hightlight-color: initial;
+	--drawer-navbar-text-color: initial;
+}
+
+el-drawer ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+el-drawer a {
+	font-size: var(--drawer-link-font-size, 1rem);
+	color: var(--drawer-text-color, var(--color-black, #000));
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	white-space: nowrap;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+el-drawer a:hover,
+el-drawer a:focus,
+el-drawer a:active {
+	-webkit-transition: ease all 0.3s;
+	transition: ease all 0.3s;
+	text-decoration: none;
+}
+
+el-drawer .menu-navbar {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+el-drawer .menu-navbar li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	padding: 0 1rem;
+}
+
+el-drawer .menu-navbar a:hover {
+	color: var(--drawer-hover-navbar-text, #000);
+}
+
+el-drawer .drawer-menu ul a:hover {
+	background: var(--drawer-hover-color, var(--color-gray, gray));
+}
+
+el-drawer .drawer-menu ul {
+	padding: 1rem 0;
+}
+
+el-drawer .drawer-menu ul svg {
+	fill: var(--drawer-text-color, var(--color-black, #000));
+	margin-right: 2.6rem;
+	width: 24px;
+	height: 24px;
+}
+
+el-drawer h3 {
+	color: var(--color-gray, #000);
+	font-weight: 200;
+	font-size: 1.6rem;
+	margin: 0;
+	margin-top: 1rem;
+	white-space: nowrap;
+}
+
+
+el-drawer h3,
+el-drawer span {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-right: 3.1rem;
+	margin-left: 3.1rem;
+	padding: 1rem;
+	width: 100%;
+}
+
+el-drawer hr {
+	border: 1px solid #fafafa;
+}

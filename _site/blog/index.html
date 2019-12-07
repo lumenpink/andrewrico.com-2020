@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <title>Blog</title>
+  <title></title>
+  <meta name="description" content=>
   <link href=/_assets/css/stylesheet.css rel="stylesheet" >
-  
   <link href=https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet"> 
-
 </head>
 
 <el-loading background=var(--color-gradient)></el-loading>
 
     <body>
         <el-drawer>
-
-    
-    <h1 slot="drawer-brand">andrew rico</h1>
-    <h1 slot="navbar-brand">andrew rico</h1>
-
-    <div slot="drawer-menu">
-    <ul class="menu-drawer">
+    <h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
+<div class="drawer-menu" slot="drawer-menu">
+    <ul>
         <li>
             <a href="/">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
                     Home
                 </span>
             </a>
         </li>
         <li>
             <a href="/portfolio">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#lookInFolder"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
                     Portfolio
                 </span>
             </a>
         </li>
-    </ul><hr>
+    </ul>
 
-    <h3 class="drawered">Sources</h3>
-    <ul class="menu-drawer">
+    <hr><h3>Sources</h3>
+    <ul>
         <li>
             <a href="/blog">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#fileInFolder"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
                     Blog
                 </span>
             </a>
         </li>
-        
-    </ul><hr>
+    </ul>
 
-    <h3 class="drawered">Contact</h3>
-    <ul class="menu-drawer">
+    <hr><h3>Contact</h3>
+    <ul>
         <li>
             <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
                     LinkedIn
                 </span>
             </a>
         </li>
         <li>
             <a href="https://github.com/Andrewrico" target="_blank">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
                     Github
                 </span>
             </a>
         </li>
         <li>
             <a href="/contact">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
+
 </div>
-
-    
-
 </el-drawer>
         <main> 
             
@@ -99,37 +89,84 @@
                 <a href="/">iure beatae dolorum? </a>
             </el-inline>
             <ul>
-                <li>
-                    <article class="card-article">
-                        <h2>Making it easier to start with Gatsby Cloud for free</h2>
-                        <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
-                        you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
-                        <a href="/post">@andrwrico86</a>
-                    </article>
-                </li>
-                <li>
-                    <article class="card-article">
-                        <h2>Making it easier to start with Gatsby Cloud for free</h2>
-                        <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
-                        you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
-                        <a href="/post">@andrwrico86</a>
-                    </article>
-                </li>
-                <li>
-                    <article class="card-article">
-                        <h2>Making it easier to start with Gatsby Cloud for free</h2>
-                        <p>When you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations. 
-                            you go to our Quickstart page to try Gatsby Cloud, you’ll probably find yourself in one of two situations.</p>
-                        <a href="/post">@andrwrico86</a>
-                    </article>
-                </li>
+                
+                    <li>
+                        <article class="card-article">
+                            <h2>
+                                <a href="/post/2020/Web-develoment-trends-for-2020/">Web develoment trends for 2020</a>
+                            </h2>
+                            <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time>
+                            <p>Web develoment trends for 2020</p>
+                            <a href="/post/2020/Web-develoment-trends-for-2020/">Read more</a>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article class="card-article">
+                            <h2>
+                                <a href="/post/2020/How-to-build-a-dropdown-menu/">How to build a dropdown menu</a>
+                            </h2>
+                            <time datetime="2019-12-02T00:00:00.000Z">December 1, 2019</time>
+                            <p>How to build a dropdown menu</p>
+                            <a href="/post/2020/How-to-build-a-dropdown-menu/">Read more</a>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article class="card-article">
+                            <h2>
+                                <a href="/post/2020/Build-a-web-component/">Build a web component</a>
+                            </h2>
+                            <time datetime="2019-12-01T00:00:00.000Z">November 30, 2019</time>
+                            <p>Build a web component</p>
+                            <a href="/post/2020/Build-a-web-component/">Read more</a>
+                        </article>
+                    </li>
+                
             </ul>
         </el-column>
     </el-grid>
 </el-section>
+
+
+
             
         </main>
-        <footer>
+        <nav class="naviton">
+    <ul>
+        <li>
+            <a href="/">
+                <svg> <use href="/_assets/media/svg/sprites.svg#home"></use></svg>
+                <span class="tooltip"><span>Homepage</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <svg> <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg>
+                <span class="tooltip"><span>Portfolio</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/blog">
+                <svg> <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg>
+                <span class="tooltip"><span>Blog</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>
+                <span class="tooltip"><span>Contact</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <svg width="32" height="32"><use href="/_assets/media/svg/sprites.svg#circleUp"></use></svg>
+                <span class="tooltip"><span>Scrolll Up</span></span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
@@ -176,47 +213,17 @@
                 </el-copyright>
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/sitemap"> Site Map  </a> 
+                <a href="/terms">  Disclaimer </a>   
+                <a href="/privacy"> Privacy  </a>   
+                <a href="/sitemap"> Site Map  </a> 
             </el-column>
         </el-grid>
     </el-section>
 </footer>
-<nav class="navicon">
-    <ul>
-        <li>
-            <a href="/">
-                <svg> <use href="/_assets/media/svg/sprites.svg#home"></use></svg>
-                <span class="tooltip"><span>Homepage</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/portfolio">
-                <svg> <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg>
-                <span class="tooltip"><span>Portfolio</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/blog">
-                <svg> <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg>
-                <span class="tooltip"><span>Blog</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/contact">
-                <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>
-                <span class="tooltip"><span>Contact</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <svg width="32" height="32"><use href="/_assets/media/svg/sprites.svg#circleUp"></use></svg>
-                <span class="tooltip"><span>Scrolll Up</span></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+
+<script src="/_assets/js/thisel.beta.js"></script>
+<script src="/_assets/js/modules/el-drawer-jscss.js"></script>
+<script src="/_assets/js/app.js"></script>
+
     </body>
-    <script src="/_assets/js/thisel.beta.js"></script>
-    <script src="/_assets/js/app.js"></script>
-    <script src="/_assets/components/_drawer.js"></script>
 </html> 

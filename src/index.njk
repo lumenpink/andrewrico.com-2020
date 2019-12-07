@@ -3,22 +3,24 @@ title: "Home"
 layout: "layouts/layout-home.njk"
 stylesheet: "/_assets/css/stylesheet.css"
 fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
+tags: ['skill']
 ---
 
 <el-section id="skills" padding-gap=6>
     <el-grid auto-fit="columns" columns="3" gap="3">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Skills </h2>
-        </el-inline>
+        </el-column>
+
         <article class="card-progress js-skills">
             <label for="file">
-                <h4> Javascript 85% </h4>
+                <h4> {{ skill.data.CardSkillsTitle }} </h4>
                 <svg>
                     <use href="_assets/media/svg/sprites.svg#js"></use>
                 </svg>
             </label>
-            <progress id="file" class="progress" value="85" max="100"></progress>
-            <p>
+            <progress id="file" class="progress" value="85" max="100"></progress> 
+                <p>
                 Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
                 Javascript is the programming language of the Web. <br>
                 In recent years it has become one of the most popular programming language in the tech industry. <br>
@@ -111,11 +113,16 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
     </el-grid>
 </el-section>
 
+
+
+
+
+
 <el-section id="projects" padding-gap="6">
     <el-grid auto-fit="columns" columns="3" gap="3">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Recent Projects</h2>
-        </el-inline>
+        </el-column>
         <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
@@ -206,9 +213,9 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
 
 <el-section id="chanllenge" padding-gap=6>
     <el-grid auto-fit="columns" columns="2" gap="2">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Code Challenges</h2>
-        </el-inline>
+        </el-column>
 
             <article class="card-action card-ckecked">
                 <div class="card-header">
@@ -223,7 +230,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 <div class="card-footer">
                     <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
                     <el-button>
-                        <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                        <a slot="button" extended="button" theme="primary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
                     </el-button>
                 </div>
             </article>
@@ -247,7 +254,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 </div>
                 <div class="card-footer">
                     <el-button>
-                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                         <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
                     </el-button>
                 </div>
             </article>
@@ -271,7 +278,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 </div>
                 <div class="card-footer">
                     <el-button>
-                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                         <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
                     </el-button>
                 </div>
             </article>
@@ -295,71 +302,10 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 </div>
                 <div class="card-footer">
                     <el-button>
-                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                        <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
                     </el-button>
                 </div>
             </article>
-        {# </el-inline> #}
-        {# <el-inline class="card-action" padding="2" attr="card">
-
-            <svg width="56" height="56" fill="var(--color-transparent-primary)">
-                <use href="_assets/media/svg/sprites.svg#alert"></use>
-            </svg>
-
-            <p>Submit a Code Chanllenge only if you are a:</p>
-
-            <ol>
-                 <li>
-                   <b> Recruiter </b>looking to hide a developer.
-                </li>
-                <li>
-                  <b> Employer</b>  who wants to test my skills.
-                </li>
-            </ol>
-
-            <el-button>
-               <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
-            </el-button>
-
-        </el-inline>
-
-
-
-        <el-inline class="card-action" padding="2" attr="card">
-            <svg width="56" height="56" fill="var(--color-transparent-primary)">
-                <use href="_assets/media/svg/sprites.svg#alert"></use>
-            </svg>
-            <b>Submit a Code Chanllenge only if you are a:</b>
-            <ol>
-                 <li>
-                   <b> Recruiter </b>looking to hide a developer.
-                </li>
-                <li>
-                  <b> Employer</b>  who wants to test my skills.
-                </li>
-            </ol>
-            <el-button>
-                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
-            </el-button>
-        </el-inline>
-
-        <el-inline class="card-action" padding="2" attr="card">
-            <svg width="56" height="56" fill="var(--color-transparent-primary)">
-                <use href="_assets/media/svg/sprites.svg#alert"></use>
-            </svg>
-            <b>Submit a Code Chanllenge only if you are a:</b>
-            <ol>
-                 <li>
-                   <b> Recruiter </b>looking to hide a developer.
-                </li>
-                <li>
-                  <b> Employer</b>  who wants to test my skills.
-                </li>
-            </ol>
-            <el-button>
-                <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
-            </el-button>
-        </el-inline> #}
     </el-grid>
     <div id="open-modal" class="modal-window">
         <div class="modal-content">
@@ -386,7 +332,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 <label for="message">message</label>
                 <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
                 <el-button>
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                    <button type="submit" slot="button" extended="button" theme="custom">
                         Submit
                     </button>
                 </el-button>
@@ -397,14 +343,14 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
 
 <el-section id="contact" padding-bottom=6>
     <el-grid auto-fit="columns" columns="2" gap="3">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Contact Me</h2>
-        </el-inline>
-        <el-inline>
+        </el-column>
+        <el-column>
             <iframe width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
-        </el-inline>
-        <el-inline>
+        </el-column>
+        <el-column>
             <h4>
                 Send me a message
             </h4>
@@ -424,11 +370,11 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 <textarea name="message" rows="6" placeholder="In a few words, tell me about your inquiry"
                     aria-label="message"></textarea><br><br>
                 <el-button class="cubic">
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                    <button type="submit" slot="button" extended="button" theme="custom">
                         Send Message
                     </button>
                 </el-button>
             </form>
-        </el-inline>
+        </el-column>
     </el-grid>
 </el-section>

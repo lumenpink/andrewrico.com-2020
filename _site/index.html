@@ -1,89 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <title>Home</title>
+  <title></title>
+  <meta name="description" content=>
   <link href=/_assets/css/stylesheet.css rel="stylesheet" >
-  
   <link href=https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet"> 
-
 </head>
 
 <el-loading background=var(--color-gradient)></el-loading>
 
     <body>
         <el-drawer>
-
-	
-    <h1 slot="drawer-brand">andrew rico</h1>
-    <h1 slot="navbar-brand">andrew rico</h1>
-
-	<div slot="drawer-menu">
-    <ul class="menu-drawer">
+	<h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
+<div class="drawer-menu" slot="drawer-menu">
+    <ul>
         <li>
             <a href="/">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#home"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
                     Home
                 </span>
             </a>
         </li>
         <li>
             <a href="/portfolio">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#lookInFolder"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
                     Portfolio
                 </span>
             </a>
         </li>
-    </ul><hr>
+    </ul>
 
-    <h3 class="drawered">Sources</h3>
-    <ul class="menu-drawer">
+    <hr><h3>Sources</h3>
+    <ul>
         <li>
             <a href="/blog">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#fileInFolder"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
                     Blog
                 </span>
             </a>
         </li>
-        
-    </ul><hr>
+    </ul>
 
-    <h3 class="drawered">Contact</h3>
-    <ul class="menu-drawer">
+    <hr><h3>Contact</h3>
+    <ul>
         <li>
             <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#linkedin"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
                     LinkedIn
                 </span>
             </a>
         </li>
         <li>
             <a href="https://github.com/Andrewrico" target="_blank">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#github"></use></svg> 
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
                     Github
                 </span>
             </a>
         </li>
         <li>
             <a href="/contact">
-                <span class="drawered">
-                    <svg><use href="/_assets/components/_drawer.svg#contact"></use></svg>  
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
-</div>
 
+</div>
 	<ul slot="navbar-menu" class="menu-navbar">
 		<li>
 			<a href="#about">
@@ -111,7 +103,6 @@
 			</a>
 		</li>
 	</ul>
-
 	<el-dropdown slot="mobil-menu" id="mobil-menu">
 		<ul slot="dropdown">
 			<li>
@@ -141,7 +132,6 @@
 			</li>
 		</ul>
 	</el-dropdown>
-
 </el-drawer>
         <header>
             <el-section id="about" height="100" display="flex" flex-align="center" background="var(--color-gradient)" color="var(--color-white)">
@@ -184,7 +174,7 @@
                                 </ul>
                              </nav>
                             <el-button class="cubic">
-                                <a slot="button" extended="button" theme=tertiary href="#schedulePhoneCall">Schedule  a  phone</a>
+                                <a slot="button" extended="button" theme=custom href="#schedulePhoneCall">Schedule  a  phone</a>
                             </el-button>
                         </div>  
                     </el-column>
@@ -208,7 +198,7 @@
                             <label for="message">message</label>
                             <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
                             <el-button>
-                                <button type="submit" slot="button" extended="button" theme="quaternary">
+                                <button type="submit" slot="button" extended="button" theme="custom">
                                     Submit
                                 </button>
                             </el-button>
@@ -218,21 +208,23 @@
             </el-section>
         </header>
         <main> 
+        
             
 <el-section id="skills" padding-gap=6>
     <el-grid auto-fit="columns" columns="3" gap="3">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Skills </h2>
-        </el-inline>
+        </el-column>
+
         <article class="card-progress js-skills">
             <label for="file">
-                <h4> Javascript 85% </h4>
+                <h4>  </h4>
                 <svg>
                     <use href="_assets/media/svg/sprites.svg#js"></use>
                 </svg>
             </label>
-            <progress id="file" class="progress" value="85" max="100"></progress>
-            <p>
+            <progress id="file" class="progress" value="85" max="100"></progress> 
+                <p>
                 Make no mistake, <mark>Javascript</mark> <b>Is Not</b> <mark class="line-through">JAVA.</mark> <br>
                 Javascript is the programming language of the Web. <br>
                 In recent years it has become one of the most popular programming language in the tech industry. <br>
@@ -325,11 +317,16 @@
     </el-grid>
 </el-section>
 
+
+
+
+
+
 <el-section id="projects" padding-gap="6">
     <el-grid auto-fit="columns" columns="3" gap="3">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Recent Projects</h2>
-        </el-inline>
+        </el-column>
         <article class="card-minimal">
             <img src="/_assets/media/images/placeholder.png" alt="placeholder">
             <h3>Cryptopandore</h3>
@@ -420,9 +417,9 @@
 
 <el-section id="chanllenge" padding-gap=6>
     <el-grid auto-fit="columns" columns="2" gap="2">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Code Challenges</h2>
-        </el-inline>
+        </el-column>
 
             <article class="card-action card-ckecked">
                 <div class="card-header">
@@ -437,7 +434,7 @@
                 <div class="card-footer">
                     <p><b>Started:</b>11/01/19 <b>Ended:</b>11/01/19</p>
                     <el-button>
-                        <a slot="button" extended="button" theme="secondary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                        <a slot="button" extended="button" theme="primary" href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
                     </el-button>
                 </div>
             </article>
@@ -461,7 +458,7 @@
                 </div>
                 <div class="card-footer">
                     <el-button>
-                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                         <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
                     </el-button>
                 </div>
             </article>
@@ -485,7 +482,7 @@
                 </div>
                 <div class="card-footer">
                     <el-button>
-                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                         <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
                     </el-button>
                 </div>
             </article>
@@ -509,12 +506,10 @@
                 </div>
                 <div class="card-footer">
                     <el-button>
-                        <a slot="button" extended="button" href="#open-modal">Submit Challenge </a>
+                        <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
                     </el-button>
                 </div>
             </article>
-        
-        
     </el-grid>
     <div id="open-modal" class="modal-window">
         <div class="modal-content">
@@ -541,7 +536,7 @@
                 <label for="message">message</label>
                 <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
                 <el-button>
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                    <button type="submit" slot="button" extended="button" theme="custom">
                         Submit
                     </button>
                 </el-button>
@@ -552,14 +547,14 @@
 
 <el-section id="contact" padding-bottom=6>
     <el-grid auto-fit="columns" columns="2" gap="3">
-        <el-inline attr="row">
+        <el-column attr="row">
             <h2>Contact Me</h2>
-        </el-inline>
-        <el-inline>
+        </el-column>
+        <el-column>
             <iframe width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
-        </el-inline>
-        <el-inline>
+        </el-column>
+        <el-column>
             <h4>
                 Send me a message
             </h4>
@@ -579,16 +574,51 @@
                 <textarea name="message" rows="6" placeholder="In a few words, tell me about your inquiry"
                     aria-label="message"></textarea><br><br>
                 <el-button class="cubic">
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                    <button type="submit" slot="button" extended="button" theme="custom">
                         Send Message
                     </button>
                 </el-button>
             </form>
-        </el-inline>
+        </el-column>
     </el-grid>
 </el-section> 
+        
          </main>
-        <footer>
+        <nav class="naviton">
+    <ul>
+        <li>
+            <a href="/">
+                <svg> <use href="/_assets/media/svg/sprites.svg#home"></use></svg>
+                <span class="tooltip"><span>Homepage</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <svg> <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg>
+                <span class="tooltip"><span>Portfolio</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/blog">
+                <svg> <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg>
+                <span class="tooltip"><span>Blog</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>
+                <span class="tooltip"><span>Contact</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <svg width="32" height="32"><use href="/_assets/media/svg/sprites.svg#circleUp"></use></svg>
+                <span class="tooltip"><span>Scrolll Up</span></span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
@@ -635,47 +665,17 @@
                 </el-copyright>
             </el-column>
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms">  Disclaimer </a>   <a href="/privacy"> Privacy  </a>   <a href="/sitemap"> Site Map  </a> 
+                <a href="/terms">  Disclaimer </a>   
+                <a href="/privacy"> Privacy  </a>   
+                <a href="/sitemap"> Site Map  </a> 
             </el-column>
         </el-grid>
     </el-section>
 </footer>
-<nav class="navicon">
-    <ul>
-        <li>
-            <a href="/">
-                <svg> <use href="/_assets/media/svg/sprites.svg#home"></use></svg>
-                <span class="tooltip"><span>Homepage</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/portfolio">
-                <svg> <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg>
-                <span class="tooltip"><span>Portfolio</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/blog">
-                <svg> <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg>
-                <span class="tooltip"><span>Blog</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/contact">
-                <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>
-                <span class="tooltip"><span>Contact</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <svg width="32" height="32"><use href="/_assets/media/svg/sprites.svg#circleUp"></use></svg>
-                <span class="tooltip"><span>Scrolll Up</span></span>
-            </a>
-        </li>
-    </ul>
-</nav>
+
+<script src="/_assets/js/thisel.beta.js"></script>
+<script src="/_assets/js/modules/el-drawer-jscss.js"></script>
+<script src="/_assets/js/app.js"></script>
+
     </body>
-    <script src="/_assets/js/thisel.beta.js"></script>
-    <script src="/_assets/js/app.js"></script>
-    <script src="/_assets/components/_drawer.js"></script>
 </html>

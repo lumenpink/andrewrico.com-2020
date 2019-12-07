@@ -1,20 +1,41 @@
+/*
+custom/normalize ---------------------------------------
+*/
 @import 'normalize.css';
 @import 'app.css';
 
-/*globals*/
-@import '/_assets/components/_drawer.css';
-@import '/_assets/components/_mobil-menu.css';
-@import '/_assets/components/_footer.css';
-@import '/_assets/components/_form.css';
-@import '/_assets/components/_navicon.css';
+/*
+navigations ---------------------------------------
+*/
+@import 'modules/_nav-drawer.css';
+@import 'modules/_nav-mobil.css';
+@import 'modules/_nav-naviton.css';
 
-/*modular*/
-@import '/_assets/components/_bio.css';
-@import '/_assets/components/_card-article.css';
-@import '/_assets/components/_card-action.css';
-@import '/_assets/components/_card-progress.css';
-@import '/_assets/components/_card-minimal.css';
-@import '/_assets/components/_blog.css';
-@import '/_assets/components/_modal.css';
-@import '/_assets/components/_single-post.css';
-@import '/_assets/components/_portfolio.css';
+/*
+partials ---------------------------------------
+*/
+@import 'modules/_partial-footer.css';
+
+/*
+pages ---------------------------------------
+*/
+@import 'modules/_page-portfolio.css';
+@import 'modules/_page-project.css';
+@import 'modules/_page-blog.css';
+@import 'modules/_page-post.css';
+@import 'modules/_page-contact.css';
+
+/*
+cards (collection) ---------------------------------------
+*/
+@import 'modules/_card-bio.css';
+@import 'modules/_card-article.css';
+@import 'modules/_card-action.css';
+@import 'modules/_card-progress.css';
+@import 'modules/_card-minimal.css';
+
+/*
+components ---------------------------------------
+*/
+@import 'modules/_comp-form.css';
+@import 'modules/_comp-modal.css';

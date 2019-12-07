@@ -17,15 +17,16 @@
       --color-transparent-secondary: rgba(18, 22, 65, 0.337);
       --color-lighter: #fcfcfc;
       --color-light: #ebebeb;
+      --color-dark: #464646;
+      --color-darker: #262626;
       --color-gray: gray;
       --color-white: white;
       --color-black: black;
-      --color-blue: #0040ff;
-      --color-green: #7bff84;
+      --color-blue: #2462ff;
+      --color-green: #00ffae;
       --color-ripple: #7596ac;
-      --color-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      --color-gradient: -webkit-linear-gradient(to right, #0d1448, #5261d8);
-      --color-gradient: linear-gradient(to right, #0d1448, #5261d8);
+      --color-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      --color-gradient: -webkit-linear-gradient(to right, #0d1448, #5261d8); --color-gradient: linear-gradient(to right, #0d1448, #5261d8);
   }
 
   body {
@@ -57,25 +58,6 @@
       margin: 0;
       padding: 0;
       list-style: none
-  }
-
-  el-section {
-      padding: 0;
-  }
-
-  /* Porfolio Page */
-  #PorfolioPage h2 {
-      font-family: 'Coda Caption', sans-serif;
-  }
-
-  /* Contact Page */
-  .contactPageIcons a {
-      text-decoration: none;
-  }
-
-  .contactPageIcons svg {
-      width: 32px;
-      height: 32px;
   }
 
  /* .cubic {

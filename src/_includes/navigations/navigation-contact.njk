@@ -1,23 +1,17 @@
 <el-drawer>
-
-    {% include "navigations/navigation-brand.njk" %}
-
     {% include "navigations/navigation-drawer.njk" %}
-
     <ul slot="navbar-menu" class="menu-navbar">
         <li>
             <el-button>
                 <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
             </el-button>
         </li>
-        
         <li>
             <el-button>
                 <a slot="button" extended="button" href="/blog"> BLOG </a>
             </el-button>
         </li>
     </ul>
-
     <el-dropdown slot="mobil-menu" id="mobil-menu">
         <ul slot="dropdown">
             <li>
@@ -28,5 +22,4 @@
             </li>
         </ul>
     </el-dropdown>
-
 </el-drawer>

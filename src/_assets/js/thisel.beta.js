@@ -610,7 +610,8 @@ const elButtonCSS = `:host {
     overflow: hidden;
     top: 0;
     left: 0;
-    border-radius: 2px;
+	border-radius: 2px;
+	padding:1rem
     min-width: 150px;
     width: 100%;
     max-width: 300px;
@@ -619,7 +620,7 @@ const elButtonCSS = `:host {
     --color-active: #396afc;
     --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);
-    --color-hover: #0080ff
+	--color-hover: #0080ff
 }
 
 :host([size=small]) {
@@ -776,22 +777,31 @@ const elButtonCSS = `:host {
     background-image: var(--color-active, #000) !important;
     color: var(--color-white, #fff) !important
 }
+::slotted([theme=custom]) {
+	background: var(--color-quaternary, #000)!important;
+    color: var(--color-primary, #000) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
 
+::slotted([theme=custom]:hover) {
+    color: var(--color-white, #fff) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
 ::slotted([theme=primary]) {
-    background: var(--color-primary, #000)!important;
-    color: var(--color-white, gray) !important;
-    border: 1px solid var(--color-primary, #000)
+    background: var(--color-secondary, #000)!important;
+    color: var(--color-white, white) !important;
+    border: 1px solid var(--color-secondary, #000)
 }
 
 ::slotted([theme=primary]:hover) {
     background: var(--color-hover, #000);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)
+    color: var(--color-primary, #fff) !important;
+    border: 1px solid var(--color-primary, #000)!important;
 }
 
 ::slotted([theme=secondary]) {
-    background: var(--color-secondary, #fafafa)!important;
-    color: var(--color-white, #000) !important;
+    background: 0 0;
+    color: var(--color-secondary, #000) !important;
     border: 1px solid var(--color-secondary, #000)
 }
 ::slotted([theme=secondary]:hover) {
@@ -802,7 +812,7 @@ const elButtonCSS = `:host {
 
 
 ::slotted([theme=tertiary]) {
-    background: 0 0;
+    background: var(--color-tertiary, #000)!important;
     color: var(--color-primary, #000) !important;
     border: 1px solid var(--color-primary, #000)!important;
 }
@@ -814,9 +824,9 @@ const elButtonCSS = `:host {
 }
 
 ::slotted([theme=quaternary]) {
-    background: var(--color-quaternary, #000);
-    color: var(--color-primary, #000) !important;
-    border: 1px solid var(--color-primary, #000)!important;
+	background: 0 0;
+    color: var(--color-tertiary, #000) !important;
+    border: 1px solid var(--color-tertiary, #000)!important;
 }
 `;
 const elButtonHTML = `<slot name="button"></slot>`;

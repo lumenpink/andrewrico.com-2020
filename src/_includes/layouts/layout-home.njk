@@ -42,7 +42,7 @@
                                 </ul>
                              </nav>
                             <el-button class="cubic">
-                                <a slot="button" extended="button" theme=tertiary href="#schedulePhoneCall">Schedule  a  phone</a>
+                                <a slot="button" extended="button" theme=custom href="#schedulePhoneCall">Schedule  a  phone</a>
                             </el-button>
                         </div>  
                     </el-column>
@@ -66,7 +66,7 @@
                             <label for="message">message</label>
                             <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
                             <el-button>
-                                <button type="submit" slot="button" extended="button" theme="quaternary">
+                                <button type="submit" slot="button" extended="button" theme="custom">
                                     Submit
                                 </button>
                             </el-button>
@@ -76,11 +76,10 @@
             </el-section>
         </header>
         <main> 
+        {% block content %}
             {{ content | safe }} 
+        {% endblock content %}
          </main>
         {% include "partials/partial-footer.njk" %}
     </body>
-    <script src="/_assets/js/thisel.beta.js"></script>
-    <script src="/_assets/js/app.js"></script>
-    <script src="/_assets/components/_drawer.js"></script>
 </html>

@@ -1,0 +1,39 @@
+---
+stylesheet: "/_assets/css/stylesheet.css"
+layout: "/layouts/layout-blog.njk"
+fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
+title: "Blog"
+pagination:
+  data: collections.post
+  size: 10
+  reverse: true
+  alias: posts
+---
+<el-section id="blog-page" class="blog-article-entries" padding-gap=10 background="#fff">
+    <el-grid pixel-width="768" columns="1">
+        <el-column attr="row">
+            <el-inline id="blog-bio">
+                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <h1>Andrew Rico</h1>
+                <h3>UX designer and educational psychology, music, & art fan. Keeps up with her dog's Instagram fans @dgtrwatson.</h3>
+                <a href="/">iure beatae dolorum? </a>
+            </el-inline>
+            <ul>
+                {% for post in posts %}
+                    <li>
+                        <article class="card-article">
+                            <h2>
+                                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                            </h2>
+                            <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+                            {% excerpt post %}
+                            <a href="{{ post.url | url }}">Read more</a>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+        </el-column>
+    </el-grid>
+</el-section>
+
+

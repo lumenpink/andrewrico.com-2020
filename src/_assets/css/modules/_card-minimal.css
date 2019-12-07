@@ -1,0 +1,83 @@
+ .card-minimal {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     font-weight: 600;
+     padding-bottom: 1rem;
+     border-bottom: 6px solid #000;
+     transition: transform ease 0.6s;
+ }
+
+ .card-minimal:hover {
+    border-image: linear-gradient(to right, var(--color-primary) 0%, var(--color-tertiary) 100%);
+    border-image-slice: 1;
+    border-width: 6px;
+    transition: transform ease 0.6s;
+    transform: translateY(-0.56rem);
+
+ }
+
+ .card-minimal h3 {
+     text-transform: capitalize;
+     font-weight: 800;
+     font-size: 1.6rem;
+     font-family: 'Coda Caption', sans-serif;
+     color: var(--color-black);
+     text-align: center;
+ }
+
+ .card-minimal>ul {
+     display: flex;
+     justify-content: space-around;
+     font-size: 0.9rem;
+     padding: 0 1rem;
+     margin-top: 1rem;
+ }
+
+ .card-minimal svg {
+     width: 24px;
+     height: 24px;
+     fill: var(--color-black);
+ }
+
+ .card-minimal a {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     color: #5b5b5b;
+     text-decoration: none;
+     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+
+ }
+
+ .card-minimal a:hover {
+     color: var(--color-tertiary);
+     transform: translateY(-0.25rem);
+ }
+
+ .card-minimal a:hover svg {
+     fill: var(--color-tertiary);
+ }
+
+ .card-tags {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-tags span {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 0 0.5rem;
+    margin: 0.5rem;
+}
+
+.card-tags span:hover {
+    color: var(--color-primary);
+    outline:0.5px solid #565656;
+    background-image: linear-gradient(to right, var(--color-quaternary) 0%, var(--color-tertiary) 100%);
+}

@@ -1,0 +1,48 @@
+---
+title: "Contact"
+layout: "/layouts/layout-contact.njk"
+stylesheet: "/_assets/css/stylesheet.css"
+fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&display=swap"
+---
+<el-section padding-gap=6>
+    <el-grid auto-fit="columns" columns="2" gap="3">
+
+        <el-inline attr="row"><h2>Get In Touch</h2></el-inline>
+
+        <el-inline>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </el-inline>
+
+        <el-inline>
+            <div class="contactPageIcons">
+                <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+                    <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+                </a>
+                <a href="https://github.com/Andrewrico" target="_blank">
+                    <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+                </a>
+                <a href="/contact">
+                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                </a>
+            </div>
+            <h4>Send me a message</h4>
+
+            <form id="andrewrico-SendMessageForm-contactPage" class="netliform" name="FormSendMessage-contact-Page" method="POST" data-netlify="true">
+                <label for="name">name</label>
+                <input type="text" name="name" placeholder="Name" aria-label="name" />
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="Email" aria-label="email" />
+                <label for="phone">phone</label>
+                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                <label for="message">message</label>
+                <textarea name="message" rows="6" placeholder="In a few words, tell me about your inquiry" aria-label="message"></textarea><br><br>
+                <el-button>
+                    <button type="submit" slot="button" extended="button" theme="custom">
+                        Send Message
+                    </button>
+                </el-button>
+            </form>
+
+        </el-inline>
+    </el-grid>
+</el-section>
