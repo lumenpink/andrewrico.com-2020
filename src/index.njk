@@ -3,9 +3,29 @@ title: "Home"
 layout: "layouts/layout-home.njk"
 stylesheet: "/_assets/css/stylesheet.css"
 fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
-tags: ['skill']
 ---
 
+
+<el-section padding-gap=10>
+    <el-grid auto-fit="columns" columns="3" gap="3">
+        <el-column attr="row">
+            <h2>Skills</h2>
+        </el-column>
+        {%- for skill in collections.skill -%}
+            <article class="card-progress {{skill.data.skills}}">
+                <label for="file">
+                    <h4> {{ skill.data.title }} </h4>
+                    <svg> <use href={{skill.data.svgPath}}></use> </svg>
+                </label>
+                <progress id="file" class="progress" value="{{skill.data.percentage}}" max="100"></progress> 
+                <p> {{skill.data.description}} </p>
+            </article>
+        {%- endfor -%}
+    </el-grid>
+</el-section>
+
+
+{# 
 <el-section id="skills" padding-gap=6>
     <el-grid auto-fit="columns" columns="3" gap="3">
         <el-column attr="row">
@@ -112,7 +132,7 @@ tags: ['skill']
         </article>
     </el-grid>
 </el-section>
-
+ #}
 
 
 
