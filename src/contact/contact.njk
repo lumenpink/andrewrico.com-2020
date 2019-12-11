@@ -4,7 +4,7 @@ layout: "/layouts/layout-contact.njk"
 stylesheet: "/_assets/css/stylesheet.css"
 fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&display=swap"
 ---
-<el-section padding-gap=6>
+<el-section id="contact-page" padding-gap=6>
     <el-grid auto-fit="columns" columns="2" gap="3">
 
         <el-inline attr="row"><h2>Get In Touch</h2></el-inline>
@@ -14,20 +14,27 @@ fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro
         </el-inline>
 
         <el-inline>
-            <div class="contactPageIcons">
+            <div class="contactIcons">
                 <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
-                    <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+                    <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
                 </a>
                 <a href="https://github.com/Andrewrico" target="_blank">
-                    <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+                    <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
                 </a>
                 <a href="/contact">
-                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
                 </a>
             </div>
-            <h4>Send me a message</h4>
-
-            <form id="andrewrico-SendMessageForm-contactPage" class="netliform" name="FormSendMessage-contact-Page" method="POST" data-netlify="true">
+            <h4 style="color:var(--color-quaternary); font-size:1.6rem;">
+                Send me a message
+                <svg width="24" height="24" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#rocket"></use></svg>
+            </h4>
+            <form 
+            id="andrewrico-SendMessageForm-contactPage"
+            class="form-skin" 
+            name="FormSendMessage-contact-Page" 
+            method="POST" 
+            data-netlify="true">
                 <label for="name">name</label>
                 <input type="text" name="name" placeholder="Name" aria-label="name" />
                 <label for="email">email</label>
@@ -35,7 +42,7 @@ fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro
                 <label for="phone">phone</label>
                 <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
                 <label for="message">message</label>
-                <textarea name="message" rows="6" placeholder="In a few words, tell me about your inquiry" aria-label="message"></textarea><br><br>
+                <textarea name="message" rows="1" placeholder="In a few words, tell me about your inquiry" aria-label="message"></textarea><br><br>
                 <el-button>
                     <button type="submit" slot="button" extended="button" theme="custom">
                         Send Message

@@ -1,4 +1,7 @@
 {% include "partials/partial-head.njk" %}
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
     <body>
         {% include "navigations/navigation-project.njk" %}
         <header>
@@ -7,7 +10,7 @@
                     <el-column attr="row" text-align="center">
                         <el-inline center=auto>   
                             <h1>
-                                Project
+                               {{ title }}
                             </h1>
                         </el-inline>  
                     </el-column>

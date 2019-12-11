@@ -1,85 +1,111 @@
 {% include "partials/partial-head.njk" %}
-    <body>
-        {% include "navigations/navigation-home.njk" %}
-        <header>
-            <el-section id="about" height="100" display="flex" flex-align="center" background="var(--color-gradient)" color="var(--color-white)">
-                <el-grid column=1>
-                    <el-column attr="row">
-                        <div class="card-online-bio"> 
-                            <figure class="card-intro"> 
-                                <h2> Hello, I'am Andrew Rico </h2>
-                                <svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg> 
-                                <p> <svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
-                                <h3> WEB DEVELOPER <br> UI/UX ENGINEER </h3>
-                            </figure> 
-                            <span class="card-online-terminal">
-                                <span id="typying" color=var(--color-primary)>
-                                    messages...
-                                </span> 
+
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
+
+<body>
+    {% include "navigations/navigation-home.njk" %}
+    <header>
+        <el-section id="about" height="100" display="flex" flex-align="center" background="var(--color-gradient)"
+            color="var(--color-white)">
+            <el-grid column=1>
+                <el-column attr="row">
+                    <div class="card-online-bio">
+                        <figure class="card-intro">
+                            <h2> Hello, I'am Andrew Rico </h2>
+                            <svg fill="white">
+                                <use href="_assets/media/svg/sprites.svg#github"></use>
+                            </svg>
+                            <p> <svg fill="white">
+                                    <use href="_assets/media/svg/sprites.svg#location"></use>
+                                </svg> USA FL, Fort Lauderdale</p>
+                            <h3> WEB DEVELOPER <br> UI/UX ENGINEER </h3>
+                        </figure>
+                        <span class="card-online-terminal"> 
+                             <span id="typying" color=var(--color-primary)>
+                                messages...
                             </span>
-                            <nav class="card-online-navigation">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.linkedin.com/in/andrewrico-/"> <svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a>
-                                        LinkedIn 
-                                    </li> |
-                                    <li>
-                                        <a href="https://github.com/Andrewrico"><svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg></a> 
-                                        Github
-                                    </li> |
-                                    <li>
-                                        <a href="/portfolio"><svg fill="white"><use href="_assets/media/svg/sprites.svg#lookInFolder"></use></svg></a>     
-                                        Porfolio
-                                    </li> |
-                                    <li>
-                                        <a href="/portfolio"><svg fill="white"><use href="_assets/media/svg/sprites.svg#fileInFolder"></use></svg></a>     
-                                        Blog
-                                    </li> |
-                                    <li> 
-                                        <a href="/portfolio"><svg fill="white"><use href="_assets/media/svg/sprites.svg#contact"></use></svg></a>     
-                                        Contacts
-                                    </li> 
-                                </ul>
-                             </nav>
-                            <el-button class="cubic">
-                                <a slot="button" extended="button" theme=custom href="#schedulePhoneCall">Schedule  a  phone</a>
-                            </el-button>
-                        </div>  
-                    </el-column>
-                </el-grid>
-                <div id="schedulePhoneCall" class="modal-window">
-                    <div class="modal-content">
-                        <a href="#about" title="Close Modal" class="backdrop-modal"></a>
-                        <form 
-                        id="andrewrico-schedulePhoneCall-homePage" 
-                        name="andrewrico-schedulePhoneCall-homePage" 
-                        class="netliform themeform"
-                        method="POST" 
-                        data-netlify="true">
-                        <p>Schedule a Phone Call</p>
-                            <label for="name">name</label>
-                            <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
-                            <label for="email">email</label>
-                            <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
-                            <label for="url">url</label>
-                            <input type="url" name="url"  placeholder="URL" aria-label="url" />
-                            <label for="message">message</label>
-                            <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules" aria-label="message"></textarea><br><br>
-                            <el-button>
-                                <button type="submit" slot="button" extended="button" theme="custom">
-                                    Submit
-                                </button>
-                            </el-button>
-                        </form>
+                       {#<div class="container">
+                            <p>Coding is <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+                        </div> #}
+                        </span>
+                        <nav class="card-online-navigation">
+                            <ul>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/andrewrico-/"> <svg fill="white">
+                                            <use href="_assets/media/svg/sprites.svg#linkedin"></use>
+                                        </svg></a>
+                                    LinkedIn
+                                </li> |
+                                <li>
+                                    <a href="https://github.com/Andrewrico"><svg fill="white">
+                                            <use href="_assets/media/svg/sprites.svg#github"></use>
+                                        </svg></a>
+                                    Github
+                                </li> |
+                                <li>
+                                    <a href="/portfolio"><svg fill="white">
+                                            <use href="_assets/media/svg/sprites.svg#lookInFolder"></use>
+                                        </svg></a>
+                                    Porfolio
+                                </li> |
+                                <li>
+                                    <a href="/blog"><svg fill="white">
+                                            <use href="_assets/media/svg/sprites.svg#fileInFolder"></use>
+                                        </svg></a>
+                                    Blog
+                                </li> |
+                                <li>
+                                    <a href="/contact"><svg fill="white">
+                                            <use href="_assets/media/svg/sprites.svg#contact"></use>
+                                        </svg></a>
+                                    Contacts
+                                </li>
+                            </ul>
+                        </nav>
+                        <el-button class="cubic">
+                            <a slot="button" extended="button" theme=custom href="#schedulePhoneCall">Schedule a
+                                phone</a>
+                        </el-button>
                     </div>
+                </el-column>
+            </el-grid>
+            <div id="schedulePhoneCall" class="modal-window">
+                <div class="modal-content">
+                    <a href="#about" title="Close Modal" class="backdrop-modal"></a>
+                    <form 
+                    id="andrewrico-schedulePhoneCall-homePage" 
+                    name="andrewrico-schedulePhoneCall-homePage"
+                    class="form-skin form-site" 
+                    method="POST" 
+                    data-netlify="true">
+                        <p>Schedule a Phone Call</p>
+                        <label for="name">name</label>
+                        <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                        <label for="email">email</label>
+                        <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                        <label for="url">url</label>
+                        <input type="url" name="url" placeholder="URL" aria-label="url" />
+                        <label for="message">message</label>
+                        <textarea name="message" rows="1" placeholder="Any Questions?"
+                            aria-label="message"></textarea><br><br>
+                        <el-button>
+                            <button type="submit" slot="button" extended="button" theme="custom">
+                                Submit
+                            </button>
+                        </el-button>
+                    </form>
                 </div>
-            </el-section>
-        </header>
-        <main> 
+            </div>
+        </el-section>
+    </header>
+    <main>
         {% block content %}
-            {{ content | safe }} 
+            {{ content | safe }}
         {% endblock content %}
-         </main>
-        {% include "partials/partial-footer.njk" %}
-    </body>
+    </main>
+    {% include "partials/partial-footer.njk" %}
+</body>
+
 </html>

@@ -1,0 +1,26 @@
+---
+layout: "/layouts/layout-post.njk"
+title: "Blog Post"
+stylesheet: "/_assets/css/stylesheet.css"
+css_module: "/_assets/css/modules/_page-post.css"
+fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|PT+Sans|Source+Code+Pro|Dancing+Script&display=swap"
+---
+<el-section id="blogpost-page" padding-gap=10>
+    <el-grid pixel-width="1024" auto-fit="columns" gap="1" template-columns="4fr 1fr">
+        <el-column>
+            <article>
+                <h1>{{ title }}</h1>
+                <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+                {% block content  %}
+                    {{ content | safe }}
+                {% endblock content %}
+            </article>
+        </el-column>
+        <el-column display="flex" flex-direction="column" align-items="center" justify-content="flex-start">
+            <aside>
+                <svg fill="black"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+                <p>andrew rico</p>
+            </aside>
+        </el-column>
+    </el-grid>
+</el-section>

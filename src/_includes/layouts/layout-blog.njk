@@ -1,6 +1,9 @@
 {% include "partials/partial-head.njk" %}
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
     <body>
-        {% include "navigations/navigation-blog.njk" %}
+        {% include "navigations/navigation-base.njk" %}
         <main> 
             {% block content  %}
                {{ content | safe }}

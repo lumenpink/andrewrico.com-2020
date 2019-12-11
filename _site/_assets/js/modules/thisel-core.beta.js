@@ -611,7 +611,6 @@ const elButtonCSS = `:host {
     top: 0;
     left: 0;
 	border-radius: 2px;
-	padding:1rem
     min-width: 150px;
     width: 100%;
     max-width: 300px;
@@ -852,7 +851,7 @@ customElements.define('el-button',
 				elButton.addEventListener('click', e => {
 					e = e.touches ? e.touches[0] : e;
 					const r = elButton.getBoundingClientRect(),
-						d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2;
+						d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 1;
 					elButton.style.cssText = `--s: 0; --o: 1;`;
 					elButton.offsetTop;
 					elButton.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${e.clientX - r.left}; --y:${e.clientY - r.top};`

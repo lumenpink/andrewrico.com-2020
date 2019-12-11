@@ -1,0 +1,19 @@
+---
+layout: "layouts/layout-project.njk"
+title: "Project"
+stylesheet: "/_assets/css/stylesheet.css"
+fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&display=swap"
+---
+<el-section id="project-page" padding-gap=10>
+    <el-grid auto-fit="columns" gap="3" columns="3">
+        <el-column>
+            <article>
+                <h1>{{ title }}</h1>
+                <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
+                {% block content  %}
+                    {{ content | safe }}
+                {% endblock content %}
+            </article>
+        </el-column>
+    </el-grid>
+</el-section>

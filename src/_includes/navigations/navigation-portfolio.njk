@@ -2,6 +2,25 @@
     {% include "navigations/navigation-drawer.njk" %}
     <ul slot="navbar-menu" class="menu-navbar">
         <li>
+            <el-button>
+                <a slot="button" extended="button"  href="/blog"> BLOG </a>
+            </el-button>
+        </li>
+    </ul>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
+            <li>
+                <a href="/blog"> BLOG </a>
+            </li>
+        </ul>
+    </el-dropdown>
+</el-drawer>
+
+
+{#<el-drawer>
+    {% include "navigations/navigation-drawer.njk" %}
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
             <a href="#Javascript">
                 Javascript
             </a>
@@ -17,12 +36,12 @@
             </a>
         </li>
         <li>
-            <a href="#UI-UX">
+            <a href="#UIUX">
                 UI/UX
             </a>
         </li>
         <li>
-            <a href="#HTML-CSS">
+            <a href="#HTMLCSS">
                 HTML/CSS
             </a>
         </li>
@@ -45,15 +64,15 @@
                 </a>
             </li>
             <li>
-                <a href="#UI-UX">
+                <a href="#UIUX">
                     UI/UX
                 </a>
             </li>
             <li>
-                <a href="#HTML-CSS">
+                <a href="#HTMLCSS">
                     HTML/CSS
                 </a>
             </li>
         </ul>
     </el-dropdown>
-</el-drawer>
+</el-drawer> #}

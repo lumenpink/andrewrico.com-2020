@@ -1,4 +1,7 @@
 {% include "partials/partial-head.njk" %}
+</head>
+
+<el-loading background=var(--color-gradient)></el-loading>
     <body>
         {% include "navigations/navigation-contact.njk" %}
         <header>
@@ -15,11 +18,9 @@
             </el-section>
         </header>
         <main> 
-            
             {% block content  %}
                {{ content | safe }}
             {% endblock content %}
-
          </main>
         {% include "partials/partial-footer.njk" %}
     </body>
