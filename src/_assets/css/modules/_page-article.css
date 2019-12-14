@@ -1,0 +1,139 @@
+#article-page {
+    font-family: 'PT Sans', sans-serif;
+}
+#article-page el-grid el-column:nth-child(1) {
+    display: block;
+    order: 2;
+}
+
+#article-page el-grid el-column:nth-child(2) {
+    display: block;
+    order: 1;
+}
+
+@media(min-width:1024px) {
+    #article-page el-grid el-column:nth-child(1) {
+        order: 1;
+    }
+
+    #article-page el-grid el-column:nth-child(2) {
+        order: 2;
+    }
+}
+
+#article-sidebar {
+    display: flex;
+    min-height: 200px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.article-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-avatar {
+    max-width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.author-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-meta p {
+    margin: 0;
+}
+
+.author-meta p:nth-child(2) {
+    color:#8f8f8f;
+}
+
+.article-keywords {
+    display: flex;
+}
+
+.article-keywords b {
+    display: inline-flex;
+    background:#262626;
+    color: var(--color-white);
+    padding: 0.125rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.article-keywords b:hover {
+    color: var(--color-primary);
+    background-image: linear-gradient(to right, var(--color-quaternary) 0%, var(--color-tertiary) 100%);
+}
+
+#article h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.6rem;
+    font-weight: 800;
+    font-family: Helvetica, sans-serif;
+    color: #000;
+}
+
+#article h3 {
+    font-size: 2.6rem;
+    font-weight: 200;
+    font-family: Helvetica, sans-serif;
+    color: #000;
+}
+
+#article p {
+    font-size: 1.6rem;
+    font-weight: 200;
+    font-family: 'PT Sans', sans-serif;
+    color: #000;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+}
+
+#article a {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'PT Sans', sans-serif;
+    color: blue;
+}
+
+#article .coding-section {
+    background: #262626;
+    color: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+}
+
+#article .preface {
+    border-radius: 4px;
+    line-height: 2.3 !important;
+    font-size: 1.2rem;
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+    letter-spacing: 1.6px;
+    word-spacing: 1.6px;
+    padding: 4rem;
+    margin-bottom: 10rem;
+    color: #000000;
+    background: #ffffffba;
+    border-left: 6px solid #000000;
+    box-shadow: var(--color-shadow);
+}
+
+#article .preface::first-letter {
+    font-size: 1.6rem;
+    font-weight: 600;
+}

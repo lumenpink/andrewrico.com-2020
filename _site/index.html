@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
+  <meta property="og:title" content="European Travel Destinations">
+  <meta property="og:description" content="description">
+  <meta property="og:image" content="imageUrl">
+  <meta property="og:url" content="url">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta name="twitter:site" content="@website-username">
+  <title>Andrew Rico | Home</title>
+  <meta name="description" content="This is the Home page">
+  <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
-
-
-
+  <link href=https://fonts.googleapis.com/css?family=Roboto|PT+Sans|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
 </head>
 
-<el-loading background=var(--color-gradient)></el-loading>
+<el-loading background="var(--color-gradient)"></el-loading>
+
+
 
 <body>
     <el-drawer>
@@ -137,38 +143,63 @@
 		</ul>
 	</el-dropdown>
 </el-drawer>
-    <header>
-        <el-section id="about" height="100" display="flex" flex-align="center" background="var(--color-gradient)"
-            color="var(--color-white)">
-            <el-grid column=1>
-                <el-column attr="row">
-                    <div class="card-online-bio">
+    <header> 
+        <el-section id="about" 
+        height="100" 
+        display="flex" 
+        flex-align="center" 
+        background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)" 
+        color="var(--color-white)">
+            <el-grid column="1">
+                <el-column  id="header" attr="row">
+
+                    <el-inlinev class="card-online-bio"
+                    background-image="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)" >
                         <figure class="card-intro">
-                            <h2> Hello, I'am Andrew Rico </h2>
+                            <h1> Hello, I'am Andrew Rico </h1>
                             <svg fill="white">
                                 <use href="_assets/media/svg/sprites.svg#github"></use>
                             </svg>
-                            <p> <svg fill="white">
+                            <p> 
+                                <svg fill="white">
                                     <use href="_assets/media/svg/sprites.svg#location"></use>
-                                </svg> USA FL, Fort Lauderdale</p>
+                                </svg> USA FL, Fort Lauderdale
+                            </p>
                             <h3> WEB DEVELOPER <br> UI/UX ENGINEER </h3>
                         </figure>
-                        <span class="card-online-terminal"> 
-                             <span id="typying" color=var(--color-primary)>
-                                messages...
-                            </span>
-                       
-                        </span>
+                        <div class="card-online-terminal"> 
+                            <p class="typewrite" data-period="2000" data-type='[ 
+                                    " I like to build things – I love knowledge ", 
+                                    " and I strongly believe technology can ",
+                                    " and should enrich every single life ", 
+                                    " this universe has to offer. ", 
+                                    " When I’m not working on client projects ",
+                                    " I’m either learning about new technologies ",
+                                    " or finding new ways to bring more value ",
+                                    " to my clients at an affordable price. ",
+                                    " I`ve always been drawn to the overlap ",
+                                    " between design and development. ",
+                                    " I enjoy each aspect, and love ", 
+                                    " building sites & web applications ",
+                                    " from start to finish, for clients ",
+                                    " all over the world. ", 
+                                    " I`m available for remote work - ",
+                                    " if you would like to build something, ",
+                                    " let`s work together? "
+                                ]'>
+                                <span class="caret"></span>
+                            </p>
+                        </div>
                         <nav class="card-online-navigation">
                             <ul>
                                 <li>
-                                    <a href="https://www.linkedin.com/in/andrewrico-/"> <svg fill="white">
+                                    <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank"> <svg fill="white">
                                             <use href="_assets/media/svg/sprites.svg#linkedin"></use>
                                         </svg></a>
                                     LinkedIn
                                 </li> |
                                 <li>
-                                    <a href="https://github.com/Andrewrico"><svg fill="white">
+                                    <a href="https://github.com/Andrewrico" target="_blank"> <svg fill="white">
                                             <use href="_assets/media/svg/sprites.svg#github"></use>
                                         </svg></a>
                                     Github
@@ -194,10 +225,10 @@
                             </ul>
                         </nav>
                         <el-button class="cubic">
-                            <a slot="button" extended="button" theme=custom href="#schedulePhoneCall">Schedule a
-                                phone</a>
+                            <a slot="button" extended="button" theme="custom" href="#schedulePhoneCall">Schedule a phone</a>
                         </el-button>
-                    </div>
+                    </el-inline>
+                    
                 </el-column>
             </el-grid>
             <div id="schedulePhoneCall" class="modal-window">
@@ -211,15 +242,24 @@
                     data-netlify="true">
                         <p>Schedule a Phone Call</p>
                         <label for="name">name</label>
-                        <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                        <input type="text" name="name" placeholder="Name" aria-label="name" />
                         <label for="email">email</label>
-                        <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                        <input type="text" name="email" placeholder="E-mail" aria-label="email" />
+                        <label for="phone">phone</label>
+                        <input type="text" name="email" placeholder="Phone" aria-label="phone" />
                         <label for="url">url</label>
                         <input type="url" name="url" placeholder="URL" aria-label="url" />
+
+<el-inline attr="columns">
+                        <label for="date">date</label>
+                        <input type="date" name="date" placeholder="Date" aria-label="date" />
+                        <label for="time">time</label>
+                        <input type="time" name="time" placeholder="Time" aria-label="time" />
+</el-inline>
+
                         <label for="message">message</label>
-                        <textarea name="message" rows="1" placeholder="Any Questions?"
-                            aria-label="message"></textarea><br><br>
-                        <el-button>
+                        <textarea name="message" rows="1" placeholder="Any Questions?"  aria-label="message"></textarea><br><br>
+                        <el-button class="cubic">
                             <button type="submit" slot="button" extended="button" theme="custom">
                                 Submit
                             </button>
@@ -243,7 +283,7 @@
                     </svg>
             </label>
             <progress name="skill" class="progress" value="100" max="100"></progress>
-            <p> description </p>
+            <p> CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. </p>
         </article><article class="card-progress html-skills">
             <label for="skill">
                 <h4> HTML 100% </h4>
@@ -252,7 +292,7 @@
                     </svg>
             </label>
             <progress name="skill" class="progress" value="100" max="100"></progress>
-            <p> description </p>
+            <p> With HTML, authors describe the structure of pages using markup. The elements of the language label pieces of content such as “paragraph,” “list,” “table,” and so on. </p>
         </article><article class="card-progress js-skills">
             <label for="skill">
                 <h4> Javascript 85% </h4>
@@ -261,7 +301,7 @@
                     </svg>
             </label>
             <progress name="skill" class="progress" value="85" max="100"></progress>
-            <p> description </p>
+            <p> JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is a powerful scripting language, widely used for controlling web page behavior. </p>
         </article><article class="card-progress php-skills">
             <label for="skill">
                 <h4> PHP 45% </h4>
@@ -270,7 +310,7 @@
                     </svg>
             </label>
             <progress name="skill" class="progress" value="45" max="100"></progress>
-            <p> description </p>
+            <p> PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. </p>
         </article><article class="card-progress uiux-skills">
             <label for="skill">
                 <h4> UI/UX 85% </h4>
@@ -380,7 +420,7 @@
                     <b>Started:</b>Dec/14/2019<br>
                     <b>Ended:</b>Jan/01/2020
                 </p>
-                <el-button>
+                <el-button class="cubic">
                     <a slot="button" extended="button" theme="primary"
                         href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
                 </el-button>
@@ -403,8 +443,8 @@
                 </ol>
             </div>
             <div class="card-footer">
-                <el-button>
-                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit </a>
                 </el-button>
             </div>
         </article><article class="card-action">
@@ -425,8 +465,8 @@
                 </ol>
             </div>
             <div class="card-footer">
-                <el-button>
-                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit </a>
                 </el-button>
             </div>
         </article><article class="card-action">
@@ -447,8 +487,8 @@
                 </ol>
             </div>
             <div class="card-footer">
-                <el-button>
-                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit </a>
                 </el-button>
             </div>
         </article></el-grid>
@@ -465,20 +505,20 @@
                 <p>Submit a Code Challenge</p>
                 <label for="selection">You are a:</label>
                 <select name="selection">
-                    <option>Select</option>
+                    <option>I'am a</option>
                     <option>Recruiter</option>
                     <option>Employer </option>
                 </select>
                 <label for="name">name</label>
-                <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                <input type="text" name="name" placeholder="Name" aria-label="name" />
                 <label for="email">email</label>
-                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                <input type="text" name="email" placeholder="E-mail" aria-label="email" />
                 <label for="url">url</label>
                 <input type="url" name="url" placeholder="URL" aria-label="url" />
                 <label for="message">message</label>
-                <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules"
+                <textarea name="message" rows="1" placeholder="In a few words, tell me more about the rules"
                     aria-label="message"></textarea><br><br>
-                <el-button>
+                <el-button class="cubic">
                     <button type="submit" slot="button" extended="button" theme="custom">
                         Submit
                     </button>

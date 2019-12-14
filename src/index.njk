@@ -1,8 +1,7 @@
 ---
 title: "Home"
+description: "This is the Home page"
 layout: "layouts/layout-home.njk"
-stylesheet: "/_assets/css/stylesheet.css"
-fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
 ---
 <el-section id="skills" padding-top="10" padding-bottom="6">
     <el-grid auto-fit="columns" columns="3" gap="3">
@@ -76,7 +75,7 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                     <b>Started:</b>{{ challenges.data.started }}<br>
                     <b>Ended:</b>{{ challenges.data.ended }}
                 </p>
-                <el-button>
+                <el-button class="cubic">
                     <a slot="button" extended="button" theme="primary"
                         href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
                 </el-button>
@@ -102,8 +101,8 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 </ol>
             </div>
             <div class="card-footer">
-                <el-button>
-                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit Challenge </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit </a>
                 </el-button>
             </div>
         </article> 
@@ -122,20 +121,20 @@ fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Captio
                 <p>Submit a Code Challenge</p>
                 <label for="selection">You are a:</label>
                 <select name="selection">
-                    <option>Select</option>
+                    <option>I'am a</option>
                     <option>Recruiter</option>
                     <option>Employer </option>
                 </select>
                 <label for="name">name</label>
-                <input type="text" name="name" placeholder="Name Or Company Name" aria-label="name" />
+                <input type="text" name="name" placeholder="Name" aria-label="name" />
                 <label for="email">email</label>
-                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
+                <input type="text" name="email" placeholder="E-mail" aria-label="email" />
                 <label for="url">url</label>
                 <input type="url" name="url" placeholder="URL" aria-label="url" />
                 <label for="message">message</label>
-                <textarea name="message" rows="4" placeholder="In a few words, tell me more about the rules"
+                <textarea name="message" rows="1" placeholder="In a few words, tell me more about the rules"
                     aria-label="message"></textarea><br><br>
-                <el-button>
+                <el-button class="cubic">
                     <button type="submit" slot="button" extended="button" theme="custom">
                         Submit
                     </button>

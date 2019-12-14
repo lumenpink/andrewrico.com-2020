@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
+  <meta property="og:title" content="European Travel Destinations">
+  <meta property="og:description" content="description">
+  <meta property="og:image" content="imageUrl">
+  <meta property="og:url" content="url">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta name="twitter:site" content="@website-username">
+  <title>Andrew Rico | Blog</title>
+  <meta name="description" content="This is the Blog page">
+  <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
-
-
+  <link href=https://fonts.googleapis.com/css?family=Roboto|PT+Sans|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
 </head>
 
-<el-loading background=var(--color-gradient)></el-loading>
+<el-loading background="var(--color-gradient)"></el-loading>
+
+
     <body>
         <el-drawer>
     <h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
@@ -79,13 +86,24 @@
 
 </div>
 </el-drawer>
+        <header>
+            <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-1.jpg)">
+                <el-grid columns="1">
+                    <el-inline attr="row" center="auto">  
+                        <h1>
+                            Blog
+                        </h1>
+                    </el-inline>  
+                </el-grid>
+            </el-section>
+        </header>
         <main> 
             
-               <el-section id="blog-page" class="blog-article-entries" padding-gap=10 background="#fff">
+               <el-section id="blog-page" class="blog-article-entries" padding-gap="10">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
             <el-inline id="blog-bio">
-                <img src="/_assets/media/images/placeholder.png" alt="placeholder">
+                <img class="author-avatar" src="/_assets/media/images/placeholder.png" alt="Andrew Rico Avatar">
                 <h1>Andrew Rico</h1>
                 <h3>UX designer and educational psychology, music, & art fan. Keeps up with her dog's Instagram fans @dgtrwatson.</h3>
                 <a href="/">iure beatae dolorum? </a>
@@ -94,34 +112,34 @@
                 
                     <li>
                         <article class="card-article">
-                            <h2>
-                                <a href="/post/2020/Web-develoment-trends-for-2020/">Web develoment trends for 2020</a>
-                            </h2>
-                            <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time>
-                            <h1>Web develoment trends for 2020</h1>
-                            <a href="/post/2020/Web-develoment-trends-for-2020/">Read more</a>
+                            <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time><br><br>
+                            <h2> Build a web component </h2>
+                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+                            <el-button>
+                                <a slot="button" extended="button" theme="quaternary" href="/article/2020/Build-a-web-component/">Read more</a>
+                            </el-button>
                         </article>
                     </li>
                 
                     <li>
                         <article class="card-article">
-                            <h2>
-                                <a href="/post/2020/How-to-build-a-dropdown-menu/">How to build a dropdown menu</a>
-                            </h2>
-                            <time datetime="2019-12-02T00:00:00.000Z">December 1, 2019</time>
+                            <time datetime="2019-12-02T00:00:00.000Z">December 1, 2019</time><br><br>
+                            <h2> How to build a dropdown menu </h2>
                             <p>How to build a dropdown menu</p>
-                            <a href="/post/2020/How-to-build-a-dropdown-menu/">Read more</a>
+                            <el-button>
+                                <a slot="button" extended="button" theme="quaternary" href="/article/2020/How-to-build-a-dropdown-menu/">Read more</a>
+                            </el-button>
                         </article>
                     </li>
                 
                     <li>
                         <article class="card-article">
-                            <h2>
-                                <a href="/post/2020/Build-a-web-component/">Build a web component</a>
-                            </h2>
-                            <time datetime="2019-12-01T00:00:00.000Z">November 30, 2019</time>
-                            <h1>Build a web component</h1>
-                            <a href="/post/2020/Build-a-web-component/">Read more</a>
+                            <time datetime="2019-12-01T00:00:00.000Z">November 30, 2019</time><br><br>
+                            <h2> Web develoment trends for 2020 </h2>
+                            <p>Web develoment trends for 2020</p>
+                            <el-button>
+                                <a slot="button" extended="button" theme="quaternary" href="/article/2020/Web-develoment-trends-for-2020/">Read more</a>
+                            </el-button>
                         </article>
                     </li>
                 

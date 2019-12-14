@@ -1,8 +1,8 @@
 ---
 title: "Contact"
+description: "This is the Contact page"
 layout: "/layouts/layout-contact.njk"
-stylesheet: "/_assets/css/stylesheet.css"
-fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&display=swap"
+pathTo_banner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-5.jpg)"
 ---
 <el-section id="contact-page" padding-gap=6>
     <el-grid auto-fit="columns" columns="2" gap="3">
@@ -43,13 +43,12 @@ fonts: "https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro
                 <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
                 <label for="message">message</label>
                 <textarea name="message" rows="1" placeholder="In a few words, tell me about your inquiry" aria-label="message"></textarea><br><br>
-                <el-button>
+                <el-button class="cubic">
                     <button type="submit" slot="button" extended="button" theme="custom">
                         Send Message
                     </button>
                 </el-button>
             </form>
-
         </el-inline>
     </el-grid>
 </el-section>

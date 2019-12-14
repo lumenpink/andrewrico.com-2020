@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
+  <meta property="og:title" content="European Travel Destinations">
+  <meta property="og:description" content="description">
+  <meta property="og:image" content="imageUrl">
+  <meta property="og:url" content="url">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta name="twitter:site" content="@website-username">
+  <title>Andrew Rico | Portfolio</title>
+  <meta name="description" content="This is the Portfolio page">
+  <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
-
-
+  <link href=https://fonts.googleapis.com/css?family=Roboto|PT+Sans|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
 </head>
+
+<el-loading background="var(--color-gradient)"></el-loading>
+
+
     <body>
-        <el-loading background=var(--color-gradient)></el-loading>
         <el-drawer>
     <h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
 <div class="drawer-menu" slot="drawer-menu">
@@ -79,7 +87,7 @@
 </div>
     <ul slot="navbar-menu" class="menu-navbar">
         <li>
-            <el-button>
+            <el-button class="cubic">
                 <a slot="button" extended="button"  href="/blog"> BLOG </a>
             </el-button>
         </li>
@@ -96,15 +104,13 @@
 
 
         <header>
-            <el-section id="about" padding-gap="10" background="#262626" color=var(--color-primary)>
-                <el-grid columns=1>
-                    <el-column attr="row" text-align="center">
-                        <el-inline center=auto>  
-                             <h1>
-                                PORTFOLIO
-                            </h1>
-                        </el-inline>  
-                    </el-column>
+            <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-2.jpg)">
+                <el-grid columns="1">
+                    <el-inline attr="row" center="auto">  
+                        <h1>
+                            Portfolio
+                        </h1>
+                    </el-inline>  
                 </el-grid>
             </el-section>
         </header>
@@ -114,79 +120,113 @@
         <el-column attr="row">
             <h2>Recent Projects</h2>
         </el-column>
+
         
             <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="">
+                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
+                <h3>Cryptopandore</h3>
+                <h4 class="card-tags">
+                    <span>Cryptocurrency</span>
+                    <span>Info</span>
+                </h4>
+                <ul>
+                    <li>
+                        <a href="https://google.com/">
+                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                        </a> live
+                    </li>
+                    <li>
+                        <a href="https://github.com/">
+                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                        </a> Code
+                    </li>
+                    <li>
+                        <a href="/projects/javascript/cryptopandore/">
+                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
+                        </a> Project
+                    </li>
+                </ul>
+            </article>
+        
+            <article class="card-minimal">
+                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
+                <h3>Design and concepts</h3>
+                <h4 class="card-tags">
+                    <span>Interior Design</span>
+                    <span>Ecommerce</span>
+                </h4>
+                <ul>
+                    <li>
+                        <a href="https://google.com/">
+                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                        </a> live
+                    </li>
+                    <li>
+                        <a href="https://github.com/">
+                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                        </a> Code
+                    </li>
+                    <li>
+                        <a href="/projects/wordpress/design-and-concepts/">
+                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
+                        </a> Project
+                    </li>
+                </ul>
+            </article>
+        
+            <article class="card-minimal">
+                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
                 <h3>Mandarin Village</h3>
-                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <h4 class="card-tags">
+                    <span>Restaurant</span>
+                    <span>Ecommerce</span>
+                </h4>
                 <ul>
                     <li>
                         <a href="https://google.com/">
                             <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a>live
+                        </a> live
                     </li>
                     <li>
-                        <a href="https://google.com/">
+                        <a href="https://github.com/">
                             <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a>Code
+                        </a> Code
                     </li>
                     <li>
-                        <a href="https://google.com/">
+                        <a href="/projects/wordpress/mandarin-village/">
                             <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a>Details
+                        </a> Project
                     </li>
                 </ul>
-                <a href="/projects/wordpress/mandarin-village/">Mandarin Village</a>
             </article>
         
             <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="">
-                <h3>Design &amp; concepts</h3>
-                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
-                <ul>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a>live
-                    </li>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a>Code
-                    </li>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a>Details
-                    </li>
-                </ul>
-                <a href="/projects/wordpress/design-and-concepts/">Design &amp; concepts</a>
-            </article>
-        
-            <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="">
+                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
                 <h3>Churchill Exotics</h3>
-                <h4 class="card-tags"><span>Car Dealership</span> <span>Ecommerce</span></h4>
+                <h4 class="card-tags">
+                    <span>Car Dealership</span>
+                    <span>Ecommerce</span>
+                </h4>
                 <ul>
                     <li>
                         <a href="https://google.com/">
                             <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a>live
+                        </a> live
                     </li>
                     <li>
-                        <a href="https://google.com/">
+                        <a href="https://github.com/">
                             <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a>Code
+                        </a> Code
                     </li>
                     <li>
-                        <a href="https://google.com/">
+                        <a href="/projects/wordpress/churchill-exotics/">
                             <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a>Details
+                        </a> Project
                     </li>
                 </ul>
-                <a href="/projects/wordpress/churchill-exotics/">Churchill Exotics</a>
             </article>
         
+
     </el-grid>
 </el-section>
         </main>

@@ -3,11 +3,24 @@
     text-decoration: none;
   }
 
-  #contact-page a:hover {
-    opacity: 0.7;
+  #contact-page a:hover svg {
+    fill:var(--color-primary);
+    box-shadow:var(--color-shadow);
+    background: var(--color-quaternary);
+    border-radius: 50%;
+    transition:   0.1s;
+
   }
+
+  #contact-page a:active svg {
+    transition:  0.3s;
+    transform: translateY(0.3rem);
+
+  }
+
 
   .contactIcons svg {
     width: 56px;
     height: 56px;
+    padding: 0.5rem;
   }

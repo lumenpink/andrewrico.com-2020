@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
+  <meta property="og:title" content="European Travel Destinations">
+  <meta property="og:description" content="description">
+  <meta property="og:image" content="imageUrl">
+  <meta property="og:url" content="url">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta name="twitter:site" content="@website-username">
+  <title>Andrew Rico | Contact</title>
+  <meta name="description" content="This is the Contact page">
+  <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Coda+Caption:800|Source+Code+Pro|Dancing+Script&amp;display=swap rel="stylesheet">
-
-
+  <link href=https://fonts.googleapis.com/css?family=Roboto|PT+Sans|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
 </head>
 
-<el-loading background=var(--color-gradient)></el-loading>
+<el-loading background="var(--color-gradient)"></el-loading>
+
+
     <body>
         <el-drawer>
     <h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
@@ -80,12 +87,12 @@
 </div>
     <ul slot="navbar-menu" class="menu-navbar">
         <li>
-            <el-button>
+            <el-button class="cubic">
                 <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
             </el-button>
         </li>
         <li>
-            <el-button>
+            <el-button class="cubic">
                 <a slot="button" extended="button" href="/blog"> BLOG </a>
             </el-button>
         </li>
@@ -102,15 +109,13 @@
     </el-dropdown>
 </el-drawer>
         <header>
-            <el-section id="about" padding-gap="10" background="#262626" color=var(--color-primary)>
-                <el-grid columns=1>
-                    <el-column attr="row" text-align="center">
-                        <el-inline center=auto>  
-                             <h1>
-                                CONTACT
-                            </h1>
-                        </el-inline>  
-                    </el-column>
+            <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-5.jpg)">
+                <el-grid columns="1">
+                    <el-inline attr="row" center="auto">  
+                        <h1>
+                            Contact
+                        </h1>
+                    </el-inline>  
                 </el-grid>
             </el-section>
         </header>
@@ -155,18 +160,17 @@
                 <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
                 <label for="message">message</label>
                 <textarea name="message" rows="1" placeholder="In a few words, tell me about your inquiry" aria-label="message"></textarea><br><br>
-                <el-button>
+                <el-button class="cubic">
                     <button type="submit" slot="button" extended="button" theme="custom">
                         Send Message
                     </button>
                 </el-button>
             </form>
-
         </el-inline>
     </el-grid>
 </el-section>
             
-         </main>
+        </main>
         <nav class="naviton">
     <ul>
         <li>

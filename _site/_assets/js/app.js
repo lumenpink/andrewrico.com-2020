@@ -1,183 +1,127 @@
 /*
-Index: Portfolio 11ty App | 2019
+index: Portfolio 11ty App | 2019 | https://Andrewrico.com/
 ------------------------------------------------
-Typing
+- Typing
+- 
+- 
 */
-
 /* ---------------------------------------------
-name: name
-Function: Function 
-Location: [ Location ]
-/*--------------------------------------------- */
-const petsData = [{
-        name: "Purrsloud",
-        species: "Cat",
-        favFoods: ["wet food", "dry food", "<strong>any</strong> food"],
-        birthYear: 2016,
-        photo: "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
-    },
-    {
-        name: "Barksalot",
-        species: "Dog",
-        birthYear: 2008,
-        photo: "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
-    },
-    {
-        name: "Meowsalot",
-        species: "Cat",
-        favFoods: ["tuna", "catnip", "celery"],
-        birthYear: 2012,
-        photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg"
-    }
-];
-
-function age(birthYear) {
-    let calculatedAge = new Date().getFullYear() - birthYear;
-    if (calculatedAge == 1) {
-        return "1 year old";
-    } else if (calculatedAge == 0) {
-        return "Baby";
-    } else {
-        return `${calculatedAge} years old`;
-    }
-}
-
-
-
-function foods(foods) {
-    return `
-<h4>Favorite Foods</h4>
-<ul class="foods-list">
-    ${foods.map(food => `<li>${food}</li>`).join("")}
-</ul>
-`;
-}
-
-function petTemplate(pet) {
-    return `
-        <el-section id="projects" padding-gap="6">
-            <el-grid auto-fit="columns" columns="3" gap="3">
-                <el-column attr="row">
-                    <h2>Recent Projects</h2>
-                </el-column>
-                <article class="card-minimal">
-                    <img src="${pet.photo}" alt="placeholder">
-                    <h3>${pet.name}</h3>
-                    ${pet.favFoods ? foods(pet.favFoods) : ""}
-                    <ul>
-                        <li>
-                            <a href="/project">
-                                <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                            </a>live
-                        </li>
-                        <li>
-                            <a href="/">
-                                <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                            </a>Code
-                        </li>
-                        <li>
-                            <a href="/">
-                                <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                            </a>Details
-                        </li>
-                    </ul>
-                </article>
-            </el-grid>
-        </el-section>
-
-
-  `;
-}
-
-document.getElementById("post").innerHTML = `
-
-  <h1 class="app-title">Pets (${petsData.length} results)</h1>
-
-  ${petsData.map(petTemplate).join("")}
-  
-  <p class="footer">These ${petsData.length} pets were added recently. Check back soon for updates.</p>
-`;
-
-
-/* ---------------------------------------------
-name: name
-Function: Function 
-Location: [ Location ]
-/*--------------------------------------------- */
-// module.exports = ({nameMy}) => `<p>${nameMy}</p>`;
-
-
-
-
-/* ---------------------------------------------
-Name: name
-Function: function 
-Location: [ location ]
+name: Typing
+Function: Typing 
+Location: [ card-bio, (Home) ]
 /*--------------------------------------------- */
 
+// const typedTextSpan = document.querySelector(".typed-text");
+// const cursorSpan = document.querySelector(".cursor");
 
-/* ---------------------------------------------
-Name: name
-Function: function 
-Location: [ location ]
-/*--------------------------------------------- */
-// const petsData = [{
-//     name: "Purrsloud",
-//     species: "Cat",
-//     favFoods: ["wet food", "dry food", "<strong>any</strong> food"],
-//     birthYear: 2016,
-//     photo: "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
-// },
-// {
-//     name: "Barksalot",
-//     species: "Dog",
-//     birthYear: 2008,
-//     photo: "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
-// },
-// {
-//     name: "Meowsalot",
-//     species: "Cat",
-//     favFoods: ["tuna", "catnip", "celery"],
-//     birthYear: 2012,
-//     photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg"
-// }
+// const textArray = [
+//     "hello, I'am andrew Rico,",
+//     "Web developer/uiux engenieer",
+//     "a journey",
+//     "LIFE"
 // ];
+// const typingDelay = 200;
+// const erasingDelay = 100;
+// const newTextDelay = 2000; // Delay between current and next text
+// let textArrayIndex = 0;
+// let charIndex = 0;
 
-// function age(birthYear) {
-// let calculatedAge = new Date().getFullYear() - birthYear;
-// if (calculatedAge == 1) {
-//     return "1 year old";
-// } else if (calculatedAge == 0) {
-//     return "Baby";
-// } else {
-//     return `${calculatedAge} years old`;
-// }
-// }
-
-
-
-// function foods(foods) {
-// return `
-// <h4>Favorite Foods</h4>
-// <ul class="foods-list">
-// ${foods.map(food => `<li>${food}</li>`).join("")}
-// </ul>
-// `;
+// function type() {
+//   if (charIndex < textArray[textArrayIndex].length) {
+//     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+//     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+//     charIndex++;
+//     setTimeout(type, typingDelay);
+//   } 
+//   else {
+//     cursorSpan.classList.remove("typing");
+//   	setTimeout(erase, newTextDelay);
+//   }
 // }
 
-// function petTemplate(pet) {
-// return `
-// <div class="animal">
-// <img class="pet-photo" src="${pet.photo}">
-// <h2 class="pet-name">${pet.name} <span class="species">(${pet.species})</span></h2>
-// <p><strong>Age:</strong> ${age(pet.birthYear)}</p>
-// ${pet.favFoods ? foods(pet.favFoods) : ""}
-// </div>
-// `;
+// function erase() {
+// 	if (charIndex > 0) {
+//     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+//     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+//     charIndex--;
+//     setTimeout(erase, erasingDelay);
+//   } 
+//   else {
+//     cursorSpan.classList.remove("typing");
+//     textArrayIndex++;
+//     if(textArrayIndex>=textArray.length) textArrayIndex=0;
+//     setTimeout(type, typingDelay + 1100);
+//   }
 // }
 
-// document.getElementById("post").innerHTML = `
-// <h1 class="app-title">Pets (${petsData.length} results)</h1>
-// ${petsData.map(petTemplate).join("")}
-// <p class="footer">These ${petsData.length} pets were added recently. Check back soon for updates.</p>
-// `;
+// document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+//   if(textArray.length) setTimeout(type, newTextDelay + 250);
+// });
+
+/* ---------------------------------------------
+name: copyToClipboard
+Function: copyToClipboard 
+Location: [ post]
+/*--------------------------------------------- */
+
+/* ---------------------------------------------
+name: copyToClipboard
+Function: copyToClipboard 
+Location: [ post]
+/*--------------------------------------------- */
+let TxtType = function(el, toRotate, period) {
+	this.toRotate = toRotate;
+	this.el = el;
+	this.loopNum = 0;
+	this.period = parseInt(period, 10) || 100;
+	this.txt = '';
+	this.tick();
+	this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+	let i = this.loopNum % this.toRotate.length;
+	let fullTxt = this.toRotate[i];
+
+	if (this.isDeleting) {
+	this.txt = fullTxt.substring(0, this.txt.length - 1);
+	} else {
+	this.txt = fullTxt.substring(0, this.txt.length + 1);
+	}
+
+	this.el.innerHTML = '<span class="caret">'+this.txt+'</span>';
+
+	let that = this;
+	let delta = 200 - Math.random() * 100;
+
+	if (this.isDeleting) { delta /= 2; }
+
+	if (!this.isDeleting && this.txt === fullTxt) {
+	delta = this.period;
+	this.isDeleting = true;
+	} else if (this.isDeleting && this.txt === '') {
+	this.isDeleting = false;
+	this.loopNum++;
+	delta = 100;
+	}
+
+	setTimeout(function() {
+	that.tick();
+	}, delta);
+};
+
+window.onload = function() {
+	let elements = document.getElementsByClassName('typewrite');
+	for (let i=0; i<elements.length; i++) {
+		let toRotate = elements[i].getAttribute('data-type');
+		let period = elements[i].getAttribute('data-period');
+		if (toRotate) {
+		  new TxtType(elements[i], JSON.parse(toRotate), period);
+		}
+	}
+	// INJECT CSS
+	let css = document.createElement("style");
+	css.type = "text/css";
+	css.innerHTML = ".typewrite > .caret { border-right: 0.08em solid lime}";
+	document.body.appendChild(css);
+};

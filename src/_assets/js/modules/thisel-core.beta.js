@@ -68,7 +68,23 @@ customElements.define('el-section',
 	}
 );
 // create el-grid template.
-const elGridCSS = `:host{--el-grid-gutter:0.0rem;--el-grid-max-width:1366px;--el-grid-width:99.75%;display:-ms-grid;display:grid;grid-gap:var(--el-grid-gutter,025rem);margin:var(--el-grid-gutter,0.25rem) auto;max-width:var(--el-grid-max-width,1366px);width:var(--el-grid-width,99.75%)}@media(max-width:1024px){:host([auto-fit=columns]){grid-template-columns:repeat(auto-fit,minmax(310px,1fr))!important}}`;
+const elGridCSS = `:host {
+    --el-grid-gutter: 0.0rem;
+    --el-grid-max-width: 1366px;
+    --el-grid-width: 99.75%;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: var(--el-grid-gutter, 025rem);
+    margin: var(--el-grid-gutter, 0.25rem) auto;
+    max-width: var(--el-grid-max-width, 1366px);
+    width: var(--el-grid-width, 99.75%)
+}
+
+@media(max-width:1268px) {
+    :host([auto-fit="columns"]) {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important
+    }
+}`;
 const elGridHTML = "<slot></slot>";
 const elGridTemplate = document.createElement("template");
 elGridTemplate.innerHTML = `<style>`.concat(elGridCSS, `</style>`).concat(elGridHTML);
@@ -860,59 +876,7 @@ customElements.define('el-button',
 		}
 	}
 );
-// // define el-video tag.
-customElements.define('el-bgvideo',
-	class elVideo extends HTMLElement {
-		constructor() {
-			super();
-			// _thisElVideo = elVideo
-			let _thisElVideo = this;
-			this._elVideoSRC;
-			this._elVideoPoster;
-			// open shadowRoot.
-			const shadowRoot = _thisElVideo.attachShadow({
-				mode: "open"
-			});
-			// create el-video template (inside).
-			const _elVideoSRC = this.getAttribute("src");
-			const _elVideoPoster = this.getAttribute("poster");
-			const elVideoCSS = `:host{display:block;width:100%;height:100vh;overflow:hidden;position:relative}video{min-width:100%;min-height:100%;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}.content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;overflow:hidden;position:relative;top:0;bottom:0;z-index:1;width:100%;height:100%;padding:0;margin:0;background:rgba(0,0,0,.64)}.overlay{width:100%}`;
-			const elVideoHTML = `<video autoplay loop muted src=${_elVideoSRC} poster="${_elVideoPoster}" type=video/mp4></video><div class=content><div class=overlay><slot name=overlay></slot></div></div>`;
-			const elVideoTemplate = document.createElement("template");
-			elVideoTemplate.innerHTML = `<style>`.concat(elVideoCSS, `</style>`).concat(elVideoHTML);
-			// clone el-section template. 
-			shadowRoot.appendChild(elVideoTemplate.content.cloneNode(!0));
-			return _thisElVideo;
-		}
-		connectedCallback() {
-			// this = elVideo
-			let _elVideo = this;
-			//  inject css attributes, 
-			const _videos = document.querySelectorAll('el-bgvideo');
-			_videos.forEach(_video => {
-					_elVideo.hasAttribute("height") && (_elVideo.styleHeight = _elVideo.getAttribute("height") + "vh", _elVideo.style.height = _elVideo.styleHeight);
-				}),
-				//  check statics attributes
-				_elVideo.hasAttribute("src") && (_elVideo._elVideoSRC = _elVideo.getAttribute("src")), _elVideo.hasAttribute("poster") && (_elVideo._elVideoPoster = _elVideo.getAttribute("poster"));
-		}
-		//   changed statics attributes
-		attributeChangedCallback(_name, oldValue, newValue) {
-			if (oldValue === newValue) {
-				return;
-			}
-			if (_name === 'src') {
-				this._elVideoSRC = newValue;
-			}
-			if (_name === 'poster') {
-				this._elVideoPoster = newValue;
-			}
-		}
-		// observe statics attributes
-		static get observedAttributes() {
-			return ['src', 'poster'];
-		}
-	}
-);
+
 // create el-video template (inside).
 const elDropdownCSS = `:host {
 		position: relative;
@@ -1408,109 +1372,6 @@ customElements.define('el-drawer',
 				_addMediaQuery.addListener(_whenWidthChange);
 				_whenWidthChange(_addMediaQuery);
 			};
-		}
-	}
-);
-
-
-
-// create el-video template (inside).
-const elOptionsCSS = `
-:host {display: block;}
-#optionsPanel {
-	position: fixed;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	justify-content: space-between;
-	bottom: 10px;
-	right: 0;
-	min-height: 100px;
-	max-height: 600px;
-	z-index: 5000;
-}
-
-
-#optionsPanel svg {
-	pointer-events: none;
-}
-
-.open-options {
-	position: relative;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	cursor: pointer;
-	outline: 0;
-	border: 0;
-	margin: 0;
-	font-size: 32px ;
-	max-width: 2em ;
-	min-width: 2em ;
-	background: transparent;
-	color: var(--color-black, #0000);
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	z-index: 1;
-	filter:drop-shadow(0 0 1px #cbcbcb);
-}
-
-.open-options:active {
-	-webkit-transform: translateY(4px);
-	transform: translateY(4px);
-}
-
-`;
-const elOptionsHTML = `
-<aside id="optionsPanel">
-
-	 <a class="open-options" href="/">
-		 <svg fill="var(--color-black, #000)"  version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
-			 <path d="M512 295.222l-256-198.713-256 198.714v-81.019l256-198.713 256 198.714zM448 288v192h-128v-128h-128v128h-128v-192l192-144z"></path>
-		 </svg>
-	 </a>
-
-	 <a class="open-options" href="#">
-		 <svg fill="var(--color-black, #000)" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
-			 <path d="M0 256c0 141.385 114.615 256 256 256s256-114.615 256-256-114.615-256-256-256-256 114.615-256 256zM464 256c0 114.875-93.125 208-208 208s-208-93.125-208-208 93.125-208 208-208 208 93.125 208 208z"></path>
-			 <path d="M353.372 334.628l45.256-45.256-142.628-142.627-142.627 142.628 45.254 45.254 97.373-97.372z"></path>
-		 </svg>
-	 </a>
-
-<slot name="option"></slot>
-
-</aside>
-`;
-const elOptionsTemplate = document.createElement("template");
-elOptionsTemplate.innerHTML = `<style>`.concat(elOptionsCSS, `</style>`).concat(elOptionsHTML);
-// defines el-options tag.
-customElements.define('el-options',
-	class elOptions extends HTMLElement {
-		constructor() {
-			super();
-			// _thisElOptions = elVideo
-			let _thisElOptions = this;
-			// open shadowRoot.
-			const shadowRoot = _thisElOptions.attachShadow({
-				mode: "open"
-			});
-
-			// clone template. 
-			shadowRoot.appendChild(elOptionsTemplate.content.cloneNode(!0));
-			return _thisElOptions;
 		}
 	}
 );

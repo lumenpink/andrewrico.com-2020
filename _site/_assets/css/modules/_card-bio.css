@@ -9,14 +9,16 @@
   font-size: 0.9rem;
   text-align: center;
   border: 0.5px solid var(--color-primary);
-  background: var(--color-quaternary);
-  filter: drop-shadow(0 0 6px var(--color-primary));
+  /* background: var(--color-quaternary); */
+  /* filter: drop-shadow(0 0 1px var(--color-primary)); */
+  background: rgba(0, 0, 0, 0);
 }
 
-.card-online-bio h2 {
+.card-online-bio h1 {
   font-size: 1.6rem;
   font-family: 'Dancing Script', cursive;
 }
+
 .card-online-bio p {
   font-size: 0.8rem;
   letter-spacing: 0.5px;
@@ -29,25 +31,25 @@
   font-weight: 300;
 }
 
-.card-online-bio > nav {
+.card-online-bio>nav {
   margin: 1rem;
 }
 
 
-.card-online-bio > nav > ul {
+.card-online-bio>nav>ul {
   display: inline;
   align-items: center;
   justify-content: space-around;
 }
 
-@media(min-width:768px)  {
-  .card-online-bio > nav > ul{
+@media(min-width:768px) {
+  .card-online-bio>nav>ul {
     display: flex;
     width: 100%;
   }
 }
 
-.card-online-bio > nav > ul > li {
+.card-online-bio>nav>ul>li {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +73,7 @@
 .card-online-terminal {
   display: block;
   background: var(--color-black);
- width: 50%;
+  width: 72.5%;
   max-width: 100%;
 }
 
@@ -80,17 +82,14 @@
   height: 12px;
 }
 
-#typying {
-  display: inline-block;
-  color: var(--color-primary);
-  border-right: .05px solid;
-  width:auto;
-  max-width: 100%;
-  animation: caret 1s steps(1) infinite;
-}
+/* .typying {
+  padding: 0 0.25rem;
+  display: flex;
+} */
 
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
+.typewrite {
+  font-family: 'Source Code Pro', monospace;
+  color: lime;
+  margin:0;
+  padding: 0.25rem;
 }

@@ -127,8 +127,7 @@ textarea:focus {
 
 
 select {
-	width: 100%;
-	max-width: 100%;
+	width: auto;
 	margin: 0;
 	background: #fff;
 	border: none;
@@ -137,7 +136,9 @@ select {
 	border-radius: 2px;
 	border: 1px solid rgba(221, 221, 221, .41);
 	-webkit-box-shadow: var(--color-shadow);
-	box-shadow: var(--color-shadow)
+	box-shadow: var(--color-shadow);
+	margin-right: auto;
+
 }
 
 option {

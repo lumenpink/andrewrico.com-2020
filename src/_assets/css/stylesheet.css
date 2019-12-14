@@ -9,21 +9,23 @@ navigations ---------------------------------------
 */
 @import 'modules/_nav-drawer.css';
 @import 'modules/_nav-mobil.css';
-@import 'modules/_nav-naviton.css';
+@import 'modules/_nav-sidanav.css';
 
 /*
 partials ---------------------------------------
 */
+@import 'modules/_partial-banner.css';
 @import 'modules/_partial-footer.css';
 
 /*
 pages ---------------------------------------
 */
+@import 'modules/_page-article.css';
+@import 'modules/_page-blog.css';
+@import 'modules/_page-contact.css';
 @import 'modules/_page-portfolio.css';
 @import 'modules/_page-project.css';
-@import 'modules/_page-blog.css';
-/* @import 'modules/_page-post.css'; */
-@import 'modules/_page-contact.css';
+
 
 /*
 cards (collection) ---------------------------------------

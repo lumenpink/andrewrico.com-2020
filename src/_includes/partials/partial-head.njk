@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{ MetaPageTitle }}</title>
-  <meta name="description" content="{{ MetaPageDescription }}">
-  <link href={{ stylesheet }} rel="stylesheet">
-  <link href={{ fonts }} rel="stylesheet">
+  <meta property="og:title" content="European Travel Destinations">
+  <meta property="og:description" content="description">
+  <meta property="og:image" content="imageUrl">
+  <meta property="og:url" content="url">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta name="twitter:site" content="@website-username">
+  <title>{{ global.author }} | {{ title}}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="{{ keywords }}">
+  <link href={{ global.stylesheet }} rel="stylesheet">
+  <link href={{ global.fonts }} rel="stylesheet">
+</head>
+
+<el-loading background="var(--color-gradient)"></el-loading>
 

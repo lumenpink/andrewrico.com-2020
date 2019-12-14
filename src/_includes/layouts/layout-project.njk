@@ -1,19 +1,14 @@
 {% include "partials/partial-head.njk" %}
-</head>
-
-<el-loading background=var(--color-gradient)></el-loading>
     <body>
         {% include "navigations/navigation-project.njk" %}
         <header>
-            <el-section id="about" padding-gap="10" background=#262626 color=var(--color-primary)>
-                <el-grid column=1>
-                    <el-column attr="row" text-align="center">
-                        <el-inline center=auto>   
-                            <h1>
-                               {{ title }}
-                            </h1>
-                        </el-inline>  
-                    </el-column>
+            <el-section class="site-base-header" background="{{ page_path_banner }}">
+                <el-grid columns="1">
+                    <el-inline attr="row">  
+                        <h1>
+                            {{ title }}
+                        </h1>
+                    </el-inline>  
                 </el-grid>
             </el-section>
         </header>

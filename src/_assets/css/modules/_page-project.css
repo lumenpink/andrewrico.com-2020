@@ -1,0 +1,79 @@
+#project-page img {
+    max-width: 100%;
+    width: 100%;
+}
+
+#project-page p {
+    margin-bottom: 4rem;
+}
+
+#project-page div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#situation {
+    grid-area: situation;
+}
+
+#situation-image {
+    grid-area: situation-image;
+}
+
+#problem {
+    grid-area: problem;
+}
+
+#problem-image {
+    grid-area: problem-image;
+}
+
+#approch {
+    grid-area: approch;
+}
+
+#approch-image {
+    grid-area: approch-image;
+}
+
+#solution {
+    grid-area: solution;
+}
+
+#solution-image {
+    grid-area: solution-image;
+}
+
+#conclution {
+    grid-area: conclution;
+}
+
+#conclution-image {
+    grid-area: conclution-image;
+}
+
+#project-page el-grid{
+    grid-template-areas:
+    'situation-image'
+    'situation' 
+    'problem-image' 
+    'problem'
+    'approch-image'
+    'approch' 
+    'solution-image' 
+    'solution'
+    'conclution-image'
+    'conclution';
+}
+
+@media(min-width:768px) {
+    #project-page el-grid{
+        grid-template-areas:
+        'situation situation-image'
+        'problem-image problem'
+        'approch approch-image'
+        'solution-image solution'
+        'conclution conclution-image';
+    }
+}

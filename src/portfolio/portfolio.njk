@@ -1,8 +1,8 @@
 ---
-stylesheet: "/_assets/css/stylesheet.css"
+title: "Portfolio"
+description: "This is the Portfolio page"
 layout: "/layouts/layout-portfolio.njk"
-fonts: "https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Coda+Caption:800|Dancing+Script&display=swap"
-title: "Portfolio Page"
+pathTo_banner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-2.jpg)"
 pagination:
   data: collections.projects
   size: 10
@@ -14,30 +14,34 @@ pagination:
         <el-column attr="row">
             <h2>Recent Projects</h2>
         </el-column>
+
         {% for project in projects %}
             <article class="card-minimal">
-                <img src="{{ project.data.image }}" alt="{{ project.data.placeholder }}">
+                <img src="{{ project.data.project_path_image }}" alt="{{ project.data.project_string_imageAlt }}">
                 <h3>{{ project.data.title }}</h3>
-                <h4 class="card-tags"><span>{{ project.data.cathegory }}</span> <span>{{ project.data.type }}</span></h4>
+                <h4 class="card-tags">
+                    <span>{{ project.data.project_string_cathegory }}</span>
+                    <span>{{ project.data.project_string_type }}</span>
+                </h4>
                 <ul>
                     <li>
-                        <a href="{{ project.data.livePath }}">
+                        <a href="{{ project.data.project_link_demo }}">
                             <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a>live
+                        </a> live
                     </li>
                     <li>
-                        <a href="{{ project.data.codePath }}">
+                        <a href="{{ project.data.project_link_code }}">
                             <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a>Code
+                        </a> Code
                     </li>
                     <li>
-                        <a href="{{ project.data.infoPath }}">
+                        <a href="{{ project.url | url }}">
                             <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a>Details
+                        </a> Project
                     </li>
                 </ul>
-                <a href="{{ project.url | url }}">{{ project.data.title }}</a>
             </article>
         {% endfor %}
+
     </el-grid>
 </el-section>

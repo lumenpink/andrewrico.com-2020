@@ -1,4 +1,4 @@
-<h1 slot="drawer-brand">{{ global.brand }}</h1><h1 slot="navbar-brand">{{ global.brand }}</h1>
+<h1 slot="drawer-brand">{{ global.site }}</h1><h1 slot="navbar-brand">{{ global.site }}</h1>
 <div class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
@@ -34,7 +34,7 @@
     <hr><h3>Contact</h3>
     <ul>
         <li>
-            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+            <a href="{{ global.linkedin }}" target="_blank">
                 <span>
                     <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
                     LinkedIn
@@ -42,7 +42,7 @@
             </a>
         </li>
         <li>
-            <a href="https://github.com/Andrewrico" target="_blank">
+            <a href="{{ global.github }}" target="_blank">
                 <span>
                     <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
                     Github
