@@ -2,46 +2,97 @@
 title: "Portfolio"
 description: "This is the Portfolio page"
 layout: "/layouts/layout-portfolio.njk"
-pathTo_banner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-2.jpg)"
+PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-2.jpg)"
 pagination:
   data: collections.projects
-  size: 10
+  size: 3
   reverse: true
   alias: projects
 ---
-<el-section padding-top="6" padding-bottom="12">
+<el-section id="portfolio-page" padding-top="6" padding-bottom="12">
     <el-grid auto-fit="columns" columns="3" gap="3">
-        <el-column attr="row">
+
+        <el-column id="recent" attr="row">
             <h2>Recent Projects</h2>
         </el-column>
-
-        {% for project in projects %}
-            <article class="card-minimal">
-                <img src="{{ project.data.project_path_image }}" alt="{{ project.data.project_string_imageAlt }}">
-                <h3>{{ project.data.title }}</h3>
-                <h4 class="card-tags">
-                    <span>{{ project.data.project_string_cathegory }}</span>
-                    <span>{{ project.data.project_string_type }}</span>
-                </h4>
-                <ul>
-                    <li>
-                        <a href="{{ project.data.project_link_demo }}">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a> live
-                    </li>
-                    <li>
-                        <a href="{{ project.data.project_link_code }}">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a> Code
-                    </li>
-                    <li>
-                        <a href="{{ project.url | url }}">
-                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a> Project
-                    </li>
-                </ul>
-            </article>
-        {% endfor %}
+        <el-column>
+            <ul>
+            {% for project in projects %}
+                <li>
+                    <article class="card-minimal">
+                        <img src="{{ project.data.ProjectPathToimage }}" alt="{{ project.data.ProjectPathToimageAlt }}">
+                        <h3>{{ project.data.title }}</h3>
+                        <h4 class="card-tags">
+                            <span>{{ project.data.ProjectStringCathegory }}</span>
+                            <span>{{ project.data.ProjectStringType }}</span>
+                        </h4>
+                        <h4 class="card-subtitle"> 
+                            <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                            {{ project.data.ProjectStringMade }}
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="{{ project.data.ProjectLinkToDemo }}">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                                </a> DEMO
+                            </li>
+                            <li>
+                                <a href="{{ project.data.ProjectLinkToCode }}">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                                </a> CODE
+                            </li>
+                            <li>
+                                <a href="{{ project.url | url }}">
+                                    <svg><use href="/_assets/media/svg/sprites.svg#timeline"></use></svg>
+                                </a> CASE STUDY
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            {% endfor %}
+            </ul>
+        </el-column>
+        
+        <el-column id="Javascript" attr="row">
+            <h2>Javascript</h2>
+        </el-column>
+        <el-column>
+            <ul>
+            {%- for js in collections.js -%}
+                <li>
+                    <article class="card-minimal">
+                        <img src="{{ js.data.ProjectPathToimage }}" alt="{{ project.data.ProjectPathToimageAlt }}">
+                        <h3>{{ js.data.title }}</h3>
+                        <h4 class="card-tags">
+                            <span>{{ js.data.ProjectStringCathegory }}</span>
+                            <span>{{ js.data.ProjectStringType }}</span>
+                        </h4>
+                        <h4 class="card-subtitle"> 
+                            <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                            {{ js.data.ProjectStringMade }}
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="{{ js.data.ProjectLinkToDemo }}">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                                </a> DEMO
+                            </li>
+                            <li>
+                                <a href="{{ js.data.ProjectLinkToCode }}">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                                </a> CODE
+                            </li>
+                            <li>
+                                <a href="{{ js.url | url }}">
+                                    <svg><use href="/_assets/media/svg/sprites.svg#timeline"></use></svg>
+                                </a> CASE STUDY
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            {% endfor %}
+            </ul>
+        </el-column>
 
     </el-grid>
 </el-section>

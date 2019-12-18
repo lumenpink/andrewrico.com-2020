@@ -42,3 +42,10 @@
    #PorfolioPage h2 {
     font-family: 'Coda Caption', sans-serif;
 }
+
+#portfolio-page el-column h2{
+    margin-top:2em;
+
+}
+
+

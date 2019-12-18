@@ -1,6 +1,5 @@
 #footer h1 {
 	font-size: 3.6rem;
-	font-family: 'Dancing Script', cursive;
 }
 
 #footer a:hover,
@@ -8,7 +7,7 @@
 	color: #dddd;
 }
 
-.column-menu {
+#footer el-column {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -18,32 +17,64 @@
 	flex-direction: column;
 }
 
-.column-menu h3 {
+#footer h3 {
 	max-width: 85%;
 	border-bottom: 1px solid var(--color-secondary);
 }
 
-.column-menu ul {
+#footer ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-.column-menu ul li {
+#footer ul li {
 	padding: 0.4rem 0;
 }
 
-.column-menu a {
+#footer a {
 	font-weight: 100;
 	padding: 0.5rem 1rem;
 	color: var(--color-primary) !important;
 	text-decoration: none;
+	letter-spacing: 0.6px;
 }
 
-.column-menu a:hover {
-	background: rgba(0, 0, 0, 0.78);
-	filter: drop-shadow(1px 1px 6px rgba(21, 255, 0, 0.701));
+#footer a:hover {
+	transition: 0.3s;
+	background: var(--color-tertiary);
 }
+
+#footer a:active {
+	transition: 0.3s;
+	background: var(--color-quaternary);
+}
+
+#footer .author-references {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+
+#footer .author-references svg {
+	width: 48px;
+	height: 48px;
+	padding: 0.5rem;
+	fill: var(--color-primary);
+}
+
+#footer .author-references a:hover svg {
+	fill: var(--color-secondary);
+	background: var(--color-primary);
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+#footer .author-references a:active svg {
+	transition: 0.3s;
+	transform: translateY(0.3rem);
+}
+
 
 #footer-bottom a {
 	font-size: 0.9rem;
@@ -65,11 +96,11 @@
 }
 
 #copyright {
+	font-family: 'Source Code Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0rem 0.5rem;
 	padding: 0;
 	font-weight: 100;
 	color: var(--color-white);
-
 }
 
 #copyright a {

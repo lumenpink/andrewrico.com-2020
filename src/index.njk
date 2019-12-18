@@ -1,6 +1,6 @@
 ---
 title: "Home"
-description: "This is the Home page"
+description: "This is the Homepage"
 layout: "layouts/layout-home.njk"
 ---
 <el-section id="skills" padding-top="10" padding-bottom="6">
@@ -8,17 +8,19 @@ layout: "layouts/layout-home.njk"
         <el-column attr="row">
             <h2>Skills</h2>
         </el-column>
-        {%- for skills in collections.skills -%}
-        <article class="card-progress {{skills.data.skills}}">
-            <label for="skill">
-                <h4> {{ skills.data.title }} </h4>
-                    <svg>
-                        <use href="{{skills.data.svgPath}}"></use>
-                    </svg>
-            </label>
-            <progress name="skill" class="progress" value="{{skills.data.percentage}}" max="100"></progress>
-            <p> {{skills.data.description}} </p>
-        </article>
+        {%- for skill in collections.skills -%}
+        <el-column>
+            <article class="card-progress {{skill.data.skills}}">
+                <label for="skill">
+                    <h4> {{ skill.data.title }} </h4>
+                        <svg>
+                            <use href="{{skill.data.svgPath}}"></use>
+                        </svg>
+                </label>
+                <progress name="skill" class="progress" value="{{skill.data.percentage}}" max="100"></progress>
+                <p> {{skill.data.description}} </p>
+            </article>
+        </el-column>
         {%- endfor -%}
     </el-grid>
 </el-section>
@@ -28,30 +30,39 @@ layout: "layouts/layout-home.njk"
         <el-column attr="row">
             <h2>Recent Projects</h2>
         </el-column>
-        {%- for recents in collections.recents -%}
-        <article class="card-minimal">
-            <img src="{{ recents.data.image }}" alt="{{ recents.data.placeholder }}">
-            <h3>{{ recents.data.title }}</h3>
-            <h4 class="card-tags"><span>{{ recents.data.cathegory }}</span> <span>{{ recents.data.type }}</span></h4>
-            <ul>
-                <li>
-                    <a href="{{ recents.data.livePath }}">
-                        <svg> <use href="_assets/media/svg/sprites.svg#earth"></use></svg>
-                    </a>live
-                </li>
-                <li>
-                    <a href="{{ recents.data.codePath }}">
-                        <svg> <use href="_assets/media/svg/sprites.svg#github"></use> </svg>
-                    </a>Code
-                </li>
-                <li>
-                    <a href="{{ recents.data.infoPath }}">
-                        <svg><use href="_assets/media/svg/sprites.svg#zoom"></use></svg>
-                    </a>Details
-                </li>
-            </ul>
-        </article>
-        {%- endfor -%}
+        {%- for project in collections.projects -%}
+        <el-column>
+            <article class="card-minimal">
+                <img src="{{ project.data.ProjectPathToimage }}" alt="{{ project.data.ProjectPathToimageAlt }}">
+                <h3>{{ project.data.title }}</h3>
+                <h4 class="card-tags">
+                    <span>{{ project.data.ProjectStringCathegory }}</span>
+                    <span>{{ project.data.ProjectStringType }}</span>
+                </h4>
+                <h4 class="card-subtitle">
+                    <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                    {{ project.data.ProjectStringMade }}
+                </h4>
+                <ul>
+                    <li>
+                        <a href="{{ project.data.ProjectLinkToDemo }}">
+                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                        </a> DEMO
+                    </li>
+                    <li>
+                        <a href="{{ project.data.ProjectLinkToCode }}">
+                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                        </a> CODE
+                    </li>
+                    <li>
+                        <a href="{{ project.url | url }}">
+                            <svg><use href="/_assets/media/svg/sprites.svg#timeline"></use></svg>
+                        </a> CASE STUDY
+                    </li>
+                </ul>
+            </article>
+        </el-column>
+        {% endfor %}
     </el-grid>
 </el-section>
 
@@ -61,87 +72,87 @@ layout: "layouts/layout-home.njk"
             <h2>Code Challenges</h2>
         </el-column>
         {%- for challenges in collections.challenge -%}
-        <article class="card-action card-ckecked">
-            <div class="card-header">
-                <svg width="56" height="56" fill="var(--color-secondary)">
-                    <use href="_assets/media/svg/sprites.svg#success"></use>
-                </svg>
-            </div>
-            <div class="card-content">
-                <h3>{{ challenges.data.title }}</h3>
-            </div>
-            <div class="card-footer">
-                <p>
-                    <b>Started:</b>{{ challenges.data.started }}<br>
-                    <b>Ended:</b>{{ challenges.data.ended }}
-                </p>
-                <el-button class="cubic">
-                    <a slot="button" extended="button" theme="primary"
-                        href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
-                </el-button>
-            </div>
-        </article>
+        <el-column>
+            <article class="card-action card-ckecked">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-secondary)">
+                        <use href="_assets/media/svg/sprites.svg#success"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>{{ challenges.data.title }}</h3>
+                </div>
+                <div class="card-footer">
+                    <p>
+                        <b>Started:</b>{{ challenges.data.started }}<br>
+                        <b>Ended:</b>{{ challenges.data.ended }}
+                    </p>
+                    <el-button class="el-button">
+                        <a slot="button" extended="button" theme="primary"
+                            href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                    </el-button>
+                </div>
+            </article>
+        </el-column>
         {%- endfor -%}
-        {%- for challenges in collections.challengeOpen -%}
-        <article class="card-action">
-            <div class="card-header">
-                <svg width="56" height="56" fill="var(--color-light)">
-                    <use href="_assets/media/svg/sprites.svg#alert"></use>
-                </svg>
-            </div>
-            <div class="card-content">
-                <p>Submit a Code Chanllenge only if you are a:</p>
-                <ol>
-                    <li>
-                        <b> Recruiter </b>looking to hide a developer.
-                    </li>
-                    <li>
-                        <b> Employer</b> who wants to test my skills.
-                    </li>
-                </ol>
-            </div>
-            <div class="card-footer">
-                <el-button class="cubic">
-                    <a slot="button" extended="button" theme="secondary" href="#open-modal">Submit </a>
-                </el-button>
-            </div>
-        </article> 
+        {%- for challenges in collections.open -%}
+        <el-column>
+            <article class="card-action">
+                <div class="card-header">
+                    <svg width="56" height="56" fill="var(--color-light)">
+                        <use href="_assets/media/svg/sprites.svg#alert"></use>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <p>Submit a Code Chanllenge only if you are a:</p>
+                    <ol>
+                        <li>
+                            <b> Recruiter </b>looking to hide a developer.
+                        </li>
+                        <li>
+                            <b> Employer</b> who wants to test my skills.
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-footer">
+                    <el-button class="el-button">
+                        <a slot="button" extended="button" theme="secondary" href="#submit-chanllenge">Submit </a>
+                    </el-button>
+                </div>
+            </article> 
+        </el-column>
         {%- endfor -%}
     </el-grid>
-
-    <div id="open-modal" class="modal-window">
+    <div id="submit-chanllenge" class="modal-popup">
         <div class="modal-content">
-            <a href="#chanllenge" title="Close Modal" class="backdrop-modal"></a>
-            <form 
-            id="andrewrico-CodeChallegeForm-homePage" 
-            name="andrewrico-CodeChallegeForm-homePage"
-            class="form-skin form-site"  
-            method="POST" 
-            data-netlify="true">
-                <p>Submit a Code Challenge</p>
-                <label for="selection">You are a:</label>
-                <select name="selection">
-                    <option>I'am a</option>
-                    <option>Recruiter</option>
-                    <option>Employer </option>
-                </select>
-                <label for="name">name</label>
-                <input type="text" name="name" placeholder="Name" aria-label="name" />
-                <label for="email">email</label>
-                <input type="text" name="email" placeholder="E-mail" aria-label="email" />
-                <label for="url">url</label>
-                <input type="url" name="url" placeholder="URL" aria-label="url" />
-                <label for="message">message</label>
-                <textarea name="message" rows="1" placeholder="In a few words, tell me more about the rules"
-                    aria-label="message"></textarea><br><br>
-                <el-button class="cubic">
-                    <button type="submit" slot="button" extended="button" theme="custom">
-                        Submit
-                    </button>
-                </el-button>
-            </form>
+            <a href="#chanllenge" title="CLOSE" class="backdrop-modal"></a>
+            {% include "forms/form-submitChallenge.njk" %}
         </div>
     </div>
+</el-section>
+
+<el-section id="articles" padding-gap=6>
+    <el-grid auto-fit="columns" columns="2" gap="3">
+        <el-column attr="row">
+            <h2>Recent Articles</h2>
+        </el-column>
+        <el-column attr="row" max-width="768px" center="auto">
+            <ul>
+                {%- for article in collections.article -%}
+                    <li>
+                        <article class="card-article">
+                            <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
+                            <h2> {{ article.data.title }} </h2>
+                            {% excerpt article %}
+                            <el-button class="el-button">
+                                <a slot="button" extended="button" theme="quaternary" href="{{ article.url | url }}">Read more</a>
+                            </el-button>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+        </el-column>
+    </el-grid>
 </el-section>
 
 <el-section id="contact" padding-gap=6>
@@ -149,7 +160,6 @@ layout: "layouts/layout-home.njk"
         <el-column attr="row">
             <h2>Contact Me</h2>
         </el-column>
-        
         <el-column>
             <iframe 
             width="100%" 
@@ -159,33 +169,8 @@ layout: "layouts/layout-home.njk"
             allowfullscreen=""  
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
         </el-column>
-
         <el-column>
-            <h4 style="color:var(--color-quaternary); font-size:1.6rem;">
-                Send me a message
-                <svg width="32" height="32" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#rocket"></use></svg>
-            </h4>
-            <form 
-            id="andrewrico-SendMessageForm-homePage" 
-            name="andrewrico-SendMessageForm-homePage" 
-            class="form-skin" 
-            method="POST" 
-            data-netlify="true">
-                <label for="name">name</label>
-                <input type="text" name="name" placeholder="Name" aria-label="name" />
-                <label for="email">email</label>
-                <input type="email" name="email" placeholder="Email" aria-label="email" />
-                <label for="phone">phone</label>
-                <input type="text" name="phone" placeholder="Phone" aria-label="phone" />
-                <label for="message">message</label>
-                <textarea name="message" rows="1" placeholder="In a few words, tell me about your inquiry"
-                    aria-label="message"></textarea><br><br>
-                <el-button class="cubic">
-                    <button type="submit" slot="button" extended="button" theme="custom">
-                        Send Message
-                    </button>
-                </el-button>
-            </form>
+            {% include "forms/form-sendMessage.njk" %}
         </el-column>
     </el-grid>
 </el-section>

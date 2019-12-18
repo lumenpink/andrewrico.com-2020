@@ -1,4 +1,4 @@
-<nav class="naviton">
+<nav id="navigation-panel">
     <ul>
         <li>
             <a href="/">
@@ -34,45 +34,44 @@
         </li>
         <li>
             <a href="#">
-                <svg width="32" height="32">
-                    <use href="/_assets/media/svg/sprites.svg#circleUp"></use>
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
                 </svg>
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
     </ul>
 </nav>
+
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>andrew rico</h1>
+                <h1>{{ site.author.name }}</h1>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>About</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
                 </ul>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>Sources</h3>
                 <ul>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>Contact</h3>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
-                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
-                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
                     <li><a href="/contact">Get In Touch</a></li>
+                    <li>{% include "components/author-references.njk" %}</li>
                 </ul>
             </el-column>
         </el-grid>
     </el-section>
-    <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
+    <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
         <el-grid auto-fit="columns" columns="3">
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
                 <span id="credits">
@@ -98,5 +97,4 @@
 </footer>
 
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
-<script src="/_assets/js/modules/thisel-jscss.js"></script>
 <script src="/_assets/js/app.js"></script>

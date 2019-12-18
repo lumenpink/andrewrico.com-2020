@@ -1,0 +1,20 @@
+---
+fonts: "https://fonts.googleapis.com/css?family=Roboto&display=swap"
+---
+{% include "partials/partial-head.njk" %}
+    <body>
+        {% include "navigations/navigation-base.njk" %}
+        <main class="simple-page"> 
+            <el-section padding-gap=6>
+                <el-grid pixel-width="768">
+                    <el-column attr="row">
+                    {% block content  %}
+                        {{ content | safe }}
+                    {% endblock content %}
+                    </el-column>
+                </el-grid>
+            </el-section>
+        </main>
+        {% include "partials/partial-footer.njk" %}
+    </body>
+</html>

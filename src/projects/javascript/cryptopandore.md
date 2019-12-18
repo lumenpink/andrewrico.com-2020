@@ -1,78 +1,87 @@
 ---
 title: "Cryptopandore"
 description: "This is the Cryptopandore project page"
+keywords: ["car dealership"]
+tags: [ "projects", "js"]
 layout: "/page/project.njk"
-tags: [ projects ]
-project_string_cathegory: "Cryptocurrency"
-project_string_type: "Info"
-project_link_demo: "https://google.com/"
-project_link_code: "https://github.com/"
-project_path_image: "/_assets/media/images/placeholder.png"
-project_string_imageAlt: "Project Image"
-page_path_banner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-1.jpg)"
-page_path_situationImage: "/_assets/media/images/placeholder.png"
-page_string_situationImageAlt: "situation Project Image"
-page_path_problemImage: "/_assets/media/images/placeholder.png"
-page_string_problemImageAlt: "situation Project Image"
-page_path_approachImage: "/_assets/media/images/placeholder.png"
-page_string_approachImageAlt: "situation Project Image"
-page_path_solutionImage: "/_assets/media/images/placeholder.png"
-page_string_solutionImageAlt: "situation Project Image"
-page_path_conclutionImage: "/_assets/media/images/placeholder.png"
-page_string_conclutionImageAlt: "situation Project Image"
+ProjectStringCathegory: "Cryptocurrency"
+ProjectStringType: "Info"
+ProjectStringMade: "Made with GASTBY/ReactJS"
+ProjectLinkToDemo: "https://andrewrico.com/"
+ProjectLinkToCode: "https://github.com/"
+ProjectPathToimage: "/_assets/media/images/placeholder.png"
+ProjectimageAlt: "Project Image"
+PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
+PagePathToCaseStudyImage: "/_assets/media/images/placeholder.png"
+PageCaseStudyImageAlt: "Case Study Image"
+PagePathToProblemImage: "/_assets/media/images/placeholder.png"
+PageProblemImageAlt: "Problem Image"
+PagePathToApproachImage: "/_assets/media/images/placeholder.png"
+PageApproachImageAlt: "Approach Image"
+PagePathToSolutionImage: "/_assets/media/images/placeholder.png"
+PageSolutionImageAlt: "Solution Image"
+PagePathToConclutionImage: "/_assets/media/images/placeholder.png"
+PageConclutionImageAlt: "Conclution Image"
 ---
 
 <!-- PROJECT PAGE 
 --------------- ----------------- ------------- -->
 
-<!-- situation
+
+<!-- Case Study
 --------------- ----------------- ------------- -->
-<img id="situation-image" src="{{ page_path_situationImage }}" alt="{{ page_path_situationImage }}">
+![{{PagePathToCaseStudyImageAlt}}]({{PagePathToCaseStudyImage}})
 
-<div id="situation">
+<div id="case-study">
 
-## The Situation
+## Case Study 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 </div>
 
 <!-- problem
 --------------- ----------------- ------------- -->
-<img id="problem-image" src="{{ page_path_problemImage }}" alt="{{ page_string_problemImageAlt }}">
+![{{PagePathToProblemImageAlt}}]({{PagePathToProblemImage}})
 
-<div id="problem">
+<div id="problem" markdown="1">
 
-## The Problem
+## The Problem 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 </div>
 
 <!-- approch
 --------------- ----------------- ------------- -->
-<img id="approch-image" src="{{ page_path_approachImage }}" alt="{{ page_string_approachImageAlt }}">
+![{{PagePathToApproachImageAlt}}]({{PagePathToApproachImage}})
 
-<div id="approach">
+<div id="approach" markdown="1">
 
 ## The Approach
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 </div>
 
 <!-- solution
 --------------- ----------------- ------------- -->
-<img id="solution-image" src="{{ page_path_solutionImage }}" alt="{{ page_string_solutionImageAlt }}">
+![{{PagePathToSolutionImageAlt}}]({{PagePathToSolutionImage}})
 
-<div id="solution">
+<div id="solution" markdown="1">
 
 ## The Solution
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 </div>
 
 <!-- conclution
 --------------- ----------------- ------------- -->
-<img id="conclution-image" src="{{ page_path_conclutionImage }}" alt="{{ page_string_conclutionImageAlt }}">
+![{{PagePathToConclutionImageAlt}}]({{PagePathToConclutionImage}})
 
-<div id="conclution">
+<div id="conclution" markdown="1">
 
 ## The Conclution
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
 </div>
 
 

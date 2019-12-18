@@ -1,142 +1,21 @@
 ---
-pathTo_banner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)"
+PagePathToBanner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)"
 ---
 {% include "partials/partial-head.njk" %}
-
 <body>
     {% include "navigations/navigation-home.njk" %}
-    <header> 
-        <el-section id="about" 
-        height="100" 
-        display="flex" 
-        flex-align="center" 
-        background="{{ pathTo_banner }}" 
-        color="var(--color-white)">
-            <el-grid column="1">
-                <el-column  id="header" attr="row">
-
-                    <el-inlinev class="card-online-bio"
-                    background-image="{{ pathTo_banner }}" >
-                        <figure class="card-intro">
-                            <h1> Hello, I'am {{ global.author }} </h1>
-                            <svg fill="white">
-                                <use href="_assets/media/svg/sprites.svg#github"></use>
-                            </svg>
-                            <p> 
-                                <svg fill="white">
-                                    <use href="_assets/media/svg/sprites.svg#location"></use>
-                                </svg> {{ global.location }}
-                            </p>
-                            <h3> {{ global.jobTitle }} <br> {{ global.jobSubtitle }} </h3>
-                        </figure>
-                        <div class="card-online-terminal"> 
-                            <p class="typewrite" data-period="2000" data-type='[ 
-                                    " I like to build things – I love knowledge ", 
-                                    " and I strongly believe technology can ",
-                                    " and should enrich every single life ", 
-                                    " this universe has to offer. ", 
-                                    " When I’m not working on client projects ",
-                                    " I’m either learning about new technologies ",
-                                    " or finding new ways to bring more value ",
-                                    " to my clients at an affordable price. ",
-                                    " I`ve always been drawn to the overlap ",
-                                    " between design and development. ",
-                                    " I enjoy each aspect, and love ", 
-                                    " building sites & web applications ",
-                                    " from start to finish, for clients ",
-                                    " all over the world. ", 
-                                    " I`m available for remote work - ",
-                                    " if you would like to build something, ",
-                                    " let`s work together? "
-                                ]'>
-                                <span class="caret"></span>
-                            </p>
-                        </div>
-                        <nav class="card-online-navigation">
-                            <ul>
-                                <li>
-                                    <a href="{{ global.linkedin }}" target="_blank"> <svg fill="white">
-                                            <use href="_assets/media/svg/sprites.svg#linkedin"></use>
-                                        </svg></a>
-                                    LinkedIn
-                                </li> |
-                                <li>
-                                    <a href="{{ global.github }}" target="_blank"> <svg fill="white">
-                                            <use href="_assets/media/svg/sprites.svg#github"></use>
-                                        </svg></a>
-                                    Github
-                                </li> |
-                                <li>
-                                    <a href="/portfolio"><svg fill="white">
-                                            <use href="_assets/media/svg/sprites.svg#lookInFolder"></use>
-                                        </svg></a>
-                                    Porfolio
-                                </li> |
-                                <li>
-                                    <a href="/blog"><svg fill="white">
-                                            <use href="_assets/media/svg/sprites.svg#fileInFolder"></use>
-                                        </svg></a>
-                                    Blog
-                                </li> |
-                                <li>
-                                    <a href="/contact"><svg fill="white">
-                                            <use href="_assets/media/svg/sprites.svg#contact"></use>
-                                        </svg></a>
-                                    Contacts
-                                </li>
-                            </ul>
-                        </nav>
-                        <el-button class="cubic">
-                            <a slot="button" extended="button" theme="custom" href="#schedulePhoneCall">Schedule a phone</a>
-                        </el-button>
-                    </el-inline>
-                    
-                </el-column>
-            </el-grid>
-            <div id="schedulePhoneCall" class="modal-window">
-                <div class="modal-content">
-                    <a href="#about" title="Close Modal" class="backdrop-modal"></a>
-                    <form 
-                    id="andrewrico-schedulePhoneCall-homePage" 
-                    name="andrewrico-schedulePhoneCall-homePage"
-                    class="form-skin form-site" 
-                    method="POST" 
-                    data-netlify="true">
-                        <p>Schedule a Phone Call</p>
-                        <label for="name">name</label>
-                        <input type="text" name="name" placeholder="Name" aria-label="name" />
-                        <label for="email">email</label>
-                        <input type="text" name="email" placeholder="E-mail" aria-label="email" />
-                        <label for="phone">phone</label>
-                        <input type="text" name="email" placeholder="Phone" aria-label="phone" />
-                        <label for="url">url</label>
-                        <input type="url" name="url" placeholder="URL" aria-label="url" />
-
-<el-inline attr="columns">
-                        <label for="date">date</label>
-                        <input type="date" name="date" placeholder="Date" aria-label="date" />
-                        <label for="time">time</label>
-                        <input type="time" name="time" placeholder="Time" aria-label="time" />
-</el-inline>
-
-                        <label for="message">message</label>
-                        <textarea name="message" rows="1" placeholder="Any Questions?"  aria-label="message"></textarea><br><br>
-                        <el-button class="cubic">
-                            <button type="submit" slot="button" extended="button" theme="custom">
-                                Submit
-                            </button>
-                        </el-button>
-                    </form>
-                </div>
-            </div>
-        </el-section>
-    </header>
+    {% include "headers/header.homepage.njk" %}
+    <div id="schedule-phone-call" class="modal-popup">
+        <div class="modal-content">
+            <a href="#about" title="CLOSE" class="backdrop-modal"></a>
+            {% include "forms/form-scheduleCall.njk" %}
+        </div>
+    </div>
     <main>
         {% block content %}
             {{ content | safe }}
         {% endblock content %}
     </main>
-    {% include "partials/partial-footer.njk" %}
+    {% include "partials/partial-footer.njk" %}    
 </body>
-
 </html>

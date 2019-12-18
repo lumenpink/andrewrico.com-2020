@@ -1,17 +1,7 @@
 {% include "partials/partial-head.njk" %}
     <body>
         {% include "navigations/navigation-project.njk" %}
-        <header>
-            <el-section class="site-base-header" background="{{ page_path_banner }}">
-                <el-grid columns="1">
-                    <el-inline attr="row">  
-                        <h1>
-                            {{ title }}
-                        </h1>
-                    </el-inline>  
-                </el-grid>
-            </el-section>
-        </header>
+        {% include "headers/header-banner.njk" %}
         <main> 
             {% block content  %}
                {{ content | safe }}

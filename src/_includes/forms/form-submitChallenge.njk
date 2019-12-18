@@ -1,0 +1,63 @@
+<div class="netliform popup-form">
+    <p id="error-messsge"></p>
+    <h3>Submit a Code Challenge</h3>
+    <form 
+        id="andrewrico-submitChallenge-netlify" 
+        name="andrewrico-submitChallenge-netlify" 
+        method="POST" 
+        action="/"
+        data-netlify="true"
+        >
+        <fieldset class="fullwidth">
+            <label for="name">NAME</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                <input type="text" name="name" placeholder="jhon due" aria-label="name" required />
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="selection">YOU ARE A</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
+                <select name="selection" required>
+                    <option value="">Select one</option>
+                    <option value="Recruiter">Recruiter</option>
+                    <option value="Employer">Employer </option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="email">E-MAIL</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                <input type="text" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="phone">PHONE</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                <input type="text" name="phone" placeholder="(555)-333-3333" aria-label="phone" required />
+            </label>
+        </fieldset>
+            <fieldset>
+            <label for="url">URL</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+                <input type="text" name="url" placeholder="https://www." aria-label="url" required />
+            </label>
+        </fieldset>
+        <fieldset class="fullwidth">
+            <label for="message">MESSAGE</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                <input type="text" name="message" placeholder="In a few words, tell me about the rules" aria-label="message" required/>
+            </label>
+        </fieldset>
+        <el-button class="el-button">
+            <button type="submit" slot="button" extended="button" theme="quaternary">
+                Submit
+            </button>
+        </el-button>
+    </form>
+</div>

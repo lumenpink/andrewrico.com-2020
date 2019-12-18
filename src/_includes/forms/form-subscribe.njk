@@ -1,0 +1,24 @@
+<div class="netliform subscriber-form">
+    {# <p id="error"></p> #}
+    <h3>NEWSLETTERS</h3>
+    <form 
+        id="andrewrico-subscribe-netlify" 
+        name="andrewrico-subscribe-netlify" 
+        method="POST" 
+        action="/" 
+        data-netlify="true"
+        >
+        <fieldset>
+            <label for="email">E-MAIL</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                <input type="text" name="email" placeholder="jhondue@mail.com" aria-label="email"  required/>
+            </label>
+        </fieldset>
+        <el-button class="el-button">
+            <button type="submit" slot="button" extended="button">
+                SUBSCRIBRE 
+            </button>
+        </el-button>
+    </form>
+</div>

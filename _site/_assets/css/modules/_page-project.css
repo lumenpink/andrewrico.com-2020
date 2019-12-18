@@ -13,12 +13,12 @@
     flex-direction: column;
 }
 
-#situation {
-    grid-area: situation;
+#case-study {
+    grid-area: case-study;
 }
 
-#situation-image {
-    grid-area: situation-image;
+#case-study-image {
+    grid-area: case-study-image;
 }
 
 #problem {
@@ -29,12 +29,12 @@
     grid-area: problem-image;
 }
 
-#approch {
-    grid-area: approch;
+#approach {
+    grid-area: approach;
 }
 
 #approch-image {
-    grid-area: approch-image;
+    grid-area: approach-image;
 }
 
 #solution {
@@ -53,27 +53,27 @@
     grid-area: conclution-image;
 }
 
-#project-page el-grid{
+#project-page el-grid {
     grid-template-areas:
-    'situation-image'
-    'situation' 
-    'problem-image' 
-    'problem'
-    'approch-image'
-    'approch' 
-    'solution-image' 
-    'solution'
-    'conclution-image'
-    'conclution';
+        'case-study-image'
+        'case-study'
+        'problem-image'
+        'problem'
+        'approach-image'
+        'approach'
+        'solution-image'
+        'solution'
+        'conclution-image'
+        'conclution';
 }
 
 @media(min-width:768px) {
-    #project-page el-grid{
+    #project-page el-grid {
         grid-template-areas:
-        'situation situation-image'
-        'problem-image problem'
-        'approch approch-image'
-        'solution-image solution'
-        'conclution conclution-image';
+            'case-study case-study-image'
+            'problem-image problem'
+            'approach approach-image'
+            'solution-image solution'
+            'conclution conclution-image';
     }
 }

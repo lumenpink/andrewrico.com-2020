@@ -5,11 +5,16 @@ custom/normalize ---------------------------------------
 @import 'app.css';
 
 /*
+app ---------------------------------------
+*/
+@import 'modules/_app-typo.css';
+
+/*
 navigations ---------------------------------------
 */
 @import 'modules/_nav-drawer.css';
 @import 'modules/_nav-mobil.css';
-@import 'modules/_nav-sidanav.css';
+@import 'modules/_nav-panel.css';
 
 /*
 partials ---------------------------------------
@@ -22,7 +27,6 @@ pages ---------------------------------------
 */
 @import 'modules/_page-article.css';
 @import 'modules/_page-blog.css';
-@import 'modules/_page-contact.css';
 @import 'modules/_page-portfolio.css';
 @import 'modules/_page-project.css';
 
@@ -41,3 +45,4 @@ components ---------------------------------------
 */
 @import 'modules/_comp-form.css';
 @import 'modules/_comp-modal.css';
+@import 'modules/_comp-author.css';

@@ -1,75 +1,83 @@
 /*
-index: Portfolio 11ty App | 2019 | https://Andrewrico.com/
-------------------------------------------------
+index: Portfolio | 11ty App | 2019 | https://Andrewrico.com/
+------------------------------------------------------------
+- Hide on scroll (a)
+- Hide on scroll (b)
 - Typing
-- 
-- 
 */
+
+
 /* ---------------------------------------------
-name: Typing
-Function: Typing 
-Location: [ card-bio, (Home) ]
+Name: el-drawer
+Function: el-drawer 
+Location: [ el-drawer]
 /*--------------------------------------------- */
+const drawer = document.querySelector('el-drawer')
 
-// const typedTextSpan = document.querySelector(".typed-text");
-// const cursorSpan = document.querySelector(".cursor");
+const drawerStyle = {
+	sizePadding: `0.6rem`,
+	brandFontSize: `0.8rem`,
+	brandFontFamily: `'Dancing Script', cursive`,
+	linkFontSize: `1rem`,
+	hoverItem: `rgba(232, 232, 232, 0.69)`,
+	hoverText: `#000`,
+	hoverNavbarText: `var(--color-tertiary)`,
+	backgroundColor: `#fff`,
+	textColor: `#00000`,
+}
+drawer.style.setProperty('--drawer-padding', drawerStyle.sizePadding)
+drawer.style.setProperty('--drawer-brand-font-size', drawerStyle.brandFontSize)
+drawer.style.setProperty('--drawer-brand-font-family', drawerStyle.brandFontFamily)
+drawer.style.setProperty('--drawer-link-font-size', drawerStyle.linkFontSize)
+drawer.style.setProperty('--drawer-hover-color', drawerStyle.hoverItem)
+drawer.style.setProperty('--drawer-hover-text', drawerStyle.hoverText)
+drawer.style.setProperty('--drawer-hover-navbar-text', drawerStyle.hoverNavbarText)
+drawer.style.setProperty('--drawer-background-color', drawerStyle.backgroundColor)
+drawer.style.setProperty('--drawer-text-color', drawerStyle.textColor)
 
-// const textArray = [
-//     "hello, I'am andrew Rico,",
-//     "Web developer/uiux engenieer",
-//     "a journey",
-//     "LIFE"
-// ];
-// const typingDelay = 200;
-// const erasingDelay = 100;
-// const newTextDelay = 2000; // Delay between current and next text
-// let textArrayIndex = 0;
-// let charIndex = 0;
 
-// function type() {
-//   if (charIndex < textArray[textArrayIndex].length) {
-//     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-//     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-//     charIndex++;
-//     setTimeout(type, typingDelay);
-//   } 
-//   else {
-//     cursorSpan.classList.remove("typing");
-//   	setTimeout(erase, newTextDelay);
-//   }
+
+
+/* ---------------------------------------------
+Name: Hide on scroll (a)
+Function: Hide navigation panel when scroll down, show when scroll up 
+Location: [ Site ]
+/*--------------------------------------------- */
+// let prevOffset = window.pageYOffset;
+// window.onscroll = () => {
+// 	let currentOffset = window.pageYOffset;
+// 	if (prevOffset > currentOffset) {
+// 		document.getElementById("").style.right = "-60px";
+// 	} else {
+// 		document.getElementById("").style.right = "0px";
+// 	}
+// 	prevOffset = currentOffset;
 // }
 
-// function erase() {
-// 	if (charIndex > 0) {
-//     if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-//     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-//     charIndex--;
-//     setTimeout(erase, erasingDelay);
-//   } 
-//   else {
-//     cursorSpan.classList.remove("typing");
-//     textArrayIndex++;
-//     if(textArrayIndex>=textArray.length) textArrayIndex=0;
-//     setTimeout(type, typingDelay + 1100);
-//   }
-// }
-
-// document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-//   if(textArray.length) setTimeout(type, newTextDelay + 250);
-// });
 
 /* ---------------------------------------------
-name: copyToClipboard
-Function: copyToClipboard 
-Location: [ post]
+Name: Hide on scroll (b)
+Function: Hide navigation panel when is window in on header  
+Location: [ Site ]
 /*--------------------------------------------- */
+window.onscroll = () => {
+	scrollHide()
+};
+scrollHide = () => {
+	if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+		document.getElementById("navigation-panel").style.right = "0px";
+	} else {
+		document.getElementById("navigation-panel").style.right = "-64px";
+	}
+}
+
 
 /* ---------------------------------------------
-name: copyToClipboard
-Function: copyToClipboard 
-Location: [ post]
+Name: Typing
+Function: Typing in the terminal mimic 
+Location: [ Home / card-bio]
 /*--------------------------------------------- */
-let TxtType = function(el, toRotate, period) {
+let TypeTxt = function (el, toRotate, period) {
 	this.toRotate = toRotate;
 	this.el = el;
 	this.loopNum = 0;
@@ -78,50 +86,75 @@ let TxtType = function(el, toRotate, period) {
 	this.tick();
 	this.isDeleting = false;
 };
-
-TxtType.prototype.tick = function() {
+TypeTxt.prototype.tick = function () {
 	let i = this.loopNum % this.toRotate.length;
 	let fullTxt = this.toRotate[i];
-
 	if (this.isDeleting) {
-	this.txt = fullTxt.substring(0, this.txt.length - 1);
+		this.txt = fullTxt.substring(0, this.txt.length - 1);
 	} else {
-	this.txt = fullTxt.substring(0, this.txt.length + 1);
+		this.txt = fullTxt.substring(0, this.txt.length + 1);
 	}
-
-	this.el.innerHTML = '<span class="caret">'+this.txt+'</span>';
-
+	this.el.innerHTML = '<span class="caret">' + this.txt + '</span>';
 	let that = this;
 	let delta = 200 - Math.random() * 100;
-
-	if (this.isDeleting) { delta /= 2; }
-
-	if (!this.isDeleting && this.txt === fullTxt) {
-	delta = this.period;
-	this.isDeleting = true;
-	} else if (this.isDeleting && this.txt === '') {
-	this.isDeleting = false;
-	this.loopNum++;
-	delta = 100;
+	if (this.isDeleting) {
+		delta /= 2;
 	}
-
-	setTimeout(function() {
-	that.tick();
+	if (!this.isDeleting && this.txt === fullTxt) {
+		delta = this.period;
+		this.isDeleting = true;
+	} else if (this.isDeleting && this.txt === '') {
+		this.isDeleting = false;
+		this.loopNum++;
+		delta = 100;
+	}
+	setTimeout(function () {
+		that.tick();
 	}, delta);
 };
-
-window.onload = function() {
+window.onload = function () {
 	let elements = document.getElementsByClassName('typewrite');
-	for (let i=0; i<elements.length; i++) {
+	for (let i = 0; i < elements.length; i++) {
 		let toRotate = elements[i].getAttribute('data-type');
 		let period = elements[i].getAttribute('data-period');
 		if (toRotate) {
-		  new TxtType(elements[i], JSON.parse(toRotate), period);
+			new TypeTxt(elements[i], JSON.parse(toRotate), period);
 		}
 	}
-	// INJECT CSS
-	let css = document.createElement("style");
-	css.type = "text/css";
-	css.innerHTML = ".typewrite > .caret { border-right: 0.08em solid lime}";
-	document.body.appendChild(css);
 };
+
+
+/* ---------------------------------------------
+Name: form
+Function: form 
+Location: [ form]
+/*--------------------------------------------- */
+// const name = document.getElementById('name-schedule')
+// const email = document.getElementById('email-schedule')
+// const form = document.getElementById('andrewrico-scheduleCall-netlify')
+// const errorMessage = document.getElementById('error-message')
+
+// form.addEventListener('submit', (e) => {
+// 	let messages = []
+// 	if (name.value === '' || name.value == null) {
+// 		messages.push('name is required')
+// 		errorMessage.style.display = "inline-block";
+// 		name.style.backgroundColor = "red";
+// 	}
+
+// 	if (email.value.length <= 6) {
+// 		messages.push('email must be longer than 6 characters')
+// 	}
+// 	if (email.value.length >= 20) {
+// 		messages.push('email must be less than 20 characters')
+// 	}
+// 	if (email.value === 'email') {
+// 		messages.push('email cannot be password')
+// 	}
+
+// 	if (messages.length > 0) {
+// 		e.preventDefault()
+// 		errorMessage.innerText = messages.join(', ')
+// 	}
+
+// })

@@ -2,36 +2,43 @@
 title: "Blog"
 description: "This is the Blog page"
 layout: "/layouts/layout-blog.njk"
-pathTo_banner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-1.jpg)"
+PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
 pagination:
-  data: collections.post
+  data: collections.article
   size: 10
   reverse: true
-  alias: posts
+  alias: articles
 ---
-<el-section id="blog-page" class="blog-article-entries" padding-gap="10">
+<el-section id="blog-page" padding-gap="10">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
             <el-inline id="blog-bio">
-                <img class="author-avatar" src="{{ global.avatar}}" alt="{{ global.author}} Avatar">
-                <h1>Andrew Rico</h1>
-                <h3>UX designer and educational psychology, music, & art fan. Keeps up with her dog's Instagram fans @dgtrwatson.</h3>
+                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
+                <h1> {{ site.author.name}} </h1>
+                <h3> {{ site.author.bio}} </h3>
                 <a href="/">iure beatae dolorum? </a>
             </el-inline>
             <ul>
-                {% for post in posts %}
+                {% for article in articles %}
                     <li>
                         <article class="card-article">
-                            <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time><br><br>
-                            <h2> {{ post.data.title }} </h2>
-                            {% excerpt post %}
+                            <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
+                            <h2> {{ article.data.title }} </h2>
+                            {% excerpt article %}
                             <el-button>
-                                <a slot="button" extended="button" theme="quaternary" href="{{ post.url | url }}">Read more</a>
+                                <a slot="button" extended="button" theme="quaternary" href="{{ article.url | url }}">Read more</a>
                             </el-button>
                         </article>
                     </li>
                 {% endfor %}
             </ul>
+        </el-column>
+    </el-grid>
+</el-section>
+<el-section padding-gap="2" background="#fafafa">
+    <el-grid pixel-width="768" columns="1">
+        <el-column attr="row">
+        {% include "forms/form-subscribe.njk" %}
         </el-column>
     </el-grid>
 </el-section>

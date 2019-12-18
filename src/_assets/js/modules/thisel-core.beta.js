@@ -245,6 +245,14 @@ customElements.define('el-column',
 					elColumn.styleMargin = elColumn.getAttribute("margin") + "em",
 					elColumn.style.margin = elColumn.styleMargin ? elColumn.styleMargin : null
 				)
+				elColumn.hasAttribute("center") && (
+					elColumn.styleMargin = elColumn.getAttribute("center"),
+					elColumn.style.margin = elColumn.styleMargin ? elColumn.styleMargin : null
+				)
+				elColumn.hasAttribute("max-width") && (
+					elColumn.styleMaxWidth = elColumn.getAttribute("max-width"),
+					elColumn.style.maxWidth = elColumn.styleMaxWidth ? elColumn.styleMaxWidth : null
+				)
 			})
 		}
 	}
@@ -546,7 +554,7 @@ customElements.define('el-inline',
 );
 // create el-copyright template.
 const elCopyrightFullYear = new Date().getFullYear();
-const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:sans-serif; font-size:0.8rem; text-decoration:none;}:host h1{ white-space: nowrap; margin:0;font-family:sans-serif; font-size:0.8rem;font-weight:100; }`;
+const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:'Source Code Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:0.8rem; text-decoration:none;}:host h1{ white-space: nowrap; margin:0;font-family:sans-serif; font-size:0.8rem;font-weight:100; }`;
 const elCopyrightHTML = `<h1> ©  ${elCopyrightFullYear} <slot name="copyright"> copyright </slot> </h1>`;
 const elCopyrightTemplate = document.createElement("template");
 elCopyrightTemplate.innerHTML = `<style>`.concat(elCopyrightCSS, `</style>`).concat(elCopyrightHTML);
@@ -559,7 +567,7 @@ customElements.define('el-copyright',
 			// open shadowRoot.
 			const shadowRoot = _thisElCopyright.attachShadow({
 				mode: "open"
-			});
+			}); 
 			// clone template. 
 			shadowRoot.appendChild(elCopyrightTemplate.content.cloneNode(!0));
 			return _thisElCopyright;
@@ -631,7 +639,7 @@ const elButtonCSS = `:host {
     width: 100%;
     max-width: 300px;
     height: 50px;
-    font-family: sans-serif;
+    font-family: var(--family-font-writing);
     --color-active: #396afc;
     --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);
@@ -700,7 +708,7 @@ const elButtonCSS = `:host {
     text-rendering: auto;
     text-decoration: none;
     text-align: inherit;
-    text-transform: uppercase;
+    text-transform: uppercase!important;
     font-weight: 700;
     font-size: 1em;
     white-space: normal;

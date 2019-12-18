@@ -1,0 +1,48 @@
+<div class="netliform simple-form">
+    <p id="error-message"></p>
+    <h3>
+        Send me a message
+        <svg width="24" height="24" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#rocket"></use></svg>
+    </h3>
+    <form 
+        id="andrewrico-sendMessage-netlify" 
+        name="andrewrico-sendMessage-netlify" 
+        method="POST"
+        action="/" 
+        data-netlify="true"
+        >
+        <fieldset>
+            <label for="name">NAME</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                <input type="text" name="name" placeholder="jhon due" aria-label="name" required/>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="email">E-MAIL</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                <input type="text" name="email" placeholder="jhondue@mail.com" aria-label="email" required/>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="phone">PHONE</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                <input type="text" name="phone" placeholder="(555)-333-3333" aria-label="phone" required/>
+            </label>
+        </fieldset>
+        <fieldset class="fullwidth">
+            <label for="message">MESSAGE</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                <input type="text" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
+            </label>
+        </fieldset>
+        <el-button class="el-button">
+            <button type="submit" slot="button" extended="button" theme="custom">
+                Send Message
+            </button>
+        </el-button>
+    </form>
+</div>

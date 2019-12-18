@@ -1,85 +1,127 @@
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    -ms-overflow-style: scrollbar;
-    --color-primary: #04ff00;
-    --color-secondary: #036801;
-    --color-tertiary: #172ee3;
-    --color-quaternary: #12185c;
-    --color-transparent-primary: rgba(3, 104, 1, 0.325);
-    --color-transparent-secondary: rgba(18, 22, 65, 0.337);
-    --color-lighter: #fcfcfc;
-    --color-light: #ebebeb;
-    --color-dark: #827f7f;
-    --color-darker: #262626;
-    --color-gray: gray;
-    --color-white: white;
-    --color-black: black;
-    --color-blue: #2462ff;
-    --color-green: #00ffae;
-    --color-ripple: #7596ac;
-    --color-shadow: 0 1px 2px rgba(0, 0, 0, 0.96), 0 1px 2px rgba(0, 0, 0, 0.96);
-    --color-gradient: -webkit-linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
-    --color-gradient: linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
-    --color-text-light: #827f7f;
-  }
+html {
+  touch-action: manipulation;
+  font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "PT sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -ms-overflow-style: scrollbar;
+  --color-primary: #04ff00;
+  --color-secondary: #125400;
+  --color-tertiary: #172ee3;
+  --color-quaternary: #12185c;
+  --color-transparent-primary: rgba(3, 104, 1, 0.325);
+  --color-transparent-secondary: rgba(18, 22, 65, 0.337);
+  --color-lighter: #fcfcfc;
+  --color-light: #ebebeb;
+  --color-dark: #827f7f;
+  --color-darker: #262626;
+  --color-gray: gray;
+  --color-white: white;
+  --color-black: black;
+  --color-blue: #2462ff;
+  --color-green: #00ffae;
+  --color-red: #ff1010;
+  --color-ripple: #7596ac;
+  --color-shadow: 0px 1px 2px rgba(0, 0, 0, 0.48), 0px 1px 2px rgba(0, 0, 0, 0.48);
+  --color-gradient: -webkit-linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
+  --color-gradient: linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
+  --color-text-light: #827f7f;
+  --color-banner-shadow:radial-gradient(ellipse closest-side, #0f0e16aa, #0c0b10);
 
-  body {
-    font-family: 'Source Code Pro', monospace;
-    margin: 0;
-  }
+  --family-font-title: "Dancing Script", cursive;
+  --family-font-healine: "Coda Caption", sans-serif;
+  --family-font-content: "Source Code Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --family-font-writing: "Didact Gothic", sans-serif;
 
-  ::after,
-  ::before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
-  }
+}
+body {
+  font-family: var(--family-font-content);
+  margin: 0;
+}
 
-  *:not(:defined) {
-    display: block;
-  }
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
 
-  img {
-    height: auto;
-    max-width: 100%;
-  }
+*:not(:defined) {
+  display: block;
+}
 
-  h2 {
-    font-size: 2.8em;
-    font-family: 'Coda Caption', sans-serif;
-  }
+img {
+  height: auto;
+  max-width: 100%;
+}
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none
-  }
+h1 {
+  font-family: var(--family-font-title);
+}
 
-  iframe {
-    display: block;
-    box-shadow: var(--color-shadow);
-  }
+h2 {
+  font-size: 2.8em;
+  font-family: var(--family-font-healine);
+}
 
-  .cubic {
-    box-shadow: rgba(46, 41, 51, 0.167) 0px 1px 2px, rgba(71, 63, 79, 0.187) 0px 1px 2px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, padding 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none
+}
 
-  .cubic:hover {
-    transform: translateY(-0.12rem);
-    box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 4px 8px;
-  }
+a {
+  color: var(--color-quaternary);
+}
+
+iframe {
+  display: block;
+  box-shadow: var(--color-shadow);
+}
+
+.site-homepage-header {
+  display: flex;
+  min-width: 100%;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 0.5px var(--color-primary));
+}
+
+.el-button {
+  box-shadow: rgba(46, 41, 51, 0.167) 0px 1px 2px, rgba(71, 63, 79, 0.187) 0px 1px 2px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, padding 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.el-button:hover {
+  transform: translateY(-0.12rem);
+  box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 4px 8px;
+}
 
 
 
-  #header {
-    filter: drop-shadow(0 0 1px var(--color-primary));
-  }
+.simple-page h1 ,
+.simple-page {
+  font-family: var(--family-font-writing);
+}
+
+
+.author-avatar {
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
+/*
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Source Code Pro', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
+
+*/

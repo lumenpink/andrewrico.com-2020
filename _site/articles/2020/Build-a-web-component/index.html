@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta property=”og:type” content=”article” />
+  <meta property=”og:title” content="title" />
+  <meta property=”og:description” content="description" />
+  <meta property=”og:image” content="image file" />
+  <meta property=”og:url” content="url" />
+  <meta property=”og:site_name” content="site name" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name=”twitter:title” content=”title”>
+  <meta name=”twitter:description” content="description">
+  <meta name=”twitter:image” content="image file">
+  <meta name=”twitter:site” content=”@USERNAME”>
+  <meta name=”twitter:creator” content=”@USERNAME”>
+
+  <title>Andrew Rico | Build a web component</title>
+  <meta name="description" content="This is the Build a web component page">
+  <meta name="keywords" content="javascript,webComponents ">
+  <link href=/_assets/css/stylesheet.css rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
+</head>
+
+<el-loading background="var(--color-gradient)"></el-loading>
+
+    <body>
+        <el-drawer>
+    <h1 slot="drawer-brand">Andrew Rico</h1><h1 slot="navbar-brand">Andrew Rico</h1>
+<div class="drawer-menu" slot="drawer-menu">
+    <ul>
+        <li>
+            <a href="/">
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
+                    Home
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
+                    Portfolio
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <hr><h3>Sources</h3>
+    <ul>
+        <li>
+            <a href="/blog">
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
+                    Blog
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <hr><h3>Contact</h3>
+    <ul>
+        <li>
+            <a href="" target="_blank">
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+                    LinkedIn
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="" target="_blank">
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+                    Github
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <span>
+                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    Get In Touch
+                </span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <el-button class="cubic">
+                <a slot="button" extended="button"  href="/blog"> BLOG </a>
+            </el-button>
+        </li>
+    </ul>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
+            <li>
+                <a href="/blog"> BLOG </a>
+            </li>
+        </ul>
+    </el-dropdown>
+</el-drawer>
+        <header>
+    <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-4.jpg)">
+        <el-grid columns="1">
+            <el-inline attr="row">  
+                <h1>
+                    Build a web component
+                </h1>
+            </el-inline>  
+        </el-grid>
+    </el-section>
+</header>
+        <main> 
+            
+               <el-section id="article-page" padding-gap="10">
+    <el-grid pixel-width="1024" auto-fit="columns" gap="3" template-columns="3fr 1fr">
+        <el-column>
+            <article id="article">
+                
+                    <h4 class="preface">
+we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out.</h4>
+<h2># What are WebComponents?</h2>
+<!-- Excerpt Start -->
+<p>had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<!-- Excerpt End -->
+<h2># Title</h2>
+<h3>Subitle</h3>
+<p><strong>strong</strong> <br>
+<mark>mark</mark> <br>
+<em>em</em> <br>
+<i> i tag</i><br>
+<b> b tag </b><br>
+<a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<h2># Title</h2>
+<el-inline attr="lead">
+we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
+</el-inline>
+<h3>Title</h3>
+<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<div class="coding-section">
+<pre><code>
+* {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+</code></pre>
+<button>copy</button>
+</div>
+<h2># Title</h2>
+<p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<h2># Title</h2>
+<p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<p><a class="link" href="/">in this article</a></p>
+
+                
+            </article>
+        </el-column>
+        <el-column>
+            <aside id="article-sidebar">
+                <div class="article-author">
+                    <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt="Andrew Rico Avatar">
+                    <div class="author-meta">
+                       <p> <b> Andrew Rico </b> </p>
+                       <p> <time datetime="2019-12-03T00:00:00.000Z">  December 2, 2019  </time> </p>
+                    </div>
+                </div>
+                <ul class="article-keywords">
+                    
+                        <li><b>javascript</b></li>
+                    
+                        <li><b>webComponents </b></li>
+                    
+                </ul>
+            </aside>
+        </el-column>
+    </el-grid>
+</el-section>
+            
+        </main>
+        <nav id="navigation-panel">
+    <ul>
+        <li>
+            <a href="/">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                </svg>
+                <span class="tooltip"><span>HOMEPAGE</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/portfolio">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                </svg>
+                <span class="tooltip"><span>PORTFOLIO</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/blog">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                </svg>
+                <span class="tooltip"><span>BLOG</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                </svg>
+                <span class="tooltip"><span>CONTACT</span></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL UP</span></span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<footer>
+    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+        <el-grid auto-fit="columns" columns="4">
+            <el-column align-items="center" justify-content="center">
+                <h1>Andrew Rico</h1>
+            </el-column>
+            <el-column>
+                <h3>About</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                </ul>
+            </el-column>
+            <el-column>
+                <h3>Sources</h3>
+                <ul>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </el-column>
+            <el-column>
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="/contact">Get In Touch</a></li>
+                    <li><div class="author-references">
+    <a href="andrewric@gmail.com" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+    </a>
+    <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+    </a>
+    <a href="https://github.com/Andrewrico" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+    </a>
+    <a href="" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+    </a>
+    <a href="" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+    </a>
+</div></li>
+                </ul>
+            </el-column>
+        </el-grid>
+    </el-section>
+    <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
+        <el-grid auto-fit="columns" columns="3">
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <span id="credits">
+                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>,
+                    Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>,
+                    Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
+                </span>
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <el-copyright>
+                    <span id="copyright" slot="copyright">
+                        <a href="/"> andrewrico.com </a>. All rights reserved
+                    </span>
+                </el-copyright>
+            </el-column>
+            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+                <a href="/terms"> Disclaimer </a>
+                <a href="/privacy"> Privacy </a>
+                <a href="/sitemap"> Site Map </a>
+            </el-column>
+        </el-grid>
+    </el-section>
+</footer>
+
+<script src="/_assets/js/modules/thisel-core.beta.js"></script>
+<script src="/_assets/js/app.js"></script>
+    </body>
+</html> 

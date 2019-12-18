@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:title" content="European Travel Destinations">
-  <meta property="og:description" content="description">
-  <meta property="og:image" content="imageUrl">
-  <meta property="og:url" content="url">
-  <meta name="twitter:card" content="summary_large_image">
+
   <meta property="fb:app_id" content="your_app_id" />
-  <meta name="twitter:site" content="@website-username">
+  <meta property=”og:type” content=”article” />
+  <meta property=”og:title” content="title" />
+  <meta property=”og:description” content="description" />
+  <meta property=”og:image” content="image file" />
+  <meta property=”og:url” content="url" />
+  <meta property=”og:site_name” content="site name" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name=”twitter:title” content=”title”>
+  <meta name=”twitter:description” content="description">
+  <meta name=”twitter:image” content="image file">
+  <meta name=”twitter:site” content=”@USERNAME”>
+  <meta name=”twitter:creator” content=”@USERNAME”>
+
   <title>Andrew Rico | Portfolio</title>
   <meta name="description" content="This is the Portfolio page">
   <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Roboto|PT+Sans|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
 </head>
 
 <el-loading background="var(--color-gradient)"></el-loading>
 
-
     <body>
         <el-drawer>
-    <h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
+    <h1 slot="drawer-brand">Andrew Rico</h1><h1 slot="navbar-brand">Andrew Rico</h1>
 <div class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
@@ -59,7 +67,7 @@
     <hr><h3>Contact</h3>
     <ul>
         <li>
-            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+            <a href="" target="_blank">
                 <span>
                     <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
                     LinkedIn
@@ -67,7 +75,7 @@
             </a>
         </li>
         <li>
-            <a href="https://github.com/Andrewrico" target="_blank">
+            <a href="" target="_blank">
                 <span>
                     <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
                     Github
@@ -87,15 +95,47 @@
 </div>
     <ul slot="navbar-menu" class="menu-navbar">
         <li>
-            <el-button class="cubic">
-                <a slot="button" extended="button"  href="/blog"> BLOG </a>
-            </el-button>
+            <a href="#Javascript">
+                Javascript
+            </a>
+        </li>
+        <li>
+            <a href="#Wordpress">
+                Wordpress
+            </a>
+        </li>
+        <li>
+            <a href="#UIUX">
+                UI/UX
+            </a>
+        </li>
+        <li>
+            <a href="#HTMLCSS">
+                HTML/CSS
+            </a>
         </li>
     </ul>
     <el-dropdown slot="mobil-menu" id="mobil-menu">
         <ul slot="dropdown">
             <li>
-                <a href="/blog"> BLOG </a>
+                <a href="#Javascript">
+                    Javascript
+                </a>
+            </li>
+            <li>
+                <a href="#Wordpress">
+                    Wordpress
+                </a>
+            </li>
+            <li>
+                <a href="#UIUX">
+                    UI/UX
+                </a>
+            </li>
+            <li>
+                <a href="#HTMLCSS">
+                    HTML/CSS
+                </a>
             </li>
         </ul>
     </el-dropdown>
@@ -103,134 +143,107 @@
 
 
 
+
         <header>
-            <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-2.jpg)">
-                <el-grid columns="1">
-                    <el-inline attr="row" center="auto">  
-                        <h1>
-                            Portfolio
-                        </h1>
-                    </el-inline>  
-                </el-grid>
-            </el-section>
-        </header>
+    <el-section class="site-base-header" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-2.jpg)">
+        <el-grid columns="1">
+            <el-inline attr="row">  
+                <h1>
+                    Portfolio
+                </h1>
+            </el-inline>  
+        </el-grid>
+    </el-section>
+</header>
         <main>
-            <el-section padding-top="6" padding-bottom="12">
+            <el-section id="portfolio-page" padding-top="6" padding-bottom="12">
     <el-grid auto-fit="columns" columns="3" gap="3">
-        <el-column attr="row">
+
+        <el-column id="recent" attr="row">
             <h2>Recent Projects</h2>
         </el-column>
-
+        <el-column>
+            <ul>
+            
+                <li>
+                    <article class="card-minimal">
+                        <img src="/_assets/media/images/placeholder.png" alt="">
+                        <h3>Cryptopandore</h3>
+                        <h4 class="card-tags">
+                            <span>Cryptocurrency</span>
+                            <span>Info</span>
+                        </h4>
+                        <h4 class="card-subtitle"> 
+                            <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                            Made with GASTBY/ReactJS
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="https://andrewrico.com/">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                                </a> DEMO
+                            </li>
+                            <li>
+                                <a href="https://github.com/">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                                </a> CODE
+                            </li>
+                            <li>
+                                <a href="/projects/javascript/cryptopandore/">
+                                    <svg><use href="/_assets/media/svg/sprites.svg#timeline"></use></svg>
+                                </a> CASE STUDY
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            
+            </ul>
+        </el-column>
         
-            <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
-                <h3>Cryptopandore</h3>
-                <h4 class="card-tags">
-                    <span>Cryptocurrency</span>
-                    <span>Info</span>
-                </h4>
-                <ul>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a> live
-                    </li>
-                    <li>
-                        <a href="https://github.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a> Code
-                    </li>
-                    <li>
-                        <a href="/projects/javascript/cryptopandore/">
-                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a> Project
-                    </li>
-                </ul>
-            </article>
-        
-            <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
-                <h3>Design and concepts</h3>
-                <h4 class="card-tags">
-                    <span>Interior Design</span>
-                    <span>Ecommerce</span>
-                </h4>
-                <ul>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a> live
-                    </li>
-                    <li>
-                        <a href="https://github.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a> Code
-                    </li>
-                    <li>
-                        <a href="/projects/wordpress/design-and-concepts/">
-                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a> Project
-                    </li>
-                </ul>
-            </article>
-        
-            <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
-                <h3>Mandarin Village</h3>
-                <h4 class="card-tags">
-                    <span>Restaurant</span>
-                    <span>Ecommerce</span>
-                </h4>
-                <ul>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a> live
-                    </li>
-                    <li>
-                        <a href="https://github.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a> Code
-                    </li>
-                    <li>
-                        <a href="/projects/wordpress/mandarin-village/">
-                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a> Project
-                    </li>
-                </ul>
-            </article>
-        
-            <article class="card-minimal">
-                <img src="/_assets/media/images/placeholder.png" alt="Project Image">
-                <h3>Churchill Exotics</h3>
-                <h4 class="card-tags">
-                    <span>Car Dealership</span>
-                    <span>Ecommerce</span>
-                </h4>
-                <ul>
-                    <li>
-                        <a href="https://google.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a> live
-                    </li>
-                    <li>
-                        <a href="https://github.com/">
-                            <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a> Code
-                    </li>
-                    <li>
-                        <a href="/projects/wordpress/churchill-exotics/">
-                            <svg><use href="/_assets/media/svg/sprites.svg#zoom"></use></svg>
-                        </a> Project
-                    </li>
-                </ul>
-            </article>
-        
+        <el-column id="Javascript" attr="row">
+            <h2>Javascript</h2>
+        </el-column>
+        <el-column>
+            <ul><li>
+                    <article class="card-minimal">
+                        <img src="/_assets/media/images/placeholder.png" alt="">
+                        <h3>Cryptopandore</h3>
+                        <h4 class="card-tags">
+                            <span>Cryptocurrency</span>
+                            <span>Info</span>
+                        </h4>
+                        <h4 class="card-subtitle"> 
+                            <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                            Made with GASTBY/ReactJS
+                        </h4>
+                        <ul>
+                            <li>
+                                <a href="https://andrewrico.com/">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
+                                </a> DEMO
+                            </li>
+                            <li>
+                                <a href="https://github.com/">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
+                                </a> CODE
+                            </li>
+                            <li>
+                                <a href="/projects/javascript/cryptopandore/">
+                                    <svg><use href="/_assets/media/svg/sprites.svg#timeline"></use></svg>
+                                </a> CASE STUDY
+                            </li>
+                        </ul>
+                    </article>
+                </li>
+            
+            </ul>
+        </el-column>
 
     </el-grid>
 </el-section>
+
         </main>
-        <nav class="naviton">
+        <nav id="navigation-panel">
     <ul>
         <li>
             <a href="/">
@@ -266,45 +279,60 @@
         </li>
         <li>
             <a href="#">
-                <svg width="32" height="32">
-                    <use href="/_assets/media/svg/sprites.svg#circleUp"></use>
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
                 </svg>
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
     </ul>
 </nav>
+
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>andrew rico</h1>
+                <h1>Andrew Rico</h1>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>About</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
                 </ul>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>Sources</h3>
                 <ul>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>Contact</h3>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
-                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
-                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
                     <li><a href="/contact">Get In Touch</a></li>
+                    <li><div class="author-references">
+    <a href="andrewric@gmail.com" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+    </a>
+    <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+    </a>
+    <a href="https://github.com/Andrewrico" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+    </a>
+    <a href="" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+    </a>
+    <a href="" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+    </a>
+</div></li>
                 </ul>
             </el-column>
         </el-grid>
     </el-section>
-    <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
+    <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
         <el-grid auto-fit="columns" columns="3">
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
                 <span id="credits">
@@ -330,7 +358,6 @@
 </footer>
 
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
-<script src="/_assets/js/modules/thisel-jscss.js"></script>
 <script src="/_assets/js/app.js"></script>
     </body>
 </html>

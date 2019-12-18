@@ -1,0 +1,90 @@
+ <header> 
+    <el-section 
+        id="about" 
+        class="site-homepage-header"
+        height="100" 
+        background="{{ PagePathToBanner }}" 
+        color="var(--color-white)"
+        >
+        <el-grid column="1">
+            <el-column attr="row">
+
+                <el-inline class="card-bio" background="{{ PagePathToBanner }}" >
+                    <figure class="author">
+                        <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
+                        <figcaption class="author-meta">
+                            <h1> Hello, I'am {{ site.author.name }} </h1>
+                            <h2><svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h2>
+                            <ul>
+                                {% for titles in site.author.title %}
+                                    <li><h2>{{ titles }}</h2></li>
+                                {% endfor %}
+                            </ul>
+                        </figcaption>
+                    </figure>
+                    <div class="terminal"> 
+                        <p class="typewrite" data-period="2000" data-type='[ 
+                                " I like to build things – I love knowledge ", 
+                                " and I strongly believe technology can ",
+                                " and should enrich every single life ", 
+                                " this universe has to offer. ", 
+                                " When I’m not working on client projects ",
+                                " I’m either learning about new technologies ",
+                                " or finding new ways to bring more value ",
+                                " to my clients at an affordable price. ",
+                                " I`ve always been drawn to the overlap ",
+                                " between design and development. ",
+                                " I enjoy each aspect, and love ", 
+                                " building sites & web applications ",
+                                " from start to finish, for clients ",
+                                " all over the world. ", 
+                                " I`m available for remote work - ",
+                                " if you would like to build something, ",
+                                " let`s work together? "
+                            ]'>
+                            <span class="caret"></span>
+                        </p>
+                    </div>
+                    <nav class="biopaths">
+                        <ul>
+                            <li>
+                                <a href="{{ site.author.linkedin }}" target="_blank"> <svg fill="white">
+                                        <use href="_assets/media/svg/sprites.svg#linkedin"></use>
+                                    </svg></a>
+                                LinkedIn
+                            </li> |
+                            <li>
+                                <a href="{{ site.author.github }}" target="_blank"> <svg fill="white">
+                                        <use href="_assets/media/svg/sprites.svg#github"></use>
+                                    </svg></a>
+                                Github
+                            </li> |
+                            <li>
+                                <a href="/portfolio"><svg fill="white">
+                                        <use href="_assets/media/svg/sprites.svg#lookInFolder"></use>
+                                    </svg></a>
+                                Porfolio
+                            </li> |
+                            <li>
+                                <a href="/blog"><svg fill="white">
+                                        <use href="_assets/media/svg/sprites.svg#fileInFolder"></use>
+                                    </svg></a>
+                                Blog
+                            </li> |
+                            <li>
+                                <a href="/contact"><svg fill="white">
+                                        <use href="_assets/media/svg/sprites.svg#contact"></use>
+                                    </svg></a>
+                                Contact
+                            </li>
+                        </ul>
+                    </nav>
+                    <el-button class="el-button">
+                        <a slot="button" extended="button" theme="custom" href="#schedule-phone-call">Schedule a Phone Call</a>
+                    </el-button>
+                </el-inline>
+
+            </el-column>
+        </el-grid>
+    </el-section>
+</header>

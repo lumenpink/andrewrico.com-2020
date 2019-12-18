@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:title" content="European Travel Destinations">
-  <meta property="og:description" content="description">
-  <meta property="og:image" content="imageUrl">
-  <meta property="og:url" content="url">
-  <meta name="twitter:card" content="summary_large_image">
+
   <meta property="fb:app_id" content="your_app_id" />
-  <meta name="twitter:site" content="@website-username">
+  <meta property=”og:type” content=”article” />
+  <meta property=”og:title” content="title" />
+  <meta property=”og:description” content="description" />
+  <meta property=”og:image” content="image file" />
+  <meta property=”og:url” content="url" />
+  <meta property=”og:site_name” content="site name" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name=”twitter:title” content=”title”>
+  <meta name=”twitter:description” content="description">
+  <meta name=”twitter:image” content="image file">
+  <meta name=”twitter:site” content=”@USERNAME”>
+  <meta name=”twitter:creator” content=”@USERNAME”>
+
   <title>Andrew Rico | Blog</title>
   <meta name="description" content="This is the Blog page">
   <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Roboto|PT+Sans|Source+Code+Pro|Coda+Caption:800|Dancing+Script&amp;display=swap rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
 </head>
 
 <el-loading background="var(--color-gradient)"></el-loading>
 
-
     <body>
         <el-drawer>
-    <h1 slot="drawer-brand">andrew rico</h1><h1 slot="navbar-brand">andrew rico</h1>
+    <h1 slot="drawer-brand">Andrew Rico</h1><h1 slot="navbar-brand">Andrew Rico</h1>
 <div class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
@@ -59,7 +67,7 @@
     <hr><h3>Contact</h3>
     <ul>
         <li>
-            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+            <a href="" target="_blank">
                 <span>
                     <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
                     LinkedIn
@@ -67,7 +75,7 @@
             </a>
         </li>
         <li>
-            <a href="https://github.com/Andrewrico" target="_blank">
+            <a href="" target="_blank">
                 <span>
                     <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
                     Github
@@ -87,25 +95,25 @@
 </div>
 </el-drawer>
         <header>
-            <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-1.jpg)">
-                <el-grid columns="1">
-                    <el-inline attr="row" center="auto">  
-                        <h1>
-                            Blog
-                        </h1>
-                    </el-inline>  
-                </el-grid>
-            </el-section>
-        </header>
+    <el-section class="site-base-header" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)">
+        <el-grid columns="1">
+            <el-inline attr="row">  
+                <h1>
+                    Blog
+                </h1>
+            </el-inline>  
+        </el-grid>
+    </el-section>
+</header>
         <main> 
             
-               <el-section id="blog-page" class="blog-article-entries" padding-gap="10">
+               <el-section id="blog-page" padding-gap="10">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
             <el-inline id="blog-bio">
-                <img class="author-avatar" src="/_assets/media/images/placeholder.png" alt="Andrew Rico Avatar">
-                <h1>Andrew Rico</h1>
-                <h3>UX designer and educational psychology, music, & art fan. Keeps up with her dog's Instagram fans @dgtrwatson.</h3>
+                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar">
+                <h1> Andrew Rico </h1>
+                <h3> UX designer and educational psychology, music, &amp; art fan. Keeps up with her dog&#39;s Instagram fans @dgtrwatson. </h3>
                 <a href="/">iure beatae dolorum? </a>
             </el-inline>
             <ul>
@@ -114,31 +122,9 @@
                         <article class="card-article">
                             <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time><br><br>
                             <h2> Build a web component </h2>
-                            <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+                            <p>had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same lifts the horizon of the sea to the level of the spectator on a hillside.</p>
                             <el-button>
-                                <a slot="button" extended="button" theme="quaternary" href="/article/2020/Build-a-web-component/">Read more</a>
-                            </el-button>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article class="card-article">
-                            <time datetime="2019-12-02T00:00:00.000Z">December 1, 2019</time><br><br>
-                            <h2> How to build a dropdown menu </h2>
-                            <p>How to build a dropdown menu</p>
-                            <el-button>
-                                <a slot="button" extended="button" theme="quaternary" href="/article/2020/How-to-build-a-dropdown-menu/">Read more</a>
-                            </el-button>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article class="card-article">
-                            <time datetime="2019-12-01T00:00:00.000Z">November 30, 2019</time><br><br>
-                            <h2> Web develoment trends for 2020 </h2>
-                            <p>Web develoment trends for 2020</p>
-                            <el-button>
-                                <a slot="button" extended="button" theme="quaternary" href="/article/2020/Web-develoment-trends-for-2020/">Read more</a>
+                                <a slot="button" extended="button" theme="quaternary" href="/articles/2020/Build-a-web-component/">Read more</a>
                             </el-button>
                         </article>
                     </li>
@@ -147,12 +133,42 @@
         </el-column>
     </el-grid>
 </el-section>
+<el-section padding-gap="2" background="#fafafa">
+    <el-grid pixel-width="768" columns="1">
+        <el-column attr="row">
+        <div class="netliform subscriber-form">
+    
+    <h3>NEWSLETTERS</h3>
+    <form 
+        id="andrewrico-subscribe-netlify" 
+        name="andrewrico-subscribe-netlify" 
+        method="POST" 
+        action="/" 
+        data-netlify="true"
+        >
+        <fieldset>
+            <label for="email">E-MAIL</label>
+            <label>
+                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                <input type="text" name="email" placeholder="jhondue@mail.com" aria-label="email"  required/>
+            </label>
+        </fieldset>
+        <el-button class="el-button">
+            <button type="submit" slot="button" extended="button">
+                SUBSCRIBRE 
+            </button>
+        </el-button>
+    </form>
+</div>
+        </el-column>
+    </el-grid>
+</el-section>
 
 
 
             
         </main>
-        <nav class="naviton">
+        <nav id="navigation-panel">
     <ul>
         <li>
             <a href="/">
@@ -188,45 +204,60 @@
         </li>
         <li>
             <a href="#">
-                <svg width="32" height="32">
-                    <use href="/_assets/media/svg/sprites.svg#circleUp"></use>
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
                 </svg>
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
     </ul>
 </nav>
+
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
         <el-grid auto-fit="columns" columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>andrew rico</h1>
+                <h1>Andrew Rico</h1>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>About</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
                 </ul>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>Sources</h3>
                 <ul>
                     <li><a href="/blog">Blog</a></li>
                 </ul>
             </el-column>
-            <el-column class="column-menu">
+            <el-column>
                 <h3>Contact</h3>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">Linkin</a></li>
-                    <li><a href="https://github.com/Andrewrico" target="_blank">Github</a></li>
-                    <li><a href="mailto:andrewric86@gmail.com" target="_blank">andrewric86@gmail.com</a></li>
                     <li><a href="/contact">Get In Touch</a></li>
+                    <li><div class="author-references">
+    <a href="andrewric@gmail.com" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+    </a>
+    <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+    </a>
+    <a href="https://github.com/Andrewrico" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+    </a>
+    <a href="" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+    </a>
+    <a href="" target="_blank">
+        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+    </a>
+</div></li>
                 </ul>
             </el-column>
         </el-grid>
     </el-section>
-    <el-section id="footer-bottom" background=var(--color-gradient) color="#fff" padding-bottom=3 padding-top=1>
+    <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
         <el-grid auto-fit="columns" columns="3">
             <el-column display="inline-flex" justify-content="flex-end" align-items="center">
                 <span id="credits">
@@ -252,7 +283,6 @@
 </footer>
 
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
-<script src="/_assets/js/modules/thisel-jscss.js"></script>
 <script src="/_assets/js/app.js"></script>
     </body>
 </html> 

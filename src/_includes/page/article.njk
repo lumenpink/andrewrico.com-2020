@@ -1,6 +1,5 @@
 ---
 layout: "/layouts/layout-article.njk"
-
 ---
 <el-section id="article-page" padding-gap="10">
     <el-grid pixel-width="1024" auto-fit="columns" gap="3" template-columns="3fr 1fr">
@@ -14,10 +13,10 @@ layout: "/layouts/layout-article.njk"
         <el-column>
             <aside id="article-sidebar">
                 <div class="article-author">
-                    <img class="author-avatar" src="{{ global.avatar }}" alt="{{ global.author}} Avatar">
+                    <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name}} Avatar">
                     <div class="author-meta">
-                       <p> <b> {{ global.author }} </b> </p>
-                       <p> <time datetime="{{ date | dateIso }}"> <b> {{ date | dateReadable }} </b> </time> </p>
+                       <p> <b> {{ site.author.name }} </b> </p>
+                       <p> <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time> </p>
                     </div>
                 </div>
                 <ul class="article-keywords">
