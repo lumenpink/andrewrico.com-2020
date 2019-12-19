@@ -1,6 +1,6 @@
 html {
   touch-action: manipulation;
-  font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "PT sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "Didact Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -32,14 +32,21 @@ html {
   --color-gradient: -webkit-linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
   --color-gradient: linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
   --color-text-light: #827f7f;
-  --color-banner-shadow:radial-gradient(ellipse closest-side, #0f0e16aa, #0c0b10);
+  --color-banner-shadow: radial-gradient(ellipse closest-side, #0f0e16aa, #0c0b10);
 
   --family-font-title: "Dancing Script", cursive;
   --family-font-healine: "Coda Caption", sans-serif;
-  --family-font-content: "Source Code Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --family-font-content: "Source Code Pro", monospace;
   --family-font-writing: "Didact Gothic", sans-serif;
+  
 
 }
+
+el-column {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 body {
   font-family: var(--family-font-content);
   margin: 0;
@@ -105,18 +112,19 @@ iframe {
 
 
 
-.simple-page h1 ,
+.simple-page h1,
 .simple-page {
   font-family: var(--family-font-writing);
 }
 
-
-.author-avatar {
-  max-width: 100px;
-  height: 100px;
-  border-radius: 50%;
+/*contact page*/
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
-
 
 /*
   font-family: 'Dancing Script', cursive;
@@ -125,3 +133,5 @@ iframe {
   font-family: 'Didact Gothic', sans-serif;
 
 */
+
+

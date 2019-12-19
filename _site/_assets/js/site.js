@@ -6,6 +6,12 @@ index: Portfolio | 11ty App | 2019 | https://Andrewrico.com/
 - Typing
 */
 
+/* ---------------------------------------------
+Name: el-drawer
+Function: el-drawer 
+Location: [ el-drawer]
+/*--------------------------------------------- */
+// new ClipboardJS('.btn');
 
 /* ---------------------------------------------
 Name: el-drawer
@@ -64,7 +70,7 @@ window.onscroll = () => {
 	scrollHide()
 };
 scrollHide = () => {
-	if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+	if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
 		document.getElementById("navigation-panel").style.right = "0px";
 	} else {
 		document.getElementById("navigation-panel").style.right = "-64px";

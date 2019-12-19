@@ -22,9 +22,11 @@
 
   <title>Andrew Rico | Blog</title>
   <meta name="description" content="This is the Blog page">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="Javascript,Web Components">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
+
+
 </head>
 
 <el-loading background="var(--color-gradient)"></el-loading>
@@ -114,15 +116,25 @@
                 <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar">
                 <h1> Andrew Rico </h1>
                 <h3> UX designer and educational psychology, music, &amp; art fan. Keeps up with her dog&#39;s Instagram fans @dgtrwatson. </h3>
-                <a href="/">iure beatae dolorum? </a>
             </el-inline>
+            <nav>
+                <ul class="article-keywords">
+                    
+                        <li><b>Javascript</b></li>
+                    
+                        <li><b>Web Components</b></li>
+                    
+                </ul>
+            </nav>
+        </el-column>
+        <el-column attr="row">
             <ul>
                 
                     <li>
                         <article class="card-article">
                             <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time><br><br>
                             <h2> Build a web component </h2>
-                            <p>had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+                            <p><strong>Web components are</strong> a group of web technologies that make it possible to create custom, reusable <strong>HTML elements</strong> whose functionality is encapsulated and thus <strong>completely separate from other code.</strong></p>
                             <el-button>
                                 <a slot="button" extended="button" theme="quaternary" href="/articles/2020/Build-a-web-component/">Read more</a>
                             </el-button>
@@ -136,7 +148,7 @@
 <el-section padding-gap="2" background="#fafafa">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
-        <div class="netliform subscriber-form">
+            <div class="netliform subscriber-form">
     
     <h3>NEWSLETTERS</h3>
     <form 
@@ -238,19 +250,19 @@
                     <li><a href="/contact">Get In Touch</a></li>
                     <li><div class="author-references">
     <a href="andrewric@gmail.com" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+        <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
     </a>
     <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
     </a>
     <a href="https://github.com/Andrewrico" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
     </a>
     <a href="" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
     </a>
     <a href="" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
     </a>
 </div></li>
                 </ul>
@@ -281,8 +293,7 @@
         </el-grid>
     </el-section>
 </footer>
-
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
-<script src="/_assets/js/app.js"></script>
+<script src="/_assets/js/site.js"></script>
     </body>
 </html> 

@@ -32,12 +32,16 @@
      text-align: center;
  }
 
- .card-minimal>ul {
+ .card-minimal ul {
      display: flex;
      justify-content: space-around;
      font-size: 0.9rem;
-     padding: 0 1rem;
+     /* padding: 0 1rem; */
      margin-top: 1rem;
+ }
+ .card-minimal li {
+    font-family: var(--family-font-writing);
+     text-transform: capitalize!important;
  }
 
  .card-minimal svg {

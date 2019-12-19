@@ -2,12 +2,7 @@
 custom/normalize ---------------------------------------
 */
 @import 'normalize.css';
-@import 'app.css';
-
-/*
-app ---------------------------------------
-*/
-@import 'modules/_app-typo.css';
+@import 'site.css';
 
 /*
 navigations ---------------------------------------

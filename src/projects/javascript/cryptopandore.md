@@ -4,82 +4,94 @@ description: "This is the Cryptopandore project page"
 keywords: ["car dealership"]
 tags: [ "projects", "js"]
 layout: "/page/project.njk"
+
+PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
+
+ProjectPathToImage: "/_assets/media/images/placeholder.png"
+ProjectImageMeta: "Cryptopandore Project Image"
 ProjectStringCathegory: "Cryptocurrency"
 ProjectStringType: "Info"
 ProjectStringMade: "Made with GASTBY/ReactJS"
 ProjectLinkToDemo: "https://andrewrico.com/"
 ProjectLinkToCode: "https://github.com/"
-ProjectPathToimage: "/_assets/media/images/placeholder.png"
-ProjectimageAlt: "Project Image"
-PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
+
 PagePathToCaseStudyImage: "/_assets/media/images/placeholder.png"
-PageCaseStudyImageAlt: "Case Study Image"
+PageCaseStudyImageMeta: "Case Study Section Image"
 PagePathToProblemImage: "/_assets/media/images/placeholder.png"
-PageProblemImageAlt: "Problem Image"
+PageProblemImageMeta: "Problem Section Image"
 PagePathToApproachImage: "/_assets/media/images/placeholder.png"
-PageApproachImageAlt: "Approach Image"
+PageApproachImageMeta: "Approach Section Image"
 PagePathToSolutionImage: "/_assets/media/images/placeholder.png"
-PageSolutionImageAlt: "Solution Image"
+PageSolutionImageMeta: "Solution Image"
 PagePathToConclutionImage: "/_assets/media/images/placeholder.png"
-PageConclutionImageAlt: "Conclution Image"
+PageConclutionImageMeta: "Conclution Section Image"
 ---
 
 <!-- PROJECT PAGE 
---------------- ----------------- ------------- -->
+================================ -->
 
 
 <!-- Case Study
---------------- ----------------- ------------- -->
-![{{PagePathToCaseStudyImageAlt}}]({{PagePathToCaseStudyImage}})
-
+================================ -->
+<img src="{{PagePathToCaseStudyImage}}" 
+alt="{{PageCaseStudyImageMeta}}" 
+title="{{PageCaseStudyImageMeta}}" />
 <div id="case-study">
 
 ## Case Study 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 </div>
 
 <!-- problem
---------------- ----------------- ------------- -->
-![{{PagePathToProblemImageAlt}}]({{PagePathToProblemImage}})
+================================ -->
 
-<div id="problem" markdown="1">
+<img src="{{PagePathToProblemImage}}" 
+alt="{{PageProblemImageMeta}}" 
+title="{{PageProblemImageMeta}}" />
+<div id="problem">
 
 ## The Problem 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 </div>
 
 <!-- approch
---------------- ----------------- ------------- -->
-![{{PagePathToApproachImageAlt}}]({{PagePathToApproachImage}})
+================================ -->
 
+<img src="{{PagePathToApproachImage}}" 
+alt="{{PageApproachImage}}" 
+title="{{PageApproachImage}}" />
 <div id="approach" markdown="1">
 
 ## The Approach
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 </div>
 
 <!-- solution
---------------- ----------------- ------------- -->
-![{{PagePathToSolutionImageAlt}}]({{PagePathToSolutionImage}})
+================================ -->
 
-<div id="solution" markdown="1">
+<img src="{{PagePathToSolutionImage}}" 
+Meta="{{PageSolutionImage}}" 
+title="{{PageSolutionImage}}" />
+<div id="solution">
 
 ## The Solution
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 </div>
 
 <!-- conclution
---------------- ----------------- ------------- -->
-![{{PagePathToConclutionImageAlt}}]({{PagePathToConclutionImage}})
+================================ -->
 
-<div id="conclution" markdown="1">
+<img src="{{PagePathToConclutionImage}}" 
+Meta="{{PageConclutionImageMeta}}" 
+title="{{PageConclutionImageMeta}}" />
+<div id="conclution">
 
 ## The Conclution
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 
 </div>

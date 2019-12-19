@@ -3,6 +3,9 @@ title: "Blog"
 description: "This is the Blog page"
 layout: "/layouts/layout-blog.njk"
 PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
+keywords:  
+    - Javascript
+    - Web Components
 pagination:
   data: collections.article
   size: 10
@@ -16,8 +19,16 @@ pagination:
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
                 <h1> {{ site.author.name}} </h1>
                 <h3> {{ site.author.bio}} </h3>
-                <a href="/">iure beatae dolorum? </a>
             </el-inline>
+            <nav>
+                <ul class="article-keywords">
+                    {% for item in keywords %}
+                        <li><b>{{ item }}</b></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </el-column>
+        <el-column attr="row">
             <ul>
                 {% for article in articles %}
                     <li>
@@ -38,7 +49,7 @@ pagination:
 <el-section padding-gap="2" background="#fafafa">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
-        {% include "forms/form-subscribe.njk" %}
+            {% include "forms/form-subscribe.njk" %}
         </el-column>
     </el-grid>
 </el-section>

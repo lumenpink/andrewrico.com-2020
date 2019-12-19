@@ -691,7 +691,7 @@ const elButtonCSS = `:host {
 
 ::slotted(*) {
     outline: 0;
-    padding: .75rem 0;
+    padding: .75rem;
     cursor: pointer;
     width: 100%;
     display: -webkit-inline-box;
@@ -1012,7 +1012,7 @@ const elDropdownHTML = `<div id="backdrop"></div>
 
 	</button>
 		<div id="chip-dropdown" class="dropcontent"><i class="arrow"></i>
-			<slot name="dropdown"> <a href="./">dropdown</a> </slot>
+			<slot name="dropdown"> <a href="/">dropdown</a> </slot>
 		</div>
 	</div>`;
 const elDropdownTemplate = document.createElement("template");

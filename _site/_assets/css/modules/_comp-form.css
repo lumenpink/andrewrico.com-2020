@@ -241,3 +241,17 @@ subscriber
 .subscriber-form {
 	background: #fafafa !important
 }
+
+
+/*
+sendMesseage
+---------------------------------- 
+*/
+.sendMesseage-form {
+	width: 100%;
+	max-width: 100%;
+}
+
+.sendMesseage-form h3 {
+ /* align-self: center; */
+}

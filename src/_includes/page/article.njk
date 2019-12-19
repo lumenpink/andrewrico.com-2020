@@ -2,7 +2,8 @@
 layout: "/layouts/layout-article.njk"
 ---
 <el-section id="article-page" padding-gap="10">
-    <el-grid pixel-width="1024" auto-fit="columns" gap="3" template-columns="3fr 1fr">
+    <el-grid auto-fit="columns" pixel-width="1024" template-columns="2fr 1fr" gap="2" >
+
         <el-column>
             <article id="article">
                 {% block content  %}
@@ -10,6 +11,7 @@ layout: "/layouts/layout-article.njk"
                 {% endblock content %}
             </article>
         </el-column>
+
         <el-column>
             <aside id="article-sidebar">
                 <div class="article-author">
@@ -26,5 +28,6 @@ layout: "/layouts/layout-article.njk"
                 </ul>
             </aside>
         </el-column>
+
     </el-grid>
 </el-section>

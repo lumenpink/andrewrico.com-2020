@@ -33,7 +33,7 @@ layout: "layouts/layout-home.njk"
         {%- for project in collections.projects -%}
         <el-column>
             <article class="card-minimal">
-                <img src="{{ project.data.ProjectPathToimage }}" alt="{{ project.data.ProjectPathToimageAlt }}">
+                <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta}}">
                 <h3>{{ project.data.title }}</h3>
                 <h4 class="card-tags">
                     <span>{{ project.data.ProjectStringCathegory }}</span>
@@ -47,12 +47,12 @@ layout: "layouts/layout-home.njk"
                     <li>
                         <a href="{{ project.data.ProjectLinkToDemo }}">
                             <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                        </a> DEMO
+                        </a> LIVE SITE
                     </li>
                     <li>
                         <a href="{{ project.data.ProjectLinkToCode }}">
                             <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                        </a> CODE
+                        </a> SHOW ME THE CODE
                     </li>
                     <li>
                         <a href="{{ project.url | url }}">

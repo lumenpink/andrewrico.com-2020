@@ -4,10 +4,16 @@ For: moment
 const moment = require('moment');
 moment.locale('en');
 
-/* 
-For: eleventyConfig * * * * *
+const CleanCSS = require("clean-css");
+  
+/* For: eleventyConfig * * * * *
 /*--------------------------------------------- */
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString();
   });
@@ -66,3 +72,7 @@ function extractExcerpt(article) {
   });
   return excerpt;
 }
+
+/* 
+For: CleanCSS
+/*--------------------------------------------- */

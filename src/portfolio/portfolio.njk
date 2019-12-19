@@ -20,7 +20,7 @@ pagination:
             {% for project in projects %}
                 <li>
                     <article class="card-minimal">
-                        <img src="{{ project.data.ProjectPathToimage }}" alt="{{ project.data.ProjectPathToimageAlt }}">
+                        <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta }}" title="{{ project.data.ProjectImageMeta }}">
                         <h3>{{ project.data.title }}</h3>
                         <h4 class="card-tags">
                             <span>{{ project.data.ProjectStringCathegory }}</span>
@@ -34,12 +34,12 @@ pagination:
                             <li>
                                 <a href="{{ project.data.ProjectLinkToDemo }}">
                                     <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                                </a> DEMO
+                                </a> LIVE SITE
                             </li>
                             <li>
                                 <a href="{{ project.data.ProjectLinkToCode }}">
                                     <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                                </a> CODE
+                                </a> SHOW ME THE CODE
                             </li>
                             <li>
                                 <a href="{{ project.url | url }}">
@@ -61,7 +61,7 @@ pagination:
             {%- for js in collections.js -%}
                 <li>
                     <article class="card-minimal">
-                        <img src="{{ js.data.ProjectPathToimage }}" alt="{{ project.data.ProjectPathToimageAlt }}">
+                        <img src="{{ js.data.ProjectPathToImage }}" alt="{{ js.data.ProjectImageMeta }}" title="{{ js.data.ProjectImageMeta }}">
                         <h3>{{ js.data.title }}</h3>
                         <h4 class="card-tags">
                             <span>{{ js.data.ProjectStringCathegory }}</span>
@@ -75,12 +75,12 @@ pagination:
                             <li>
                                 <a href="{{ js.data.ProjectLinkToDemo }}">
                                     <svg> <use href="/_assets/media/svg/sprites.svg#earth"></use></svg>
-                                </a> DEMO
+                                </a> LIVE SITE
                             </li>
                             <li>
                                 <a href="{{ js.data.ProjectLinkToCode }}">
                                     <svg> <use href="/_assets/media/svg/sprites.svg#github"></use> </svg>
-                                </a> CODE
+                                </a> SHOW ME THE CODE
                             </li>
                             <li>
                                 <a href="{{ js.url | url }}">
@@ -94,5 +94,15 @@ pagination:
             </ul>
         </el-column>
 
+    </el-grid>
+</el-section>
+
+<el-section padding-gap="4" background="#fafafa">
+    <el-grid pixel-width="768" columns="1">
+        <el-column center="auto">
+            <el-button class="el-button">
+                <a slot="button" extended="button" theme="quaternary" href="/contact">LET'S BUILD SOMETHING TOGETHER</a>
+            </el-button>
+        </el-column>
     </el-grid>
 </el-section>

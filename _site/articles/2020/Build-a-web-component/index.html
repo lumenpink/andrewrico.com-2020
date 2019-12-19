@@ -25,6 +25,8 @@
   <meta name="keywords" content="javascript,webComponents ">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
+
+
 </head>
 
 <el-loading background="var(--color-gradient)"></el-loading>
@@ -122,16 +124,44 @@
         <main> 
             
                <el-section id="article-page" padding-gap="10">
-    <el-grid pixel-width="1024" auto-fit="columns" gap="3" template-columns="3fr 1fr">
+    <el-grid auto-fit="columns" pixel-width="1024" template-columns="2fr 1fr" gap="2" >
+
         <el-column>
             <article id="article">
                 
                     <h4 class="preface">
-we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out.</h4>
-<h2># What are WebComponents?</h2>
+Components are the building blocks of <em>modern web</em> applications. What best practices should you follow when building your own components so they can stand the test of time?.
+</h4>
 <!-- Excerpt Start -->
-<p>had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<p><strong>Web components are</strong> a group of web technologies that make it possible to create custom, reusable <strong>HTML elements</strong> whose functionality is encapsulated and thus <strong>completely separate from other code.</strong></p>
 <!-- Excerpt End -->
+<h2># What are WebComponents?</h2>
+<p>Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.</p>
+<p>Web components are based on existing web standards. Features to support web components are currently being added to the HTML and DOM specs,letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.</p>
+<h3>Specifications</h3>
+<p><mark>Web components</mark> are based on four main specifications:</p>
+<h4>Custom Elements</h4>
+<p>The Custom Elements specification lays the foundation for designing and using new types of DOM elements.</p>
+<h4>Shadow DOM</h4>
+<p>The shadow DOM specification defines how to use encapsulated style and markup in web components.</p>
+<h4>ES Modules</h4>
+<p>The ES Modules specification defines the inclusion and reuse of JS documents in a standards based, modular, performant way.</p>
+<h4>HTML Template</h4>
+<p>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</p>
+<h3>How do I use a web component?</h3>
+<p>The components on this site provide new HTML elements that you can use in your web pages and web applications.</p>
+<p>Using a custom element is as simple as importing it, and using the new tags in an HTML document. For example, to use the paper-button element:</p>
+<div class="codepencil">
+<pre><code>
+<pre><code>&lt;script type=&quot;module&quot; src=&quot;node_modules/@polymer/paper-button/paper-button.js&quot;&gt;&lt;/script&gt;
+
+&lt;paper-button raised class=&quot;indigo&quot;&gt;raised&lt;/paper-button&gt;
+</code></pre>
+<p></code></pre></p>
+</div>
+<button>copy</button>
+<p>There are a number of ways to install custom elements. When you find an element you want to use, look at its README for the commands to install it. Most elements today can be installed with NPM. NPM also handles installing the components' dependencies. For more information on NPM, see npmjs.com.</p>
+<p>For example, the paper-button overview describes the install process with npm:</p>
 <h2># Title</h2>
 <h3>Subitle</h3>
 <p><strong>strong</strong> <br>
@@ -146,7 +176,7 @@ we had reached a great height in the atmosphere, for the sky was a dead black, a
 </el-inline>
 <h3>Title</h3>
 <p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
-<div class="coding-section">
+<div class="markcode">
 <pre><code>
 * {
 -webkit-font-smoothing: antialiased;
@@ -164,6 +194,7 @@ we had reached a great height in the atmosphere, for the sky was a dead black, a
                 
             </article>
         </el-column>
+
         <el-column>
             <aside id="article-sidebar">
                 <div class="article-author">
@@ -182,6 +213,7 @@ we had reached a great height in the atmosphere, for the sky was a dead black, a
                 </ul>
             </aside>
         </el-column>
+
     </el-grid>
 </el-section>
             
@@ -256,19 +288,19 @@ we had reached a great height in the atmosphere, for the sky was a dead black, a
                     <li><a href="/contact">Get In Touch</a></li>
                     <li><div class="author-references">
     <a href="andrewric@gmail.com" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+        <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
     </a>
     <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
     </a>
     <a href="https://github.com/Andrewrico" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
     </a>
     <a href="" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
     </a>
     <a href="" target="_blank">
-        <svg fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+        <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
     </a>
 </div></li>
                 </ul>
@@ -299,8 +331,7 @@ we had reached a great height in the atmosphere, for the sky was a dead black, a
         </el-grid>
     </el-section>
 </footer>
-
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
-<script src="/_assets/js/app.js"></script>
+<script src="/_assets/js/site.js"></script>
     </body>
 </html> 
