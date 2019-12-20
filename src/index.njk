@@ -4,7 +4,7 @@ description: "This is the Homepage"
 layout: "layouts/layout-home.njk"
 ---
 <el-section id="skills" padding-top="10" padding-bottom="6">
-    <el-grid auto-fit="columns" columns="3" gap="3">
+    <el-grid auto-fit="columns" columns="3" gap="1">
         <el-column attr="row">
             <h2>Skills</h2>
         </el-column>
@@ -26,7 +26,7 @@ layout: "layouts/layout-home.njk"
 </el-section>
 
 <el-section id="projects" padding-gap="6">
-    <el-grid auto-fit="columns" columns="3" gap="3">
+    <el-grid auto-fit="columns" columns="3" gap="1">
         <el-column attr="row">
             <h2>Recent Projects</h2>
         </el-column>
@@ -67,7 +67,7 @@ layout: "layouts/layout-home.njk"
 </el-section>
 
 <el-section id="chanllenge" padding-gap="6">
-    <el-grid auto-fit="columns" columns="2" gap="3">
+    <el-grid auto-fit="columns" columns="2" gap="1">
         <el-column attr="row">
             <h2>Code Challenges</h2>
         </el-column>
@@ -132,7 +132,7 @@ layout: "layouts/layout-home.njk"
 </el-section>
 
 <el-section id="articles" padding-gap=6>
-    <el-grid auto-fit="columns" columns="2" gap="3">
+    <el-grid auto-fit="columns" columns="2" gap="1">
         <el-column attr="row">
             <h2>Recent Articles</h2>
         </el-column>
@@ -156,7 +156,7 @@ layout: "layouts/layout-home.njk"
 </el-section>
 
 <el-section id="contact" padding-gap=6>
-    <el-grid auto-fit="columns" columns="2" gap="3">
+    <el-grid auto-fit="columns" columns="2" gap="1">
         <el-column attr="row">
             <h2>Contact Me</h2>
         </el-column>
@@ -174,3 +174,12 @@ layout: "layouts/layout-home.njk"
         </el-column>
     </el-grid>
 </el-section>
+
+
+<div class="modal-backdrop close-modal"></div>
+<div class="modal-container">
+    {% include "forms/form-submitChallenge.njk" %}
+</div>
+<button class="open-modal">OPEN MODAL 1</button>
+
+

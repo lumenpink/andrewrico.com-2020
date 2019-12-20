@@ -1,5 +1,5 @@
 #article-page {
-    font-family: var(--family-font-writing);
+    font-family: var(--font-family-writing);
 }
 
 
@@ -161,7 +161,7 @@ b {
 .link {
     font-weight: 600;
     margin: 0 4px;
-    font-family: var(--family-font-writing);
+    font-family: var(--font-family-writing);
     color: var(--color-blue);
     line-height: 1.6;
     font-size: 1.4rem;

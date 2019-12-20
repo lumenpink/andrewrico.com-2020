@@ -45,7 +45,7 @@
     background-color: rgba(0, 0, 0, 0.687) ;
 }
 
-@-webkit-keyframes topan {
+/* @-webkit-keyframes topan {
     from {
         top: 50%;
         opacity: 0
@@ -65,4 +65,4 @@
         top: 0%;
         opacity: 1
     }
-}
+} */

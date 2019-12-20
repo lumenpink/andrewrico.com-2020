@@ -25,7 +25,7 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     font-weight: bold;
-    font-family: var(--family-font-writing);
+    font-family: var(--font-family-writing);
     font-size: 3rem;
     text-transform: uppercase;
     text-align: center;

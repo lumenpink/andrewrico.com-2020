@@ -11,7 +11,7 @@
   font-size: 0.9rem;
   border: 0.5px solid var(--color-primary);
   background: rgba(0, 0, 0, 0);
-  font-family: var(--family-font-content);
+  font-family: var(--font-family-content);
 }
 
 .author {
@@ -57,7 +57,7 @@
 }
 
 .author-meta h2 {
-  font-family: var(--family-font-content);
+  font-family: var(--font-family-content);
   font-size: 0.6rem;
   margin: 1rem 0;
   padding: 0;

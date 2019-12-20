@@ -40,7 +40,7 @@
      margin-top: 1rem;
  }
  .card-minimal li {
-    font-family: var(--family-font-writing);
+    font-family: var(--font-family-writing);
      text-transform: capitalize!important;
  }
 
@@ -90,6 +90,6 @@
  .card-subtitle {
      text-align: center;
      font-size: 0.8rem;
-     font-family: var(--family-font-writing);
+     font-family: var(--font-family-writing);
 
  }

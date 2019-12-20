@@ -9,9 +9,24 @@ index: Portfolio | 11ty App | 2019 | https://Andrewrico.com/
 /* ---------------------------------------------
 Name: el-drawer
 Function: el-drawer 
-Location: [ el-drawer]
+Location: [ el-drawer]    transform: scale(1, 1)
 /*--------------------------------------------- */
-// new ClipboardJS('.btn');
+
+const openModal = document.querySelector(".open-modal");
+openModal.addEventListener('click', () => {
+	document.querySelector(".modal-backdrop").style.display = "block";
+	document.querySelector(".modal-container").style.visibility = "visible";
+	document.querySelector(".modal-container").style.bottom = "0%";
+	document.querySelector(".modal-container").style.top = "0%";
+});
+const closeModal = document.querySelector(".close-modal");
+closeModal.addEventListener('click', () => {
+	document.querySelector(".modal-backdrop").style.display = "none";
+	document.querySelector(".modal-container").style.visibility = "hidden";
+	document.querySelector(".modal-container").style.bottom = "-100%";
+});
+
+
 
 /* ---------------------------------------------
 Name: el-drawer
@@ -67,13 +82,13 @@ Function: Hide navigation panel when is window in on header
 Location: [ Site ]
 /*--------------------------------------------- */
 window.onscroll = () => {
-	scrollHide()
+	_hideOnscroll()
 };
-scrollHide = () => {
+_hideOnscroll = () => {
 	if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
 		document.getElementById("navigation-panel").style.right = "0px";
 	} else {
-		document.getElementById("navigation-panel").style.right = "-64px";
+		document.getElementById("navigation-panel").style.right = "-200px";
 	}
 }
 
