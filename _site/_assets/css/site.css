@@ -41,7 +41,7 @@ html {
   --color-banner-shadow: radial-gradient(ellipse closest-side, #0f0e16aa, #0c0b10);
 }
 
-.modal-backdrop {
+/* .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -90,7 +90,7 @@ html {
   }
 }
 
-
+ */
 
 
 
