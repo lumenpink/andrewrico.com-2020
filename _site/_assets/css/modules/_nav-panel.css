@@ -1,9 +1,12 @@
+main {
+	position: relative;
+}
 #navigation-panel {
 	position: fixed;
 	bottom: 50%;
 	right: 0%;
-	z-index: 5000;
-	filter: drop-shadow(0 0 1px var(--color-light));
+	z-index: 1;
+	filter: drop-shadow(0 0 0.5px var(--color-light));
 	transition: right 0.3s;
 }
 
