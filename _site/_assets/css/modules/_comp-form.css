@@ -2,7 +2,10 @@
 form
 ----------------------------------
 */
-
+form svg,
+form label[for] {
+	z-index: 6000;
+}
 form {
 	display: block;
 	font-family: var(--font-family-writing);

@@ -1190,7 +1190,7 @@ const elDrawerCSS = `:host {
 		}
 		::slotted(h1) ,
 		:host .brand h1 {
-			text-indent: 2rem;
+			text-indent: 3.2rem;
 			margin: 0!important;
 			font-family: var(--drawer-brand-font-family)!important;
 		}
