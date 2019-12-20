@@ -3,7 +3,7 @@ main {
 }
 #navigation-panel {
 	position: fixed;
-	bottom: 50%;
+	top:300px;
 	right: 0%;
 	z-index: 1;
 	filter: drop-shadow(0 0 0.5px var(--color-light));
