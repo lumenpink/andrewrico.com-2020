@@ -12,19 +12,19 @@ Function: el-drawer
 Location: [ el-drawer]    transform: scale(1, 1)
 /*--------------------------------------------- */
 
-const openModal = document.querySelector(".open-modal");
-openModal.addEventListener('click', () => {
-	document.querySelector(".modal-backdrop").style.display = "block";
-	document.querySelector(".modal-container").style.visibility = "visible";
-	document.querySelector(".modal-container").style.bottom = "0%";
-	document.querySelector(".modal-container").style.top = "0%";
-});
-const closeModal = document.querySelector(".close-modal");
-closeModal.addEventListener('click', () => {
-	document.querySelector(".modal-backdrop").style.display = "none";
-	document.querySelector(".modal-container").style.visibility = "hidden";
-	document.querySelector(".modal-container").style.bottom = "-100%";
-});
+// const openModal = document.querySelector(".open-modal");
+// openModal.addEventListener('click', () => {
+// 	document.querySelector(".modal-backdrop").style.display = "block";
+// 	document.querySelector(".modal-container").style.visibility = "visible";
+// 	document.querySelector(".modal-container").style.bottom = "0%";
+// 	document.querySelector(".modal-container").style.top = "0%";
+// });
+// const closeModal = document.querySelector(".close-modal");
+// closeModal.addEventListener('click', () => {
+// 	document.querySelector(".modal-backdrop").style.display = "none";
+// 	document.querySelector(".modal-container").style.visibility = "hidden";
+// 	document.querySelector(".modal-container").style.bottom = "-100%";
+// });
 
 
 
