@@ -132,14 +132,6 @@ h2 {
   font-family: var(--font-family-healine);
 }
 
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-family-content);
-}
-
-
 a {
   color: var(--color-quaternary);
 }
@@ -189,7 +181,7 @@ iframe {
   flex-direction: column;
   text-align: center;
 }
-/* 
+
 el-grid > el-column > h2 {
   text-align: center;
 }
@@ -199,7 +191,7 @@ el-grid > el-column > h2 {
     text-align: initial;
   }
   
-} */
+}
 
 
 @media(max-width: 1268px) {

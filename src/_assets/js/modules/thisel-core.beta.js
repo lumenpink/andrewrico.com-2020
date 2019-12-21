@@ -82,7 +82,7 @@ const elGridCSS = `:host {
 
 @media(max-width:1268px) {
     :host([auto-fit="columns"]) {
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)) !important
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)) !important
     }
 }`;
 const elGridHTML = "<slot></slot>";

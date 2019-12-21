@@ -5,7 +5,6 @@
     align-items: center;
     padding: 1rem;
     min-height: 250px;
-    border: 1px inset rgba(250, 250, 250, 0.441);
     transition: ease-in 0.3s;
     background: var(--color-white);
     box-shadow: rgba(46, 41, 51, 0.4) 0px 1px 2px, rgba(71, 63, 79, 0.489) 0px 2px 4px;

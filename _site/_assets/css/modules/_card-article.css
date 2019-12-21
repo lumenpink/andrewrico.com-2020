@@ -1,5 +1,7 @@
 
 .card-article {
+    display: flex;
+    flex-direction: column;
     margin: 2rem 0;
     box-shadow: rgba(46, 41, 51, 0.4) 0px 1px 2px, rgba(71, 63, 79, 0.489) 0px 2px 4px;
     background-color: #ffffff;
@@ -53,11 +55,11 @@
 }
 
 .card-article el-button {
-    margin: auto;
+    align-self: center;
 }
 
 @media(min-width: 768px) {
     .card-article el-button {
-        margin-left: auto!important;
+        align-self: flex-end;
     }
 }

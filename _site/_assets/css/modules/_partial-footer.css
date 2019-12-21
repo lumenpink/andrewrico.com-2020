@@ -85,20 +85,8 @@
 #footer-bottom a {
 	font-size: 0.9rem;
 	text-decoration: none;
-	margin-left: 0.75rem;
-	margin-right: 0.75rem;
-}
-
-#footer-bottom a {
 	color: var(--color-primary);
-}
-
-#credits {
-	font-size: 0.8rem;
-}
-
-#credits a {
-	margin: 0;
+	margin-right: 16px;
 }
 
 #copyright {
@@ -109,6 +97,26 @@
 	color: var(--color-white);
 }
 
-#copyright a {
-	margin: 0rem !important;
+#footer-bottom el-copyright a {
+	font-size: 1rem;
+	margin-right: 0;
+}
+
+#footer-bottom el-column {
+	width: 100%;
+	font-size: 1rem;
+}
+
+#footer-bottom el-column {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#footer-bottom el-column:nth-child(1) {
+	font-size: 0.7rem;
+}
+
+
+@media(min-width: 1024px) {
+
 }

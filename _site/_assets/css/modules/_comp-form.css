@@ -2,17 +2,14 @@
 form
 ----------------------------------
 */
-form svg,
-form label[for] {
-	z-index: 6000;
-}
+
 form {
 	display: block;
 	font-family: var(--font-family-writing);
 	width: 100%;
 }
 
-form el-button {
+el-button {
 	grid-column: 1 / -1;
 	margin: auto;
 }
@@ -27,7 +24,7 @@ input {
 	color: #000 !important;
 	display: block;
 	width: 100%;
-	min-width:100%;
+	min-width: 100%;
 	height: 100%;
 	border: none;
 	font-size: 1em;
@@ -54,14 +51,17 @@ input {
 input:required:invalid {
 	background: rgba(250, 250, 250, 0.2);
 }
+
 /*2*/
 input:focus:invalid {
-	background:rgba(255, 0, 0, 0.18);
+	background: rgba(255, 0, 0, 0.18);
 }
+
 /*3*/
 input:required:valid {
 	background: rgba(3, 247, 3, 0.318);
 }
+
 /*4*/
 input:focus:valid {
 	background: rgba(175, 193, 215, 0.393);
@@ -112,6 +112,8 @@ fieldset svg {
 	width: 16px;
 	height: 16px;
 	fill: #060606;
+	z-index: 6000;
+
 }
 
 /*
@@ -201,9 +203,14 @@ simple
 	margin: 0;
 	padding: 1rem 0;
 	font-size: 1.6rem;
-	align-self: flex-start;
 	text-transform: uppercase;
-	color: var(--color-quaternary)
+	color: var(--color-quaternary);
+	align-self: center;
+}
+
+.simple-form el-button {
+	margin: auto;
+
 }
 
 .simple-form fieldset {
@@ -213,9 +220,15 @@ simple
 	box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.56);
 }
 
-.simple-form el-button {
-	margin: 0;
-	margin-left: auto !important;
+@media(min-width:768px) {
+	.simple-form h3 {
+		align-self: flex-start !important;
+	}
+
+	.simple-form el-button {
+		margin: 0;
+		margin-left: auto!important;
+	}
 }
 
 /*
@@ -257,5 +270,5 @@ sendMesseage
 }
 
 .sendMesseage-form h3 {
- /* align-self: center; */
+	/* align-self: center; */
 }

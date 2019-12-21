@@ -311,26 +311,28 @@ title="Conclution Section Image" /></p>
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3">
-            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <span id="credits">
-                    Made with <a href="https://www.11ty.io/" target="_blank">11ty</a>,
-                    Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a>,
-                    Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a>.
-                </span>
+        <el-grid auto-fit="columns" columns="3" gap="2">
+
+            <el-column>
+                <span>Made with <a href="https://www.11ty.io/" target="_blank">11ty</a></span>
+                <span>Hosted by <a href="https://www.netlify.com/" target="_blank">Netlify</a></span>
+                <span>Built with <a href="https://www.thisel.com/" target="_blank">thiselJS</a></span>
             </el-column>
-            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
+
+            <el-column>
+                <a href="/terms"> Disclaimer </a>
+                <a href="/privacy"> Privacy </a>
+                <a href="/sitemap"> Site Map </a>
+            </el-column>
+
+            <el-column>
                 <el-copyright>
                     <span id="copyright" slot="copyright">
                         <a href="/"> andrewrico.com </a>. All rights reserved
                     </span>
                 </el-copyright>
             </el-column>
-            <el-column display="inline-flex" justify-content="flex-end" align-items="center">
-                <a href="/terms"> Disclaimer </a>
-                <a href="/privacy"> Privacy </a>
-                <a href="/sitemap"> Site Map </a>
-            </el-column>
+
         </el-grid>
     </el-section>
 </footer>
