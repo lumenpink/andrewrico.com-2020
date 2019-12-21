@@ -135,6 +135,7 @@ netliform
 	margin: auto;
 	padding: 1rem;
 	font-size: 0.9rem;
+	overflow-y: auto;
 }
 
 .netliform #error-message {

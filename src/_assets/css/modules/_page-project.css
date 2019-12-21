@@ -8,7 +8,7 @@
 }
 
 #project-page p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 4rem;
 }
 
@@ -16,12 +16,19 @@
     font-size: 2.2rem;
 }
 
-#project-page div {
+
+
+@media(max-width: 1268px) {
+    #project-page el-grid {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+  }
+  #project-page div {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
 #case-study {
     grid-area: case-study;
 }

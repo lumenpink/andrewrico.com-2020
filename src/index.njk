@@ -116,14 +116,14 @@ layout: "layouts/layout-home.njk"
                 </div>
                 <div class="card-footer">
                     <el-button class="el-button">
-                        <a slot="button" extended="button" theme="secondary" href="#submit-chanllenge">Submit </a>
+                        <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
             </article> 
         </el-column>
         {%- endfor -%}
     </el-grid>
-    <div id="submit-chanllenge" class="modal-popup">
+    <div id="submit-challenge" class="modal-popup">
         <div class="modal-content">
             <a href="#chanllenge" title="CLOSE" class="backdrop-modal"></a>
             {% include "forms/form-submitChallenge.njk" %}

@@ -59,8 +59,15 @@ Using a custom element is as simple as importing it, and using the new tags in a
 <button>copy</button>
 
 There are a number of ways to install custom elements. When you find an element you want to use, look at its README for the commands to install it. Most elements today can be installed with NPM. NPM also handles installing the components' dependencies. For more information on NPM, see npmjs.com.
-
 For example, the paper-button overview describes the install process with npm:
+
+
+## # Title
+we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside
+
+###  Title
+we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
+
 
 ## # Title 
 ###  Subitle 
@@ -72,34 +79,5 @@ For example, the paper-button overview describes the install process with npm:
 <a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
 
 
-
-## # Title
-
-<el-inline attr="lead">
-we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
-</el-inline>
-
-###  Title
-we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
-
-
-<div class="markcode">
-<pre><code>
-* {
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-</code></pre>
-<button>copy</button>
-</div>
-
-## # Title
-Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
-
-## # Title
-Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
-
-
-<a class="link" href="/">in this article</a>
 
 

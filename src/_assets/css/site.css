@@ -138,8 +138,8 @@ el-grid > el-column > h2 {
 
 @media(max-width: 1268px) {
   el-column {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
 }
