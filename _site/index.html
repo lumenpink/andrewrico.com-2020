@@ -327,7 +327,7 @@
     </div>
     <main>
         
-            <el-section id="skills" padding-top="10" padding-bottom="6">
+            <el-section id="skills" padding-top="6" padding-bottom="6">
     <el-grid auto-fit="columns" columns="3" gap="1">
         <el-column attr="row">
             <h2>Skills</h2>
@@ -585,7 +585,7 @@
     </div>
 </el-section>
 
-<el-section id="articles" padding-gap=6>
+<el-section id="articles" padding-gap="6">
     <el-grid auto-fit="columns" columns="2" gap="1">
         <el-column attr="row">
             <h2>Recent Articles</h2>
@@ -607,11 +607,14 @@
     </el-grid>
 </el-section>
 
-<el-section id="contact" padding-gap=6>
+<el-section id="contact" padding-gap="6">
+
     <el-grid auto-fit="columns" columns="2" gap="1">
+
         <el-column attr="row">
             <h2>Contact Me</h2>
         </el-column>
+
         <el-column>
             <iframe 
             width="100%" 
@@ -621,6 +624,7 @@
             allowfullscreen=""  
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
         </el-column>
+
         <el-column>
             <div class="netliform simple-form sendMesseage-form">
     <p id="error-message"></p>
@@ -671,79 +675,10 @@
     </form>
 </div>
         </el-column>
+
     </el-grid>
+    
 </el-section>
-
-
-<div class="modal-backdrop close-modal"></div>
-<div class="modal-container">
-    <div class="netliform popup-form">
-    <p id="error-messsge"></p>
-    <h3>Submit a Code Challenge</h3>
-    <form 
-        id="andrewrico-submitChallenge-netlify" 
-        name="andrewrico-submitChallenge-netlify" 
-        method="POST" 
-        action="/"
-        data-netlify="true"
-        >
-        <fieldset class="fullwidth">
-            <label for="name">NAME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" name="name" placeholder="jhon due" aria-label="name" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="selection">YOU ARE A</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
-                <select name="selection" required>
-                    <option value="">Select one</option>
-                    <option value="Recruiter">Recruiter</option>
-                    <option value="Employer">Employer </option>
-                </select>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="email">E-MAIL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="tel">PHONE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
-            </label>
-        </fieldset>
-
-        <fieldset>
-            <label for="url">URL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
-            </label>
-        </fieldset>
-
-        <fieldset class="fullwidth">
-            <label for="message">MESSAGE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" name="message" placeholder="In a few words, tell me about the rules" aria-label="message" required/>
-            </label>
-        </fieldset>
-        <el-button class="el-button">
-            <button type="submit" slot="button" extended="button" theme="quaternary">
-                Submit
-            </button>
-        </el-button>
-    </form>
-</div>
-</div>
-<button class="open-modal">OPEN MODAL 1</button>
 
 
 

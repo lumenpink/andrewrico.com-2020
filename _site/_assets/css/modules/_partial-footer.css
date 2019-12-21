@@ -1,5 +1,11 @@
 #footer h1 {
-	font-size: 3.6rem;
+	font-size: 1.6rem;
+}
+
+@media(min-width: 1268px) {
+	#footer h1 {
+		font-size: 3.6rem;
+	}
 }
 
 #footer a:hover,

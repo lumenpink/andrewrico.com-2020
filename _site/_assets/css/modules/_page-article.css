@@ -118,6 +118,7 @@
     border-left: 6px solid #000000;
     box-shadow: var(--color-shadow);
     font-weight: 100;
+    font-family: var(--font-family-writing);
 }
 
 #article .preface::first-letter {
