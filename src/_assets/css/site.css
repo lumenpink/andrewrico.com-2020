@@ -123,6 +123,11 @@ iframe {
   flex-direction: column;
   text-align: center;
 }
+/* #about el-column:first-child {
+  padding-left: 2px;
+  padding-right: 2px;
+} */
+
 
 el-grid > el-column > h2 {
   text-align: center;
@@ -135,6 +140,11 @@ el-grid > el-column > h2 {
   
 }
 
+el-button {
+	grid-column: 1 / -1;
+	margin: auto;
+	text-align: center;
+}
 
 @media(max-width: 1268px) {
   el-column {
