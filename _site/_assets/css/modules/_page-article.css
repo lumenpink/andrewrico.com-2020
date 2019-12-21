@@ -3,7 +3,7 @@
 }
 
 
-#article-sidebar {
+#article-bio {
     display: flex;
     min-height: 200px;
     justify-content: flex-start;
@@ -97,8 +97,6 @@
     font-weight: 400;
     color: #000;
     line-height: 1.6;
-    text-align: justify;
-    text-justify: inter-word;
     text-overflow: ellipsis;
     white-space: normal;
     word-break: normal;

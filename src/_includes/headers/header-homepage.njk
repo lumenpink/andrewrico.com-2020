@@ -15,11 +15,9 @@
                         <figcaption class="author-meta">
                             <h1> Hello, I'am {{ site.author.name }} </h1>
                             <h2><svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h2>
-                            <ul>
-                                {% for titles in site.author.title %}
-                                    <li><h2>{{ titles }}</h2></li>
-                                {% endfor %}
-                            </ul>
+                            {% for titles in site.author.title %}
+                                <b>{{ titles }}</b>
+                            {% endfor %}
                         </figcaption>
                     </figure>
                     <div class="terminal"> 

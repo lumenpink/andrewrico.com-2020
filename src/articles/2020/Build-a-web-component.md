@@ -10,14 +10,17 @@ PagePathToBanner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), ur
 ---
 
 <h4 class="preface">
-Components are the building blocks of <em>modern web</em> applications. What best practices should you follow when building your own components so they can stand the test of time?.
+Components are the building blocks of modern web applications. What best practices should you follow when building your own components so they can stand the test of time?.
 </h4>
 
+## # What are WebComponents? 
+
 <!-- Excerpt Start -->
+
 <strong>Web components are</strong> a group of web technologies that make it possible to create custom, reusable <strong>HTML elements</strong> whose functionality is encapsulated and thus <strong>completely separate from other code.</strong>
+
 <!-- Excerpt End -->
 
-## # What are WebComponents? 
 Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
 
 Web components are based on existing web standards. Features to support web components are currently being added to the HTML and DOM specs,letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.

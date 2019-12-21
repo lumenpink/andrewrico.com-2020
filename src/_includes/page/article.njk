@@ -2,18 +2,11 @@
 layout: "/layouts/layout-article.njk"
 ---
 <el-section id="article-page" padding-gap="10">
-    <el-grid auto-fit="columns" pixel-width="1024" template-columns="2fr 1fr" gap="2" >
+    <el-grid auto-fit="columns" columns="1" gap="2" pixel-width="768">
 
-        <el-column>
-            <article id="article">
-                {% block content  %}
-                    {{ content | safe }}
-                {% endblock content %}
-            </article>
-        </el-column>
+        <el-column attr="row">
 
-        <el-column>
-            <aside id="article-sidebar">
+            <div id="article-bio">
                 <div class="article-author">
                     <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name}} Avatar">
                     <div class="author-meta">
@@ -26,8 +19,15 @@ layout: "/layouts/layout-article.njk"
                         <li><b>{{ item }}</b></li>
                     {% endfor %}
                 </ul>
-            </aside>
+            </div>
+
+            <article id="article">
+                {% block content  %}
+                    {{ content | safe }}
+                {% endblock content %}
+            </article>
         </el-column>
+
 
     </el-grid>
 </el-section>

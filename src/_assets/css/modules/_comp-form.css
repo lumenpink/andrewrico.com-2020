@@ -12,6 +12,7 @@ form {
 el-button {
 	grid-column: 1 / -1;
 	margin: auto;
+	text-align: center;
 }
 
 input {
@@ -112,7 +113,7 @@ fieldset svg {
 	width: 16px;
 	height: 16px;
 	fill: #060606;
-	z-index: 6000;
+	z-index: 10;
 
 }
 
