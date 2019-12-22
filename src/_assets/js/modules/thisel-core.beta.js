@@ -1188,7 +1188,7 @@ const elDrawerCSS = `:host {
 		
 		::slotted(.brand) ,
 		:host .brand {
-			font-size:0.6rem;
+			font-size:0.8rem;
 			font-family: var(--drawer-brand-font-family)!important;
 			width: 128px;
 			height: 56px;
@@ -1214,7 +1214,7 @@ const elDrawerCSS = `:host {
 		@media(min-width:1024px) {
 			::slotted(.brand) ,
 			:host .brand {
-				font-size: 0.8rem;
+				font-size: 0.9rem;
 			}
 			::slotted(h1) ,
 			:host .brand h1 {
