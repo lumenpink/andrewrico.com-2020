@@ -12,10 +12,9 @@ pagination:
   reverse: true
   alias: articles
 ---
-<el-section id="blog-page" padding-gap="10">
+<el-section>
     <el-grid pixel-width="768" columns="1">
-
-    <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
+        <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
 
             <el-inline id="author">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
@@ -56,7 +55,7 @@ pagination:
         </el-column>
     </el-grid>
 </el-section>
-<el-section padding-gap="2" background="#fafafa">
+<el-section background="#fafafa">
     <el-grid pixel-width="768" columns="1">
         <el-column attr="row">
             {% include "forms/form-subscribe.njk" %}

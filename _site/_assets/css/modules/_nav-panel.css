@@ -66,11 +66,7 @@
 	transition: transform ease 0.3s;
 }
 
-#navigation-panel ul>li>a:hover .tooltip {
-	position: absolute;
-	opacity: 1;
-	display: inline-block;
-}
+
 
 .tooltip {
 	pointer-events: none;
@@ -88,12 +84,16 @@
 	border-radius: 2px;
 	white-space: nowrap;
 	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+	visibility: hidden;
 	display: none;
 	
 }
-
+#navigation-panel ul>li>a:hover .tooltip {
+	position: absolute;
+	opacity: 1;
+	display: block;
+	visibility: visible;
+}
 @media only screen and (max-height: 468px) {
 	#navigation-panel {
 		display: none;
