@@ -1,5 +1,5 @@
 // create el-section template.
-const elSectionCSS = `:host {  display: block;width:100%; } :host > * { color:inherit; }`;
+const elSectionCSS = `:host {  display: block;width:100%; } :host > * { color:inherit; } :host section { display:block; }`;
 const elSectionHTML = `<section><slot></slot></section>`;
 const elSectionTemplate = document.createElement("template");
 elSectionTemplate.innerHTML = `<style>`.concat(elSectionCSS, `</style>`).concat(elSectionHTML);
@@ -85,11 +85,7 @@ const elGridCSS = `:host {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important
     }
 }
-@media(min-width:768px) and (max-width:1024px) {
-    :host([auto-fit="columns"]) {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important
-    }
-}
+
 `;
 const elGridHTML = "<slot></slot>";
 const elGridTemplate = document.createElement("template");
@@ -1183,7 +1179,7 @@ const elDrawerCSS = `:host {
 		:host .brand h1 {
 			margin: 0!important;
 			font-family: var(--drawer-brand-font-family);
-			text-indent: 32px;
+			text-indent: 0px;
 		}
 		
 		::slotted(.brand) ,
@@ -1220,7 +1216,7 @@ const elDrawerCSS = `:host {
 			:host .brand h1 {
 				margin: 0!important;
 				font-family: var(--drawer-brand-font-family);
-				text-indent: 16px;
+				text-indent: 8px;
 			}
 		}
 		@media(min-width:1268px) {
@@ -1232,7 +1228,7 @@ const elDrawerCSS = `:host {
 			:host .brand h1 {
 				margin: 0!important;
 				font-family: var(--drawer-brand-font-family);
-				text-indent: 8px;
+				text-indent: 16px;
 			}
 		}
 		
