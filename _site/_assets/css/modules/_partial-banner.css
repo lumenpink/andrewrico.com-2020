@@ -3,10 +3,6 @@ header {
     
 }
 
-.site-homepage-header {
-    z-index: 100000!important;
-
-}
 .site-base-header {
     display: flex;
     justify-content: center;

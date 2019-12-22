@@ -1,5 +1,5 @@
 // create el-section template.
-const elSectionCSS = `:host {  display: block;} :host > * { color:inherit; }`;
+const elSectionCSS = `:host {  display: block;width:100%; } :host > * { color:inherit; }`;
 const elSectionHTML = `<section><slot></slot></section>`;
 const elSectionTemplate = document.createElement("template");
 elSectionTemplate.innerHTML = `<style>`.concat(elSectionCSS, `</style>`).concat(elSectionHTML);
@@ -80,11 +80,17 @@ const elGridCSS = `:host {
     width: var(--el-grid-width, 99.75%)
 }
 
-@media(max-width:1268px) {
+@media(max-width:768px) {
     :host([auto-fit="columns"]) {
-        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)) !important
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important
     }
-}`;
+}
+@media(min-width:768px) and (max-width:1024px) {
+    :host([auto-fit="columns"]) {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important
+    }
+}
+`;
 const elGridHTML = "<slot></slot>";
 const elGridTemplate = document.createElement("template");
 elGridTemplate.innerHTML = `<style>`.concat(elGridCSS, `</style>`).concat(elGridHTML);
@@ -150,9 +156,9 @@ const elColumnCSS = `:host {
     display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: var(--el-grid-gutter, .25rem);
-    margin: var(--el-grid-gutter, .25rem);
-    padding: var(--el-grid-gutter, .25rem)
+    grid-gap: var(--el-grid-gutter, .0);
+    margin: var(--el-grid-gutter, .0);
+    padding: var(--el-grid-gutter, .0)
 }
 
 :host([attr=row]) {
@@ -164,7 +170,7 @@ const elColumnCSS = `:host {
     :host([attr=auto-fit]) {
         display: -ms-grid;
         display: grid;
-        grid-gap: 0.225rem;
+        grid-gap: 0;
         margin: 0;
 		grid-template-columns: 1fr!important;
     }
@@ -1080,6 +1086,7 @@ const elDrawerCSS = `:host {
 			position: fixed;
 			height: 100vh;
 			left: 0;
+			right:0;
 			bottom: 0;
 			width: 100%;
 			display: none;
@@ -1171,9 +1178,16 @@ const elDrawerCSS = `:host {
 			-webkit-transform: scale(2);
 			transform: scale(2);
 		}
+
+		::slotted(h1) ,
+		:host .brand h1 {
+			margin: 0!important;
+			font-family: var(--drawer-brand-font-family);
+		}
+		
 		::slotted(.brand) ,
 		:host .brand {
-			font-size: var(--drawer-brand-font-size, 1rem);
+			font-size:0.6rem;
 			font-family: var(--drawer-brand-font-family)!important;
 			width: 128px;
 			height: 56px;
@@ -1187,26 +1201,33 @@ const elDrawerCSS = `:host {
 			-ms-flex-align: center;
 			align-items: center;
 			margin: 0;
-			text-indent: .5rem;
 			color: var(--drawer-hightlight-color, var(--color-black, #000))!important;
-			text-decoration: none;
 			-webkit-transition: ease-in-out opacity .3s;
 			transition: ease-in-out opacity .3s;
 			white-space: nowrap;
 			text-decoration: none;
 			color: var(--drawer-brand-color, var(--color-black, #000))
 		}
-		::slotted(h1) ,
-		:host .brand h1 {
-			text-indent: 3.2rem;
-			margin: 0!important;
-			font-family: var(--drawer-brand-font-family)!important;
+
+		@media(min-width:1024px) {
+			::slotted(.brand) ,
+			:host .brand {
+				font-size: 0.8rem;
+			}
+		}
+		@media(min-width:1268px) {
+			::slotted(.brand) ,
+			:host .brand {
+				font-size: var(--drawer-brand-font-size, 1rem);
+			}
 		}
 		
 		:host #navbar {
 			-webkit-box-shadow: 0 7px 5px -7px #111;
 			box-shadow: 0 7px 5px -7px #111;
 			position: fixed;
+			left:0;
+			right:0;
 			background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
 			width: 100%;
 			top:0!important;
@@ -1392,139 +1413,3 @@ customElements.define('el-drawer',
 		}
 	}
 );
-
-
-
-// // create el-Drawer template.
-// const elModalCSS = `:host {
-// 			display: flex;
-// 			justify-content:center;
-// 			align-items:center;
-// 		}
-		
-// 		:host #modal-backdrop {
-// 			position: fixed;
-// 			height: 100vh;
-// 			left: 0;
-// 			bottom: 0;
-// 			width: 100%;
-// 			display: none;
-// 			background: rgba(0, 0, 0, .72);
-// 			z-index: 10;
-// 			cursor: not-allowed
-// 		}
-		
-// 		:host button[id*='-modal'] {
-// 			z-index: 10;
-// 			cursor: pointer;
-// 			-ms-touch-action: auto;
-// 			touch-action: auto;
-// 			background: 0 0;
-// 			border: 0;
-// 			border-radius:50%;
-// 			padding:0.9rem;
-// 			display: -webkit-box;
-// 			display: -ms-flexbox;
-// 			display: flex;
-// 			-webkit-box-pack: center;
-// 			-ms-flex-pack: center;
-// 			justify-content: center;
-// 			-webkit-box-align: center;
-// 			-ms-flex-align: center;
-// 			align-items: center;
-// 			cursor: pointer
-// 		}
-// 		:host #modal {
-// 			background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
-// 			width: 100%;
-// 			max-width: 100%;
-// 			min-height: 500px
-// 			position: fixed;
-// 			z-index: 10;
-// 			-webkit-transition: all .2s;
-// 			transition: all .2s
-// 		}
-		
-// `;
-// const elModalHTML = `
-
-// 	<div id="modal-backdrop"></div>
-
-// 	<button id="open-modal">
-// 		OPEN
-// 	</button>
-	
-// 	<div id="modal">
-// 		<button id="close-modal">
-// 			CLOSE
-// 		</button>
-// 	</div>
-
-// 	<slot></slot>
-
-// 	`;
-// const elModalTemplate = document.createElement("template");
-// elModalTemplate.innerHTML = `<style>`.concat(elModalCSS, `</style>`).concat(elModalHTML);
-// // define el-Drawer tag.
-// customElements.define('el-modal',
-// 	class elModal extends HTMLElement {
-// 		constructor() {
-// 			super();
-// 			// _thisElDrawer = elDrawer
-// 			let _thisElModal = this;
-// 			// open shadowRoot.
-// 			const shadowRoot = _thisElModal.attachShadow({
-// 				mode: "open"
-// 			});
-// 			// clone template. 
-// 			shadowRoot.appendChild(elModalTemplate.content.cloneNode(!0));
-// 			return _thisElModal;
-// 		}
-// 		connectedCallback() {
-// 			// DOM elements
-// 			const _drawer = this.shadowRoot.querySelector("#modal");
-// 			const _backdrop = this.shadowRoot.querySelector("#modal-backdrop");
-// 			const _opendrawer = this.shadowRoot.querySelector("#open-modal");
-// 			const _closedrawer = this.shadowRoot.querySelector("#close-modal");
-
-// 			// open drawer if click button
-// 			_opendrawer.addEventListener('click', () => {
-// 				_drawer.setAttribute('tabindex', 1);
-// 				_drawer.style.width = '85%';
-// 				_drawer.style.maxWidth = '400px';
-// 				_drawer.style.opacity = '1';
-// 				_backdrop.style.display = 'block';
-// 			});
-// 			// close drawer if click button
-// 			_closedrawer.addEventListener('click', () => {
-// 				_drawer.setAttribute('tabindex', 0);
-// 				_drawer.style.width = '0';
-// 				_drawer.style.maxWidth = '0';
-// 				_drawer.style.opacity = '0';
-// 				_backdrop.style.display = 'none';
-// 			});
-// 			// close drawer if click _backdrop
-// 			_backdrop.addEventListener('click', () => {
-// 				_drawer.style.width = '0';
-// 				_drawer.style.maxWidth = '0';
-// 				_drawer.style.opacity = '0';
-// 				_backdrop.style.display = 'none';
-// 			});
-// 			// close drawer if width change
-// 			function _whenWidthChange(_addMediaQuery) {
-// 				if (_addMediaQuery.matches) {
-// 					_drawer.style.width = '0';
-// 					_drawer.style.maxWidth = '0';
-// 					_drawer.style.opacity = '0';
-// 					_backdrop.style.display = 'none';
-// 				}
-// 			}
-// 			// if width change add media query
-// 			const _addMediaQuery = window.matchMedia("(min-width: 768px)");
-// 			if (matchMedia) {
-// 				_addMediaQuery.addListener(_whenWidthChange);
-// 				_whenWidthChange(_addMediaQuery);
-// 			};
-// 		}
-// 	}
-// );

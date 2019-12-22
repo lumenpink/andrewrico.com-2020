@@ -26,15 +26,15 @@
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
 
-
 </head>
 
 <el-loading background="var(--color-gradient)"></el-loading>
 
 <body>
     <el-drawer>
-	<h1 slot="drawer-brand">Andrew Rico</h1><h1 slot="navbar-brand">Andrew Rico</h1>
-<div class="drawer-menu" slot="drawer-menu">
+	<h1 slot="drawer-brand">Andrew Rico</h1>
+<h1 slot="navbar-brand">Andrew Rico</h1>
+<nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
             <a href="/">
@@ -94,7 +94,7 @@
         </li>
     </ul>
 
-</div>
+</nav>
 	<ul slot="navbar-menu" class="menu-navbar">
 		<li>
 			<a href="#about">
@@ -333,7 +333,7 @@
     </div>
     <main id="homepage-content">
         
-            <el-section id="skills" padding-top="6" padding-bottom="6">
+            <el-section id="skills">
     <el-grid auto-fit="columns" columns="3" gap="1">
         <el-column attr="row">
             <h2>Skills</h2>
@@ -406,7 +406,7 @@
         </el-column></el-grid>
 </el-section>
 
-<el-section id="projects" padding-gap="6">
+<el-section id="projects">
     <el-grid auto-fit="columns" columns="3" gap="1">
         <el-column attr="row">
             <h2>Recent Projects</h2>
@@ -445,7 +445,7 @@
     </el-grid>
 </el-section>
 
-<el-section id="chanllenge" padding-gap="6">
+<el-section id="chanllenge">
     <el-grid auto-fit="columns" columns="2" gap="1">
         <el-column attr="row">
             <h2>Code Challenges</h2>
@@ -592,7 +592,7 @@
     </div>
 </el-section>
 
-<el-section id="articles" padding-gap="6">
+<el-section id="articles" >
     <el-grid auto-fit="columns" columns="2" gap="1">
         <el-column attr="row">
             <h2>Recent Articles</h2>
@@ -614,7 +614,7 @@
     </el-grid>
 </el-section>
 
-<el-section id="contact" padding-gap="6">
+<el-section id="contact">
 
     <el-grid auto-fit="columns" columns="2" gap="1">
 

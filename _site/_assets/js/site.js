@@ -81,16 +81,16 @@ Name: Hide on scroll (b)
 Function: Hide navigation panel when is window in on header  
 Location: [ Site ]
 /*--------------------------------------------- */
-window.onscroll = () => {
-	_hideOnscroll()
-};
-_hideOnscroll = () => {
-	if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-		document.getElementById("navigation-panel").style.right = "0px";
-	} else {
-		document.getElementById("navigation-panel").style.right = "-200px";
-	}
-}
+// window.onscroll = () => {
+// 	_hideOnscroll()
+// };
+// _hideOnscroll = () => {
+// 	if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+// 		document.getElementById("navigation-panel").style.right = "0px";
+// 	} else {
+// 		document.getElementById("navigation-panel").style.right = "-200px";
+// 	}
+// }
 
 
 /* ---------------------------------------------

@@ -10,6 +10,7 @@ components ---------------------------------------
 @import 'modules/_comp-form.css';
 @import 'modules/_comp-modal.css';
 @import 'modules/_comp-author.css';
+@import 'modules/_comp-thisel.css';
 
 /*
 navigations ---------------------------------------
