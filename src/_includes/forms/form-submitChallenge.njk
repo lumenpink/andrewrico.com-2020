@@ -13,14 +13,14 @@
             <label for="name">NAME</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" name="name" placeholder="jhon due" aria-label="name" required />
+                <input type="text" id="name" name="name" aria-label="name" placeholder="jhon due" required />
             </label>
         </fieldset>
         <fieldset>
             <label for="selection">YOU ARE A</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
-                <select name="selection" required>
+                <select id="selection" name="selection" aria-label="selection"  required>
                     <option value="">Select one</option>
                     <option value="Recruiter">Recruiter</option>
                     <option value="Employer">Employer </option>
@@ -31,14 +31,14 @@
             <label for="email">E-MAIL</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
+                <input type="email" id="email" name="email" aria-label="email" placeholder="jhondue@mail.com" required />
             </label>
         </fieldset>
         <fieldset>
             <label for="tel">PHONE</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
+                <input type="tel" id="tel" name="tel" aria-label="tel" placeholder="(555)-333-3333" required />
             </label>
         </fieldset>
 
@@ -46,7 +46,7 @@
             <label for="url">URL</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
+                <input type="text" id="url" id="url" name="url"  aria-label="url" placeholder="https://www." required />
             </label>
         </fieldset>
 
@@ -54,7 +54,7 @@
             <label for="message">MESSAGE</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" name="message" placeholder="In a few words, tell me about the rules" aria-label="message" required/>
+                <input type="text" id="message" name="message" aria-label="message" placeholder="In a few words, tell me about the rules" required/>
             </label>
         </fieldset>
         <el-button class="el-button">

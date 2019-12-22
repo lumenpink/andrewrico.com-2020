@@ -133,32 +133,3 @@ Name: form
 Function: form 
 Location: [ form]
 /*--------------------------------------------- */
-// const name = document.getElementById('name-schedule')
-// const email = document.getElementById('email-schedule')
-// const form = document.getElementById('andrewrico-scheduleCall-netlify')
-// const errorMessage = document.getElementById('error-message')
-
-// form.addEventListener('submit', (e) => {
-// 	let messages = []
-// 	if (name.value === '' || name.value == null) {
-// 		messages.push('name is required')
-// 		errorMessage.style.display = "inline-block";
-// 		name.style.backgroundColor = "red";
-// 	}
-
-// 	if (email.value.length <= 6) {
-// 		messages.push('email must be longer than 6 characters')
-// 	}
-// 	if (email.value.length >= 20) {
-// 		messages.push('email must be less than 20 characters')
-// 	}
-// 	if (email.value === 'email') {
-// 		messages.push('email cannot be password')
-// 	}
-
-// 	if (messages.length > 0) {
-// 		e.preventDefault()
-// 		errorMessage.innerText = messages.join(', ')
-// 	}
-
-// })

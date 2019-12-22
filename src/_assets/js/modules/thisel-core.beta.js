@@ -1330,7 +1330,7 @@ const elDrawerCSS = `:host {
 		}`;
 const elDrawerHTML = `<div id="drawer-backdrop"></div>
 	<nav id="navbar">
-		<div id="navbar-container"><button class="radial" id="open_drawer"><svg
+		<div id="navbar-container"><button aria-label="open drawer icon" class="radial" id="open_drawer"><svg
 					fill="var(--drawer-hightlight-color, var(--color-black, #000))" height=24
 					style="enable-background:new 0 0 459 459" viewBox="0 0 459 459" width=24 x=0px xml:space=preserve
 					xmlns=http://www.w3.org/2000/svg y=0px>
@@ -1347,12 +1347,16 @@ const elDrawerHTML = `<div id="drawer-backdrop"></div>
 		</div>
 	</nav>
 	<nav id="drawer">
-		<div class="drawer-header"><button class="radial" id="close_drawer"><svg fill="var(--drawer-hightlight-color, var(--color-black, #000))"
+		<div class="drawer-header">
+		
+		<button aria-label="close drawer icon" class="radial" id="close_drawer"><svg fill="var(--drawer-hightlight-color, var(--color-black, #000))"
 					xmlns="http://www.w3.org/2000/svg" height=24 width=24 x="0px" y="0px" viewBox="0 0 31.112 31.112"
 					style="enable background:new 0 0 31.112 31.112;" xml:space="preserve">
 					<polygon
 						points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97 29.698,31.112 31.112,29.698 16.97,15.556 " />
-					</svg></button><a class="brand" href="/">
+					</svg>
+		</button>
+		<a class="brand" href="/">
 				<slot name="drawer-brand">
 					<h1>Brand</h1>
 				</slot>
