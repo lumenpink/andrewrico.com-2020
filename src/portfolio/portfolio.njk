@@ -9,11 +9,11 @@ pagination:
   reverse: true
   alias: projects
 ---
-<el-section padding-gap="6">
-    <el-grid auto-fit="columns" columns="1" >
+<el-section>
+    <el-grid auto-fit="columns" columns="1">
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
 
-            <el-inline id="author" class="card">
+            <el-inline id="author">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
                 <h1 class="author-name"> {{ site.author.name}} </h1>
                 <div class="author-titles">
@@ -29,8 +29,8 @@ pagination:
     </el-grid>
 </el-section>
 
-<el-section padding-gap="6">
-    <el-grid auto-fit="columns" columns="3" gap="3">
+<el-section>
+    <el-grid auto-fit="columns" columns="3">
 
         <el-column margin-top="2" id="recent" attr="row">
             <h2>Recent Projects</h2>

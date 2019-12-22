@@ -1177,13 +1177,12 @@ const elDrawerCSS = `:host {
 
 		::slotted(h1) ,
 		:host .brand h1 {
-			margin: 0!important;
 			font-family: var(--drawer-brand-font-family);
-			text-indent: 0px;
 		}
 		
 		::slotted(.brand) ,
 		:host .brand {
+			margin:auto;
 			font-size:0.8rem;
 			font-family: var(--drawer-brand-font-family)!important;
 			width: 128px;
@@ -1197,16 +1196,19 @@ const elDrawerCSS = `:host {
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center;
-			margin: 0;
 			color: var(--drawer-hightlight-color, var(--color-black, #000))!important;
 			-webkit-transition: ease-in-out opacity .3s;
 			transition: ease-in-out opacity .3s;
 			white-space: nowrap;
 			text-decoration: none;
-			
 			color: var(--drawer-brand-color, var(--color-black, #000))
 		}
-
+		@media(min-width:768px) {
+			::slotted(.brand) ,
+			:host .brand {
+				margin:0;
+			}
+		}
 		@media(min-width:1024px) {
 			::slotted(.brand) ,
 			:host .brand {
@@ -1214,9 +1216,7 @@ const elDrawerCSS = `:host {
 			}
 			::slotted(h1) ,
 			:host .brand h1 {
-				margin: 0!important;
 				font-family: var(--drawer-brand-font-family);
-				text-indent: 8px;
 			}
 		}
 		@media(min-width:1268px) {
@@ -1226,9 +1226,7 @@ const elDrawerCSS = `:host {
 			}
 			::slotted(h1) ,
 			:host .brand h1 {
-				margin: 0!important;
 				font-family: var(--drawer-brand-font-family);
-				text-indent: 16px;
 			}
 		}
 		
@@ -1249,16 +1247,14 @@ const elDrawerCSS = `:host {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: flex-center;
+			justify-content: space-between;
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			align-items: center;
 			opacity: 1;
 			padding: var(--drawer-padding) 0rem;
-			margin-right: 3rem;
-			margin-left: 3rem
+			margin-right: 48px;
+			margin-left: 48px;
 		}
 		
 		:host #navbar-menu {
