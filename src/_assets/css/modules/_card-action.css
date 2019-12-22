@@ -18,6 +18,9 @@
 .card-action>div {
     padding: 1.2rem;
 }
+.card-action h3 {
+    text-align: center;
+}
 
 .card-action ol {
     padding: 0;

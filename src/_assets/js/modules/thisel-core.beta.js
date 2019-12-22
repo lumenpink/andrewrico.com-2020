@@ -1183,6 +1183,7 @@ const elDrawerCSS = `:host {
 		:host .brand h1 {
 			margin: 0!important;
 			font-family: var(--drawer-brand-font-family);
+			text-indent: 32px;
 		}
 		
 		::slotted(.brand) ,
@@ -1206,6 +1207,7 @@ const elDrawerCSS = `:host {
 			transition: ease-in-out opacity .3s;
 			white-space: nowrap;
 			text-decoration: none;
+			
 			color: var(--drawer-brand-color, var(--color-black, #000))
 		}
 
@@ -1214,11 +1216,23 @@ const elDrawerCSS = `:host {
 			:host .brand {
 				font-size: 0.8rem;
 			}
+			::slotted(h1) ,
+			:host .brand h1 {
+				margin: 0!important;
+				font-family: var(--drawer-brand-font-family);
+				text-indent: 16px;
+			}
 		}
 		@media(min-width:1268px) {
 			::slotted(.brand) ,
 			:host .brand {
 				font-size: var(--drawer-brand-font-size, 1rem);
+			}
+			::slotted(h1) ,
+			:host .brand h1 {
+				margin: 0!important;
+				font-family: var(--drawer-brand-font-family);
+				text-indent: 8px;
 			}
 		}
 		
