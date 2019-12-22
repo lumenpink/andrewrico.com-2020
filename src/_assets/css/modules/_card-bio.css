@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-around;
   min-height: 400px;
-  padding: 2rem 0.5rem;
+  padding: 2rem;
   min-width: 100%;
   width: 100%;
   margin: auto;
@@ -14,7 +14,7 @@
   font-family: var(--font-family-content);
 }
 
-.author {
+.card-bio .author-figure {
   width: 100%;
   margin: auto;
   display: flex;
@@ -24,8 +24,9 @@
   text-align: center;
 }
 
+
 @media(min-width:768px) {
-  .author {
+  .card-bio .author-figure {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -33,52 +34,61 @@
     text-align: left;
   }
 }
-.author-meta {
-  /* align-self: flex-end; */
+
+.card-bio .author-avatar {
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.card-bio .author-info {
   margin: 0;
   padding: 0;
 }
-.author .author-avatar {
+
+.card-bio  .author-avatar {
   max-width: 125px;
   height: 125px;
   border-radius: 50%;
   padding: 1px;
   background: var(--color-light);
-  /* border: 2px solid var(--color-white); */
-  /* filter: drop-shadow(0 0 3px var(--color-primary)); */
 
 }
+.card-bio  .author-titles {
+padding: 1rem 0;
+}
 
-.author-meta svg {
+.card-bio  svg {
   width: 12px;
   height: 12px;
 }
 
-.author-meta h1 {
+.card-bio  h1 {
   font-size: 1.6rem;
   margin: 0;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-family-title);
 }
 
-.author-meta h2 {
+.card-bio  p {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.card-bio  h2 {
   font-family: var(--font-family-content);
-  font-size: 0.6rem;
-  margin: 1rem 0;
+  font-size: 1em;
+  margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 @media(min-width:1024px) {
-  .card-bio .author-meta b {
-    align-self: flex-end;
+  .card-bio h2 {
+    text-align: right;
   }
 }
 
 
-.author-meta ul h2 {
-  font-size: 1.2rem;
-  margin: 0;
-  letter-spacing: 2px;
-}
 
 .terminal {
   margin: 0;
@@ -94,6 +104,12 @@
   margin: 0;
   padding: 0.25rem;
 }
+
+.typewrite>.caret {
+  border-right: 0.08em solid var(--color-primary)
+}
+
+
 
 .biopaths {
   display: block;
@@ -141,10 +157,4 @@
   fill: var(--color-primary);
   transition: transform ease 0.6s;
   transform: translateY(-0.24rem);
-}
-
-
-
-.typewrite>.caret {
-  border-right: 0.08em solid var(--color-primary)
 }

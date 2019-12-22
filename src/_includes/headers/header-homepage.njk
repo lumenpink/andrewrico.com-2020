@@ -10,16 +10,23 @@
             <el-column attr="row">
 
                 <el-inline class="card-bio" background="{{ PagePathToBanner }}" >
-                    <figure class="author">
+
+                    <figure class="author-figure">
                         <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
-                        <figcaption class="author-meta">
+                        <figcaption class="author-info">
                             <h1> Hello, I'am {{ site.author.name }} </h1>
-                            <h2><svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h2>
-                            {% for titles in site.author.title %}
-                                <b>{{ titles }}</b>
-                            {% endfor %}
+                            <p><svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</p>
+                            <div class="author-titles">
+                                {% for titles in site.author.title %}
+                                <h2 class="author-title"> {{ titles }} </h2> 
+                                {% endfor %}
+                                {% for subtitles in site.author.subtitle %}
+                                <h2 class="author-subtitle"> {{ subtitles }} </h2>
+                                {% endfor %}
+                            </div> 
                         </figcaption>
                     </figure>
+
                     <div class="terminal"> 
                         <p class="typewrite" data-period="2000" data-type='[ 
                                 " I like to build things – I love knowledge ", 

@@ -121,30 +121,11 @@
         </el-grid>
     </el-section>
 </header>
-        <main> 
+        <main id="article-page"> 
             
-               <el-section id="article-page" padding-gap="10">
-    <el-grid auto-fit="columns" columns="1" gap="2" pixel-width="768">
-
-        <el-column attr="row">
-
-            <div id="article-bio">
-                <div class="article-author">
-                    <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt="Andrew Rico Avatar">
-                    <div class="author-meta">
-                       <p> <b> Andrew Rico </b> </p>
-                       <p> <time datetime="2019-12-03T00:00:00.000Z">  December 2, 2019  </time> </p>
-                    </div>
-                </div>
-                <ul class="article-keywords">
-                    
-                        <li><b>javascript</b></li>
-                    
-                        <li><b>webComponents </b></li>
-                    
-                </ul>
-            </div>
-
+               <el-section padding-gap="6">
+    <el-grid auto-fit="columns" columns="1" gap="2" template-columns="2fr 1fr"> 
+        <el-column>
             <article id="article">
                 
                     <h4 class="preface">
@@ -192,12 +173,20 @@ For example, the paper-button overview describes the install process with npm:</
 <i> i tag</i><br>
 <b> b tag </b><br>
 <a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<p><a href="/blog">BACK TO BLOG</a></p>
 
                 
             </article>
         </el-column>
-
-
+        <el-column>
+            <el-inline id="author-article">
+                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar">
+                <span>
+                    <h2 class="author-name"> Andrew Rico </h2>   
+                    <p> <time datetime="2019-12-03T00:00:00.000Z">  December 2, 2019  </time> </p>  
+                </span> 
+            </el-inline>
+        </el-column>
     </el-grid>
 </el-section>
             

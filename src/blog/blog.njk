@@ -14,15 +14,22 @@ pagination:
 ---
 <el-section id="blog-page" padding-gap="10">
     <el-grid pixel-width="768" columns="1">
-        <el-column attr="row">
-            <el-inline id="blog-bio">
+
+    <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
+
+            <el-inline id="author">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
-                <h1> {{ site.author.name}} </h1>
-                <p>
-                    <b>JAM Stack Specialist</b> <br>
-                    Web Developer & UI/UX Engineer
-                 </p> 
+                <h1 class="author-name"> {{ site.author.name}} </h1>
+                <div class="author-titles">
+                    {% for titles in site.author.title %}
+                    <h2 class="author-title"> {{ titles }} </h2> 
+                    {% endfor %}
+                    {% for subtitles in site.author.subtitle %}
+                    <h2 class="author-subtitle"> {{ subtitles }} </h2>
+                    {% endfor %}
+                </div>                
             </el-inline>
+
             <nav>
                 <ul class="article-keywords">
                     {% for item in keywords %}

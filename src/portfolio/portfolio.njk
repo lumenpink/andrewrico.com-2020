@@ -9,10 +9,30 @@ pagination:
   reverse: true
   alias: projects
 ---
-<el-section id="portfolio-page" padding-top="6" padding-bottom="12">
+<el-section padding-gap="6">
+    <el-grid auto-fit="columns" columns="1" >
+        <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
+
+            <el-inline id="author" class="card">
+                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
+                <h1 class="author-name"> {{ site.author.name}} </h1>
+                <div class="author-titles">
+                    {% for titles in site.author.title %}
+                    <h2 class="author-title"> {{ titles }} </h2> 
+                    {% endfor %}
+                    {% for subtitles in site.author.subtitle %}
+                    <h2 class="author-subtitle"> {{ subtitles }} </h2>
+                    {% endfor %}
+                </div>                
+            </el-inline>
+        </el-column>
+    </el-grid>
+</el-section>
+
+<el-section padding-gap="6">
     <el-grid auto-fit="columns" columns="3" gap="3">
 
-        <el-column id="recent" attr="row">
+        <el-column margin-top="2" id="recent" attr="row">
             <h2>Recent Projects</h2>
         </el-column>
         <el-column>
@@ -53,7 +73,7 @@ pagination:
             </ul>
         </el-column>
         
-        <el-column id="Javascript" attr="row">
+        <el-column margin-top="2" id="Javascript" attr="row">
             <h2>Javascript</h2>
         </el-column>
         <el-column>
@@ -97,7 +117,7 @@ pagination:
     </el-grid>
 </el-section>
 
-<el-section padding-gap="4" background="#fafafa">
+<el-section padding-gap="6" background="#fafafa">
     <el-grid pixel-width="768" columns="1">
         <el-column arrt="row">
             <el-button class="el-button">

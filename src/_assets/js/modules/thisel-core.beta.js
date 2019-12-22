@@ -241,6 +241,14 @@ customElements.define('el-column',
 					elColumn.stylePadding = elColumn.getAttribute("padding") + "em",
 					elColumn.style.padding = elColumn.stylePadding ? elColumn.stylePadding : null
 				)
+				elColumn.hasAttribute("margin-top") && (
+					elColumn.styleMargin = elColumn.getAttribute("margin-top") + "em",
+					elColumn.style.marginTop = elColumn.styleMargin ? elColumn.styleMargin : null
+				)
+				elColumn.hasAttribute("margin-bottom") && (
+					elColumn.styleMargin = elColumn.getAttribute("margin-bottom") + "em",
+					elColumn.style.marginBottom = elColumn.styleMargin ? elColumn.styleMargin : null
+				)
 				elColumn.hasAttribute("margin") && (
 					elColumn.styleMargin = elColumn.getAttribute("margin") + "em",
 					elColumn.style.margin = elColumn.styleMargin ? elColumn.styleMargin : null

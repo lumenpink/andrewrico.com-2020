@@ -20,16 +20,19 @@ PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstrac
             >
             </iframe>
         </el-column>
-
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
-            <el-inline class="card">
+            <el-inline id="author" class="card">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
-                <h1> {{ site.author.name}} </h1>
+                <h1 class="author-name"> {{ site.author.name}} </h1>
                 {% include "components/author-references.njk" %}
-                <p>
-                    <b>JAM Stack Specialist</b> <br>
-                    Web Developer & UI/UX Engineer
-                 </p>                
+                <div class="author-titles">
+                    {% for titles in site.author.title %}
+                    <h2 class="author-title"> {{ titles }} </h2> 
+                    {% endfor %}
+                    {% for subtitles in site.author.subtitle %}
+                    <h2 class="author-subtitle"> {{ subtitles }} </h2>
+                    {% endfor %}
+                </div>                
             </el-inline>
         </el-column>
 

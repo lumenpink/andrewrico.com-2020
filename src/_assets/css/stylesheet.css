@@ -5,6 +5,13 @@ custom/normalize ---------------------------------------
 @import 'site.css';
 
 /*
+components ---------------------------------------
+*/
+@import 'modules/_comp-form.css';
+@import 'modules/_comp-modal.css';
+@import 'modules/_comp-author.css';
+
+/*
 navigations ---------------------------------------
 */
 @import 'modules/_nav-drawer.css';
@@ -35,9 +42,3 @@ cards (collection) ---------------------------------------
 @import 'modules/_card-progress.css';
 @import 'modules/_card-minimal.css';
 
-/*
-components ---------------------------------------
-*/
-@import 'modules/_comp-form.css';
-@import 'modules/_comp-modal.css';
-@import 'modules/_comp-author.css';

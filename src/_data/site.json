@@ -6,7 +6,8 @@
         "email": "andrewric@gmail.com",
         "github": "https://github.com/Andrewrico",
         "linkedin": "https://www.linkedin.com/in/andrewrico-/",
-        "title": ["JAM stack specialist", "WEB DEVELOPER", "UI/UX ENGINEER"]
+        "title": ["JAM stack specialist"],
+        "subtitle": ["WEB DEVELOPER", "UI/UX ENGINEER"]
     },
     "path": {
         "stylesheet": "/_assets/css/stylesheet.css",
