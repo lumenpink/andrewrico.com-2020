@@ -1,12 +1,12 @@
 html {
-  /* overflow-x: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   -ms-overflow-style: scrollbar;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility; */
+  text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "Didact Gothic", "Coda Caption", "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -38,22 +38,13 @@ html {
   --color-gradient-webkit-: -webkit-linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
   --color-gradient: linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
   --color-banner-shadow: radial-gradient(ellipse closest-side, #0f0e16aa, #0c0b10);
-    border:6px solid orange;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
-
 }
 
 body {
-  width:100%;
-  max-width: 100%;
   font-family: var(--font-family-content);
   margin: 0;
-  border:6px solid green;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width:100%;
-
 }
 
 *,
@@ -62,10 +53,10 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box
 }
-/* 
+
 *:not(:defined) {
   display: block;
-} */
+}
 
 img {
   display: block;
@@ -124,7 +115,6 @@ iframe {
   font-family: var(--font-family-writing);
 }
 
-/*contact page*/
 .card {
   display: flex;
   justify-content: center;
@@ -132,35 +122,12 @@ iframe {
   flex-direction: column;
   text-align: center;
 }
-/* #about el-column:first-child {
+ #about el-column:first-child {
   padding-left: 2px;
   padding-right: 2px;
 }
 
 
-el-grid > el-column > h2 {
-  text-align: center;
-}
-
-@media(min-width: 1268px) {
-  el-grid > el-column >  h2 {
-    text-align: initial;
-  }
-  
-}
-
-el-button {
-	grid-column: 1 / -1;
-	margin: auto;
-	text-align: center;
-} */
-
-/* @media(max-width: 1024px) {
-  el-column {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-} */
 
 
 
