@@ -1,10 +1,16 @@
 {% include "partials/partial-head.njk" %}
     <body>
         {% include "navigations/navigation-base.njk" %}
-        <main id="base-page"> 
-            {% block content  %}
-               {{ content | safe }}
-            {% endblock content %}
+        <main id="404-page"> 
+            <el-section>
+                <el-grid pixel-width="768">
+                    <el-column grid="row">
+                    {% block content  %}
+                        {{ content | safe }}
+                    {% endblock content %}
+                    </el-column>
+                </el-grid>
+            </el-section>
         </main>
         {% include "partials/partial-footer.njk" %}
     </body>
