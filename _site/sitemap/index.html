@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta property="fb:app_id" content="your_app_id" />
   <meta property=”og:type” content=”article” />
   <meta property=”og:title” content="title" />
@@ -19,27 +17,22 @@
   <meta name=”twitter:image” content="image file">
   <meta name=”twitter:site” content=”@USERNAME”>
   <meta name=”twitter:creator” content=”@USERNAME”>
-
   <title>Andrew Rico | Site Map</title>
   <meta name="description" content="This is the Site Map page">
   <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
-
 </head>
-
 <el-loading background="var(--color-gradient)"></el-loading>
 
     <body>
         <el-drawer>
-    <h1 slot="drawer-brand">Andrew Rico</h1>
-<h1 slot="navbar-brand">Andrew Rico</h1>
-<nav class="drawer-menu" slot="drawer-menu">
+    <nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
             <a href="/">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -47,7 +40,7 @@
         <li>
             <a href="/portfolio">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use></svg> 
                     Portfolio
                 </span>
             </a>
@@ -59,7 +52,7 @@
         <li>
             <a href="/blog">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-blog"></use></svg> 
                     Blog
                 </span>
             </a>
@@ -87,32 +80,102 @@
         <li>
             <a href="/contact">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
-
 </nav>
+<h4 class="drawer-author" slot="drawer-brand">Andrew Rico</h4>
+<h4 slot="navbar-brand">Andrew Rico</h4>
 </el-drawer>
         <main class="simple-page"> 
             <el-section padding-gap=6>
                 <el-grid pixel-width="768">
-                    <el-column attr="row">
+                    <el-column grid="row">
                     
-                        
+                        <h1>What are web components?</h1>
+<h2>webcomponents.org</h2>
+<p>Web Components are a set of different technologies that allow you to build reusable, encapsulated and interoperable HTML elements, that can be used in web applications. Features, built on the Web Component standards, can be used with (or without) any JavaScript library or framework (i.e. Angular, React and Vue) and will work across all modern browsers.</p>
+<p>Web Components are based on four core technologies:
+Custom Elements;
+HTML Templates;
+Shadow DOM;
+ES Modules.</p>
+<h2>Medium blog</h2>
+<p>Web components are custom made tags which extend HTML’s capabilities. It allows you to write HTML code like:
+.my-tooltip. direction=&quot;left&quot;Message .my-tooltip.
+Custom elements like these allow you to encapsulate logic and UI into one tag which we can then reuse in the same project as well as other projects with or without any other framework.
+Encapsulation helps to scope the element in its own environment, makes it easier to maintain and allows separation of concerns.
+Throughout this post, I will use custom elements and web components interchangeably.
+The feature of reusability of web components can also be leveraged to make your own UI component library similar to what the team at Ionic framework did with their recent release of Ionic 4. Now Ionic is a collection of styled web components compiled using their Stencil compiler which you can use with any framework or standalone. This hence allows you to create your own brand identity.</p>
+<h2>ultimatecourses.com</h2>
+<p>Web Components are a set of different technologies that allow you to build reusable, encapsulated and interoperable HTML elements, that can be used in web applications. Features, built on the Web Component standards, can be used with (or without) any JavaScript library or framework (i.e. Angular, React and Vue) and will work across all modern browsers.
+Web Components are based on four core technologies:</p>
+<h2>csstricks.com</h2>
+<p>Web Components consist of three separate technologies that are used together:</p>
+<p>Custom Elements. Quite simply, these are fully-valid HTML elements with custom templates, behaviors and tag names (e.g. one-dialog) made with a set of JavaScript APIs. Custom Elements are defined in the HTML Living Standard specification.
+Shadow DOM. Capable of isolating CSS and JavaScript, almost like an iframe. This is defined in the Living Standard DOM specification.
+HTML templates. User-defined templates in HTML that aren’t rendered until called upon. The template tag is defined in the HTML Living Standard specification.
+These are what make up the Web Components specification.</p>
+<p>HTML Modules is likely to be the fourth technology in the stack, but it has yet to be implemented in any of the big four browsers. The Chrome team has announced it an intent to implement them in a future release.</p>
+<p>Web Components are generally available in all of the major browsers with the exception of Microsoft Edge and Internet Explorer 11, but polyfills exist to fill in those gaps.</p>
+<p>Referring to any of these as Web Components is technically accurate because the term itself is a bit overloaded. As a result, each of the technologies can be used independently or combined with any of the others. In other words, they are not mutually exclusive.</p>
+<p>Let’s take a quick look at each of those first three. We’ll dive deeper into them in other articles in this series.</p>
+<h2>MDN</h2>
+<p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements whose functionality is encapsulated and thus completely separate from other code.</p>
+<p>Concept and application
+It is generally accepted among software developers to reuse code as far as possible. As is known, this was not so easy for custom markup structures. Just think of the complex HTML (as well as CSS and script) conglomerate that was sometimes necessary to create custom UI controls; and how the multiple use of such custom elements on a page can lead to a completely opaque confusion if you are not very careful.</p>
+<p>Web components aim to solve these problems. Consisting of three main technologies that can be used together to create different and versatile custom elements with self-contained functionality that can be reused as often as you want without fear of different code interfering or interfering:</p>
+<h3>Specifications</h3>
+<p><mark>Web components</mark> are based on four main specifications:</p>
+<h4>Custom Elements</h4>
+<p>The Custom Elements specification lays the foundation for designing and using new types of DOM elements.</p>
+<h4>Shadow DOM</h4>
+<p>The shadow DOM specification defines how to use encapsulated style and markup in web components.</p>
+<h4>ES Modules</h4>
+<p>The ES Modules specification defines the inclusion and reuse of JS documents in a standards based, modular, performant way.</p>
+<h4>HTML Template</h4>
+<p>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</p>
+<h3>How do I use a web component?</h3>
+<p>The components on this site provide new HTML elements that you can use in your web pages and web applications.</p>
+<p>Using a custom element is as simple as importing it, and using the new tags in an HTML document. For example, to use the paper-button element:</p>
+<div class="codepencil">
+<pre><code>
+<pre><code>&lt;script type=&quot;module&quot; src=&quot;node_modules/@polymer/paper-button/paper-button.js&quot;&gt;&lt;/script&gt;
+
+&lt;paper-button raised class=&quot;indigo&quot;&gt;raised&lt;/paper-button&gt;
+</code></pre>
+<p></code></pre></p>
+</div>
+<button>copy</button>
+<p>There are a number of ways to install custom elements. When you find an element you want to use, look at its README for the commands to install it. Most elements today can be installed with NPM. NPM also handles installing the components' dependencies. For more information on NPM, see npmjs.com.
+For example, the paper-button overview describes the install process with npm:</p>
+<h2># Title</h2>
+<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside</p>
+<h3>Title</h3>
+<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+<h2># Title</h2>
+<h3>Subitle</h3>
+<p><strong>strong</strong> <br>
+<mark>mark</mark> <br>
+<em>em</em> <br>
+<i> i tag</i><br>
+<b> b tag </b><br>
+<a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
+
                     
                     </el-column>
                 </el-grid>
             </el-section>
         </main>
-        <nav id="navigation-panel">
+        <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
                 </svg>
                 <span class="tooltip"><span>HOMEPAGE</span></span>
             </a>
@@ -120,7 +183,7 @@
         <li>
             <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
                 </svg>
                 <span class="tooltip"><span>PORTFOLIO</span></span>
             </a>
@@ -128,7 +191,7 @@
         <li>
             <a href="/blog" aria-label="link to andrew's rico blog page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
                 </svg>
                 <span class="tooltip"><span>BLOG</span></span>
             </a>
@@ -136,7 +199,7 @@
         <li>
             <a href="/contact" aria-label="link to andrew's rico contact page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
                 </svg>
                 <span class="tooltip"><span>CONTACT</span></span>
             </a>
@@ -149,12 +212,20 @@
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
+        <li>
+            <a href="#/" aria-label="scroll up to bottom of the window button">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowDown"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL DOWN</span></span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
-        <el-grid auto-fit="columns" columns="4">
+        <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
                 <h1>Andrew Rico</h1>
             </el-column>
@@ -197,7 +268,7 @@
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3" gap="2">
+        <el-grid columns="3">
 
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
@@ -211,10 +282,10 @@
                 <a href="/sitemap"> Site Map </a>
             </el-column>
 
-            <el-column>
+            <el-column id="/">
                 <el-copyright>
                     <span id="copyright" slot="copyright">
-                         andrewrico.com .  All rights reserved
+                         andrewrico.com All rights reserved
                     </span>
                 </el-copyright>
             </el-column>

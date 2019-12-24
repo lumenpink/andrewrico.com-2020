@@ -1,9 +1,9 @@
-<nav id="navigation-panel">
+<nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
                 </svg>
                 <span class="tooltip"><span>HOMEPAGE</span></span>
             </a>
@@ -11,7 +11,7 @@
         <li>
             <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
                 </svg>
                 <span class="tooltip"><span>PORTFOLIO</span></span>
             </a>
@@ -19,7 +19,7 @@
         <li>
             <a href="/blog" aria-label="link to andrew's rico blog page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
                 </svg>
                 <span class="tooltip"><span>BLOG</span></span>
             </a>
@@ -27,7 +27,7 @@
         <li>
             <a href="/contact" aria-label="link to andrew's rico contact page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
                 </svg>
                 <span class="tooltip"><span>CONTACT</span></span>
             </a>
@@ -40,12 +40,20 @@
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
+        <li>
+            <a href="#/" aria-label="scroll up to bottom of the window button">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowDown"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL DOWN</span></span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
-        <el-grid auto-fit="columns" columns="4">
+        <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
                 <h1>{{ site.author.name }}</h1>
             </el-column>
@@ -66,13 +74,13 @@
                 <h3>Contact</h3>
                 <ul>
                     <li><a href="/contact">Get In Touch</a></li>
-                    <li>{% include "components/author-references.njk" %}</li>
+                    <li>{% include "components/author-social-icons.njk" %}</li>
                 </ul>
             </el-column>
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3" gap="2">
+        <el-grid columns="3">
 
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
@@ -86,10 +94,10 @@
                 <a href="/sitemap"> Site Map </a>
             </el-column>
 
-            <el-column>
+            <el-column id="/">
                 <el-copyright>
                     <span id="copyright" slot="copyright">
-                         andrewrico.com .  All rights reserved
+                         andrewrico.com All rights reserved
                     </span>
                 </el-copyright>
             </el-column>

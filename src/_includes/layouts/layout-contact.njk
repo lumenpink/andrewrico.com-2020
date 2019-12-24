@@ -1,8 +1,8 @@
 {% include "partials/partial-head.njk" %}
     <body>
         {% include "navigations/navigation-contact.njk" %}
-        {% include "headers/header-banner.njk" %}
-        <main> 
+        {% include "banners/banner-base.njk" %}
+        <main id="contact-page"> 
             {% block content  %}
                {{ content | safe }}
             {% endblock content %}

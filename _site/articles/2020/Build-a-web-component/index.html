@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta property="fb:app_id" content="your_app_id" />
   <meta property=”og:type” content=”article” />
   <meta property=”og:title” content="title" />
@@ -19,27 +17,22 @@
   <meta name=”twitter:image” content="image file">
   <meta name=”twitter:site” content=”@USERNAME”>
   <meta name=”twitter:creator” content=”@USERNAME”>
-
   <title>Andrew Rico | Build a web component</title>
   <meta name="description" content="This is the Build a web component page">
   <meta name="keywords" content="javascript,webComponents ">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
-
 </head>
-
 <el-loading background="var(--color-gradient)"></el-loading>
 
     <body>
         <el-drawer>
-    <h1 slot="drawer-brand">Andrew Rico</h1>
-<h1 slot="navbar-brand">Andrew Rico</h1>
-<nav class="drawer-menu" slot="drawer-menu">
+    <nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
             <a href="/">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -47,7 +40,7 @@
         <li>
             <a href="/portfolio">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use></svg> 
                     Portfolio
                 </span>
             </a>
@@ -59,7 +52,7 @@
         <li>
             <a href="/blog">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-blog"></use></svg> 
                     Blog
                 </span>
             </a>
@@ -87,44 +80,49 @@
         <li>
             <a href="/contact">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
-
 </nav>
-    <ul slot="navbar-menu" class="menu-navbar">
-        <li>
-            <el-button class="cubic">
-                <a slot="button" extended="button"  href="/blog"> BLOG </a>
-            </el-button>
-        </li>
-    </ul>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <ul slot="dropdown">
+<h4 class="drawer-author" slot="drawer-brand">Andrew Rico</h4>
+<h4 slot="navbar-brand">Andrew Rico</h4>
+    <nav slot="navbar-menu"> 
+        <ul class="menu-navbar">
             <li>
-                <a href="/blog"> BLOG </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button"  href="/blog"> BLOG </a>
+                </el-button>
             </li>
         </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="/blog"> BLOG </a>
+                </li>
+            </ul>
+        </nav>
     </el-dropdown>
 </el-drawer>
         <header>
-    <el-section class="site-base-header" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-4.jpg)">
+    <el-section class="base-banner" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-4.jpg)">
         <el-grid columns="1">
-            <el-inline attr="row">  
+            <el-column grid="row">  
                 <h1>
                     Build a web component
                 </h1>
-            </el-inline>  
+            </el-column>  
         </el-grid>
     </el-section>
 </header>
         <main id="article-page"> 
             
                <el-section>
-    <el-grid auto-fit="columns" columns="1" gap="2" template-columns="2fr 1fr"> 
+    <el-grid gap="6" template-columns="minmax(350px, 768px) minmax(350px, 1fr)"> 
         <el-column>
             <article id="article">
                 
@@ -135,68 +133,45 @@ Components are the building blocks of modern web applications. What best practic
 <!-- Excerpt Start -->
 <p><strong>Web components are</strong> a group of web technologies that make it possible to create custom, reusable <strong>HTML elements</strong> whose functionality is encapsulated and thus <strong>completely separate from other code.</strong></p>
 <!-- Excerpt End -->
+<p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements whose functionality is encapsulated and thus completely separate from other code.</p>
+<p>Concept and application
+It is generally accepted among software developers to reuse code as far as possible. As is known, this was not so easy for custom markup structures. Just think of the complex HTML (as well as CSS and script) conglomerate that was sometimes necessary to create custom UI controls; and how the multiple use of such custom elements on a page can lead to a completely opaque confusion if you are not very careful.</p>
+<p>Web components aim to solve these problems. Consisting of three main technologies that can be used together to create different and versatile custom elements with self-contained functionality that can be reused as often as you want without fear of different code interfering or interfering:</p>
 <p>Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.</p>
 <p>Web components are based on existing web standards. Features to support web components are currently being added to the HTML and DOM specs,letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.</p>
-<h3>Specifications</h3>
-<p><mark>Web components</mark> are based on four main specifications:</p>
-<h4>Custom Elements</h4>
-<p>The Custom Elements specification lays the foundation for designing and using new types of DOM elements.</p>
-<h4>Shadow DOM</h4>
-<p>The shadow DOM specification defines how to use encapsulated style and markup in web components.</p>
-<h4>ES Modules</h4>
-<p>The ES Modules specification defines the inclusion and reuse of JS documents in a standards based, modular, performant way.</p>
-<h4>HTML Template</h4>
-<p>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</p>
-<h3>How do I use a web component?</h3>
-<p>The components on this site provide new HTML elements that you can use in your web pages and web applications.</p>
-<p>Using a custom element is as simple as importing it, and using the new tags in an HTML document. For example, to use the paper-button element:</p>
-<div class="codepencil">
-<pre><code>
-<pre><code>&lt;script type=&quot;module&quot; src=&quot;node_modules/@polymer/paper-button/paper-button.js&quot;&gt;&lt;/script&gt;
-
-&lt;paper-button raised class=&quot;indigo&quot;&gt;raised&lt;/paper-button&gt;
-</code></pre>
-<p></code></pre></p>
-</div>
-<button>copy</button>
-<p>There are a number of ways to install custom elements. When you find an element you want to use, look at its README for the commands to install it. Most elements today can be installed with NPM. NPM also handles installing the components' dependencies. For more information on NPM, see npmjs.com.
-For example, the paper-button overview describes the install process with npm:</p>
-<h2># Title</h2>
-<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside</p>
-<h3>Title</h3>
-<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
-<h2># Title</h2>
-<h3>Subitle</h3>
-<p><strong>strong</strong> <br>
-<mark>mark</mark> <br>
-<em>em</em> <br>
-<i> i tag</i><br>
-<b> b tag </b><br>
-<a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
-<p><a href="/blog">BACK TO BLOG</a></p>
+<h2>SOURCES:</h2>
+<ul>
+<li>MDN</li>
+</ul>
+<p><a href="/blog"> &lt;&lt; BACK TO BLOG</a></p>
 
                 
             </article>
         </el-column>
         <el-column>
-            <el-inline id="author-article">
-                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar">
-                <span>
-                    <h2 class="author-name"> Andrew Rico </h2>   
-                    <p> <time datetime="2019-12-03T00:00:00.000Z">  December 2, 2019  </time> </p>  
-                </span> 
-            </el-inline>
+             <aside>
+                <figure id="author-article">
+                    <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt="Andrew Rico Avatar" title="Andrew Rico Avatar">
+                    <span>
+                        <h2 class="author-name"> Andrew Rico </h2>   
+                        <p> <time datetime="2019-12-03T00:00:00.000Z">  December 2, 2019  </time> </p>  
+                    </span> 
+                </figure>
+                <div id="ads">
+                
+                </div>
+            </aside>
         </el-column>
     </el-grid>
 </el-section>
             
         </main>
-        <nav id="navigation-panel">
+        <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
                 </svg>
                 <span class="tooltip"><span>HOMEPAGE</span></span>
             </a>
@@ -204,7 +179,7 @@ For example, the paper-button overview describes the install process with npm:</
         <li>
             <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
                 </svg>
                 <span class="tooltip"><span>PORTFOLIO</span></span>
             </a>
@@ -212,7 +187,7 @@ For example, the paper-button overview describes the install process with npm:</
         <li>
             <a href="/blog" aria-label="link to andrew's rico blog page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
                 </svg>
                 <span class="tooltip"><span>BLOG</span></span>
             </a>
@@ -220,7 +195,7 @@ For example, the paper-button overview describes the install process with npm:</
         <li>
             <a href="/contact" aria-label="link to andrew's rico contact page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
                 </svg>
                 <span class="tooltip"><span>CONTACT</span></span>
             </a>
@@ -233,12 +208,20 @@ For example, the paper-button overview describes the install process with npm:</
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
+        <li>
+            <a href="#/" aria-label="scroll up to bottom of the window button">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowDown"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL DOWN</span></span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
-        <el-grid auto-fit="columns" columns="4">
+        <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
                 <h1>Andrew Rico</h1>
             </el-column>
@@ -281,7 +264,7 @@ For example, the paper-button overview describes the install process with npm:</
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3" gap="2">
+        <el-grid columns="3">
 
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
@@ -295,10 +278,10 @@ For example, the paper-button overview describes the install process with npm:</
                 <a href="/sitemap"> Site Map </a>
             </el-column>
 
-            <el-column>
+            <el-column id="/">
                 <el-copyright>
                     <span id="copyright" slot="copyright">
-                         andrewrico.com .  All rights reserved
+                         andrewrico.com All rights reserved
                     </span>
                 </el-copyright>
             </el-column>

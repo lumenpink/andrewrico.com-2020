@@ -2,7 +2,7 @@
 layout: "/layouts/layout-article.njk"
 ---
 <el-section>
-    <el-grid auto-fit="columns" columns="1" gap="2" template-columns="2fr 1fr"> 
+    <el-grid gap="6" template-columns="minmax(350px, 768px) minmax(350px, 1fr)"> 
         <el-column>
             <article id="article">
                 {% block content  %}
@@ -11,13 +11,18 @@ layout: "/layouts/layout-article.njk"
             </article>
         </el-column>
         <el-column>
-            <el-inline id="author-article">
-                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar">
-                <span>
-                    <h2 class="author-name"> {{ site.author.name}} </h2>   
-                    <p> <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time> </p>  
-                </span> 
-            </el-inline>
+             <aside>
+                <figure id="author-article">
+                    <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Avatar">
+                    <span>
+                        <h2 class="author-name"> {{ site.author.name}} </h2>   
+                        <p> <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time> </p>  
+                    </span> 
+                </figure>
+                <div id="ads">
+                
+                </div>
+            </aside>
         </el-column>
     </el-grid>
 </el-section>

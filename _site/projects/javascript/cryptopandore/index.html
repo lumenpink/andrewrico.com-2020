@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta property="fb:app_id" content="your_app_id" />
   <meta property=”og:type” content=”article” />
   <meta property=”og:title” content="title" />
@@ -19,27 +17,22 @@
   <meta name=”twitter:image” content="image file">
   <meta name=”twitter:site” content=”@USERNAME”>
   <meta name=”twitter:creator” content=”@USERNAME”>
-
   <title>Andrew Rico | Cryptopandore</title>
   <meta name="description" content="This is the Cryptopandore project page">
   <meta name="keywords" content="car dealership">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
-
 </head>
-
 <el-loading background="var(--color-gradient)"></el-loading>
 
     <body>
         <el-drawer>
-    <h1 slot="drawer-brand">Andrew Rico</h1>
-<h1 slot="navbar-brand">Andrew Rico</h1>
-<nav class="drawer-menu" slot="drawer-menu">
+    <nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
             <a href="/">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -47,7 +40,7 @@
         <li>
             <a href="/portfolio">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use></svg> 
                     Portfolio
                 </span>
             </a>
@@ -59,7 +52,7 @@
         <li>
             <a href="/blog">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-blog"></use></svg> 
                     Blog
                 </span>
             </a>
@@ -87,92 +80,87 @@
         <li>
             <a href="/contact">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
-
 </nav>
-    <ul slot="navbar-menu" class="menu-navbar">
-        <li>
-            <a href="#case-study">
-                 Case Study
-            </a>
-        </li>
-        <li>
-            <a href="#problem">
-                 Problem
-            </a>
-        </li>
-        <li>
-            <a href="#approach">
-                 approach
-            </a>
-        </li>
-        <li>
-            <a href="#solution">
-                 Solution
-            </a>
-        </li>
-        <li>
-            <a href="#conclution">
-                 Conslution
-            </a>
-        </li>
-    </ul>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <ul slot="dropdown">
+<h4 class="drawer-author" slot="drawer-brand">Andrew Rico</h4>
+<h4 slot="navbar-brand">Andrew Rico</h4>
+    <nav slot="navbar-menu">
+        <ul class="menu-navbar">
             <li>
                 <a href="#case-study">
-                     Case Study
+                    Case Study
                 </a>
             </li>
             <li>
-                <a href="#problem">
-                     Problem
+                <a href="#situation">
+                    Situation
                 </a>
             </li>
             <li>
                 <a href="#approach">
-                     approach
-                </a>
-            </li>
-            <li>
-                <a href="#solution">
-                     Solution
+                    approach
                 </a>
             </li>
             <li>
                 <a href="#conclution">
-                     Conslution
+                    Conslution
                 </a>
             </li>
         </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="#case-study">
+                        Case Study
+                    </a>
+                </li>
+                <li>
+                    <a href="#situation">
+                        Situation
+                    </a>
+                </li>
+                <li>
+                    <a href="#approach">
+                        approach
+                    </a>
+                </li>
+                <li>
+                    <a href="#conclution">
+                        Conslution
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </el-dropdown>
 </el-drawer>
         <header>
-    <el-section class="site-base-header" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)">
+    <el-section class="base-banner" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)">
         <el-grid columns="1">
-            <el-inline attr="row">  
+            <el-column grid="row">  
                 <h1>
                     Cryptopandore
                 </h1>
-            </el-inline>  
+            </el-column>  
         </el-grid>
     </el-section>
 </header>
         <main id="project-page"> 
             
                <el-section>
-    <el-grid gap="4">
+    <el-grid class="project-grid">
         
             <!-- PROJECT PAGE 
 ================================ -->
 <!-- Case Study
 ================================ -->
-<p><img src="/_assets/media/images/placeholder.png" 
+<p><img id="case-study-image" src="/_assets/media/images/placeholder.png" 
 alt="Case Study Section Image" 
 title="Case Study Section Image" /></p>
 <div id="case-study">
@@ -181,53 +169,46 @@ title="Case Study Section Image" /></p>
 </div>
 <!-- problem
 ================================ -->
-<p><img src="/_assets/media/images/placeholder.png" 
-alt="Problem Section Image" 
-title="Problem Section Image" /></p>
-<div id="problem">
-<h2>The Problem</h2>
+<p><img id="conclution-image" src="/_assets/media/images/placeholder.png" 
+alt="Situation Section Image" 
+title="Situation Section Image" /></p>
+<div id="situation">
+<h2>The Situation</h2>
 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+<p>Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet</p>
 </div>
 <!-- approch
 ================================ -->
-<p><img src="/_assets/media/images/placeholder.png" 
+<p><img id="approach-image" src="/_assets/media/images/placeholder.png" 
 alt="" 
 title="" /></p>
-<div id="approach" markdown="1">
+<div id="approach">
 <h2>The Approach</h2>
-<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-</div>
-<!-- solution
-================================ -->
-<p><img src="/_assets/media/images/placeholder.png" 
-Meta="" 
-title="" /></p>
-<div id="solution">
-<h2>The Solution</h2>
 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
 </div>
 <!-- conclution
 ================================ -->
-<p><img src="/_assets/media/images/placeholder.png" 
-Meta="Conclution Section Image" 
+<p><img id="conclution-image" src="/_assets/media/images/placeholder.png" 
+alt="Conclution Section Image" 
 title="Conclution Section Image" /></p>
 <div id="conclution">
 <h2>The Conclution</h2>
 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
 </div>
-<p><a href="/portfolio">BACK TO PORTFOLIO</a></p>
 
         
     </el-grid>
 </el-section>
             
         </main>
-        <nav id="navigation-panel">
+        <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
                 </svg>
                 <span class="tooltip"><span>HOMEPAGE</span></span>
             </a>
@@ -235,7 +216,7 @@ title="Conclution Section Image" /></p>
         <li>
             <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
                 </svg>
                 <span class="tooltip"><span>PORTFOLIO</span></span>
             </a>
@@ -243,7 +224,7 @@ title="Conclution Section Image" /></p>
         <li>
             <a href="/blog" aria-label="link to andrew's rico blog page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
                 </svg>
                 <span class="tooltip"><span>BLOG</span></span>
             </a>
@@ -251,7 +232,7 @@ title="Conclution Section Image" /></p>
         <li>
             <a href="/contact" aria-label="link to andrew's rico contact page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
                 </svg>
                 <span class="tooltip"><span>CONTACT</span></span>
             </a>
@@ -264,12 +245,20 @@ title="Conclution Section Image" /></p>
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
+        <li>
+            <a href="#/" aria-label="scroll up to bottom of the window button">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowDown"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL DOWN</span></span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
-        <el-grid auto-fit="columns" columns="4">
+        <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
                 <h1>Andrew Rico</h1>
             </el-column>
@@ -312,7 +301,7 @@ title="Conclution Section Image" /></p>
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3" gap="2">
+        <el-grid columns="3">
 
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
@@ -326,10 +315,10 @@ title="Conclution Section Image" /></p>
                 <a href="/sitemap"> Site Map </a>
             </el-column>
 
-            <el-column>
+            <el-column id="/">
                 <el-copyright>
                     <span id="copyright" slot="copyright">
-                         andrewrico.com .  All rights reserved
+                         andrewrico.com All rights reserved
                     </span>
                 </el-copyright>
             </el-column>

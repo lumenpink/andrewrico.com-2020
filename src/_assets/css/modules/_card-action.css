@@ -18,12 +18,21 @@
 .card-action>div {
     padding: 1.2rem;
 }
+
 .card-action h3 {
     text-align: center;
 }
 
 .card-action ol {
     padding: 0;
+}
+
+.card-action li {
+    padding: 2px 0;
+    padding: 0.7rem;
+
+    color:gray;
+
 }
 
 .card-action:hover {
@@ -37,14 +46,20 @@
 }
 
 .card-content {
-    font-size: 0.8rem;
+    font-size:1rem;
+
 }
 
-.card-content p {
-    font-size: 1rem;
+.card-content span {
+    font-size:1rem;
+    text-transform: uppercase;
     font-weight: 600;
+}
+.card-content p {
     font-style: italic;
 }
+
+
 
 .card-action.card-ckecked .card-content {
     font-size: 1.1rem;
@@ -57,18 +72,16 @@
     flex-direction: column;
 }
 
-
 .card-header {
     flex: 1;
 }
 
 .card-content {
-    flex: 3;
+    flex: 2;
 }
 
 .card-footer {
-    flex: 3;
-
+    flex: 1;
 }
 
 @media(min-width:1024px) {

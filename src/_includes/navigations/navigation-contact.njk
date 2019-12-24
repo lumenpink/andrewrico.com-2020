@@ -1,25 +1,29 @@
 <el-drawer>
     {% include "navigations/navigation-drawer.njk" %}
-    <ul slot="navbar-menu" class="menu-navbar">
-        <li>
-            <el-button class="cubic">
-                <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
-            </el-button>
-        </li>
-        <li>
-            <el-button class="cubic">
-                <a slot="button" extended="button" href="/blog"> BLOG </a>
-            </el-button>
-        </li>
-    </ul>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <ul slot="dropdown">
+    <nav slot="navbar-menu">
+        <ul class="menu-navbar">
             <li>
-                <a href="/portfolio"> PORTFOLIO </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
+                </el-button>
             </li>
             <li>
-                <a href="/blog"> BLOG </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button" href="/blog"> BLOG </a>
+                </el-button>
             </li>
         </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="/portfolio"> PORTFOLIO </a>
+                </li>
+                <li>
+                    <a href="/blog"> BLOG </a>
+                </li>
+            </ul>
+        </nav>
     </el-dropdown>
 </el-drawer>

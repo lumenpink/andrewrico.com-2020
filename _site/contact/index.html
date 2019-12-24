@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta property="fb:app_id" content="your_app_id" />
   <meta property=”og:type” content=”article” />
   <meta property=”og:title” content="title" />
@@ -19,27 +17,22 @@
   <meta name=”twitter:image” content="image file">
   <meta name=”twitter:site” content=”@USERNAME”>
   <meta name=”twitter:creator” content=”@USERNAME”>
-
   <title>Andrew Rico | Contact</title>
   <meta name="description" content="This is the Contact page">
   <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
-
 </head>
-
 <el-loading background="var(--color-gradient)"></el-loading>
 
     <body>
         <el-drawer>
-    <h1 slot="drawer-brand">Andrew Rico</h1>
-<h1 slot="navbar-brand">Andrew Rico</h1>
-<nav class="drawer-menu" slot="drawer-menu">
+    <nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
             <a href="/">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -47,7 +40,7 @@
         <li>
             <a href="/portfolio">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use></svg> 
                     Portfolio
                 </span>
             </a>
@@ -59,7 +52,7 @@
         <li>
             <a href="/blog">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-blog"></use></svg> 
                     Blog
                 </span>
             </a>
@@ -87,71 +80,74 @@
         <li>
             <a href="/contact">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
-
 </nav>
-    <ul slot="navbar-menu" class="menu-navbar">
-        <li>
-            <el-button class="cubic">
-                <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
-            </el-button>
-        </li>
-        <li>
-            <el-button class="cubic">
-                <a slot="button" extended="button" href="/blog"> BLOG </a>
-            </el-button>
-        </li>
-    </ul>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <ul slot="dropdown">
+<h4 class="drawer-author" slot="drawer-brand">Andrew Rico</h4>
+<h4 slot="navbar-brand">Andrew Rico</h4>
+    <nav slot="navbar-menu">
+        <ul class="menu-navbar">
             <li>
-                <a href="/portfolio"> PORTFOLIO </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button"  href="/portfolio"> PORTFOLIO </a>
+                </el-button>
             </li>
             <li>
-                <a href="/blog"> BLOG </a>
+                <el-button class="cubic">
+                    <a slot="button" extended="button" href="/blog"> BLOG </a>
+                </el-button>
             </li>
         </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="/portfolio"> PORTFOLIO </a>
+                </li>
+                <li>
+                    <a href="/blog"> BLOG </a>
+                </li>
+            </ul>
+        </nav>
     </el-dropdown>
 </el-drawer>
         <header>
-    <el-section class="site-base-header" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-5.jpg)">
+    <el-section class="base-banner" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-5.jpg)">
         <el-grid columns="1">
-            <el-inline attr="row">  
+            <el-column grid="row">  
                 <h1>
                     Contact
                 </h1>
-            </el-inline>  
+            </el-column>  
         </el-grid>
     </el-section>
 </header>
-        <main> 
+        <main id="contact-page"> 
             
-               <el-section id="contact-page" padding-gap=6>
+               <el-section>
     <el-grid auto-fit="columns" template-columns="1fr 2fr" gap="3">
-
-        <el-column attr="row"><h2>Get In Touch</h2></el-column>
-
-        <el-column attr="row">
+        <el-column grid="row"><h2>Get In Touch</h2></el-column>
+        <el-column grid="row">
             <iframe 
-            title="andrew rico location"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus" 
-            width="100" 
-            height="100" 
-            frameborder="0" 
-            style="border:0; width:100%; min-height:50vh;" 
-            allowfullscreen=""
-            >
+                title="andrew rico location"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus" 
+                width="100" 
+                height="100" 
+                frameborder="0" 
+                style="border:0; width:100%; min-height:50vh;" 
+                allowfullscreen="">
             </iframe>
         </el-column>
-        <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
-            <el-inline id="author" class="card">
-                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar">
-                <h1 class="author-name"> Andrew Rico </h1>
+        <el-column display="flex" flex-direction="column" justify-content="center" align-items="center">
+            <figure id="author">
+                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
+                <h2 class="author-name"> Andrew Rico </h2>
+                <h4 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</h4>
                 <div class="author-references">
     <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
         <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
@@ -169,19 +165,18 @@
         <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
     </a>
 </div>
-                <div class="author-titles">
-                    
-                    <h2 class="author-title"> JAM stack specialist </h2> 
-                    
-                    
+                <div class="/author-titles">
+                
                     <h2 class="author-subtitle"> WEB DEVELOPER </h2>
                     
                     <h2 class="author-subtitle"> UI/UX ENGINEER </h2>
                     
+                    
+                    <h2 class="author-title"> JAM stack specialist </h2> 
+                    
                 </div>                
-            </el-inline>
+            </figure>
         </el-column>
-
          <el-column>
             <div class="netliform simple-form sendMesseage-form">
     <p id="error-message"></p>
@@ -236,12 +231,12 @@
 </el-section>
             
         </main>
-        <nav id="navigation-panel">
+        <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
                 </svg>
                 <span class="tooltip"><span>HOMEPAGE</span></span>
             </a>
@@ -249,7 +244,7 @@
         <li>
             <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
                 </svg>
                 <span class="tooltip"><span>PORTFOLIO</span></span>
             </a>
@@ -257,7 +252,7 @@
         <li>
             <a href="/blog" aria-label="link to andrew's rico blog page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
                 </svg>
                 <span class="tooltip"><span>BLOG</span></span>
             </a>
@@ -265,7 +260,7 @@
         <li>
             <a href="/contact" aria-label="link to andrew's rico contact page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
                 </svg>
                 <span class="tooltip"><span>CONTACT</span></span>
             </a>
@@ -278,12 +273,20 @@
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
+        <li>
+            <a href="#/" aria-label="scroll up to bottom of the window button">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowDown"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL DOWN</span></span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
-        <el-grid auto-fit="columns" columns="4">
+        <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
                 <h1>Andrew Rico</h1>
             </el-column>
@@ -326,7 +329,7 @@
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3" gap="2">
+        <el-grid columns="3">
 
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
@@ -340,10 +343,10 @@
                 <a href="/sitemap"> Site Map </a>
             </el-column>
 
-            <el-column>
+            <el-column id="/">
                 <el-copyright>
                     <span id="copyright" slot="copyright">
-                         andrewrico.com .  All rights reserved
+                         andrewrico.com All rights reserved
                     </span>
                 </el-copyright>
             </el-column>

@@ -16,7 +16,7 @@ const drawer = document.querySelector('el-drawer')
 
 const drawerStyle = {
 	sizePadding: `0.6rem`,
-	brandFontSize: `0.8rem`,
+	brandFontSize: `28px`,
 	brandFontFamily: `'Dancing Script', cursive`,
 	linkFontSize: `1rem`,
 	hoverItem: `rgba(232, 232, 232, 0.69)`,
@@ -99,7 +99,7 @@ class _terminalType {
 		}
 		this.caret.innerHTML = '<span class="caret">' + this.txt + '</span>'
 		let _this = this
-		let timingTyping = 200 - Math.random() * 100
+		let timingTyping = 110 - Math.random() * 100
 		if (this.deleteTyping) {
 			timingTyping /= 2
 		}

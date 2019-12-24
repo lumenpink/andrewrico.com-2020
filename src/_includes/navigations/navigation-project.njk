@@ -1,59 +1,53 @@
 <el-drawer>
     {% include "navigations/navigation-drawer.njk" %}
-    <ul slot="navbar-menu" class="menu-navbar">
-        <li>
-            <a href="#case-study">
-                 Case Study
-            </a>
-        </li>
-        <li>
-            <a href="#problem">
-                 Problem
-            </a>
-        </li>
-        <li>
-            <a href="#approach">
-                 approach
-            </a>
-        </li>
-        <li>
-            <a href="#solution">
-                 Solution
-            </a>
-        </li>
-        <li>
-            <a href="#conclution">
-                 Conslution
-            </a>
-        </li>
-    </ul>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <ul slot="dropdown">
+    <nav slot="navbar-menu">
+        <ul class="menu-navbar">
             <li>
                 <a href="#case-study">
-                     Case Study
+                    Case Study
                 </a>
             </li>
             <li>
-                <a href="#problem">
-                     Problem
+                <a href="#situation">
+                    Situation
                 </a>
             </li>
             <li>
                 <a href="#approach">
-                     approach
-                </a>
-            </li>
-            <li>
-                <a href="#solution">
-                     Solution
+                    approach
                 </a>
             </li>
             <li>
                 <a href="#conclution">
-                     Conslution
+                    Conslution
                 </a>
             </li>
         </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="#case-study">
+                        Case Study
+                    </a>
+                </li>
+                <li>
+                    <a href="#situation">
+                        Situation
+                    </a>
+                </li>
+                <li>
+                    <a href="#approach">
+                        approach
+                    </a>
+                </li>
+                <li>
+                    <a href="#conclution">
+                        Conslution
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </el-dropdown>
 </el-drawer>

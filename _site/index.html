@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <meta property="fb:app_id" content="your_app_id" />
   <meta property=”og:type” content=”article” />
   <meta property=”og:title” content="title" />
@@ -19,27 +17,22 @@
   <meta name=”twitter:image” content="image file">
   <meta name=”twitter:site” content=”@USERNAME”>
   <meta name=”twitter:creator” content=”@USERNAME”>
-
   <title>Andrew Rico | Home</title>
   <meta name="description" content="This is the Homepage">
   <meta name="keywords" content="">
   <link href=/_assets/css/stylesheet.css rel="stylesheet">
   <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
-
 </head>
-
 <el-loading background="var(--color-gradient)"></el-loading>
 
 <body>
     <el-drawer>
-	<h1 slot="drawer-brand">Andrew Rico</h1>
-<h1 slot="navbar-brand">Andrew Rico</h1>
-<nav class="drawer-menu" slot="drawer-menu">
+	<nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
             <a href="/">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#home"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-home"></use></svg> 
                     Home
                 </span>
             </a>
@@ -47,7 +40,7 @@
         <li>
             <a href="/portfolio">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#lookInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use></svg> 
                     Portfolio
                 </span>
             </a>
@@ -59,7 +52,7 @@
         <li>
             <a href="/blog">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#fileInFolder"></use></svg> 
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-blog"></use></svg> 
                     Blog
                 </span>
             </a>
@@ -87,48 +80,17 @@
         <li>
             <a href="/contact">
                 <span>
-                    <svg><use href="/_assets/media/svg/sprites.svg#contact"></use></svg>  
+                    <svg><use href="/_assets/media/svg/sprites.svg#icon-contact"></use></svg>  
                     Get In Touch
                 </span>
             </a>
         </li>
     </ul>
-
 </nav>
-	<ul slot="navbar-menu" class="menu-navbar">
-		<li>
-			<a href="#about">
-				About
-			</a>
-		</li>
-		<li>
-			<a href="#skills">
-				Skills
-			</a>
-		</li>
-		<li>
-			<a href="#projects">
-				Projects
-			</a>
-		</li>
-		<li>
-			<a href="#challenge">
-				Code Challenges
-			</a>
-		</li>
-		<li>
-			<a href="#articles">
-				Articles
-			</a>
-		</li>
-		<li>
-			<a href="#contact">
-				Contact
-			</a>
-		</li>
-	</ul>
-	<el-dropdown slot="mobil-menu" id="mobil-menu">
-		<ul slot="dropdown">
+<h4 class="drawer-author" slot="drawer-brand">Andrew Rico</h4>
+<h4 slot="navbar-brand">Andrew Rico</h4>
+	<nav slot="navbar-menu" >
+		<ul class="menu-navbar">
 			<li>
 				<a href="#about">
 					About
@@ -160,184 +122,214 @@
 				</a>
 			</li>
 		</ul>
+	</nav>
+	<el-dropdown slot="mobil-menu" id="mobil-menu">
+		<nav slot="dropdown">
+			<ul>
+				<li>
+					<a href="#about">
+						About
+					</a>
+				</li>
+				<li>
+					<a href="#skills">
+						Skills
+					</a>
+				</li>
+				<li>
+					<a href="#projects">
+						Projects
+					</a>
+				</li>
+				<li>
+					<a href="#challenge">
+						Code Challenges
+					</a>
+				</li>
+				<li>
+					<a href="#articles">
+						Articles
+					</a>
+				</li>
+				<li>
+					<a href="#contact">
+						Contact
+					</a>
+				</li>
+			</ul>
+		</nav>
 	</el-dropdown>
 </el-drawer>
      <header> 
     <el-section 
         id="about" 
-        class="site-homepage-header"
-        height="100" 
+        class="homepage-banner"
         background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)" 
         color="var(--color-white)"
         >
-        <el-grid columns="1">
-            <el-column attr="row">
+        <figure class="card-bio">
 
-                <el-inline class="card-bio" background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)" >
+            <div class="card-bio-author">
+                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
+                <div class="author-info">
+                    <h1> Hello, I'am <b> Andrew Rico </b>  </h1>
+                    <h4 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</h4>
+                    <div class="author-titles">
+                        
+                        <h2 class="author-subtitle"> WEB DEVELOPER </h2>
+                        
+                        <h2 class="author-subtitle"> UI/UX ENGINEER </h2>
+                        
+                        
+                        <h2 class="author-title"> JAM stack specialist </h2> 
+                        
+                    </div> 
+                </div>
+            </div>
 
-                    <figure class="author-figure">
-                        <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar">
-                        <figcaption class="author-info">
-                            <h1> Hello, I'am Andrew Rico </h1>
-                            <p><svg fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</p>
-                            <div class="author-titles">
-                                
-                                <h2 class="author-title"> JAM stack specialist </h2> 
-                                
-                                
-                                <h2 class="author-subtitle"> WEB DEVELOPER </h2>
-                                
-                                <h2 class="author-subtitle"> UI/UX ENGINEER </h2>
-                                
-                            </div> 
-                        </figcaption>
-                    </figure>
+            <div class="card-bio-terminal"> 
+                <p class="typewrite" data-period="2500" data-type='[ 
+                        " I like to build things – I love knowledge ", 
+                        " and I strongly believe technology can ",
+                        " and should enrich every single life ", 
+                        " this universe has to offer. ", 
+                        " When I’m not working on client projects ",
+                        " I’m either learning about new technologies ",
+                        " or finding new ways to bring more value ",
+                        " to my clients at an affordable price. ",
+                        " I`ve always been drawn to the overlap ",
+                        " between design and development. ",
+                        " I enjoy each aspect, and love ", 
+                        " building sites & web applications ",
+                        " from start to finish, for clients ",
+                        " all over the world. ", 
+                        " I`m available for remote work - ",
+                        " if you would like to build something, ",
+                        " let`s work together? "
+                    ]'>
+                </p>
+            </div>
 
-                    <div class="terminal"> 
-                        <p class="typewrite" data-period="2000" data-type='[ 
-                                " I like to build things – I love knowledge ", 
-                                " and I strongly believe technology can ",
-                                " and should enrich every single life ", 
-                                " this universe has to offer. ", 
-                                " When I’m not working on client projects ",
-                                " I’m either learning about new technologies ",
-                                " or finding new ways to bring more value ",
-                                " to my clients at an affordable price. ",
-                                " I`ve always been drawn to the overlap ",
-                                " between design and development. ",
-                                " I enjoy each aspect, and love ", 
-                                " building sites & web applications ",
-                                " from start to finish, for clients ",
-                                " all over the world. ", 
-                                " I`m available for remote work - ",
-                                " if you would like to build something, ",
-                                " let`s work together? "
-                            ]'>
-                            <span class="caret"></span>
-                        </p>
-                    </div>
-                    <nav class="biopaths">
-                        <ul>
-                            <li> 
-                                <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"> <svg fill="white">
-                                        <use href="_assets/media/svg/sprites.svg#linkedin"></use>
-                                    </svg></a>
-                                 LinkedIn 
-                            </li> 
-                            <li>
-                                <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile"> <svg fill="white">
-                                        <use href="_assets/media/svg/sprites.svg#github"></use>
-                                    </svg></a>
-                                 Github 
-                            </li> 
-                            <li>
-                                <a href="/portfolio" aria-label="link to andrew's rico portfolio page"><svg fill="white">
-                                        <use href="_assets/media/svg/sprites.svg#lookInFolder"></use>
-                                    </svg></a>
-                                 Porfolio 
-                            </li> 
-                            <li>
-                                <a href="/blog" aria-label="link to andrew's rico blog page">
-                                    <svg fill="white">
-                                        <use href="_assets/media/svg/sprites.svg#fileInFolder"></use>
-                                    </svg></a>
-                                  Blog 
-                            </li> 
-                            <li>
-                                <a href="/contact"  aria-label="link to andrew's rico contact page">
-                                    <svg fill="white">
-                                        <use href="_assets/media/svg/sprites.svg#contact"></use>
-                                    </svg></a>
-                                  Contact 
-                            </li> 
-                        </ul>
-                    </nav>
-                    <el-button class="el-button">
-                        <a slot="button" extended="button" theme="custom" href="#schedule-phone-call">Schedule a Phone Call</a>
-                    </el-button>
-                </el-inline>
-
-            </el-column>
-        </el-grid>
+            <nav class="card-bio-navgigation" aria-labelledby="card-bio-navigation-accesible-label">
+                <h6 id="card-bio-navigation-accesible-label">navigation for card-bio component<h6>
+                <ul>
+                    <li> 
+                        <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"> <svg fill="white">
+                                <use href="_assets/media/svg/sprites.svg#linkedin"></use>
+                            </svg></a>
+                            LinkedIn 
+                    </li> 
+                    <li>
+                        <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile"> <svg fill="white">
+                                <use href="_assets/media/svg/sprites.svg#github"></use>
+                            </svg></a>
+                            Github 
+                    </li> 
+                    <li>
+                        <a href="/portfolio" aria-label="link to andrew's rico portfolio page"><svg fill="white">
+                                <use href="_assets/media/svg/sprites.svg#icon-portfolio"></use>
+                            </svg></a>
+                            Porfolio 
+                    </li> 
+                    <li>
+                        <a href="/blog" aria-label="link to andrew's rico blog page">
+                            <svg fill="white">
+                                <use href="_assets/media/svg/sprites.svg#icon-blog"></use>
+                            </svg></a>
+                            Blog 
+                    </li> 
+                    <li>
+                        <a href="/contact"  aria-label="link to andrew's rico contact page">
+                            <svg fill="white">
+                                <use href="_assets/media/svg/sprites.svg#contact"></use>
+                            </svg></a>
+                            Contact 
+                    </li> 
+                </ul>
+            </nav>
+            <el-button class="el-button">
+                <a slot="button" extended="button" theme="custom" href="#schedule-phone-call">Schedule a Phone Call</a>
+            </el-button>
+        </figure>
     </el-section>
 </header>
     <div id="schedule-phone-call" class="modal-popup">
         <div class="modal-content">
             <a href="#about" title="CLOSE" class="backdrop-modal"></a>
-            <div class="netliform popup-form">
-<a href="#about" title="CLOSE" class="modal-icon-close">X</a>
-    <p id="error-messsage"></p>
-    <h3>Schedule a Phone Call</h3>
-    <form 
-        id="andrewrico-scheduleCall-netlify" 
-        name="andrewrico-scheduleCall-netlify"
-        method="GET" 
-        action="/"
-        data-netlify="true"
-        >
-        <fieldset>
-            <label for="name">NAME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="email">E-MAIL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="tel">PHONE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="url">URL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="time">TIME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                <input type="time" id="time" name="time" placeholder="(555)-333-3333" aria-label="phone" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="date">DATE</label>
-            <label>
-                <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                <input type="date" id="date" name="date" placeholder="https://www." aria-label="date" required />
-            </label>
-        </fieldset>
-        <fieldset class="fullwidth">
-            <label for="message">MESSAGE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
-            </label>
-        </fieldset>
-        <el-button class="el-button">
-            <button type="submit" slot="button" extended="button" theme="quaternary">
-                SCHEDULE
-            </button>
-        </el-button>
-    </form>
-</div>
+        <div class="netliform popup-form">
+        <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
+            <p id="error-messsage"></p>
+            <h3>Schedule a Phone Call</h3>
+            <form 
+                id="andrewrico-scheduleCall-netlify" 
+                name="andrewrico-scheduleCall-netlify"
+                method="GET" 
+                action="/"
+                data-netlify="true"
+                >
+                <fieldset>
+                    <label for="name">NAME</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                        <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="email">E-MAIL</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                        <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="tel">PHONE</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="url">URL</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+                        <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="time">TIME</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
+                        <input type="time" id="time" name="time" placeholder="(555)-333-3333" aria-label="phone" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="date">DATE</label>
+                    <label>
+                        <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
+                        <input type="date" id="date" name="date" placeholder="https://www." aria-label="date" required />
+                    </label>
+                </fieldset>
+                <fieldset class="fullwidth">
+                    <label for="message">MESSAGE</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                        <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
+                    </label>
+                </fieldset>
+                <el-button class="el-button">
+                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                        SCHEDULE
+                    </button>
+                </el-button>
+            </form>
         </div>
-    </div>
-    <main id="homepage-content">
+     </div>
+</div>
+    <main id="homepage">
         
             <el-section id="skills">
-    <el-grid auto-fit="columns" columns="3" gap="1">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="3">
+        <el-column grid="row">
             <h2>Skills</h2>
         </el-column><el-column>
             <article class="card-progress css-skills">
@@ -348,7 +340,7 @@
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="100" max="100"></progress>
-                <p> CSS is the language for describing the presentation of Web pages, including colors, layout, and fonts. It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers. </p>
+                CSS is the language for describing the presentation of Web pages, including <mark>colors, layout, and fonts.</mark> It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers.
             </article>
         </el-column><el-column>
             <article class="card-progress html-skills">
@@ -359,7 +351,7 @@
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="100" max="100"></progress>
-                <p> With HTML, authors describe the structure of pages using markup. The elements of the language label pieces of content such as “paragraph,” “list,” “table,” and so on. </p>
+                &quot;With HTML, authors describe the structure of pages using markup. The elements of the language label pieces of content such as “paragraph,” “list,” “table,” and so on.&quot;
             </article>
         </el-column><el-column>
             <article class="card-progress js-skills">
@@ -370,7 +362,7 @@
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="85" max="100"></progress>
-                <p> JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is a powerful scripting language, widely used for controlling web page behavior. </p>
+                JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is a powerful scripting language, widely used for controlling web page behavior
             </article>
         </el-column><el-column>
             <article class="card-progress php-skills">
@@ -381,7 +373,7 @@
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="45" max="100"></progress>
-                <p> PHP (Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. </p>
+                PHP (Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML
             </article>
         </el-column><el-column>
             <article class="card-progress uiux-skills">
@@ -392,7 +384,8 @@
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="85" max="100"></progress>
-                <p> The “UI” in UI design stands for “user interface.” The user interface is the graphical layout of an application. It consists of the buttons users click on, the text they read, the images, sliders, text entry fields etc. “UX” or User experience is determined by how easy or difficult it is to interact with the user interface elements. </p>
+                The “UI” in UI design stands for “user interface.” The user interface is the graphical layout of an application. It consists of the buttons users click on, the text they read, the images, sliders, text entry fields etc.
+“UX” or User experience is determined by how easy or difficult it is to interact with the user interface elements.
             </article>
         </el-column><el-column>
             <article class="card-progress wp-skills">
@@ -403,14 +396,53 @@
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="75" max="100"></progress>
-                <p> WordPress is an excellent website platform for a variety of websites. From blogging to e-commerce to business and portfolio websites, WordPress is a versatile CMS. </p>
+                WordPress is an excellent website platform for a variety of websites. From blogging to e-commerce to business and portfolio websites, WordPress is a versatile CMS.
+            </article>
+        </el-column><el-column>
+            <article class="card-progress practice-skills">
+                <label for="otherskill">
+                    <h4> Best Practices </h4>
+                        <svg>
+                            <use href="_assets/media/svg/sprites.svg#embed"></use>
+                        </svg>
+                </label>
+                <progress name="otherskill" class="progress" value="100" max="100"></progress>
+                Mobil first desing <br>
+Responsive Web design <br>
+Cross browser compability <br>
+            </article>
+        </el-column><el-column>
+            <article class="card-progress soft-skills">
+                <label for="otherskill">
+                    <h4> Soft Skills </h4>
+                        <svg>
+                            <use href="_assets/media/svg/sprites.svg#tree"></use>
+                        </svg>
+                </label>
+                <progress name="otherskill" class="progress" value="100" max="100"></progress>
+                Problem solver<br>
+Critial thinking<br>
+Analitics<br>
+            </article>
+        </el-column><el-column>
+            <article class="card-progress workflow-skills">
+                <label for="otherskill">
+                    <h4> Workflow </h4>
+                        <svg>
+                            <use href="_assets/media/svg/sprites.svg#cogs"></use>
+                        </svg>
+                </label>
+                <progress name="otherskill" class="progress" value="100" max="100"></progress>
+                Visual Studio Code<br>
+Netliyfy<br>
+HostGator<br>
             </article>
         </el-column></el-grid>
 </el-section>
 
 <el-section id="projects">
-    <el-grid auto-fit="columns" columns="3" gap="1">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="3">
+        <el-column grid="row">
             <h2>Recent Projects</h2>
         </el-column><el-column>
             <article class="card-minimal">
@@ -447,9 +479,9 @@
     </el-grid>
 </el-section>
 
-<el-section id="chanllenge">
-    <el-grid auto-fit="columns" columns="2" gap="1">
-        <el-column attr="row">
+<el-section id="challenge">
+    <el-grid auto-fit="columns" columns="2">
+        <el-column grid="row">
             <h2>Code Challenges</h2>
         </el-column><el-column>
             <article class="card-action card-ckecked">
@@ -463,8 +495,8 @@
                 </div>
                 <div class="card-footer">
                     <p>
-                        <b>Started:</b>Dec/14/2019<br>
-                        <b>Ended:</b>Jan/01/2020
+                        <span>Started:</span>Dec/14/2019<br>
+                        <span>Ended:</span>Jan/01/2020
                     </p>
                     <el-button class="el-button">
                         <a slot="button" extended="button" theme="primary"
@@ -483,34 +515,13 @@
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li>
-                            <b> Recruiter </b>looking to hide a developer.
+                            <span> Recruiter </span>looking to hider a developer.
                         </li>
                         <li>
-                            <b> Employer</b> who wants to test my skills.
-                        </li>
-                    </ol>
-                </div>
-                <div class="card-footer">
-                    <el-button class="el-button">
-                        <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
-                    </el-button>
-                </div>
-            </article> 
-        </el-column><el-column>
-            <article class="card-action">
-                <div class="card-header">
-                    <svg width="56" height="56" fill="var(--color-light)">
-                        <use href="_assets/media/svg/sprites.svg#alert"></use>
-                    </svg>
-                </div>
-                <div class="card-content">
-                    <p>Submit a Code Chanllenge only if you are a:</p>
-                    <ol>
-                        <li>
-                            <b> Recruiter </b>looking to hide a developer.
+                            <span> Employer</span> who wants to test my skills.
                         </li>
                         <li>
-                            <b> Employer</b> who wants to test my skills.
+                            <span> Propest</span> who wants to bild a project.
                         </li>
                     </ol>
                 </div>
@@ -522,84 +533,85 @@
             </article> 
         </el-column></el-grid>
     <div id="submit-challenge" class="modal-popup">
-        <div class="modal-content">
-            <a href="#chanllenge" title="CLOSE" class="backdrop-modal"></a>
-            <div class="netliform popup-form">
-<a href="#challenge" title="CLOSE" class="modal-icon-close">X</a>
-    <p id="error-messsge"></p>
-    <h3>Submit a Code Challenge</h3>
-    <form 
-        id="andrewrico-submitChallenge-netlify" 
-        name="andrewrico-submitChallenge-netlify" 
-        method="POST" 
-        action="/"
-        data-netlify="true"
-        >
-        <fieldset class="fullwidth">
-            <label for="name">NAME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" id="name" name="name" aria-label="name" placeholder="jhon due" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="selection">YOU ARE A</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
-                <select id="selection" name="selection" aria-label="selection"  required>
-                    <option value="">Select one</option>
-                    <option value="Recruiter">Recruiter</option>
-                    <option value="Employer">Employer </option>
-                </select>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="email">E-MAIL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="email" id="email" name="email" aria-label="email" placeholder="jhondue@mail.com" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="tel">PHONE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="tel" id="tel" name="tel" aria-label="tel" placeholder="(555)-333-3333" required />
-            </label>
-        </fieldset>
+    <div class="modal-content">
+        <a href="#chanllenge" title="CLOSE" class="backdrop-modal"></a>
+        <div class="netliform popup-form">
+            <a href="#challenge" title="CLOSE" class="modal-icon-close">X</a>
+            <p id="error-messsge"></p>
+            <h3>Submit a Code Challenge</h3>
+            <form 
+                id="andrewrico-submitChallenge-netlify" 
+                name="andrewrico-submitChallenge-netlify" 
+                method="POST" 
+                action="/"
+                data-netlify="true"
+                >
+                <fieldset class="fullwidth">
+                    <label for="name">NAME</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                        <input type="text" id="name" name="name" aria-label="name" placeholder="jhon due" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="selection">I'AM A</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
+                        <select id="selection" name="selection" aria-label="selection"  required>
+                            <option value="">Select one</option>
+                            <option value="Recruiter">Recruiter</option>
+                            <option value="Employer">Employer </option>
+                            <option value="Prospect">Prospect </option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="email">E-MAIL</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                        <input type="email" id="email" name="email" aria-label="email" placeholder="jhondue@mail.com" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="tel">PHONE</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                        <input type="tel" id="tel" name="tel" aria-label="tel" placeholder="(555)-333-3333" required />
+                    </label>
+                </fieldset>
 
-        <fieldset>
-            <label for="url">URL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                <input type="text" id="url" id="url" name="url"  aria-label="url" placeholder="https://www." required />
-            </label>
-        </fieldset>
+                <fieldset>
+                    <label for="url">URL</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+                        <input type="text" id="url" id="url" name="url"  aria-label="url" placeholder="https://www." required />
+                    </label>
+                </fieldset>
 
-        <fieldset class="fullwidth">
-            <label for="message">MESSAGE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" id="message" name="message" aria-label="message" placeholder="In a few words, tell me about the rules" required/>
-            </label>
-        </fieldset>
-        <el-button class="el-button">
-            <button type="submit" slot="button" extended="button" theme="quaternary">
-                Submit
-            </button>
-        </el-button>
-    </form>
-</div>
+                <fieldset class="fullwidth">
+                    <label for="message">MESSAGE</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                        <input type="text" id="message" name="message" aria-label="message" placeholder="In a few words, tell me about the rules" required/>
+                    </label>
+                </fieldset>
+                <el-button class="el-button">
+                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                        Submit
+                    </button>
+                </el-button>
+            </form>
         </div>
     </div>
+</div>
 </el-section>
 
 <el-section id="articles" >
-    <el-grid auto-fit="columns" columns="2" gap="1">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="2">
+        <el-column grid="row">
             <h2>Recent Articles</h2>
         </el-column>
-        <el-column attr="row" max-width="768px" center="auto">
+        <el-column grid="row" max-width="768px" center="auto">
             <ul><li>
                         <article class="card-article">
                             <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time><br><br>
@@ -618,9 +630,9 @@
 
 <el-section id="contact">
 
-    <el-grid auto-fit="columns" columns="2" gap="1">
+    <el-grid auto-fit="columns" columns="2">
 
-        <el-column attr="row">
+        <el-column grid="row">
             <h2>Contact Me</h2>
         </el-column>
 
@@ -694,12 +706,12 @@
 
         
     </main>
-    <nav id="navigation-panel">
+    <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#home"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
                 </svg>
                 <span class="tooltip"><span>HOMEPAGE</span></span>
             </a>
@@ -707,7 +719,7 @@
         <li>
             <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#lookInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
                 </svg>
                 <span class="tooltip"><span>PORTFOLIO</span></span>
             </a>
@@ -715,7 +727,7 @@
         <li>
             <a href="/blog" aria-label="link to andrew's rico blog page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#fileInFolder"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
                 </svg>
                 <span class="tooltip"><span>BLOG</span></span>
             </a>
@@ -723,7 +735,7 @@
         <li>
             <a href="/contact" aria-label="link to andrew's rico contact page">
                 <svg>
-                    <use href="/_assets/media/svg/sprites.svg#contact"></use>
+                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
                 </svg>
                 <span class="tooltip"><span>CONTACT</span></span>
             </a>
@@ -736,12 +748,20 @@
                 <span class="tooltip"><span>SCROLL UP</span></span>
             </a>
         </li>
+        <li>
+            <a href="#/" aria-label="scroll up to bottom of the window button">
+                <svg>
+                    <use href="/_assets/media/svg/sprites.svg#arrowDown"></use>
+                </svg>
+                <span class="tooltip"><span>SCROLL DOWN</span></span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <footer>
     <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
-        <el-grid auto-fit="columns" columns="4">
+        <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
                 <h1>Andrew Rico</h1>
             </el-column>
@@ -784,7 +804,7 @@
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
-        <el-grid auto-fit="columns" columns="3" gap="2">
+        <el-grid columns="3">
 
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
@@ -798,10 +818,10 @@
                 <a href="/sitemap"> Site Map </a>
             </el-column>
 
-            <el-column>
+            <el-column id="/">
                 <el-copyright>
                     <span id="copyright" slot="copyright">
-                         andrewrico.com .  All rights reserved
+                         andrewrico.com All rights reserved
                     </span>
                 </el-copyright>
             </el-column>
@@ -810,6 +830,6 @@
     </el-section>
 </footer>
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
-<script src="/_assets/js/site.js"></script>    
+<script src="/_assets/js/site.js"></script>
 </body>
 </html>

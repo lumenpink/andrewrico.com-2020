@@ -11,7 +11,7 @@ html {
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "Didact Gothic", "Coda Caption", "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-family-title: "Dancing Script", cursive;
-  --font-family-healine: "Coda Caption", sans-serif;
+  --font-family-headline: "Coda Caption", sans-serif;
   --font-family-content: "Source Code Pro", monospace;
   --font-family-writing: "Didact Gothic", sans-serif;
   --color-primary: #04ff00;
@@ -70,14 +70,14 @@ h1 {
 
 h2 {
   font-size: 2.8em;
-  font-family: var(--font-family-healine);
+  font-family: var(--font-family-headline);
 }
 
 a {
   color: var(--color-quaternary);
 }
 
-ol ,
+ol,
 ul {
   list-style: none;
   margin: 0;
@@ -92,12 +92,10 @@ iframe {
   box-shadow: var(--color-shadow);
 }
 
-.site-homepage-header {
-  display: flex;
-  min-width: 100%;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 0 0.5px var(--color-primary));
+figure {
+  padding: 0;
+  margin: 0;
+  display: block;
 }
 
 .el-button {
@@ -110,22 +108,30 @@ iframe {
   box-shadow: rgba(46, 41, 51, 0.08) 0px 2px 4px, rgba(71, 63, 79, 0.16) 0px 4px 8px;
 }
 
+
+/*for simple-page fonts*/
 .simple-page h1,
 .simple-page {
   font-family: var(--font-family-writing);
 }
 
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+/*make nagigation label inbisible*/
+[id*="-navigation-accesible-label"] {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
- #about el-column:first-child {
-  padding-left: 2px;
-  padding-right: 2px;
+
+/*for ads on the artcle page*/
+#ads {
+  margin: 64px 0;
+box-shadow: var(--color-shadow);
+min-height: 100vh;
+height: 100%;
+width: auto;
 }
+
 
 
 

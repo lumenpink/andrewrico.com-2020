@@ -1,67 +1,72 @@
-<div class="netliform popup-form">
-<a href="#about" title="CLOSE" class="modal-icon-close">X</a>
-    <p id="error-messsage"></p>
-    <h3>Schedule a Phone Call</h3>
-    <form 
-        id="andrewrico-scheduleCall-netlify" 
-        name="andrewrico-scheduleCall-netlify"
-        method="GET" 
-        action="/"
-        data-netlify="true"
-        >
-        <fieldset>
-            <label for="name">NAME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="email">E-MAIL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="tel">PHONE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="url">URL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="time">TIME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                <input type="time" id="time" name="time" placeholder="(555)-333-3333" aria-label="phone" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="date">DATE</label>
-            <label>
-                <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                <input type="date" id="date" name="date" placeholder="https://www." aria-label="date" required />
-            </label>
-        </fieldset>
-        <fieldset class="fullwidth">
-            <label for="message">MESSAGE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
-            </label>
-        </fieldset>
-        <el-button class="el-button">
-            <button type="submit" slot="button" extended="button" theme="quaternary">
-                SCHEDULE
-            </button>
-        </el-button>
-    </form>
+<div id="schedule-phone-call" class="modal-popup">
+        <div class="modal-content">
+            <a href="#about" title="CLOSE" class="backdrop-modal"></a>
+        <div class="netliform popup-form">
+        <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
+            <p id="error-messsage"></p>
+            <h3>Schedule a Phone Call</h3>
+            <form 
+                id="andrewrico-scheduleCall-netlify" 
+                name="andrewrico-scheduleCall-netlify"
+                method="GET" 
+                action="/"
+                data-netlify="true"
+                >
+                <fieldset>
+                    <label for="name">NAME</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                        <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="email">E-MAIL</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                        <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="tel">PHONE</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="url">URL</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+                        <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="time">TIME</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
+                        <input type="time" id="time" name="time" placeholder="(555)-333-3333" aria-label="phone" required />
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="date">DATE</label>
+                    <label>
+                        <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
+                        <input type="date" id="date" name="date" placeholder="https://www." aria-label="date" required />
+                    </label>
+                </fieldset>
+                <fieldset class="fullwidth">
+                    <label for="message">MESSAGE</label>
+                    <label>
+                        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                        <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
+                    </label>
+                </fieldset>
+                <el-button class="el-button">
+                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                        SCHEDULE
+                    </button>
+                </el-button>
+            </form>
+        </div>
+     </div>
 </div>

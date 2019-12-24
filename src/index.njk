@@ -1,11 +1,11 @@
 ---
 title: "Home"
 description: "This is the Homepage"
-layout: "layouts/layout-home.njk"
+layout: "layouts/layout-homepage.njk"
 ---
 <el-section id="skills">
-    <el-grid auto-fit="columns" columns="3" gap="1">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="3">
+        <el-column grid="row">
             <h2>Skills</h2>
         </el-column>
         {%- for skill in collections.skills -%}
@@ -18,7 +18,21 @@ layout: "layouts/layout-home.njk"
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="{{skill.data.percentage}}" max="100"></progress>
-                <p> {{skill.data.description}} </p>
+                {% excerpt skill %}
+            </article>
+        </el-column>
+        {%- endfor -%}
+        {%- for otherskill in collections.otherskills -%}
+        <el-column>
+            <article class="card-progress {{otherskill.data.otherskillsClass}}">
+                <label for="otherskill">
+                    <h4> {{ otherskill.data.title }} </h4>
+                        <svg>
+                            <use href="{{otherskill.data.svgPath}}"></use>
+                        </svg>
+                </label>
+                <progress name="otherskill" class="progress" value="{{otherskill.data.percentage}}" max="100"></progress>
+                {% excerpt otherskill %}
             </article>
         </el-column>
         {%- endfor -%}
@@ -26,8 +40,8 @@ layout: "layouts/layout-home.njk"
 </el-section>
 
 <el-section id="projects">
-    <el-grid auto-fit="columns" columns="3" gap="1">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="3">
+        <el-column grid="row">
             <h2>Recent Projects</h2>
         </el-column>
         {%- for project in collections.projects -%}
@@ -66,9 +80,9 @@ layout: "layouts/layout-home.njk"
     </el-grid>
 </el-section>
 
-<el-section id="chanllenge">
-    <el-grid auto-fit="columns" columns="2" gap="1">
-        <el-column attr="row">
+<el-section id="challenge">
+    <el-grid auto-fit="columns" columns="2">
+        <el-column grid="row">
             <h2>Code Challenges</h2>
         </el-column>
         {%- for challenges in collections.challenge -%}
@@ -84,8 +98,8 @@ layout: "layouts/layout-home.njk"
                 </div>
                 <div class="card-footer">
                     <p>
-                        <b>Started:</b>{{ challenges.data.started }}<br>
-                        <b>Ended:</b>{{ challenges.data.ended }}
+                        <span>Started:</span>{{ challenges.data.started }}<br>
+                        <span>Ended:</span>{{ challenges.data.ended }}
                     </p>
                     <el-button class="el-button">
                         <a slot="button" extended="button" theme="primary"
@@ -107,10 +121,13 @@ layout: "layouts/layout-home.njk"
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li>
-                            <b> Recruiter </b>looking to hide a developer.
+                            <span> Recruiter </span>looking to hider a developer.
                         </li>
                         <li>
-                            <b> Employer</b> who wants to test my skills.
+                            <span> Employer</span> who wants to test my skills.
+                        </li>
+                        <li>
+                            <span> Propest</span> who wants to bild a project.
                         </li>
                     </ol>
                 </div>
@@ -123,20 +140,15 @@ layout: "layouts/layout-home.njk"
         </el-column>
         {%- endfor -%}
     </el-grid>
-    <div id="submit-challenge" class="modal-popup">
-        <div class="modal-content">
-            <a href="#chanllenge" title="CLOSE" class="backdrop-modal"></a>
-            {% include "forms/form-submitChallenge.njk" %}
-        </div>
-    </div>
+    {% include "forms/form-submitChallenge.njk" %}
 </el-section>
 
 <el-section id="articles" >
-    <el-grid auto-fit="columns" columns="2" gap="1">
-        <el-column attr="row">
+    <el-grid auto-fit="columns" columns="2">
+        <el-column grid="row">
             <h2>Recent Articles</h2>
         </el-column>
-        <el-column attr="row" max-width="768px" center="auto">
+        <el-column grid="row" max-width="768px" center="auto">
             <ul>
                 {%- for article in collections.article -%}
                     <li>
@@ -157,9 +169,9 @@ layout: "layouts/layout-home.njk"
 
 <el-section id="contact">
 
-    <el-grid auto-fit="columns" columns="2" gap="1">
+    <el-grid auto-fit="columns" columns="2">
 
-        <el-column attr="row">
+        <el-column grid="row">
             <h2>Contact Me</h2>
         </el-column>
 

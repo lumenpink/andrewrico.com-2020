@@ -27,7 +27,7 @@
      text-transform: capitalize;
      font-weight: 800;
      font-size: 1.6rem;
-     font-family: 'Coda Caption', sans-serif;
+     font-family: var(--font-family-headline);
      color: var(--color-black);
      text-align: center;
  }
@@ -36,12 +36,13 @@
      display: flex;
      justify-content: space-around;
      font-size: 0.9rem;
-     /* padding: 0 1rem; */
      margin-top: 1rem;
  }
+
  .card-minimal li {
-    font-family: var(--font-family-writing);
-     text-transform: capitalize!important;
+     font-family: var(--font-family-writing);
+     text-transform: capitalize !important;
+     text-align: center;
  }
 
  .card-minimal svg {

@@ -6,9 +6,14 @@ moment.locale('en');
 
 const CleanCSS = require("clean-css");
   
-/* For: eleventyConfig * * * * *
+/* For: eleventyConfig 
 /*--------------------------------------------- */
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "<!-- excerpt -->"
+  });
 
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
@@ -18,13 +23,16 @@ module.exports = function (eleventyConfig) {
     return moment(date).toISOString();
   });
   eleventyConfig.addFilter('dateReadable', date => {
-    return moment(date).format('LL'); // E.g. May 31, 2019
+    return moment(date).format('LL'); 
   });
+
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
 
   eleventyConfig.setBrowserSyncConfig({
     notify: true
   });
+
+
   eleventyConfig.addPassthroughCopy("src/_assets");
   return {
     pathPrefix: "/",
@@ -40,6 +48,8 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: "njk",
     templateFormats: ["html", "css", "js", "njk", "md"],
   };
+
+  
 }
 
 /* 

@@ -1,9 +1,11 @@
 {% include "partials/partial-head.njk" %}
     <body>
         {% include "navigations/navigation-portfolio.njk" %}
-        {% include "headers/header-banner.njk" %}
-        <main id="portfolio-page">
-            {{ content | safe }}
+        {% include "banners/banner-base.njk" %}
+        <main>
+            {% block content %}
+                {{ content | safe }}
+            {% endblock content %}
         </main>
         {% include "partials/partial-footer.njk" %}
     </body>

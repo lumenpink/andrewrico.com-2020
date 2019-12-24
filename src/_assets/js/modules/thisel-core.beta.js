@@ -1,5 +1,5 @@
 // create el-section template.
-const elSectionCSS = `:host {  display: block;width:100%; } :host > * { color:inherit; } :host section { display:block; }`;
+const elSectionCSS = `:host {  display: block;width:100%; } :host > * { color:inherit; } :host > section { display:block; }`;
 const elSectionHTML = `<section><slot></slot></section>`;
 const elSectionTemplate = document.createElement("template");
 elSectionTemplate.innerHTML = `<style>`.concat(elSectionCSS, `</style>`).concat(elSectionHTML);
@@ -25,11 +25,6 @@ customElements.define('el-section',
 				_elSection.hasAttribute("display") && (
 					_elSection.styleDisplay = _elSection.getAttribute("display"),
 					_elSection.style.display = _elSection.styleDisplay ? _elSection.styleDisplay : null
-				)
-				_elSection.hasAttribute("clip-path") && (
-					_elSection.styleClipPath = _elSection.getAttribute("clip-path"),
-					_elSection.style.clipPath = _elSection.styleClipPath ? _elSection.styleClipPath : null,
-					_elSection.style.WebkitdClipPath = _elSection.styleClipPath ? _elSection.styleClipPath : null
 				)
 				_elSection.hasAttribute("flex-align") && (
 					_elSection.styleFlexAlign = _elSection.getAttribute("flex-align"),
@@ -69,20 +64,21 @@ customElements.define('el-section',
 );
 // create el-grid template.
 const elGridCSS = `:host {
-    --el-grid-gutter: 0.0rem;
+	--el-grid-gutter: 0;
     --el-grid-max-width: 1366px;
-    --el-grid-width: 99.75%;
+    --el-grid-width: 100%;
     display: -ms-grid;
     display: grid;
     grid-gap: var(--el-grid-gutter, 025rem);
-    margin: var(--el-grid-gutter, 0.25rem) auto;
+    margin: var(--el-grid-gutter, 0) auto;
     max-width: var(--el-grid-max-width, 1366px);
-    width: var(--el-grid-width, 99.75%)
+	width: var(--el-grid-width, 100%)
+
 }
 
 @media(max-width:768px) {
-    :host([auto-fit="columns"]) {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important
+    :host {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important
     }
 }
 
@@ -152,16 +148,16 @@ const elColumnCSS = `:host {
     display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: var(--el-grid-gutter, .0);
-    margin: var(--el-grid-gutter, .0);
-    padding: var(--el-grid-gutter, .0)
+    grid-gap: var(--el-grid-gutter, 0);
+    margin: var(--el-grid-gutter, 0);
+    padding: var(--el-grid-gutter, 0)
 }
 
-:host([attr=row]) {
-    grid-column: 1/-1
+:host([grid="row"]) {
+    grid-column: 1/-1;
 }
 
-@media(max-width:1268px) {
+@media(max-width:768px) {
     ::slotted([attr=auto-fit]),
     :host([attr=auto-fit]) {
         display: -ms-grid;
@@ -227,7 +223,6 @@ customElements.define('el-column',
 					elColumn.style.justifyContent = elColumn.styleJustifyContent ? elColumn.styleJustifyContent : null,
 					elColumn.style.WebkitJustifyContent = elColumn.styleJustifyContent ? elColumn.styleJustifyContent : null
 				)
-
 				elColumn.hasAttribute("flex-align") && (
 					elColumn.styleFlexAlign = elColumn.getAttribute("flex-align"),
 					elColumn.style.justifyContent = elColumn.styleFlexAlign ? elColumn.styleFlexAlign : null,
@@ -243,14 +238,6 @@ customElements.define('el-column',
 					elColumn.stylePadding = elColumn.getAttribute("padding") + "em",
 					elColumn.style.padding = elColumn.stylePadding ? elColumn.stylePadding : null
 				)
-				elColumn.hasAttribute("margin-top") && (
-					elColumn.styleMargin = elColumn.getAttribute("margin-top") + "em",
-					elColumn.style.marginTop = elColumn.styleMargin ? elColumn.styleMargin : null
-				)
-				elColumn.hasAttribute("margin-bottom") && (
-					elColumn.styleMargin = elColumn.getAttribute("margin-bottom") + "em",
-					elColumn.style.marginBottom = elColumn.styleMargin ? elColumn.styleMargin : null
-				)
 				elColumn.hasAttribute("margin") && (
 					elColumn.styleMargin = elColumn.getAttribute("margin") + "em",
 					elColumn.style.margin = elColumn.styleMargin ? elColumn.styleMargin : null
@@ -263,305 +250,16 @@ customElements.define('el-column',
 					elColumn.styleMaxWidth = elColumn.getAttribute("max-width"),
 					elColumn.style.maxWidth = elColumn.styleMaxWidth ? elColumn.styleMaxWidth : null
 				)
-			})
-		}
-	}
-);
-// create el-inline template.
-const elInlineCSS = `:host {
-    display: inline-block
-}
-
-::slotted([attr=background-image]),
-:host([attr=background-image]) {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 10rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex
-}
-
-::slotted([attr=columns]),
-:host([attr=columns]) {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 1rem;
-    margin: 0;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 300px))
-}
-
-::slotted([attr=card]),
-:host([attr=card]) {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: .5rem;
-    text-align: center;
-    -webkit-box-shadow: 0 0 2px #4f4f4f;
-    box-shadow: 0 0 2px #4f4f4f;
-    border-radius: 2px;
-    font-size: 16px;
-    line-height: 1.6;
-    width: auto;
-    height: auto;
-    padding: 1.6rem
-}
-
-::slotted([attr=card]:hover),
-:host([attr=card]:hover) {
-    opacity: 1;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .99);
-    box-shadow: 0 0 3px rgba(0, 0, 0, .99)
-}
-
-::slotted([attr=chip]),
-:host([attr=chip]) {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background: 0 0;
-    color: var(--color-black, #000);
-    -webkit-box-shadow: 0 0 2px #4f4f4f;
-    box-shadow: 0 0 2px #4f4f4f;
-    width: 2rem;
-    height: 2rem;
-    padding: .2rem;
-    border-radius: 50%;
-    -webkit-transition: ease all .5s;
-    -o-transition: ease all .5s;
-    transition: ease all .5s
-}
-
-::slotted([attr=lead]),
-:host([attr=lead]) {
-    font-size: 1.6rem;
-    font-weight: 300;
-    line-height: 1.6
-}
-
-::slotted([attr=row]),
-:host([attr=row]) {
-    grid-column: 1/-1
-}
-::slotted([dir=horizontal]),
-:host([dir=horizontal]) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row
-}
-::slotted([dir=vertical]),
-:host([dir=vertical]) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column
-}
-
-
-::slotted([theme=primary]),
-:host([theme=primary]) {
-    background: var(--color-primary, #000);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)
-}
-::slotted([theme=primary][hover=on]:hover),
-:host([theme=primary][hover=on]:hover) {
-    background: var(--color-quaternary, #d3d3d3);
-    color: var(--color-primary, #fff) !important;
-    border: 1px solid var(--color-primary, #000)
-}
-
-::slotted([theme=secondary]),
-:host([theme=secondary]) {
-    background: var(--color-secondary, #fafafa);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-secondary, #000)
-}
-::slotted([theme=secondary][hover=on]:hover),
-:host([theme=secondary][hover=on]:hover) {
-    background: var(--color-quaternary, #d3d3d3);
-    color: var(--color-primary, #fff) !important;
-    border: 1px solid .5var(--color-primary, #000)
-}
-
-::slotted([theme=tertiary]),
-:host([theme=tertiary]) {
-    background: 0 0;
-    color: var(--color-primary, #000) !important;
-    border: 1px solid var(--color-primary, #000)
-}
-::slotted([theme=tertiary][hover=on]:hover),
-:host([theme=tertiary][hover=on]:hover) {
-    background: var(--color-quaternary, #d3d3d3);
-    color: var(--color-primary, #fff) !important;
-    border: 1px solid var(--color-primary, #000)
-}`;
-const elInlineHTML = `<slot></slot>`;
-const elInlineTemplate = document.createElement("template");
-elInlineTemplate.innerHTML = `<style>`.concat(elInlineCSS, `</style>`).concat(elInlineHTML);
-// define el-inline tag.
-customElements.define('el-inline',
-	class elInline extends HTMLElement {
-		constructor() {
-			super();
-			let _thisElInline = this;
-			// open shadowRoot.
-			const shadowRoot = _thisElInline.attachShadow({
-				mode: "open"
-			});
-			// clone template. 
-			shadowRoot.appendChild(elInlineTemplate.content.cloneNode(!0));
-			return _thisElInline;
-		}
-		connectedCallback() {
-			let elInline = this;
-			// inject css attributes.
-			const _inlines = document.querySelectorAll("el-inline");
-			_inlines.forEach(_inline => {
-				elInline.hasAttribute("display") && (
-					elInline.styleDisplay = elInline.getAttribute("display"),
-					elInline.style.display = elInline.styleDisplay ? elInline.styleDisplay : null
-				)
-				elInline.hasAttribute("clip-path") && (
-					elInline.styleClipPath = elInline.getAttribute("clip-path"),
-					elInline.style.clipPath = elInline.styleClipPath ? elInline.styleClipPath : null,
-					elInline.style.WebkitdClipPath = elInline.styleClipPath ? elInline.styleClipPath : null
-				)
-				elInline.hasAttribute("flex-direction") && (
-					elInline.styleDirection = elInline.getAttribute("flex-direction"),
-					elInline.style.flexDirection = elInline.styleDirection ? elInline.styleDirection : null,
-					elInline.style.WebkitFlexDirection = elInline.styleDirection ? elInline.styleDirection : null
-				)
-				elInline.hasAttribute("align-items") && (
-					elInline.styleAlignItems = elInline.getAttribute("align-items"),
-					elInline.style.alignItems = elInline.styleAlignItems ? elInline.styleAlignItems : null,
-					elInline.style.WebkitAlignItems = elInline.styleAlignItems ? elInline.styleAlignItems : null
-				)
-				elInline.hasAttribute("justify-content") && (
-					elInline.styleJustifyContent = elInline.getAttribute("justify-content"),
-					elInline.style.justifyContent = elInline.styleJustifyContent ? elInline.styleJustifyContent : null,
-					elInline.style.WebkitJustifyContent = elInline.styleJustifyContent ? elInline.styleJustifyContent : null
-				)
-				elInline.hasAttribute("flex-align") && (
-					elInline.styleFlexAlign = elInline.getAttribute("flex-align"),
-					elInline.style.justifyContent = elInline.styleFlexAlign ? elInline.styleFlexAlign : null,
-					elInline.style.WebkitJustifyContent = elInline.styleFlexAlign ? elInline.styleFlexAlign : null,
-					elInline.style.alignItems = elInline.styleFlexAlign ? elInline.styleFlexAlign : null,
-					elInline.style.WebkitAlignItems = elInline.styleFlexAlign ? elInline.styleFlexAlign : null
-				)
-				elInline.hasAttribute("align-self") && (
-					elInline.styleAlignSelf = elInline.getAttribute("align-self"),
-					elInline.style.alignSelf = elInline.styleAlignSelf ? elInline.styleAlignItems : null,
-					elInline.style.WebkitAlignSelf = elInline.styleAlignSelf ? elInline.styleAlignSelf : null
-				)
-				elInline.hasAttribute("flex-flow") && (
-					elInline.styleFlexFlow = elInline.getAttribute("flex-flow"),
-					elInline.style.flexFlow = elInline.styleFlexFlow ? elInline.styleFlexFlow : null,
-					elInline.style.WebkitFlexFlow = elInline.styleFlexFlow ? elInline.styleFlexFlow : null
-				)
-				elInline.hasAttribute("line-height") && (
-					elInline.styleLineHeight = elInline.getAttribute("line-height"),
-					elInline.style.lineHeight = elInline.styleLineHeight ? elInline.styleLineHeight : null
-				)
-				elInline.hasAttribute("color") && (
-					elInline.styleColor = elInline.getAttribute("color"),
-					elInline.style.color = elInline.styleColor ? elInline.styleColor : null
-				)
-				elInline.hasAttribute("background") && (
-					elInline.styleBackground = elInline.getAttribute("background"),
-					elInline.style.backgroundColor = elInline.styleBackground ? elInline.styleBackground : null
-				)
-				elInline.hasAttribute("background-image") && (
-					elInline.styleBackgroundImage = elInline.getAttribute("background-image"),
-					elInline.style.backgroundImage = elInline.styleBackgroundImage ? elInline.styleBackgroundImage : null
-				)
-				elInline.hasAttribute("font") && (
-					elInline.styleFont = elInline.getAttribute("font"),
-					elInline.style.font = elInline.styleFont ? elInline.styleFont : null
-				)
-				elInline.hasAttribute("font-size") && (
-					elInline.styleFontSize = elInline.getAttribute("font-size") + "rem",
-					elInline.style.fontSize = elInline.styleFontSize ? elInline.styleFontSize : null
-				)
-				elInline.hasAttribute("font-family") && (
-					elInline.styleFontFamily = elInline.getAttribute("font-family"),
-					elInline.style.fontFamily = elInline.styleFontFamily ? elInline.styleFontFamily : null
-				)
-				elInline.hasAttribute("font-weight") && (
-					elInline.styleFontWeight = elInline.getAttribute("font-weight"),
-					elInline.style.fontWeight = elInline.styleFontWeight ? elInline.styleFontWeight : null
-				)
-				elInline.hasAttribute("object-fit") && (
-					elInline.styleObjectFit = elInline.getAttribute("object-fit"),
-					elInline.style.objectFit = elInline.styleObjectFit ? elInline.styleObjectFit : null
-				)
-				elInline.hasAttribute("box-shadow") && (
-					elInline.styleBoxShadow = elInline.getAttribute("box-shadow"),
-					elInline.style.boxShadow = elInline.styleBoxShadow ? elInline.styleBoxShadow : null
-				)
-				elInline.hasAttribute("border") && (
-					elInline.styleBorder = elInline.getAttribute("border"),
-					elInline.style.border = elInline.styleBorder ? elInline.styleBorder : null
-				)
-				elInline.hasAttribute("border-radius") && (
-					elInline.styleBorderRadius = elInline.getAttribute("border-radius") + "rem",
-					elInline.style.borderRadius = elInline.styleBorderRadius ? elInline.styleBorderRadius : null
-				)
-				elInline.hasAttribute("padding") && (
-					elInline.stylePadding = elInline.getAttribute("padding") + "rem",
-					elInline.style.padding = elInline.stylePadding ? elInline.stylePadding : null
-				)
-				elInline.hasAttribute("margin") && (
-					elInline.styleMargin = elInline.getAttribute("margin") + "rem",
-					elInline.style.margin = elInline.styleMargin ? elInline.styleMargin : null
-				)
-				elInline.hasAttribute("center") && (
-					elInline.styleMargin = elInline.getAttribute("center"),
-					elInline.style.margin = elInline.styleMargin ? elInline.styleMargin : null
-				)
-				elInline.hasAttribute("width") && (
-					elInline.styleWidth = elInline.getAttribute("width") + "rem",
-					elInline.style.width = elInline.styleWidth ? elInline.styleWidth : null
-				)
-				elInline.hasAttribute("max-width") && (
-					elInline.styleMaxWidth = elInline.getAttribute("max-width") + "%",
-					elInline.style.maxWidth = elInline.styleMaxWidth ? elInline.styleMaxWidth : null
-				)
-				elInline.hasAttribute("height") && (
-					elInline.styleHeight = elInline.getAttribute("height") + "rem",
-					elInline.style.height = elInline.styleHeight ? elInline.styleHeight : null
-				)
-				elInline.hasAttribute("text-align") && (
-					elInline.styleTextAlign = elInline.getAttribute("text-align"),
-					elInline.style.textAlign = elInline.styleTextAlign ? elInline.styleTextAlign : null
+				elColumn.hasAttribute("max-height") && (
+					elColumn.styleMaxHeight = elColumn.getAttribute("max-height"),
+					elColumn.style.maxHeight= elColumn.styleMaxHeight ? elColumn.styleMaxHeight : null
 				)
 			})
 		}
 	}
 );
+
+
 // create el-copyright template.
 const elCopyrightFullYear = new Date().getFullYear();
 const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:'Source Code Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:0.8rem; text-decoration:none;}:host h1{ white-space: nowrap; margin:0;font-family:sans-serif; font-size:0.8rem;font-weight:100; }`;
@@ -924,9 +622,9 @@ const elDropdownCSS = `:host {
 		background: #fafafa;
 		position: absolute;
 		left: calc(50% - 0%);
-		top: -5px;
+		top: -4px;
 		border: solid #b5b5b5;
-		border-width: 0 1.2px 1.2px 0;
+		border-width: 0 1.3px 1.3px 0;
 		padding: 3px;
 		transform: rotate(-135deg);
 		-webkit-transform: rotate(-135deg)
@@ -1175,18 +873,13 @@ const elDrawerCSS = `:host {
 			transform: scale(2);
 		}
 
-		::slotted(h1) ,
-		:host .brand h1 {
-			font-family: var(--drawer-brand-font-family);
-		}
-		
 		::slotted(.brand) ,
 		:host .brand {
 			margin:auto;
-			font-size:0.8rem;
-			font-family: var(--drawer-brand-font-family)!important;
 			width: 128px;
 			height: 56px;
+			font-size:24px;
+			font-family: var(--drawer-brand-font-family);
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -1201,6 +894,7 @@ const elDrawerCSS = `:host {
 			transition: ease-in-out opacity .3s;
 			white-space: nowrap;
 			text-decoration: none;
+			text-indent: 24px;
 			color: var(--drawer-brand-color, var(--color-black, #000))
 		}
 		@media(min-width:768px) {
@@ -1209,24 +903,10 @@ const elDrawerCSS = `:host {
 				margin:0;
 			}
 		}
-		@media(min-width:1024px) {
-			::slotted(.brand) ,
-			:host .brand {
-				font-size: 0.9rem;
-			}
-			::slotted(h1) ,
-			:host .brand h1 {
-				font-family: var(--drawer-brand-font-family);
-			}
-		}
 		@media(min-width:1268px) {
 			::slotted(.brand) ,
 			:host .brand {
 				font-size: var(--drawer-brand-font-size, 1rem);
-			}
-			::slotted(h1) ,
-			:host .brand h1 {
-				font-family: var(--drawer-brand-font-family);
 			}
 		}
 		
@@ -1321,7 +1001,7 @@ const elDrawerCSS = `:host {
 			flex-direction: column
 		}`;
 const elDrawerHTML = `<div id="drawer-backdrop"></div>
-	<nav id="navbar">
+	<div id="navbar">
 		<div id="navbar-container"><button aria-label="open drawer icon" class="radial" id="open_drawer"><svg
 					fill="var(--drawer-hightlight-color, var(--color-black, #000))" height=24
 					style="enable-background:new 0 0 459 459" viewBox="0 0 459 459" width=24 x=0px xml:space=preserve
@@ -1329,7 +1009,7 @@ const elDrawerHTML = `<div id="drawer-backdrop"></div>
 					<path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" /></svg></button><a
 				class="brand" href="/">
 				<slot name="navbar-brand">
-					<h1>Brand</h1>
+					<b>Brand</b>
 				</slot>
 			</a>
 			<div id="navbar-menu">
@@ -1337,8 +1017,8 @@ const elDrawerHTML = `<div id="drawer-backdrop"></div>
 			</div>
 			<slot name="mobil-menu"></slot>
 		</div>
-	</nav>
-	<nav id="drawer">
+	</div>
+	<aside id="drawer">
 		<div class="drawer-header">
 		
 		<button aria-label="close drawer icon" class="radial" id="close_drawer"><svg fill="var(--drawer-hightlight-color, var(--color-black, #000))"
@@ -1350,13 +1030,15 @@ const elDrawerHTML = `<div id="drawer-backdrop"></div>
 		</button>
 		<a class="brand" href="/">
 				<slot name="drawer-brand">
-					<h1>Brand</h1>
+					<b>Brand</b>
 				</slot>
 			</a></div>
+
 		<div id="drawer-menu">
 			<slot name="drawer-menu"></slot>
 		</div>
-	</nav>
+		
+	</aside>
 	<slot></slot>`;
 const elDrawerTemplate = document.createElement("template");
 elDrawerTemplate.innerHTML = `<style>`.concat(elDrawerCSS, `</style>`).concat(elDrawerHTML);
