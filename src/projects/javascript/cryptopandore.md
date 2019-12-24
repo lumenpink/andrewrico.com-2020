@@ -34,7 +34,7 @@ title="{{PageCaseStudyImageMeta}}" />
 <div id="case-study">
 
 ## Case Study 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+In this section i talk about the story od the business or person
 
 </div>
 
@@ -48,10 +48,7 @@ title="{{PageSituationImageMeta}}" />
 <div id="situation">
 
 ## The Situation 
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit
-Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet
+In this section i talk about the situation and problems i faced during the initial part
 
 </div>
 
@@ -65,7 +62,8 @@ title="{{PageApproachImage}}" />
 <div id="approach">
 
 ## The Approach
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit
+In this section i talk about the how i approached posible issues or problems about the project
+also talk about the kind of fonts and images or assets that i use.
 
 </div>
 
@@ -80,7 +78,7 @@ title="{{PageConclutionImageMeta}}" />
 <div id="conclution">
 
 ## The Conclution
-### Lorem ipsum dolor sit amet, consectetur adipiscing elit
+In this section i talk about the finaal words of the projects.
 
 </div>
 
