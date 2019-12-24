@@ -701,7 +701,7 @@ const elDropdownCSS = `:host {
 	}`;
 const elDropdownHTML = `<div id="backdrop"></div>
 	<div class="dropdown">
-	<button class="chip" id="chip">
+	<button aria-label="dropdown button" class="chip" id="chip">
 <slot name="dropdown-icon">
 		<svg  fill="var(--color-black, #262626)" height="16" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 	 viewBox="0 0 60.123 60.123" style="enable-background:new 0 0 60.123 60.123;" xml:space="preserve">
