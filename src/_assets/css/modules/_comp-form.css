@@ -144,6 +144,13 @@ netliform
 	grid-column: 1 / -1;
 }
 
+.netliform h3 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 /*
 simple form
 ----------------------------------
