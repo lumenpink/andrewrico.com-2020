@@ -76,7 +76,8 @@
    justify-content: flex-start;
 }
 .action-content li p {
-   margin: 4px 0;
+   margin: 8px 0;
+   font-size: 14px;
    text-transform: none;
  }
 .action-content span {
