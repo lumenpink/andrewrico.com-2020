@@ -38,6 +38,11 @@ html {
   --color-gradient: linear-gradient(to left, var(--color-quaternary), var(--color-tertiary));
   --color-banner-shadow: radial-gradient(ellipse closest-side, #0f0e16aa, #0c0b10);
 }
+@media(max-width:500px) {
+  html {
+    position: absolute;
+  }
+}
 
 body {
   font-family: var(--font-family-content);

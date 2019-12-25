@@ -49,7 +49,7 @@
     letter-spacing: 0.2px;
     text-rendering: optimizeLegibility;
     word-spacing: 2px;
-    color: var(--color-text-light);
+    color: var(--color-text-gray);
     margin-bottom: 1.5rem;
     font-family: var(--font-family-content);
 }
