@@ -18,10 +18,11 @@
   <meta name=”twitter:site” content=”@USERNAME”>
   <meta name=”twitter:creator” content=”@USERNAME”>
   <title>{{ site.author.name }} | {{ title}}</title>
-  <meta name="description" content="{{ description }}">
-  <meta name="keywords" content="{{ keywords }}">
-  <link rel="apple-touch-icon" href="/andrewrico.png">
-  <link href={{ site.path.stylesheet }} rel="stylesheet">
-  <link href={{ site.path.fonts }} rel="stylesheet">
+  <meta name="description" content="{{ description }}" />
+  <meta name="keywords" content="{{ keywords }}" />
+  <meta name="theme-color" content={{ site.author.color }}/>
+  <link rel="apple-touch-icon" href={{ site.author.avatar }}>
+  <link rel="stylesheet"href={{ site.path.stylesheet }}>
+  <link rel="stylesheet"href={{ site.path.fonts }}>
 </head>
 <el-loading background="var(--color-gradient)"></el-loading>

@@ -7,7 +7,8 @@
         "github": "https://github.com/Andrewrico",
         "linkedin": "https://www.linkedin.com/in/andrewrico-/",
         "title": ["JAM stack specialist"],
-        "subtitle": ["WEB DEVELOPER", "UI/UX ENGINEER"]
+        "subtitle": ["WEB DEVELOPER", "UI/UX ENGINEER"],
+        "color": "lime"
     },
     "path": {
         "stylesheet": "/_assets/css/stylesheets.css",
