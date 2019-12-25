@@ -2,7 +2,7 @@
 layout: "/layouts/layout-article.njk"
 ---
 <el-section>
-    <el-grid gap="6" template-columns="minmax(350px, 768px) minmax(350px, 1fr)"> 
+    <el-grid> 
         <el-column>
             <article id="article">
                 {% block content  %}
@@ -19,9 +19,7 @@ layout: "/layouts/layout-article.njk"
                         <p> <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time> </p>  
                     </span> 
                 </figure>
-                <div id="ads">
-                
-                </div>
+                <div id="ads"></div>
             </aside>
         </el-column>
     </el-grid>

@@ -825,15 +825,13 @@ const elDrawerCSS = `:host {
 		}
 	
 		.radial {
-			margin: .4em;
-			padding: 1em;
+			max-width:100%;
+			height:auto;
 			cursor: pointer;
 			background: #e1e1e1;
 			text-decoration: none;
 			color: #666;
 			-webkit-tap-highlight-color: #0000;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
 			display: inline-block;
 			vertical-align: middle;
 			-webkit-transform: perspective(1px) translateZ(0);
