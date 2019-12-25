@@ -35,17 +35,19 @@ pagination:
             <ul>
                 {% for project in projects %}
                     <li>
-                        <article class="card-minimal">
-                            <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta }}" title="{{ project.data.ProjectImageMeta }}">
-                            <h3>{{ project.data.title }}</h3>
-                            <h4 class="minimal-tags">
-                                <span>{{ project.data.ProjectStringCathegory }}</span>
-                                <span>{{ project.data.ProjectStringType }}</span>
-                            </h4>
-                            <h4 class="minimal-subtitle"> 
-                                <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
-                                {{ project.data.ProjectStringMade }}
-                            </h4>
+                        <figure class="card-minimal">
+                            <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta}}">
+                            <figcaption>
+                                <h3>{{ project.data.title }}</h3>
+                                <h4 class="minimal-tags">
+                                    <span>{{ project.data.ProjectStringCathegory }}</span>
+                                    <span>{{ project.data.ProjectStringType }}</span>
+                                </h4>
+                                <h4 class="minimal-subtitle">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                                    {{ project.data.ProjectStringMade }}
+                                </h4>
+                            </figcaption>
                             <ul>
                                 <li>
                                     <a href="{{ project.data.ProjectLinkToDemo }}" aria-label="live site project link">
@@ -63,7 +65,7 @@ pagination:
                                     </a> CASE STUDY
                                 </li>
                             </ul>
-                        </article>
+                        </figure>
                     </li>
                 {% endfor %}
             </ul>
@@ -73,17 +75,19 @@ pagination:
             <ul>
                 {%- for js in collections.js -%}
                     <li>
-                        <article class="card-minimal">
-                            <img src="{{ js.data.ProjectPathToImage }}" alt="{{ js.data.ProjectImageMeta }}" title="{{ js.data.ProjectImageMeta }}">
-                            <h3>{{ js.data.title }}</h3>
-                            <h4 class="minimal-tags">
-                                <span>{{ js.data.ProjectStringCathegory }}</span>
-                                <span>{{ js.data.ProjectStringType }}</span>
-                            </h4>
-                            <h4 class="minimal-subtitle"> 
-                                <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
-                                {{ js.data.ProjectStringMade }}
-                            </h4>
+                        <figure class="card-minimal">
+                            <img src="{{ js.data.ProjectPathToImage }}" alt="{{ js.data.ProjectImageMeta}}">
+                            <figcaption>
+                                <h3>{{ js.data.title }}</h3>
+                                <h4 class="minimal-tags">
+                                    <span>{{ js.data.ProjectStringCathegory }}</span>
+                                    <span>{{ js.data.ProjectStringType }}</span>
+                                </h4>
+                                <h4 class="minimal-subtitle">
+                                    <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                                    {{ js.data.ProjectStringMade }}
+                                </h4>
+                            </figcaption>
                             <ul>
                                 <li>
                                     <a href="{{ js.data.ProjectLinkToDemo }}" aria-label="live site project link">
@@ -101,20 +105,21 @@ pagination:
                                     </a> CASE STUDY
                                 </li>
                             </ul>
-                        </article>
+                        </figure>
                     </li>
                 {% endfor %}
             </ul>
         </el-column>
-        
     </el-grid>
 </el-section>
 
 <el-section background="#fafafa">
     <el-grid max-width="100">
         <el-column grid="row">
-            <el-button class="el-button">
-                <a slot="button" extended="button" theme="quaternary" href="/contact">LET'S BUILD SOMETHING TOGETHER</a>
+            <el-button class="el-button button-large">
+                <a slot="button" extended="button" size="large" theme="quaternary" href="/contact">
+                    LET'S BUILD SOMETHING TOGETHER
+                </a>
             </el-button>
         </el-column>
     </el-grid>

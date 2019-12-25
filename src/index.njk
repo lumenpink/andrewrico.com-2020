@@ -10,7 +10,7 @@ layout: "layouts/layout-homepage.njk"
         </el-column>
         {%- for skill in collections.skills -%}
         <el-column>
-            <article class="card-progress {{skill.data.skills}}">
+            <figure class="card-progress {{skill.data.skills}}">
                 <label for="skill">
                     <h4> {{ skill.data.title }} </h4>
                         <svg>
@@ -18,13 +18,15 @@ layout: "layouts/layout-homepage.njk"
                         </svg>
                 </label>
                 <progress name="skill" class="progress" value="{{skill.data.percentage}}" max="100"></progress>
-                {% excerpt skill %}
-            </article>
+                <figcaption>
+                    {% excerpt skill %}
+                </figcaption>
+            </figure>
         </el-column>
         {%- endfor -%}
         {%- for otherskill in collections.otherskills -%}
         <el-column>
-            <article class="card-progress {{otherskill.data.otherskillsClass}}">
+            <figure class="card-progress {{otherskill.data.otherskillsClass}}">
                 <label for="otherskill">
                     <h4> {{ otherskill.data.title }} </h4>
                         <svg>
@@ -32,8 +34,10 @@ layout: "layouts/layout-homepage.njk"
                         </svg>
                 </label>
                 <progress name="otherskill" class="progress" value="{{otherskill.data.percentage}}" max="100"></progress>
-                {% excerpt otherskill %}
-            </article>
+                <figcaption>
+                    {% excerpt otherskill %}
+                </figcaption>
+            </figure>
         </el-column>
         {%- endfor -%}
     </el-grid>
@@ -46,17 +50,19 @@ layout: "layouts/layout-homepage.njk"
         </el-column>
         {%- for project in collections.projects -%}
         <el-column>
-            <article class="card-minimal">
+            <figure class="card-minimal">
                 <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta}}">
-                <h3>{{ project.data.title }}</h3>
-                <h4 class="minimal-tags">
-                    <span>{{ project.data.ProjectStringCathegory }}</span>
-                    <span>{{ project.data.ProjectStringType }}</span>
-                </h4>
-                <h4 class="minimal-subtitle">
-                    <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
-                    {{ project.data.ProjectStringMade }}
-                </h4>
+                <figcaption>
+                    <h3>{{ project.data.title }}</h3>
+                    <h4 class="minimal-tags">
+                        <span>{{ project.data.ProjectStringCathegory }}</span>
+                        <span>{{ project.data.ProjectStringType }}</span>
+                    </h4>
+                    <h4 class="minimal-subtitle">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
+                        {{ project.data.ProjectStringMade }}
+                    </h4>
+                </figcaption>
                 <ul>
                     <li>
                         <a href="{{ project.data.ProjectLinkToDemo }}" aria-label="live site project link">
@@ -74,7 +80,7 @@ layout: "layouts/layout-homepage.njk"
                         </a> CASE STUDY
                     </li>
                 </ul>
-            </article>
+            </figure>
         </el-column>
         {% endfor %}
     </el-grid>
@@ -175,7 +181,7 @@ layout: "layouts/layout-homepage.njk"
         </el-column>
         <el-column>
             <iframe 
-            title="andrew rico location"
+            title="Andrew's Rico current location"
             width="100%" 
             height="100%" 
             frameborder="0" 

@@ -578,8 +578,9 @@ customElements.define('el-button',
 			return _thisElButton;
 		}
 		connectedCallback() {
+			const _elButtons = document.querySelectorAll('el-button');
 			// inject ripple effect
-			[].map.call(document.querySelectorAll('el-button'), elButton => {
+			[].map.call(_elButtons, elButton => {
 				elButton.addEventListener('click', e => {
 					e = e.touches ? e.touches[0] : e;
 					const r = elButton.getBoundingClientRect(),
