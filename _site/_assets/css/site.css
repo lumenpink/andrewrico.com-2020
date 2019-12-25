@@ -147,7 +147,26 @@ figure {
 
 
 
+#usa-map{
+  align-self: center;
+  display: flex;
+}
+#usa-map > path:hover, circle:hover {
+  stroke: var(--color-primary) !important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: #002868 !important;
+  cursor: pointer;
+}
 
+
+#FL {
+  stroke: var(--color-primary) !important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: #002868 !important;
+  cursor: pointer;
+}
 
 
 
