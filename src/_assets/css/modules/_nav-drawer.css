@@ -62,7 +62,7 @@ el-drawer .drawer-menu ul a:hover {
 }
 
 el-drawer .drawer-menu ul {
-	padding: 1rem 0;
+	padding: 0.25rem 0;
 }
 
 el-drawer .drawer-menu ul svg {
