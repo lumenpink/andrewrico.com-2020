@@ -14,11 +14,12 @@
 }
 
 /*author*/
-.card-bio .card-bio-author {
+.bio-author {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
   justify-content: space-between;
 }
 
@@ -28,12 +29,12 @@
     min-width: 500px;
   }
 
-  .card-bio .card-bio-author {
+  .bio-author {
     flex-direction: row;
   }
 }
 
-.card-bio-author .author-avatar {
+.bio-avatar {
   max-width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -42,92 +43,96 @@
   background: var(--color-light);
 }
 
-.card-bio-author h1 {
+.bio-author h1 {
   font-size: 1.4rem;
   margin: 0;
   font-family: var(--font-family-title);
 }
-
-.card-bio-author h2 {
-  font-family: var(--font-family-content);
+.bio-author h2 {
   font-size: 1em;
+  font-family: var(--font-family-content);
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.card-bio-author p {
+.bio-author h4 {
+  font-size: 12.25px;
+  margin: 0;
+}
+
+.bio-author p {
   font-size: 0.7em;
   margin: 0;
   padding: 0;
 }
 
 @media(min-width:1024px) {
-  .card-bio-author h2 {
+  .bio-author h2 {
     text-align: right;
   }
 }
 
-.card-bio-author .author-info {
+.bio-info {
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-
-
-.card-bio-author .author-titles {
+.bio-titles {
   padding: 1rem 0;
 }
 /*termianl*/
-.card-bio-terminal {
+.bio-terminal {
   margin: 1rem auto;
   background: var(--color-black);
   width: 100%;
   filter: drop-shadow(0 0 2px var(--color-primary));
 }
 
-.card-bio-terminal .typewrite {
-  font-size: 0.7rem;
+.bio-terminal .typewrite {
+  font-size: 12.2px;
+  font-weight: 400;
+  font-family: monospace;
   color: var(--color-primary);
   margin: 0;
   padding: 0.25rem;
 }
 
-.card-bio-terminal .typewrite>.caret {
+.bio-terminal .typewrite>.caret {
   border-right: 0.08em solid var(--color-primary)
 }
 
 /*navgigation*/
-.card-bio-navgigation ul {
+.bio-navgigation ul {
   display: inline-flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
 }
 
-.card-bio-navgigation ul li {
+.bio-navgigation ul li {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-
-
-.card-bio-navgigation p {
-  font-size: 0.9rem;
+  font-size: 12.25px;
   letter-spacing: 0.5px;
   font-weight: 100;
 }
-
-.card-bio-navgigation svg {
+@media(min-width:1024px) {
+  .bio-navgigation ul li {
+    font-size: 1rem;
+  }
+}
+.bio-navgigation svg {
   width: 24px;
   height: 24px;
   margin: 8px 0;
   transition: transform ease 0.6s;
 }
 
-.card-bio-navgigation a:hover svg {
+.bio-navgigation a:hover svg {
   transform: translateY(-0.25rem);
   fill: var(--color-primary);
   transition: transform ease 0.6s;

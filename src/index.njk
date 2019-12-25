@@ -4,7 +4,7 @@ description: "This is the Homepage"
 layout: "layouts/layout-homepage.njk"
 ---
 <el-section id="skills">
-    <el-grid auto-fit="columns" columns="3">
+    <el-grid columns="3">
         <el-column grid="row">
             <h2>Skills</h2>
         </el-column>
@@ -40,7 +40,7 @@ layout: "layouts/layout-homepage.njk"
 </el-section>
 
 <el-section id="projects">
-    <el-grid auto-fit="columns" columns="3">
+    <el-grid columns="3">
         <el-column grid="row">
             <h2>Recent Projects</h2>
         </el-column>
@@ -49,11 +49,11 @@ layout: "layouts/layout-homepage.njk"
             <article class="card-minimal">
                 <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta}}">
                 <h3>{{ project.data.title }}</h3>
-                <h4 class="card-tags">
+                <h4 class="minimal-tags">
                     <span>{{ project.data.ProjectStringCathegory }}</span>
                     <span>{{ project.data.ProjectStringType }}</span>
                 </h4>
-                <h4 class="card-subtitle">
+                <h4 class="minimal-subtitle">
                     <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
                     {{ project.data.ProjectStringMade }}
                 </h4>
@@ -81,62 +81,63 @@ layout: "layouts/layout-homepage.njk"
 </el-section>
 
 <el-section id="challenge">
-    <el-grid auto-fit="columns" columns="2">
+    <el-grid columns="2">
         <el-column grid="row">
             <h2>Code Challenges</h2>
         </el-column>
         {%- for challenges in collections.challenge -%}
         <el-column>
-            <article class="card-action card-ckecked">
-                <div class="card-header">
+            <figure class="card-action card-ckecked">
+                <p class="action-number">1</p>
+                <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-secondary)">
                         <use href="_assets/media/svg/sprites.svg#success"></use>
                     </svg>
                 </div>
-                <div class="card-content">
-                    <h3>{{ challenges.data.title }}</h3>
-                </div>
-                <div class="card-footer">
+                <figcaption class="action-content">
+                    <h4>{{ challenges.data.title }}</h4>
+                </figcaption>
+                <div class="action-footer">
                     <p>
                         <span>Started:</span>{{ challenges.data.started }}<br>
                         <span>Ended:</span>{{ challenges.data.ended }}
                     </p>
                     <el-button class="el-button">
-                        <a slot="button" extended="button" theme="primary"
-                            href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                        <a slot="button" extended="button" theme="primary" href="{{ challenges.data.url }}" rel="noopener"> See Results</a>
                     </el-button>
                 </div>
-            </article>
+            </figure>
         </el-column>
         {%- endfor -%}
         {%- for challenges in collections.open -%}
         <el-column>
-            <article class="card-action">
-                <div class="card-header">
+            <figure class="card-action">
+                <p class="action-number">2</p>
+                <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-light)">
                         <use href="_assets/media/svg/sprites.svg#alert"></use>
                     </svg>
                 </div>
-                <div class="card-content">
+                <figcaption class="action-content">
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
-                        <li>
-                            <span> Recruiter </span>looking to hider a developer.
+                        <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
+                            <span> Recruiter </span ><p>looking to hider a developer.</p>
                         </li>
-                        <li>
-                            <span> Employer</span> who wants to test my skills.
+                        <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
+                            <span> Employer</span>  <p>who wants to test my skills.</p>
                         </li>
-                        <li>
-                            <span> Propest</span> who wants to bild a project.
+                        <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
+                            <span> Propest</span> <p>who wants to bild a project.</p>
                         </li>
                     </ol>
-                </div>
-                <div class="card-footer">
+                </figcaption>
+                <div class="action-footer">
                     <el-button class="el-button">
                         <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
-            </article> 
+            </figure> 
         </el-column>
         {%- endfor -%}
     </el-grid>
@@ -144,7 +145,7 @@ layout: "layouts/layout-homepage.njk"
 </el-section>
 
 <el-section id="articles" >
-    <el-grid auto-fit="columns" columns="2">
+    <el-grid columns="2">
         <el-column grid="row">
             <h2>Recent Articles</h2>
         </el-column>
@@ -168,13 +169,10 @@ layout: "layouts/layout-homepage.njk"
 </el-section>
 
 <el-section id="contact">
-
-    <el-grid auto-fit="columns" columns="2">
-
+    <el-grid columns="2">
         <el-column grid="row">
             <h2>Contact Me</h2>
         </el-column>
-
         <el-column>
             <iframe 
             title="andrew rico location"
@@ -185,13 +183,10 @@ layout: "layouts/layout-homepage.njk"
             allowfullscreen=""  
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
         </el-column>
-
         <el-column>
             {% include "forms/form-sendMessage.njk" %}
         </el-column>
-
     </el-grid>
-    
 </el-section>
 
 

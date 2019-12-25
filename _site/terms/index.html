@@ -20,8 +20,8 @@
   <title>Andrew Rico | Term Of Use</title>
   <meta name="description" content="This is the Term Of Use page">
   <meta name="keywords" content="">
-  <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
+  <link href=/_assets/css/stylesheets.css rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Didact+Gothic&amp;display=swap rel="stylesheet">
 </head>
 <el-loading background="var(--color-gradient)"></el-loading>
 
@@ -156,7 +156,8 @@ In addition, you are responsible for keeping your passwords, login and account i
                 </el-grid>
             </el-section>
         </main>
-        <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
+         <nav id="navigation-panel" aria-labelledby="navigation-panel-accesible-label">
+    <h6 id="navigation-panel-accesible-label">navigation for card-bio component</h6>
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
@@ -200,12 +201,11 @@ In addition, you are responsible for keeping your passwords, login and account i
         </li>
     </ul>
 </nav>
-
 <footer>
-    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+    <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>Andrew Rico</h1>
+                <h2>Andrew Rico</h2>
             </el-column>
             <el-column>
                 <h3>About</h3>
@@ -224,50 +224,55 @@ In addition, you are responsible for keeping your passwords, login and account i
                 <h3>Contact</h3>
                 <ul>
                     <li><a href="/contact">Get In Touch</a></li>
-                    <li><div class="author-references">
-    <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
-        <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
-    </a>
-    <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
-    </a>
-    <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
-    </a>
-    <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to codepen andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
-    </a>
-    <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
-    </a>
-</div></li>
                 </ul>
+                <nav>
+    <ul class="navigation-social-icons">
+        <li>
+            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
+                <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+            </a>
+        <li>
+            <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+            </a>
+        </li>
+        <li>
+            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to codepen andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+            </a>
+        </li>
+        <li>
+            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+            </a>
+        </li>
+    </ul>
+</nav>
             </el-column>
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
         <el-grid columns="3">
-
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
                 <span>Hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a></span>
                 <span>Built with <a href="https://www.thisel.com/" target="_blank" rel="noopener">thiselJS</a></span>
             </el-column>
-
             <el-column>
-                <a href="/terms"> Disclaimer </a>
-                <a href="/privacy"> Privacy </a>
-                <a href="/sitemap"> Site Map </a>
+                <span><a href="/terms"> Disclaimer </a></span>
+                <span><a href="/privacy"> Privacy </a></span>
+                <span><a href="/sitemap"> Site Map </a></span>
             </el-column>
-
             <el-column>
                 <el-copyright>
-                    <span id="copyright" slot="copyright">
-                         andrewrico.com All rights reserved
-                    </span>
+                    <span id="copyright" slot="copyright"> andrewrico.com All rights reserved </span>
                 </el-copyright>
             </el-column>
-
         </el-grid>
     </el-section>
 </footer>

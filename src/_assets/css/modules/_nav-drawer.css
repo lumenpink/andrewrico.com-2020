@@ -1,5 +1,4 @@
 el-drawer {
-	/* variables are control by el-drawer-jscss file in the js folder, if rather not using that file then use this variables */
 	--drawer-padding: initial;
 	--drawer-brand-font-size: initial;
 	--drawer-brand-font-family: initial;
@@ -96,6 +95,10 @@ el-drawer span {
 	margin-left: 3.1rem;
 	padding: 1rem;
 	width: 100%;
+}
+
+el-drawer h4 {
+	margin:0;
 }
 
 el-drawer hr {

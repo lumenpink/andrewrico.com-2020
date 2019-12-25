@@ -347,7 +347,7 @@ const elButtonCSS = `:host {
     width: 100%;
     max-width: 300px;
     height: 50px;
-    font-family: var(--font-family-writing);
+    font-family: var(--font-family-content);
     --color-active: #396afc;
     --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);
@@ -875,10 +875,10 @@ const elDrawerCSS = `:host {
 
 		::slotted(.brand) ,
 		:host .brand {
-			margin:auto;
 			width: 128px;
 			height: 56px;
 			font-size:24px;
+			margin:0 16px;
 			font-family: var(--drawer-brand-font-family);
 			display: -webkit-box;
 			display: -ms-flexbox;
@@ -894,13 +894,12 @@ const elDrawerCSS = `:host {
 			transition: ease-in-out opacity .3s;
 			white-space: nowrap;
 			text-decoration: none;
-			text-indent: 24px;
 			color: var(--drawer-brand-color, var(--color-black, #000))
 		}
 		@media(min-width:768px) {
 			::slotted(.brand) ,
 			:host .brand {
-				margin:0;
+				margin:0 16px;
 			}
 		}
 		@media(min-width:1268px) {

@@ -357,7 +357,7 @@ const elButtonCSS = `:host {
     width: 100%;
     max-width: 300px;
     height: 50px;
-    font-family: var(--font-family-writing);
+    font-family: var(--font-family-content);
     --color-active: #396afc;
     --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);

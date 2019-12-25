@@ -5,7 +5,7 @@ form
 
 form {
 	display: block;
-	font-family: var(--font-family-writing);
+	font-family: var(--font-family-content);
 	width: 100%;
 }
 
@@ -33,7 +33,7 @@ input:focus {
 
 input::placeholder {
 	color: var(--color-dark);
-	font-family: var(--font-family-writing);
+	font-family: var(--font-family-content);
 	font-size: 0.8rem;
 	font-style: italic;
 }

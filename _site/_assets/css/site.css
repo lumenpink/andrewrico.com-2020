@@ -8,12 +8,11 @@ html {
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
-  font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Source Code Pro", "Didact Gothic", "Coda Caption", "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, "Didact Gothic", "Coda Caption", "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-family-title: "Dancing Script", cursive;
   --font-family-headline: "Coda Caption", sans-serif;
-  --font-family-content: "Source Code Pro", monospace;
-  --font-family-writing: "Didact Gothic", sans-serif;
+  --font-family-content: "Didact Gothic", sans-serif;
   --color-primary: #04ff00;
   --color-secondary: #125400;
   --color-tertiary: #172ee3;
@@ -91,6 +90,7 @@ iframe {
   max-height: 200px;
   box-shadow: var(--color-shadow);
 }
+
 @media(min-width: 768px) {
   iframe {
     max-height: 100%;
@@ -103,10 +103,12 @@ figure {
   margin: 0;
   display: block;
 }
+
 canvas {
-  border:1px solid #d3d3d3;
+  border: 1px solid #d3d3d3;
   background-color: #f1f1f1;
 }
+
 .el-button {
   box-shadow: rgba(46, 41, 51, 0.167) 0px 1px 2px, rgba(71, 63, 79, 0.187) 0px 1px 2px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, padding 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -121,11 +123,18 @@ canvas {
 /*for simple-page fonts*/
 .simple-page h1,
 .simple-page {
-  font-family: var(--font-family-writing);
+  font-family: var(--font-family-content);
 }
 
 /*make nagigation label inbisible*/
-[id*="-navigation-accesible-label"] {
+[id*="-accesible-label"] {
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+[id*="-accesible-label"] h6 {
   opacity: 0;
   margin: 0;
   padding: 0;
@@ -135,10 +144,10 @@ canvas {
 /*for ads on the artcle page*/
 #ads {
   margin: 64px 0;
-box-shadow: var(--color-shadow);
-min-height: 100vh;
-height: 100%;
-width: auto;
+  box-shadow: var(--color-shadow);
+  min-height: 100vh;
+  height: 100%;
+  width: auto;
 }
 
 

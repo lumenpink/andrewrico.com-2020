@@ -20,8 +20,8 @@
   <title>Andrew Rico | Home</title>
   <meta name="description" content="This is the Homepage">
   <meta name="keywords" content="">
-  <link href=/_assets/css/stylesheet.css rel="stylesheet">
-  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Code+Pro|Didact+Gothic&amp;display=swap rel="stylesheet">
+  <link href=/_assets/css/stylesheets.css rel="stylesheet">
+  <link href=https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Didact+Gothic&amp;display=swap rel="stylesheet">
 </head>
 <el-loading background="var(--color-gradient)"></el-loading>
 
@@ -168,26 +168,24 @@
         color="var(--color-white)"
         >
         <figure class="card-bio">
-
-            <div class="card-bio-author">
-                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
-                <div class="author-info">
+            <div class="bio-author">
+                <img class="bio-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
+                <div class="bio-info">
                     <h1> Hello, I'am <b> Andrew Rico </b>  </h1>
-                    <h4 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</h4>
-                    <div class="author-titles">
+                    <h4 class="bio-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> USA FL, Fort Lauderdale</h4>
+                    <div class="bio-titles">
                         
-                        <h2 class="author-subtitle"> WEB DEVELOPER </h2>
+                            <h2> WEB DEVELOPER </h2>
                         
-                        <h2 class="author-subtitle"> UI/UX ENGINEER </h2>
+                            <h2> UI/UX ENGINEER </h2>
                         
                         
-                        <h2 class="author-title"> JAM stack specialist </h2> 
+                            <h2> JAM stack specialist </h2> 
                         
                     </div> 
                 </div>
             </div>
-
-            <div class="card-bio-terminal"> 
+            <div class="bio-terminal"> 
                 <p class="typewrite" data-period="2500" data-type='[ 
                         " I like to build things – I love knowledge ", 
                         " and I strongly believe technology can ",
@@ -209,41 +207,28 @@
                     ]'>
                 </p>
             </div>
-
-            <nav class="card-bio-navgigation" aria-labelledby="card-bio-navigation-accesible-label">
+            <nav class="bio-navgigation" aria-labelledby="card-bio-navigation-accesible-label">
                 <h6 id="card-bio-navigation-accesible-label">navigation for card-bio component<h6>
                 <ul>
                     <li> 
-                        <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"> <svg fill="white">
-                                <use href="_assets/media/svg/sprites.svg#linkedin"></use>
-                            </svg></a>
-                            LinkedIn 
+                        <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a> 
+                        LinkedIn 
                     </li> 
                     <li>
-                        <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile"> <svg fill="white">
-                                <use href="_assets/media/svg/sprites.svg#github"></use>
-                            </svg></a>
-                            Github 
+                        <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg></a>
+                        Github 
                     </li> 
                     <li>
-                        <a href="/portfolio" aria-label="link to andrew's rico portfolio page"><svg fill="white">
-                                <use href="_assets/media/svg/sprites.svg#icon-portfolio"></use>
-                            </svg></a>
-                            Porfolio 
+                        <a href="/portfolio" aria-label="link to andrew's rico portfolio page"><svg fill="white"><use href="_assets/media/svg/sprites.svg#icon-portfolio"></use></svg></a>
+                        Porfolio 
                     </li> 
                     <li>
-                        <a href="/blog" aria-label="link to andrew's rico blog page">
-                            <svg fill="white">
-                                <use href="_assets/media/svg/sprites.svg#icon-blog"></use>
-                            </svg></a>
-                            Blog 
+                        <a href="/blog" aria-label="link to andrew's rico blog page"><svg fill="white"><use href="_assets/media/svg/sprites.svg#icon-blog"></use></svg></a>
+                        Blog 
                     </li> 
                     <li>
-                        <a href="/contact"  aria-label="link to andrew's rico contact page">
-                            <svg fill="white">
-                                <use href="_assets/media/svg/sprites.svg#icon-contact"></use>
-                            </svg></a>
-                            Contact 
+                        <a href="/contact" aria-label="link to andrew's rico contact page"><svg fill="white"><use href="_assets/media/svg/sprites.svg#icon-contact"></use></svg></a>
+                        Contact 
                     </li> 
                 </ul>
             </nav>
@@ -328,7 +313,7 @@
     <main id="homepage">
         
             <el-section id="skills">
-    <el-grid auto-fit="columns" columns="3">
+    <el-grid columns="3">
         <el-column grid="row">
             <h2>Skills</h2>
         </el-column><el-column>
@@ -450,18 +435,18 @@ Wordpress<br>
 </el-section>
 
 <el-section id="projects">
-    <el-grid auto-fit="columns" columns="3">
+    <el-grid columns="3">
         <el-column grid="row">
             <h2>Recent Projects</h2>
         </el-column><el-column>
             <article class="card-minimal">
                 <img src="/_assets/media/images/placeholder.png" alt="Cryptopandore Project Image">
                 <h3>Cryptopandore</h3>
-                <h4 class="card-tags">
+                <h4 class="minimal-tags">
                     <span>Cryptocurrency</span>
                     <span>Info</span>
                 </h4>
-                <h4 class="card-subtitle">
+                <h4 class="minimal-subtitle">
                     <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
                     Made with GASTBY/ReactJS
                 </h4>
@@ -489,57 +474,58 @@ Wordpress<br>
 </el-section>
 
 <el-section id="challenge">
-    <el-grid auto-fit="columns" columns="2">
+    <el-grid columns="2">
         <el-column grid="row">
             <h2>Code Challenges</h2>
         </el-column><el-column>
-            <article class="card-action card-ckecked">
-                <div class="card-header">
+            <figure class="card-action card-ckecked">
+                <p class="action-number">1</p>
+                <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-secondary)">
                         <use href="_assets/media/svg/sprites.svg#success"></use>
                     </svg>
                 </div>
-                <div class="card-content">
-                    <h3>21 days code challenge</h3>
-                </div>
-                <div class="card-footer">
+                <figcaption class="action-content">
+                    <h4>21 days code challenge</h4>
+                </figcaption>
+                <div class="action-footer">
                     <p>
                         <span>Started:</span>Dec/14/2019<br>
                         <span>Ended:</span>Jan/01/2020
                     </p>
                     <el-button class="el-button">
-                        <a slot="button" extended="button" theme="primary"
-                            href="https://www.hackerrank.com/andrewric86?hr_r=1"> See Results</a>
+                        <a slot="button" extended="button" theme="primary" href="https://www.hackerrank.com/andrewric86?hr_r=1" rel="noopener"> See Results</a>
                     </el-button>
                 </div>
-            </article>
+            </figure>
         </el-column><el-column>
-            <article class="card-action">
-                <div class="card-header">
+            <figure class="card-action">
+                <p class="action-number">2</p>
+                <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-light)">
                         <use href="_assets/media/svg/sprites.svg#alert"></use>
                     </svg>
                 </div>
-                <div class="card-content">
+                <figcaption class="action-content">
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
-                        <li>
-                            <span> Recruiter </span>looking to hider a developer.
+                        <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
+                            <span> Recruiter </span ><p>looking to hider a developer.</p>
                         </li>
-                        <li>
-                            <span> Employer</span> who wants to test my skills.
+                        <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
+                            <span> Employer</span>  <p>who wants to test my skills.</p>
                         </li>
-                        <li>
-                            <span> Propest</span> who wants to bild a project.
+                        <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
+                            <span> Propest</span> <p>who wants to bild a project.</p>
                         </li>
                     </ol>
-                </div>
-                <div class="card-footer">
+                </figcaption>
+                <div class="action-footer">
                     <el-button class="el-button">
                         <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
-            </article> 
+            </figure> 
         </el-column></el-grid>
     <div id="submit-challenge" class="modal-popup">
     <div class="modal-content">
@@ -616,7 +602,7 @@ Wordpress<br>
 </el-section>
 
 <el-section id="articles" >
-    <el-grid auto-fit="columns" columns="2">
+    <el-grid columns="2">
         <el-column grid="row">
             <h2>Recent Articles</h2>
         </el-column>
@@ -638,13 +624,10 @@ Wordpress<br>
 </el-section>
 
 <el-section id="contact">
-
-    <el-grid auto-fit="columns" columns="2">
-
+    <el-grid columns="2">
         <el-column grid="row">
             <h2>Contact Me</h2>
         </el-column>
-
         <el-column>
             <iframe 
             title="andrew rico location"
@@ -655,7 +638,6 @@ Wordpress<br>
             allowfullscreen=""  
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d119613.34798108297!2d-80.2624127479914!3d26.09798276038886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1574782225997!5m2!1sen!2sus"></iframe>
         </el-column>
-
         <el-column>
             <div class="netliform simple-form sendMesseage-form">
     <p id="error-message"></p>
@@ -706,16 +688,15 @@ Wordpress<br>
     </form>
 </div>
         </el-column>
-
     </el-grid>
-    
 </el-section>
 
 
 
         
     </main>
-    <nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
+     <nav id="navigation-panel" aria-labelledby="navigation-panel-accesible-label">
+    <h6 id="navigation-panel-accesible-label">navigation for card-bio component</h6>
     <ul>
         <li>
             <a href="/" aria-label="link to andrew's rico homepage">
@@ -759,12 +740,11 @@ Wordpress<br>
         </li>
     </ul>
 </nav>
-
 <footer>
-    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+    <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>Andrew Rico</h1>
+                <h2>Andrew Rico</h2>
             </el-column>
             <el-column>
                 <h3>About</h3>
@@ -783,50 +763,55 @@ Wordpress<br>
                 <h3>Contact</h3>
                 <ul>
                     <li><a href="/contact">Get In Touch</a></li>
-                    <li><div class="author-references">
-    <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
-        <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
-    </a>
-    <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
-    </a>
-    <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
-    </a>
-    <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to codepen andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
-    </a>
-    <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
-        <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
-    </a>
-</div></li>
                 </ul>
+                <nav>
+    <ul class="navigation-social-icons">
+        <li>
+            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
+                <svg><use href="/_assets/media/svg/sprites.svg#mail"></use></svg>  
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#linkedin"></use></svg> 
+            </a>
+        <li>
+            <a href="https://github.com/Andrewrico" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#github"></use></svg> 
+            </a>
+        </li>
+        <li>
+            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to codepen andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
+            </a>
+        </li>
+        <li>
+            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+            </a>
+        </li>
+    </ul>
+</nav>
             </el-column>
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
         <el-grid columns="3">
-
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
                 <span>Hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a></span>
                 <span>Built with <a href="https://www.thisel.com/" target="_blank" rel="noopener">thiselJS</a></span>
             </el-column>
-
             <el-column>
-                <a href="/terms"> Disclaimer </a>
-                <a href="/privacy"> Privacy </a>
-                <a href="/sitemap"> Site Map </a>
+                <span><a href="/terms"> Disclaimer </a></span>
+                <span><a href="/privacy"> Privacy </a></span>
+                <span><a href="/sitemap"> Site Map </a></span>
             </el-column>
-
             <el-column>
                 <el-copyright>
-                    <span id="copyright" slot="copyright">
-                         andrewrico.com All rights reserved
-                    </span>
+                    <span id="copyright" slot="copyright"> andrewrico.com All rights reserved </span>
                 </el-copyright>
             </el-column>
-
         </el-grid>
     </el-section>
 </footer>

@@ -1,9 +1,9 @@
-#footer h1 {
+#footer h2 {
 	font-size: 1.6rem;
 }
 
 @media(min-width: 1268px) {
-	#footer h1 {
+	#footer h2 {
 		font-size: 3.6rem;
 	}
 }
@@ -113,5 +113,5 @@
 	justify-content: center;
 }
 #footer-bottom el-column:nth-child(1) {
-	font-size: 0.7rem;
+	font-size: 0.9rem;
 }

@@ -1,53 +1,9 @@
-<nav id="navigation-panel" aria-label="navigation for sidebar panel component, containts the paths to otehrs pages of the site">
-    <ul>
-        <li>
-            <a href="/" aria-label="link to andrew's rico homepage">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
-                </svg>
-                <span class="tooltip"><span>HOMEPAGE</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
-                </svg>
-                <span class="tooltip"><span>PORTFOLIO</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/blog" aria-label="link to andrew's rico blog page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
-                </svg>
-                <span class="tooltip"><span>BLOG</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/contact" aria-label="link to andrew's rico contact page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
-                </svg>
-                <span class="tooltip"><span>CONTACT</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" aria-label="scroll up to top of the window button">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
-                </svg>
-                <span class="tooltip"><span>SCROLL UP</span></span>
-            </a>
-        </li>
-    </ul>
-</nav>
-
+{% include "navigations/navigation-panel.njk" %}
 <footer>
-    <el-section id="footer" padding-top="2" padding-bottom="6" background=var(--color-quaternary) color="white">
+    <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1>{{ site.author.name }}</h1>
+                <h2>{{ site.author.name }}</h2>
             </el-column>
             <el-column>
                 <h3>About</h3>
@@ -66,34 +22,28 @@
                 <h3>Contact</h3>
                 <ul>
                     <li><a href="/contact">Get In Touch</a></li>
-                    <li>{% include "components/author-social-icons.njk" %}</li>
                 </ul>
+                {% include "navigations/navigation-social.njk" %}
             </el-column>
         </el-grid>
     </el-section>
     <el-section id="footer-bottom" background="var(--color-gradient)" color="#fff" padding-bottom="3" padding-top="1">
         <el-grid columns="3">
-
             <el-column>
                 <span>Made with <a href="https://www.11ty.io/" target="_blank" rel="noopener">11ty</a></span>
                 <span>Hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a></span>
                 <span>Built with <a href="https://www.thisel.com/" target="_blank" rel="noopener">thiselJS</a></span>
             </el-column>
-
             <el-column>
-                <a href="/terms"> Disclaimer </a>
-                <a href="/privacy"> Privacy </a>
-                <a href="/sitemap"> Site Map </a>
+                <span><a href="/terms"> Disclaimer </a></span>
+                <span><a href="/privacy"> Privacy </a></span>
+                <span><a href="/sitemap"> Site Map </a></span>
             </el-column>
-
             <el-column>
                 <el-copyright>
-                    <span id="copyright" slot="copyright">
-                         andrewrico.com All rights reserved
-                    </span>
+                    <span id="copyright" slot="copyright"> andrewrico.com All rights reserved </span>
                 </el-copyright>
             </el-column>
-
         </el-grid>
     </el-section>
 </footer>
