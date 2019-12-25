@@ -1,14 +1,13 @@
 el-drawer {
-	--drawer-padding: initial;
-	--drawer-brand-font-size: initial;
-	--drawer-brand-font-family: initial;
-	--drawer-link-font-size: initial;
-	--drawer-hover-color: initial;
-	--drawer-hover-text: initial;
-	--drawer-background-color: initial;
-	--drawer-text-color: initial;
-	--drawer-hightlight-color: initial;
-	--drawer-navbar-text-color: initial;
+	--drawer-padding: 0.6rem;
+	--drawer-brand-font-size: 28px;
+	--drawer-brand-font-family: 'Dancing Script', cursive;
+	--drawer-link-font-size: 1rem;
+	--drawer-hover-color: rgba(232, 232, 232, 0.69);
+	--drawer-hover-text-color: #000;
+	--drawer-hover-navbar-text: var(--color-tertiary);
+	--drawer-background-color: #fff;
+	--drawer-text-color: #000000;
 }
 
 el-drawer ul {
@@ -20,7 +19,7 @@ el-drawer ul {
 
 el-drawer a {
 	font-size: var(--drawer-link-font-size, 1rem);
-	color: var(--drawer-text-color, var(--color-black, #000));
+	color: var(--drawer-text-color, var(--color-black, #000))!important;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -98,9 +97,19 @@ el-drawer span {
 }
 
 el-drawer h4 {
-	margin:0;
+	margin: 0;
 }
 
 el-drawer hr {
 	border: 1px solid #fafafa;
+}
+
+el-drawer .site-name {
+	font-kerning: normal;
+	font-stretch: extra-expanded;
+	font-weight: 600;
+	font-size-adjust: initial;
+	font-style: normal;
+	font-size: 1.6rem;
+	background: none;
 }

@@ -72,3 +72,7 @@ el-button:hover {
     padding-right: 32px;
   }
 }
+
+el-loading {
+  background:var(--color-gradient);
+}
