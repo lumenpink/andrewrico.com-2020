@@ -851,12 +851,12 @@ customElements.define('el-drawer',
 			
 			:host button[id*="-drawer"] {
 				z-index: 10;
-				cursor: pointer;
+				width: 60px;
+				height: 60px;
 				-ms-touch-action: auto;
 				touch-action: auto;
 				background: 0 0;
 				border-radius:50%;
-				padding:0.9rem;
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
@@ -873,16 +873,13 @@ customElements.define('el-drawer',
 				background: var(--drawer-hover-color, #000);
 			}
 			
-			:host .button-drawer {
-				margin-right:28px
-			}
+		
 			
 			::slotted(.brand) ,
 			:host .brand {
 				width: 128px;
 				height: 56px;
 				font-size:24px;
-				margin:0 16px;
 				font-family: var(--drawer-brand-font-family);
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -998,9 +995,14 @@ customElements.define('el-drawer',
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center;
+				justify-content:space-between;
 				margin-right: 48px;
 				margin-left: 48px;
 				padding: var(--drawer-padding, 0px) 0rem;
+			}
+
+			:host .drawer-header .brand {
+				margin:auto;
 			}
 			
 			:host #drawer-menu {
