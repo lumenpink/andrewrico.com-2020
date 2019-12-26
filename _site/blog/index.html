@@ -92,6 +92,24 @@
     </ul>
 </nav>
 
+    <nav slot="navbar-menu"> 
+        <ul class="menu-navbar">
+            <li>
+                <el-button>
+                    <a slot="button" extended="button"  href="/contact"> Send me a message </a>
+                </el-button>
+            </li>
+        </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="/contact"> Send me a message </a>
+                </li>
+            </ul>
+        </nav>
+    </el-dropdown>
 </el-drawer>
         <header>
     <el-section class="base-banner" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)">

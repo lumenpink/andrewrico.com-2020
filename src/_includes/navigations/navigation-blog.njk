@@ -1,0 +1,21 @@
+<el-drawer site-title="{{ site.author.name}}">
+    {% include "navigations/navigation-drawer.njk" %}
+    <nav slot="navbar-menu"> 
+        <ul class="menu-navbar">
+            <li>
+                <el-button>
+                    <a slot="button" extended="button"  href="/contact"> Send me a message </a>
+                </el-button>
+            </li>
+        </ul>
+    </nav>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <nav slot="dropdown">
+            <ul>
+                <li>
+                    <a href="/contact"> Send me a message </a>
+                </li>
+            </ul>
+        </nav>
+    </el-dropdown>
+</el-drawer>
