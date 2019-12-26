@@ -3,23 +3,19 @@ title: "Build a web component"
 description: "This is the Build a web component page"
 keywords: ["javascript", "webComponents "]
 date: 2019-12-03
+update: 2019-12-03
 layout: "/page/article.njk"
 tags: [ "article" ]
 PagePathToBanner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-4.jpg)"
+preface: "Web components are a group of web technologies that make it possible to create custom, reusable HTML elements  whose functionality is encapsulated and thus completely separate from other code."
 
 ---
 
-<h4 class="preface">
-Components are the building blocks of modern web applications. What best practices should you follow when building your own components so they can stand the test of time?.
-</h4>
+<!-- Excerpt Start -->
+Web components are a group of web technologies that make it possible to create custom, reusable HTML elements  whose functionality is encapsulated and thus completely separate from other code.
+<!-- Excerpt End -->
 
 ## # What are WebComponents? 
-
-<!-- Excerpt Start -->
-
-<strong>Web components are</strong> a group of web technologies that make it possible to create custom, reusable <strong>HTML elements</strong> whose functionality is encapsulated and thus <strong>completely separate from other code.</strong>
-
-<!-- Excerpt End -->
 
 Web components are a group of web technologies that make it possible to create custom, reusable HTML elements whose functionality is encapsulated and thus completely separate from other code.
 

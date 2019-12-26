@@ -8,7 +8,7 @@
         "linkedin": "https://www.linkedin.com/in/andrewrico-/",
         "title": ["JAM stack specialist"],
         "subtitle": ["WEB DEVELOPER", "UI/UX ENGINEER"],
-        "theme_color": "lime"
+        "theme_color": "#000"
     },
     "path": {
         "stylesheet": "/_assets/css/stylesheets.css",

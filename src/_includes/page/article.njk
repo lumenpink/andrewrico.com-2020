@@ -1,7 +1,34 @@
 ---
 layout: "/layouts/layout-article.njk"
 ---
-<el-section>
+<el-section padding-bottom="0">
+    <el-grid> 
+        <el-column>
+            <h4 class="preface">{{ preface }}</h4>
+        </el-column>
+        <el-column>
+             <aside>
+                <figure id="author-article">
+                    <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Avatar">
+                    <figcaption>
+                        <h2 class="author-name"> {{ site.author.name}} </h2>   
+                        <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time>  <br> 
+                        <em>Updated:  <time datetime="{{ update | dateIso }}">  {{ update | dateReadable }}  </time>  </em> 
+                    </figcaption> 
+                </figure>
+                <nav class="navigation-keywords" aria-labelledby="accesible-nav-keywords">
+                    <h6 id="accesible-nav-keywords">This is the navigation keywords component</h6>
+                    <ul class="article-keywords">
+                        {% for item in keywords %}
+                            <li><em class="keyword-tags">{{ item }}</em></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </aside>
+        </el-column>
+    </el-grid>
+</el-section>
+<el-section padding-top="0">
     <el-grid> 
         <el-column>
             <article id="article">
@@ -12,13 +39,6 @@ layout: "/layouts/layout-article.njk"
         </el-column>
         <el-column>
              <aside>
-                <figure id="author-article">
-                    <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Avatar">
-                    <span>
-                        <h2 class="author-name"> {{ site.author.name}} </h2>   
-                        <p> <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time> </p>  
-                    </span> 
-                </figure>
                 <div id="ads"></div>
             </aside>
         </el-column>

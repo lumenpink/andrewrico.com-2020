@@ -17,7 +17,7 @@
 .author-name {
   font-family: var(--font-family-title);
   font-size: 2rem;
-  margin: 0;
+  margin: 16px 0;
 }
 
 .author-location {

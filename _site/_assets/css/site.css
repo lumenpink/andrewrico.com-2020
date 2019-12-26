@@ -100,7 +100,10 @@ figure {
   margin: 0;
   display: block;
 }
-
+figcaption {
+  opacity: 1;
+  background: none;
+}
 
 /*for simple-page fonts*/
 .simple-page h1,
@@ -109,6 +112,8 @@ figure {
 }
 
 /*make nagigation label inbisible*/
+
+[id*="accesible-"] ,
 [id*="-accesible-label"] {
   opacity: 0;
   margin: 0;
