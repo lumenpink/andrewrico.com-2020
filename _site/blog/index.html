@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Andrew Rico">
   <meta name="description" content="This is the Blog page" />
   <meta name="keywords" content="Javascript,Web Components" />
   <meta name="theme-color" content="lime" />
@@ -29,7 +30,7 @@
 <el-loading></el-loading>
 
     <body>
-        <el-drawer>
+        <el-drawer site-title="Andrew Rico">
     <nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
@@ -90,8 +91,7 @@
         </li>
     </ul>
 </nav>
-<mark class="site-name drawer-name" aria-label="LOGO: This is the site name in the drawer" slot="drawer-brand">Andrew Rico</mark>
-<mark class="site-name navbar-name" aria-label="LOGO: This is the site name in the navbar"  slot="navbar-brand">Andrew Rico</mark>
+
 </el-drawer>
         <header>
     <el-section class="base-banner" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)">
@@ -123,12 +123,13 @@
                     
                 </div>
             </figure>
-            <nav>
+            <nav class="navigation-keywords" aria-labelledby="navigation-keywords-accesible-hidden">
+                <h6 id="navigation-keywords-accesible-hidden">This is the navigation keywords component</h6>
                 <ul class="article-keywords">
                     
-                        <li><b>Javascript</b></li>
+                        <li><p><b>Javascript</b></p></li>
                     
-                        <li><b>Web Components</b></li>
+                        <li><p><b>Web Components</b></p></li>
                     
                 </ul>
             </nav>
@@ -141,7 +142,7 @@
                             <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time><br><br>
                             <h2> Build a web component </h2>
                             <p><strong>Web components are</strong> a group of web technologies that make it possible to create custom, reusable <strong>HTML elements</strong> whose functionality is encapsulated and thus <strong>completely separate from other code.</strong></p>
-                            <el-button>
+                            <el-button class="button-center">
                                 <a slot="button" extended="button" theme="quaternary" href="/articles/2020/Build-a-web-component/">Read more</a>
                             </el-button>
                         </article>
@@ -235,7 +236,7 @@
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <h2>Andrew Rico</h2>
+                <strong class="site-name">Andrew Rico</strong>
             </el-column>
             <el-column>
                 <h3>About</h3>

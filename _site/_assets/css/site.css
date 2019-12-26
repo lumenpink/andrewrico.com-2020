@@ -125,11 +125,12 @@ figure {
 
 .button-large {
   width: 100%;
-  height: 100%;
+  height: 100%
+  ;
 }
-
 /*hiden navigation title*/
-[id*="-accesible-label"] h6 {
+h6[id*="-accesible-hidden"] ,
+h6[id*="-accesible-label"] {
   opacity: 0;
   margin: 0;
   padding: 0;

@@ -702,25 +702,15 @@ const elDropdownCSS = `:host {
 	}`;
 const elDropdownHTML = `<div id="backdrop"></div>
 	<div class="dropdown">
-	<button aria-label="dropdown button" class="chip" id="chip">
-<slot name="dropdown-icon">
-		<svg  fill="var(--color-black, #262626)" height="16" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	 viewBox="0 0 60.123 60.123" style="enable-background:new 0 0 60.123 60.123;" xml:space="preserve">
-<g>
-	<path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z"/>
-	<path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3
-		C60.124,31.719,58.781,33.062,57.124,33.062z"/>
-	<path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z"/>
-	<circle cx="4.029" cy="11.463" r="4.029"/>
-	<circle cx="4.029" cy="30.062" r="4.029"/>
-	<circle cx="4.029" cy="48.661" r="4.029"/>
-</g>
-</svg>
-</slot>
-
-
+	<button aria-label="Dropdown Button" class="chip" id="chip">
+	<slot name="dropdown-icon">
+		<svg fill="var(--color-black, #262626)" height="16" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60.123 60.123">
+			<title>Dropdown Mobil Menu Icon</title>
+			<path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z"/><path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3 C60.124,31.719,58.781,33.062,57.124,33.062z"/><path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z"/><circle cx="4.029" cy="11.463" r="4.029"/><circle cx="4.029" cy="30.062" r="4.029"/><circle cx="4.029" cy="48.661" r="4.029"/>
+		</svg>
+	</slot>
 	</button>
-		<div id="chip-dropdown" class="dropcontent"><i class="arrow"></i>
+		<div aria-label="Dropdown Content"  id="chip-dropdown" class="dropcontent"><i class="arrow"></i>
 			<slot name="dropdown"> <a href="/">dropdown</a> </slot>
 		</div>
 	</div>`;
@@ -772,274 +762,9 @@ customElements.define('el-dropdown',
 	}
 );
 
-// create el-Drawer template.
-const elDrawerCSS = `:host {
-			display: block
-		}
-		
-		:host #drawer-backdrop {
-			position: fixed;
-			height: 100vh;
-			left: 0;
-			right:0;
-			bottom: 0;
-			width: 100%;
-			display: none;
-			background: rgba(0, 0, 0, .72);
-			z-index: 10;
-			cursor: not-allowed
-		}
-		
-		:host button[id*='_drawer'] {
-			z-index: 10;
-			cursor: pointer;
-			-ms-touch-action: auto;
-			touch-action: auto;
-			background: 0 0;
-			border: 0;
-			border-radius:50%;
-			padding:0.9rem;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-	
-		}
 
-		:host .brand:hover {
-			color:var(--drawer-hover-text, var(--color-white, #fff)) !important;
-			transition: ease all 0.3s;
-		}
-		:host #open_drawer {
-			cursor: pointer
-		}
-		
-		:host #close_drawer {
-			cursor: pointer;
-			background: var(--drawer-hover-color, #000);
-		}
-	
-		.radial {
-			max-width:100%;
-			height:auto;
-			cursor: pointer;
-			background: #e1e1e1;
-			text-decoration: none;
-			color: #666;
-			-webkit-tap-highlight-color: #0000;
-			display: inline-block;
-			vertical-align: middle;
-			-webkit-transform: perspective(1px) translateZ(0);
-			transform: perspective(1px) translateZ(0);
-			box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-			position: relative;
-			overflow: hidden;
-			-webkit-transition-property: color;
-			transition-property: color;
-			-webkit-transition-duration: 100ms;
-			transition-duration: 100ms;
-		}
-	
-		.radial:before {
-			content: "";
-			position: absolute;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: var(--drawer-hover-color, #000);
-			border-radius: 100%;
-			-webkit-transform: scale(0);
-			transform: scale(0);
-			-webkit-transition-property: transform;
-			transition-property: transform;
-			-webkit-transition-duration: 200ms;
-			transition-duration: 200ms;
-			-webkit-transition-timing-function: linear;
-			transition-timing-function: linear;
-		}
-	
-		.radial:hover:before,
-		.radial:focus:before,
-		.radial:active:before {
-			-webkit-transform: scale(2);
-			transform: scale(2);
-		}
 
-		::slotted(.brand) ,
-		:host .brand {
-			width: 128px;
-			height: 56px;
-			font-size:24px;
-			margin:0 16px;
-			font-family: var(--drawer-brand-font-family);
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			color: var(--drawer-hightlight-color, var(--color-black, #000))!important;
-			-webkit-transition: ease-in-out opacity .3s;
-			transition: ease-in-out opacity .3s;
-			white-space: nowrap;
-			text-decoration: none;
-			color: var(--drawer-brand-color, var(--color-black, #000))
-		}
-		@media(min-width:768px) {
-			::slotted(.brand) ,
-			:host .brand {
-				margin:0 16px;
-			}
-		}
-		@media(min-width:1268px) {
-			::slotted(.brand) ,
-			:host .brand {
-				font-size: var(--drawer-brand-font-size, 1rem);
-			}
-		}
-		
-		:host #navbar {
-			-webkit-box-shadow: 0 7px 5px -7px #111;
-			box-shadow: 0 7px 5px -7px #111;
-			position: fixed;
-			left:0;
-			right:0;
-			background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
-			width: 100%;
-			top:0!important;
-			z-index: 5;
-		
-		}
-		
-		:host #navbar-container {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			justify-content: space-between;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			opacity: 1;
-			padding: var(--drawer-padding) 0rem;
-			margin-right: 48px;
-			margin-left: 48px;
-		}
-		
-		:host #navbar-menu {
-			display: none;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			max-width: 100%;
-			margin-left: auto
-		}
-		
-		@media(min-width:1024px) {
-			:host #navbar-menu {
-				display: flex
-			}
-		}
-		
-		:host #drawer {
-			background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
-			height: 100%;
-			width: 0;
-			max-width: 100%;
-			position: fixed;
-			z-index: 10;
-			top: 0;
-			left: 0;
-			overflow-x: hidden;
-			-webkit-transition: all .2s;
-			transition: all .2s
-		}
-		
-		:host #drawer::-webkit-scrollbar {
-			width: .5em
-		}
-		
-		:host #drawer::-webkit-scrollbar-track {
-			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .46)
-		}
-		
-		:host #drawer::-webkit-scrollbar-thumb {
-			background-color: var(--drawer-text-color, var(--color-black, #000)) !important;
-			outline: 1px solid var(--drawer-background-color, var(--color-black, #000)) !important
-		}
-		
-		:host .drawer-header {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-align: center;
-			-ms-flex-align: center;
-			align-items: center;
-			margin-right: 3rem;
-			margin-left: 3rem;
-			padding: var(--drawer-padding) 0rem;
-		}
-		
-		:host #drawer-menu {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-			flex-direction: column
-		}`;
-const elDrawerHTML = `<div id="drawer-backdrop"></div>
-	<div id="navbar">
-		<div id="navbar-container"><button aria-label="open drawer icon" class="radial" id="open_drawer"><svg
-					fill="var(--drawer-hightlight-color, var(--color-black, #000))" height=24
-					style="enable-background:new 0 0 459 459" viewBox="0 0 459 459" width=24 x=0px xml:space=preserve
-					xmlns=http://www.w3.org/2000/svg y=0px>
-					<path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" /></svg></button><a
-				class="brand" href="/">
-				<slot name="navbar-brand">
-					<b>Brand</b>
-				</slot>
-			</a>
-			<div id="navbar-menu">
-				<slot name="navbar-menu"></slot>
-			</div>
-			<slot name="mobil-menu"></slot>
-		</div>
-	</div>
-	<aside id="drawer">
-		<div class="drawer-header">
-		
-		<button aria-label="close drawer icon" class="radial" id="close_drawer"><svg fill="var(--drawer-hightlight-color, var(--color-black, #000))"
-					xmlns="http://www.w3.org/2000/svg" height=24 width=24 x="0px" y="0px" viewBox="0 0 31.112 31.112"
-					style="enable background:new 0 0 31.112 31.112;" xml:space="preserve">
-					<polygon
-						points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97 29.698,31.112 31.112,29.698 16.97,15.556 " />
-					</svg>
-		</button>
-		<a class="brand" href="/">
-				<slot name="drawer-brand">
-					<b>Brand</b>
-				</slot>
-			</a></div>
 
-		<div id="drawer-menu">
-			<slot name="drawer-menu"></slot>
-		</div>
-		
-	</aside>
-	<slot></slot>`;
-const elDrawerTemplate = document.createElement("template");
-elDrawerTemplate.innerHTML = `<style>`.concat(elDrawerCSS, `</style>`).concat(elDrawerHTML);
 // define el-Drawer tag.
 customElements.define('el-drawer',
 	class elDrawer extends HTMLElement {
@@ -1047,10 +772,301 @@ customElements.define('el-drawer',
 			super();
 			// _thisElDrawer = elDrawer
 			let _thisElDrawer = this;
+			this._elDrawerSiteName;
 			// open shadowRoot.
 			const shadowRoot = _thisElDrawer.attachShadow({
 				mode: "open"
 			});
+			// create el-Drawer template.
+
+			const _elDrawerSiteName = this.getAttribute("site-title");
+
+			const elDrawerCSS = `:host {
+				display: block
+			}
+			
+			:host #drawer-backdrop {
+				position: fixed;
+				height: 100vh;
+				left: 0;
+				right:0;
+				bottom: 0;
+				width: 100%;
+				display: none;
+				background: rgba(0, 0, 0, .72);
+				z-index: 10;
+				cursor: not-allowed
+			}
+			
+			.button-drawer {
+				max-width:100%;
+				height:auto;
+				cursor: pointer;
+				-ms-touch-action: auto;
+				touch-action: auto;
+				background: #e1e1e1;
+				border:0;
+				text-decoration: none;
+				color: #666;
+				-webkit-tap-highlight-color: #0000;
+				display: inline-block;
+				vertical-align: middle;
+				-webkit-transform: perspective(1px) translateZ(0);
+				transform: perspective(1px) translateZ(0);
+				box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+				position: relative;
+				overflow: hidden;
+				-webkit-transition-property: color;
+				transition-property: color;
+				-webkit-transition-duration: 100ms;
+				transition-duration: 100ms;
+			}
+			
+			.button-drawer:before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: var(--drawer-hover-color, #000);
+				border-radius: 100%;
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				-webkit-transition-property: transform;
+				transition-property: transform;
+				-webkit-transition-duration: 200ms;
+				transition-duration: 200ms;
+				-webkit-transition-timing-function: linear;
+				transition-timing-function: linear;
+			}
+			
+			.button-drawer:hover:before,
+			.button-drawer:focus:before,
+			.button-drawer:active:before {
+				-webkit-transform: scale(2);
+				transform: scale(2);
+			}
+			
+			:host button[id*="-drawer"] {
+				z-index: 10;
+				cursor: pointer;
+				-ms-touch-action: auto;
+				touch-action: auto;
+				background: 0 0;
+				border-radius:50%;
+				padding:0.9rem;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+			
+			}
+			
+			:host #close-drawer {
+				background: var(--drawer-hover-color, #000);
+			}
+			
+			:host .button-drawer {
+				margin-right:28px
+			}
+			
+			::slotted(.brand) ,
+			:host .brand {
+				width: 128px;
+				height: 56px;
+				font-size:24px;
+				margin:0 16px;
+				font-family: var(--drawer-brand-font-family);
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				color: var(--drawer-hightlight-color, var(--color-black, #000))!important;
+				-webkit-transition: ease-in-out opacity .3s;
+				transition: ease-in-out opacity .3s;
+				white-space: nowrap;
+				text-decoration: none;
+				background: transparent;
+				color: var(--drawer-brand-color, var(--color-black, #000))
+			}
+			@media(min-width:768px) {
+				::slotted(.brand) ,
+				:host .brand {
+					margin:0 16px;
+				}
+			}
+			@media(min-width:1268px) {
+				::slotted(.brand) ,
+				:host .brand {
+					font-size: var(--drawer-brand-font-size, 1rem);
+				}
+			}
+			:host .brand:hover {
+				opacity:0.8;
+			}
+			
+			:host #navbar {
+				-webkit-box-shadow: 0 7px 5px -7px #111;
+				box-shadow: 0 7px 5px -7px #111;
+				position: fixed;
+				left:0;
+				right:0;
+				background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
+				width: 100%;
+				top:0!important;
+				z-index: 5;
+			}
+
+			:host svg {
+				fill:#000;
+				width:24px;
+				height:24px
+			}
+			
+			:host #navbar-container {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				justify-content: space-between;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				opacity: 1;
+				padding: var(--drawer-padding) 0rem;
+				margin-right: 48px;
+				margin-left: 48px;
+			}
+			
+			:host .navbar-menu {
+				display: none;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				max-width: 100%;
+				margin-left: auto
+			}
+			
+			@media(min-width:1024px) {
+				:host .navbar-menu {
+					display: flex
+				}
+			}
+			
+			:host #drawer {
+				background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
+				height: 100%;
+				width: 0;
+				max-width: 100%;
+				position: fixed;
+				z-index: 10;
+				top: 0;
+				left: 0;
+				overflow-x: hidden;
+				-webkit-transition: all .2s;
+				transition: all .2s
+			}
+			
+			:host #drawer::-webkit-scrollbar {
+				width: .5em
+			}
+			
+			:host #drawer::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .46)
+			}
+			
+			:host #drawer::-webkit-scrollbar-thumb {
+				background-color: var(--drawer-text-color, var(--color-black, #000)) !important;
+				outline: 1px solid var(--drawer-background-color, var(--color-black, #000)) !important
+			}
+			
+			:host .drawer-header {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				margin-right: 48px;
+				margin-left: 48px;
+				padding: var(--drawer-padding, 0px) 0rem;
+			}
+			
+			:host #drawer-menu {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column
+			}
+			
+			:host .mobil-menu {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			`
+			;
+			const elDrawerHTML = `
+			<div id="drawer-backdrop"></div>
+			<div id="navbar" aria-label="this is the body of the navbar Landmark">
+			<div id="navbar-container">
+				<button id="open-drawer" class="button-drawer" aria-label="open drawer icon">
+					<svg viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg/">
+						<title>Drawer Navigation Menu Icon Open| SVG Icon</title>
+						<path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" />
+					</svg>
+				</button>
+				<a class="brand" href="/">
+					<slot name="navbar-brand">
+						<strong>${_elDrawerSiteName}</strong>
+					</slot>
+				</a>
+				<div class="navbar-menu">
+					<slot name="navbar-menu"></slot>
+				</div>
+				<div class="mobil-menu">
+					<slot name="mobil-menu"></slot>
+				</div>
+			</div>
+			</div>
+			<aside id="drawer">
+			<div class="drawer-header">
+				<button id="close-drawer" class="button-drawer" aria-label="close drawer icon" >
+					<svg viewBox="0 0 31.112 31.112" xmlns="http://www.w3.org/2000/svg" >
+						<title>Drawer Navigation Menu Icon Close | SVG Icon</title>
+						<polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97 29.698,31.112 31.112,29.698 16.97,15.556 " />
+					</svg>
+				</button>
+				<a class="brand" href="/">
+					<slot name="drawer-brand">
+						<strong>${_elDrawerSiteName}</strong>
+					</slot>
+				</a>
+			</div>
+			<div id="drawer-menu">
+				<slot name="drawer-menu"></slot>
+			</div>
+			</aside>
+			<slot></slot>`;
+			const elDrawerTemplate = document.createElement("template");
+			elDrawerTemplate.innerHTML = `<style>`.concat(elDrawerCSS, `</style>`).concat(elDrawerHTML);
+
 			// clone template. 
 			shadowRoot.appendChild(elDrawerTemplate.content.cloneNode(!0));
 			return _thisElDrawer;
@@ -1059,8 +1075,8 @@ customElements.define('el-drawer',
 			// DOM elements
 			const _drawer = this.shadowRoot.querySelector("#drawer");
 			const _backdrop = this.shadowRoot.querySelector("#drawer-backdrop");
-			const _opendrawer = this.shadowRoot.querySelector("#open_drawer");
-			const _closedrawer = this.shadowRoot.querySelector("#close_drawer");
+			const _opendrawer = this.shadowRoot.querySelector("#open-drawer");
+			const _closedrawer = this.shadowRoot.querySelector("#close-drawer");
 
 			// open drawer if click button
 			_opendrawer.addEventListener('click', () => {
@@ -1101,5 +1117,20 @@ customElements.define('el-drawer',
 				_whenWidthChange(_addMediaQuery);
 			};
 		}
+
+		attributeChangedCallback(_name, oldValue, newValue) {
+			if (oldValue === newValue) {
+				return;
+			}
+			if (_name === 'site-name') {
+				this._elDrawerSiteName = newValue;
+			}
+		}
+		// observe statics attributes
+		static get observedAttributes() {
+			return ['site-name'];
+		}
+
+
 	}
 );

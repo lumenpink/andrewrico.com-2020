@@ -1,10 +1,12 @@
-#footer h2 {
+#footer strong {
+	color:var(--color-white);
+	background: transparent;
 	font-size: 1.4rem;
 	font-family: var(--font-family-title);
 }
 
 @media(min-width: 1268px) {
-	#footer h2 {
+	#footer strong {
 		font-size: 3.6rem;
 	}
 }

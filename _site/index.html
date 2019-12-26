@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Andrew Rico">
   <meta name="description" content="This is the Homepage" />
   <meta name="keywords" content="Web Developer" />
   <meta name="theme-color" content="lime" />
@@ -29,7 +30,7 @@
 <el-loading></el-loading>
 
 <body>
-    <el-drawer>
+    <el-drawer site-title="Andrew Rico">
 	<nav class="drawer-menu" slot="drawer-menu">
     <ul>
         <li>
@@ -90,8 +91,7 @@
         </li>
     </ul>
 </nav>
-<mark class="site-name drawer-name" aria-label="LOGO: This is the site name in the drawer" slot="drawer-brand">Andrew Rico</mark>
-<mark class="site-name navbar-name" aria-label="LOGO: This is the site name in the navbar"  slot="navbar-brand">Andrew Rico</mark>
+
 	<nav slot="navbar-menu" >
 		<ul class="menu-navbar">
 			<li>
@@ -822,7 +822,7 @@ Wordpress<br>
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <h2>Andrew Rico</h2>
+                <strong class="site-name">Andrew Rico</strong>
             </el-column>
             <el-column>
                 <h3>About</h3>

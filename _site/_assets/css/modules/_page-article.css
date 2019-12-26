@@ -10,11 +10,11 @@
         grid-template-columns: 1fr!important;
     }
 }
-/* @media(min-width:768px) {
+@media(min-width:768px) {
     #article-page el-grid {
         grid-template-columns:minmax(300px, 768px) minmax(300px, 1fr);
    }   
-} */
+}
 #article {
     width: 100%;
 }
@@ -57,7 +57,7 @@
     padding: 1rem 0;
 }
 
-/* .article-keywords b {
+.article-keywords b {
     display: inline-flex;
     background: #fafafa;
     color: var(--color-black);
@@ -68,7 +68,7 @@
     text-decoration: none;
     border: 1px solid gray;
 
-} */
+}
 
 .article-keywords b:hover {
     /* color: var(--color-primary); */

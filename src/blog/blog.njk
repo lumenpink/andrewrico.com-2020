@@ -27,10 +27,11 @@ pagination:
                     {% endfor %}
                 </div>
             </figure>
-            <nav>
+            <nav class="navigation-keywords" aria-labelledby="navigation-keywords-accesible-hidden">
+                <h6 id="navigation-keywords-accesible-hidden">This is the navigation keywords component</h6>
                 <ul class="article-keywords">
                     {% for item in keywords %}
-                        <li><b>{{ item }}</b></li>
+                        <li><p><b>{{ item }}</b></p></li>
                     {% endfor %}
                 </ul>
             </nav>
@@ -43,7 +44,7 @@ pagination:
                             <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
                             <h2> {{ article.data.title }} </h2>
                             {% excerpt article %}
-                            <el-button>
+                            <el-button class="button-center">
                                 <a slot="button" extended="button" theme="quaternary" href="{{ article.url | url }}">Read more</a>
                             </el-button>
                         </article>
