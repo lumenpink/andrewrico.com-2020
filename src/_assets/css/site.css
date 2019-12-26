@@ -105,21 +105,6 @@ figcaption {
   background: none;
 }
 
-/*for simple-page fonts*/
-.simple-page h1,
-.simple-page {
-  font-family: var(--font-family-content);
-}
-
-/*make nagigation label inbisible*/
-
-[id*="accesible-"] ,
-[id*="-accesible-label"] {
-  opacity: 0;
-  margin: 0;
-  padding: 0;
-  height: 0;
-}
 
 /*el-button class*/
 .button-center {
@@ -133,30 +118,23 @@ figcaption {
   height: 100%
   ;
 }
+
 /*hiden navigation title*/
-h6[id*="-accesible-hidden"] ,
-h6[id*="-accesible-label"] {
+h6[id*="accesible-"] {
   opacity: 0;
   margin: 0;
   padding: 0;
   height: 0;
 }
 
-/*for ads on the artcle page*/
-#ads {
-  margin: 64px 0;
-  box-shadow: var(--color-shadow);
-  min-height: 100vh;
-  height: 100%;
-  width: auto;
-}
-
-
-
+/*
+USA MAP 
+*/
 #usa-map{
   align-self: center;
   display: flex;
 }
+
 #usa-map > path:hover, circle:hover {
   stroke: var(--color-primary) !important;
   stroke-width:2px;
@@ -172,6 +150,12 @@ h6[id*="-accesible-label"] {
   stroke-linejoin: round;
   fill: #002868 !important;
   cursor: pointer;
+}
+
+/*for simple-page fonts*/
+.simple-page h1,
+.simple-page {
+  font-family: var(--font-family-content);
 }
 
 

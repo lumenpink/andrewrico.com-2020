@@ -1,7 +1,16 @@
+
+.navigation-social-icons {
+    display: block;
+    width: 100%;
+  }
+  
+
 .navigation-social-icons ul {
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .navigation-social-icons a {
