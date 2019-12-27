@@ -252,21 +252,23 @@
             <form 
                 id="andrewrico-scheduleCall-netlify" 
                 name="andrewrico-scheduleCall-netlify"
-                method="GET" 
+                method="POST" 
                 action="/"
                 data-netlify="true"
-                data-netlify-recaptcha="true"
-                >
+                data-netlify-recaptcha="true" >
+
+<fieldset>         
 <label>NAME
     <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
     <input type="text" name="name-schedule" placeholder="jhon due" aria-label="name" required />
 </label>
-
+</fieldset>      
+<fieldset>      
 <label>E-MAIL
     <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
     <input type="email" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
 </label>
-
+</fieldset> 
 
                 <el-button class="button-center">
                     <button type="submit" slot="button" extended="button" theme="quaternary">
