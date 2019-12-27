@@ -11,12 +11,11 @@
   <meta name="theme-color" content="#000" />
   <link rel="apple-touch-icon" href="/_assets/media/images/andrewrico.png">
   <link rel="stylesheet" href="/_assets/css/stylesheets.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Didact+Gothic&amp;display=swap">
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Sans+Pro&amp;display=swap">
   <meta property="fb:app_id" content="andrewrico's" />
-  <meta property=”og:type” content="andrewrico's article" />
-  <meta property=”og:title” content="andrewrico's title" />
-  <meta property=”og:description” content="description" />
+  <meta property="og:type" content="andrewrico's article" />
+  <meta property="og:title" content="andrewrico's title" />
+  <meta property="og:description" content="description" />
   <meta property="og:image" content="andrewrico's image file" />
   <meta property="og:url" content="http://www.andrewrico.com/" />
   <meta property="og:site_name" content="andrewrico's site name" />
@@ -27,6 +26,7 @@
   <meta name="twitter:site" content="@andrewrico's" />
   <meta name="twitter:creator" content="@andrewrico" />
 </head>
+<body>
 <el-loading></el-loading>
 
 <body>
@@ -211,7 +211,7 @@
                 </p>
             </figcaption>
             <nav class="bio-navgigation" aria-labelledby="navigation-card-bio-accesible-label">
-                <h6 id="navigation-card-bio-accesible-label">This is the navigation component nested in the card bio component<h6>
+                <h6 id="navigation-card-bio-accesible-label">This is the navigation component nested in the card bio component</h6>
                 <ul>
                     <li> 
                         <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a> 
@@ -256,6 +256,7 @@
                 method="GET" 
                 action="/"
                 data-netlify="true"
+                data-netlify-recaptcha="true"
                 >
                 <fieldset>
                     <label for="name">NAME</label>
@@ -289,14 +290,14 @@
                     <label for="time">TIME</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                        <input type="time" id="time" name="time" placeholder="(555)-333-3333" aria-label="phone" required />
+                        <input type="time" id="time" name="time" aria-label="phone" required />
                     </label>
                 </fieldset>
                 <fieldset>
                     <label for="date">DATE</label>
                     <label>
                         <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                        <input type="date" id="date" name="date" placeholder="https://www." aria-label="date" required />
+                        <input type="date" id="date" name="date" aria-label="date" required />
                     </label>
                 </fieldset>
                 <fieldset class="fullwidth">
@@ -306,6 +307,9 @@
                         <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
                     </label>
                 </fieldset>
+
+                <div data-netlify-recaptcha="true"></div>
+ 
                 <el-button class="button-center">
                     <button type="submit" slot="button" extended="button" theme="quaternary">
                         SCHEDULE
@@ -322,129 +326,112 @@
         <el-column grid="row">
             <h2>Skills</h2>
         </el-column><el-column>
-            <figure class="card-progress css-skills">
-                <label for="skill">
+            <div class="card-progress css-skills">
+                <div>
                     <h4> CSS 100% </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#css"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="100" max="100"></progress>
-                <figcaption>
-                    CSS is the language for describing the presentation of Web pages, including <mark>colors, layout, and fonts.</mark> It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers.
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#css"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="100" max="100"></progress>
+                CSS is the language for describing the presentation of Web pages, including <mark>colors, layout, and fonts.</mark> It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers.
+            </div>
         </el-column><el-column>
-            <figure class="card-progress html-skills">
-                <label for="skill">
+            <div class="card-progress html-skills">
+                <div>
                     <h4> HTML 100% </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#html"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="100" max="100"></progress>
-                <figcaption>
-                    &quot;With HTML, authors describe the structure of pages using markup. The elements of the language label pieces of content such as “paragraph,” “list,” “table,” and so on.&quot;
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#html"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="100" max="100"></progress>
+                &quot;With HTML, authors describe the structure of pages using markup. The elements of the language label pieces of content such as “paragraph,” “list,” “table,” and so on.&quot;
+            </div>
         </el-column><el-column>
-            <figure class="card-progress js-skills">
-                <label for="skill">
+            <div class="card-progress js-skills">
+                <div>
                     <h4> Javascript 85% </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#js"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="85" max="100"></progress>
-                <figcaption>
-                    JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is a powerful scripting language, widely used for controlling web page behavior
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#js"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="85" max="100"></progress>
+                JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is a powerful scripting language, widely used for controlling web page behavior
+            </div>
         </el-column><el-column>
-            <figure class="card-progress php-skills">
-                <label for="skill">
+            <div class="card-progress php-skills">
+                <div>
                     <h4> PHP 45% </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#php"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="45" max="100"></progress>
-                <figcaption>
-                    PHP (Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#php"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="45" max="100"></progress>
+                PHP (Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML
+            </div>
         </el-column><el-column>
-            <figure class="card-progress uiux-skills">
-                <label for="skill">
+            <div class="card-progress uiux-skills">
+                <div>
                     <h4> UI/UX 85% </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#uiux"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="85" max="100"></progress>
-                <figcaption>
-                    The “UI” in UI design stands for “user interface.” The user interface is the graphical layout of an application. It consists of the buttons users click on, the text they read, the images, sliders, text entry fields etc.
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#uiux"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="85" max="100"></progress>
+                The “UI” in UI design stands for “user interface.” The user interface is the graphical layout of an application. It consists of the buttons users click on, the text they read, the images, sliders, text entry fields etc.
 “UX” or User experience is determined by how easy or difficult it is to interact with the user interface elements.
-                </figcaption>
-            </figure>
+            </div>
         </el-column><el-column>
-            <figure class="card-progress wp-skills">
-                <label for="skill">
+            <div class="card-progress wp-skills">
+                <div>
                     <h4> Wordpress 75% </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#wp"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="75" max="100"></progress>
-                <figcaption>
-                    WordPress is an excellent website platform for a variety of websites. From blogging to e-commerce to business and portfolio websites, WordPress is a versatile CMS.
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#wp"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="75" max="100"></progress>
+                WordPress is an excellent website platform for a variety of websites. From blogging to e-commerce to business and portfolio websites, WordPress is a versatile CMS.
+            </div>
         </el-column><el-column>
-            <figure class="card-progress practice-skills">
-                <label for="otherskill">
+            <div class="card-progress practice-skills">
+                <div>
                     <h4> Best Practices </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#embed"></use>
-                        </svg>
-                </label>
-                <progress name="otherskill" class="progress" value="100" max="100"></progress>
-                <figcaption>
-                    SEO <br>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#embed"></use>
+                    </svg>
+                </div>
+                <progress id="otherSkillProgress" class="progress" value="100" max="100"></progress>
+                SEO <br>
 Clean code for high performance <br>
 Mobil first desing <br>
 Responsive Web design <br>
 Cross browser compability <br>
 Modern techniques <br>
 Knowlege on Legacy code <br>
-                </figcaption>
-            </figure>
+            </div>
         </el-column><el-column>
-            <figure class="card-progress soft-skills">
-                <label for="otherskill">
+            <div class="card-progress soft-skills">
+                <div>
                     <h4> Soft Skills </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#tree"></use>
-                        </svg>
-                </label>
-                <progress name="otherskill" class="progress" value="100" max="100"></progress>
-                <figcaption>
-                    Problem solver<br>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#tree"></use>
+                    </svg>
+                </div>
+                <progress id="otherSkillProgress" class="progress" value="100" max="100"></progress>
+                Problem solver<br>
 Critial thinking<br>
 Analitics<br>
-                </figcaption>
-            </figure>
+            </div>
         </el-column><el-column>
-            <figure class="card-progress workflow-skills">
-                <label for="otherskill">
+            <div class="card-progress workflow-skills">
+                <div>
                     <h4> Workflow </h4>
-                        <svg>
-                            <use href="_assets/media/svg/sprites.svg#cogs"></use>
-                        </svg>
-                </label>
-                <progress name="otherskill" class="progress" value="100" max="100"></progress>
-                <figcaption>
-                    JAM Stack <br>
+                    <svg>
+                        <use href="_assets/media/svg/sprites.svg#cogs"></use>
+                    </svg>
+                </div>
+                <progress id="otherSkillProgress" class="progress" value="100" max="100"></progress>
+                JAM Stack <br>
 Github <br>
 Node.js<br>
 Command Line <br>
@@ -452,8 +439,7 @@ Visual Studio Code<br>
 Netliyfy<br>
 HostGator<br>
 Wordpress<br>
-                </figcaption>
-            </figure>
+            </div>
         </el-column></el-grid>
 </el-section>
 
@@ -503,16 +489,14 @@ Wordpress<br>
         <el-column grid="row">
             <h2>Code Challenges</h2>
         </el-column><el-column>
-            <figure class="card-action card-ckecked">
+            <div class="card-action card-ckecked">
                 <p class="action-number">1</p>
                 <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-secondary)">
                         <use href="_assets/media/svg/sprites.svg#success"></use>
                     </svg>
                 </div>
-                <figcaption class="action-content">
-                    <h4>21 days code challenge</h4>
-                </figcaption>
+                <h4 class="action-content">21 days code challenge</h4>
                 <div class="action-footer">
                     <p>
                         <span>Started:</span>Dec/14/2019<br>
@@ -522,35 +506,35 @@ Wordpress<br>
                         <a slot="button" extended="button" theme="primary" href="https://www.hackerrank.com/andrewric86?hr_r=1" rel="noopener" target="_blank"> See Results</a>
                     </el-button>
                 </div>
-            </figure>
+            </div>
         </el-column><el-column>
-            <figure class="card-action">
+            <div class="card-action">
                 <p class="action-number">2</p>
                 <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-light)">
                         <use href="_assets/media/svg/sprites.svg#alert"></use>
                     </svg>
                 </div>
-                <figcaption class="action-content">
+                <div class="action-content">
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
-                            <span> Recruiter </span ><p>looking to hire a developer.</p>
+                            <span> Recruiter </span ><p>Searching for a talented developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
-                            <span> Employer </span>  <p>who wants to test my skills.</p>
+                            <span> Employer </span>  <p>Hiring a developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
-                            <span> Propest </span> <p>who wants to build a project.</p>
+                            <span> Propest </span> <p><i>Let's Build Something Together</i></p>
                         </li>
                     </ol>
-                </figcaption>
+                </div>
                 <div class="action-footer">
                     <el-button>
                         <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
-            </figure> 
+            </div> 
         </el-column></el-grid>
     <div id="submit-challenge" class="modal-popup">
     <div class="modal-content">
@@ -567,12 +551,13 @@ Wordpress<br>
                 method="POST" 
                 action="/"
                 data-netlify="true"
+                data-netlify-recaptcha="true"
                 >
                 <fieldset class="fullwidth">
                     <label for="name">NAME</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                        <input type="text" id="name" name="name" aria-label="name" placeholder="jhon due" required />
+                        <input type="text" id="name" name="name" placeholder="jhon due" aria-label="name" required />
                     </label>
                 </fieldset>
                 <fieldset>
@@ -591,14 +576,14 @@ Wordpress<br>
                     <label for="email">E-MAIL</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                        <input type="email" id="email" name="email" aria-label="email" placeholder="jhondue@mail.com" required />
+                        <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
                     </label>
                 </fieldset>
                 <fieldset>
                     <label for="tel">PHONE</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                        <input type="tel" id="tel" name="tel" aria-label="tel" placeholder="(555)-333-3333" required />
+                        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
                     </label>
                 </fieldset>
 
@@ -606,7 +591,7 @@ Wordpress<br>
                     <label for="url">URL</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                        <input type="text" id="url" id="url" name="url"  aria-label="url" placeholder="https://www." required />
+                        <input type="url" id="url" name="url" placeholder="https://www." aria-label="url"  required />
                     </label>
                 </fieldset>
 
@@ -614,9 +599,12 @@ Wordpress<br>
                     <label for="message">MESSAGE</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                        <input type="text" id="message" name="message" aria-label="message" placeholder="In a few words, tell me about the rules" required/>
+                        <input type="text" id="message" name="message" placeholder="In a few words, tell me about the rules"  aria-label="message" required/>
                     </label>
                 </fieldset>
+
+                <div data-netlify-recaptcha="true"></div>
+
                 <el-button class="button-center">
                     <button type="submit" slot="button" extended="button" theme="quaternary">
                         Submit
@@ -729,35 +717,39 @@ Wordpress<br>
         method="POST"
         action="/" 
         data-netlify="true"
+        data-netlify-recaptcha="true"
         >
         <fieldset>
             <label for="name">NAME</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" name="name" placeholder="jhon due" aria-label="name" required/>
+                <input type="text" id="name" name="name" placeholder="jhon due" aria-label="name" required/>
             </label>
         </fieldset>
         <fieldset>
             <label for="email">E-MAIL</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
+                <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
             </label>
         </fieldset>
         <fieldset>
             <label for="phone">PHONE</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="text" name="phone" placeholder="(555)-333-3333" aria-label="phone" required/>
+                <input type="tel" id="tel" name="tel" aria-label="phone" required/>
             </label>
         </fieldset>
         <fieldset class="fullwidth">
             <label for="message">MESSAGE</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
+                <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
             </label>
         </fieldset>
+
+        <div data-netlify-recaptcha="true"></div>
+
         <el-button class="button-center">
             <button type="submit" slot="button" extended="button" theme="custom">
                 Send Message

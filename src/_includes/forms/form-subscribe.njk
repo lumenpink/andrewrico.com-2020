@@ -7,14 +7,18 @@
         method="POST" 
         action="/" 
         data-netlify="true"
+        data-netlify-recaptcha="true"
         >
         <fieldset>
             <label for="email">E-MAIL</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="text" name="email" placeholder="jhondue@mail.com" aria-label="email"  required/>
+                <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required/>
             </label>
         </fieldset>
+
+        <div data-netlify-recaptcha="true"></div>
+
         <el-button class="button-center">
             <button type="submit" slot="button" extended="button">
                 SUBSCRIBRE 

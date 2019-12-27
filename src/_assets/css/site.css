@@ -9,10 +9,10 @@ html {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 19px;
-  font-family: -apple-system, BlinkMacSystemFont, "Didact Gothic", "Coda Caption", "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", "Coda Caption", "Dancing Script", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-family-title: "Dancing Script", cursive;
   --font-family-headline: "Coda Caption", sans-serif;
-  --font-family-content: "Didact Gothic", sans-serif;
+  --font-family-content: 'Source Sans Pro', sans-serif;
   --color-primary: #04ff00;
   --color-secondary: #125400;
   --color-tertiary: #172ee3;
@@ -65,11 +65,6 @@ h1 {
   font-family: var(--font-family-title);
 }
 
-h2 {
-  font-size: 2.4em;
-  font-family: var(--font-family-headline);
-}
-
 a {
   color: var(--color-quaternary);
 }
@@ -100,6 +95,7 @@ figure {
   margin: 0;
   display: block;
 }
+
 figcaption {
   opacity: 1;
   background: none;
@@ -115,8 +111,7 @@ figcaption {
 
 .button-large {
   width: 100%;
-  height: 100%
-  ;
+  height: 100%;
 }
 
 /*hiden navigation title*/
@@ -130,14 +125,15 @@ h6[id*="accesible-"] {
 /*
 USA MAP 
 */
-#usa-map{
+#usa-map {
   align-self: center;
   display: flex;
 }
 
-#usa-map > path:hover, circle:hover {
+#usa-map>path:hover,
+circle:hover {
   stroke: var(--color-primary) !important;
-  stroke-width:2px;
+  stroke-width: 2px;
   stroke-linejoin: round;
   fill: #002868 !important;
   cursor: pointer;
@@ -146,7 +142,7 @@ USA MAP
 
 #FL {
   stroke: var(--color-primary) !important;
-  stroke-width:2px;
+  stroke-width: 2px;
   stroke-linejoin: round;
   fill: #002868 !important;
   cursor: pointer;

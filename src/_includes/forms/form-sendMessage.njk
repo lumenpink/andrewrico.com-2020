@@ -10,35 +10,39 @@
         method="POST"
         action="/" 
         data-netlify="true"
+        data-netlify-recaptcha="true"
         >
         <fieldset>
             <label for="name">NAME</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" name="name" placeholder="jhon due" aria-label="name" required/>
+                <input type="text" id="name" name="name" placeholder="jhon due" aria-label="name" required/>
             </label>
         </fieldset>
         <fieldset>
             <label for="email">E-MAIL</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
+                <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
             </label>
         </fieldset>
         <fieldset>
             <label for="phone">PHONE</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="text" name="phone" placeholder="(555)-333-3333" aria-label="phone" required/>
+                <input type="tel" id="tel" name="tel" aria-label="phone" required/>
             </label>
         </fieldset>
         <fieldset class="fullwidth">
             <label for="message">MESSAGE</label>
             <label>
                 <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
+                <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
             </label>
         </fieldset>
+
+        <div data-netlify-recaptcha="true"></div>
+
         <el-button class="button-center">
             <button type="submit" slot="button" extended="button" theme="custom">
                 Send Message

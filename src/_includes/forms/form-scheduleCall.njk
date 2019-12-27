@@ -13,6 +13,7 @@
                 method="GET" 
                 action="/"
                 data-netlify="true"
+                data-netlify-recaptcha="true"
                 >
                 <fieldset>
                     <label for="name">NAME</label>
@@ -46,14 +47,14 @@
                     <label for="time">TIME</label>
                     <label>
                         <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                        <input type="time" id="time" name="time" placeholder="(555)-333-3333" aria-label="phone" required />
+                        <input type="time" id="time" name="time" aria-label="phone" required />
                     </label>
                 </fieldset>
                 <fieldset>
                     <label for="date">DATE</label>
                     <label>
                         <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                        <input type="date" id="date" name="date" placeholder="https://www." aria-label="date" required />
+                        <input type="date" id="date" name="date" aria-label="date" required />
                     </label>
                 </fieldset>
                 <fieldset class="fullwidth">
@@ -63,6 +64,9 @@
                         <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
                     </label>
                 </fieldset>
+
+                <div data-netlify-recaptcha="true"></div>
+ 
                 <el-button class="button-center">
                     <button type="submit" slot="button" extended="button" theme="quaternary">
                         SCHEDULE

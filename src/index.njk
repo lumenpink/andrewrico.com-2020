@@ -11,34 +11,30 @@ layout: "layouts/layout-homepage.njk"
         </el-column>
         {%- for skill in collections.skills -%}
         <el-column>
-            <figure class="card-progress {{skill.data.skills}}">
-                <label for="skill">
+            <div class="card-progress {{skill.data.skills}}">
+                <div>
                     <h4> {{ skill.data.title }} </h4>
-                        <svg>
-                            <use href="{{skill.data.svgPath}}"></use>
-                        </svg>
-                </label>
-                <progress name="skill" class="progress" value="{{skill.data.percentage}}" max="100"></progress>
-                <figcaption>
-                    {% excerpt skill %}
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="{{skill.data.svgPath}}"></use>
+                    </svg>
+                </div>
+                <progress id="skillProgress" class="progress" value="{{skill.data.percentage}}" max="100"></progress>
+                {% excerpt skill %}
+            </div>
         </el-column>
         {%- endfor -%}
         {%- for otherskill in collections.otherskills -%}
         <el-column>
-            <figure class="card-progress {{otherskill.data.otherskillsClass}}">
-                <label for="otherskill">
+            <div class="card-progress {{otherskill.data.otherskillsClass}}">
+                <div>
                     <h4> {{ otherskill.data.title }} </h4>
-                        <svg>
-                            <use href="{{otherskill.data.svgPath}}"></use>
-                        </svg>
-                </label>
-                <progress name="otherskill" class="progress" value="{{otherskill.data.percentage}}" max="100"></progress>
-                <figcaption>
-                    {% excerpt otherskill %}
-                </figcaption>
-            </figure>
+                    <svg>
+                        <use href="{{otherskill.data.svgPath}}"></use>
+                    </svg>
+                </div>
+                <progress id="otherSkillProgress" class="progress" value="{{otherskill.data.percentage}}" max="100"></progress>
+                {% excerpt otherskill %}
+            </div>
         </el-column>
         {%- endfor -%}
     </el-grid>
@@ -94,16 +90,14 @@ layout: "layouts/layout-homepage.njk"
         </el-column>
         {%- for challenges in collections.challenge -%}
         <el-column>
-            <figure class="card-action card-ckecked">
+            <div class="card-action card-ckecked">
                 <p class="action-number">1</p>
                 <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-secondary)">
                         <use href="_assets/media/svg/sprites.svg#success"></use>
                     </svg>
                 </div>
-                <figcaption class="action-content">
-                    <h4>{{ challenges.data.title }}</h4>
-                </figcaption>
+                <h4 class="action-content">{{ challenges.data.title }}</h4>
                 <div class="action-footer">
                     <p>
                         <span>Started:</span>{{ challenges.data.started }}<br>
@@ -113,38 +107,38 @@ layout: "layouts/layout-homepage.njk"
                         <a slot="button" extended="button" theme="primary" href="{{ challenges.data.url }}" rel="noopener" target="_blank"> See Results</a>
                     </el-button>
                 </div>
-            </figure>
+            </div>
         </el-column>
         {%- endfor -%}
         {%- for challenges in collections.open -%}
         <el-column>
-            <figure class="card-action">
+            <div class="card-action">
                 <p class="action-number">2</p>
                 <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-light)">
                         <use href="_assets/media/svg/sprites.svg#alert"></use>
                     </svg>
                 </div>
-                <figcaption class="action-content">
+                <div class="action-content">
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
-                            <span> Recruiter </span ><p>looking to hire a developer.</p>
+                            <span> Recruiter </span ><p>Searching for a talented developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
-                            <span> Employer </span>  <p>who wants to test my skills.</p>
+                            <span> Employer </span>  <p>Hiring a developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
-                            <span> Propest </span> <p>who wants to build a project.</p>
+                            <span> Propest </span> <p><i>Let's Build Something Together</i></p>
                         </li>
                     </ol>
-                </figcaption>
+                </div>
                 <div class="action-footer">
                     <el-button>
                         <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
-            </figure> 
+            </div> 
         </el-column>
         {%- endfor -%}
     </el-grid>

@@ -20,7 +20,7 @@
 	--skills-svg-size:48px ;
 
 }
-.card-progress label {
+.card-progress > div {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
