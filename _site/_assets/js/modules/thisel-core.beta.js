@@ -1063,7 +1063,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="drawer-brand">
-						<h1 class="brand-name">${_elDrawerSiteName}</h1>
+						<strong class="brand-name">${_elDrawerSiteName}</strong>
 					</slot>
 				</a>
 			</div>

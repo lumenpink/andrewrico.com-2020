@@ -239,3 +239,8 @@ article keywords
 #article b {
     font-weight: 600;
 }
+
+
+.line-through {
+	text-decoration-line: line-through;
+}

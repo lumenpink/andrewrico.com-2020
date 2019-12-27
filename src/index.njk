@@ -91,13 +91,14 @@ layout: "layouts/layout-homepage.njk"
         {%- for challenges in collections.challenge -%}
         <el-column>
             <div class="card-action card-ckecked">
-                <p class="action-number">1</p>
                 <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-secondary)">
                         <use href="_assets/media/svg/sprites.svg#success"></use>
                     </svg>
                 </div>
-                <h3 class="action-content">{{ challenges.data.title }}</h3>
+                <div class="action-content">
+                    <h3>{{ challenges.data.title }}</h3>
+                </div>
                 <div class="action-footer">
                     <p>
                         <span>Started:</span>{{ challenges.data.started }}<br>
@@ -113,11 +114,11 @@ layout: "layouts/layout-homepage.njk"
         {%- for challenges in collections.open -%}
         <el-column>
             <div class="card-action">
-                <p class="action-number">2</p>
                 <div class="action-header">
                     <svg width="56" height="56" fill="var(--color-light)">
                         <use href="_assets/media/svg/sprites.svg#alert"></use>
                     </svg>
+                     <p class="action-number">2</p>
                 </div>
                 <div class="action-content">
                     <p>Submit a Code Chanllenge only if you are a:</p>
