@@ -7,10 +7,10 @@
         >
         <div class="card-bio">
             <div class="bio-author">
-                <img class="bio-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
+                <img class="bio-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Avatar">
                 <div class="bio-info">
                     <h1> Hello, I'am <b> {{ site.author.name }} </b>  </h1>
-                    <h4 class="bio-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h4>
+                    <h2 class="bio-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h2>
                     <div class="bio-titles">
                         {% for subtitles in site.author.subtitle %}
                             <h2> {{ subtitles }} </h2>
@@ -44,7 +44,7 @@
                 </p>
             </div>
             <nav class="bio-navgigation" aria-labelledby="navigation-card-bio-accesible-label">
-                <h6 id="navigation-card-bio-accesible-label">This is the navigation component nested in the card bio component</h6>
+                <h3 id="accesible-card-bio-navigation">NAVIGATION: SOCIAL ICONS</h3>
                 <ul>
                     <li> 
                         <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a> 

@@ -13,7 +13,7 @@ layout: "layouts/layout-homepage.njk"
         <el-column>
             <div class="card-progress {{skill.data.skills}}">
                 <div>
-                    <h4> {{ skill.data.title }} </h4>
+                    <h3> {{ skill.data.title }} </h3>
                     <svg>
                         <use href="{{skill.data.svgPath}}"></use>
                     </svg>
@@ -27,7 +27,7 @@ layout: "layouts/layout-homepage.njk"
         <el-column>
             <div class="card-progress {{otherskill.data.otherskillsClass}}">
                 <div>
-                    <h4> {{ otherskill.data.title }} </h4>
+                    <h3> {{ otherskill.data.title }} </h3>
                     <svg>
                         <use href="{{otherskill.data.svgPath}}"></use>
                     </svg>
@@ -97,7 +97,7 @@ layout: "layouts/layout-homepage.njk"
                         <use href="_assets/media/svg/sprites.svg#success"></use>
                     </svg>
                 </div>
-                <h4 class="action-content">{{ challenges.data.title }}</h4>
+                <h3 class="action-content">{{ challenges.data.title }}</h3>
                 <div class="action-footer">
                     <p>
                         <span>Started:</span>{{ challenges.data.started }}<br>
