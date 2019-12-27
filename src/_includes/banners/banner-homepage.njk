@@ -5,7 +5,7 @@
         background="{{ PagePathToBanner }}" 
         color="var(--color-white)"
         >
-        <figure class="card-bio">
+        <div class="card-bio">
             <div class="bio-author">
                 <img class="bio-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
                 <div class="bio-info">
@@ -21,7 +21,7 @@
                     </div> 
                 </div>
             </div>
-            <figcaption class="bio-terminal"> 
+            <div class="bio-terminal"> 
                 <p class="typewrite" data-period="2500" data-type='[ 
                         " I like to build things – I love knowledge ", 
                         " and I strongly believe technology can ",
@@ -42,7 +42,7 @@
                         " let`s work together? "
                     ]'>
                 </p>
-            </figcaption>
+            </div>
             <nav class="bio-navgigation" aria-labelledby="navigation-card-bio-accesible-label">
                 <h6 id="navigation-card-bio-accesible-label">This is the navigation component nested in the card bio component</h6>
                 <ul>
@@ -71,6 +71,6 @@
             <el-button class="button-center">
                 <a slot="button" extended="button" theme="custom" href="#schedule-phone-call">Schedule a Phone Call</a>
             </el-button>
-        </figure>
+        </div>
     </el-section>
 </header>

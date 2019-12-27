@@ -170,7 +170,7 @@
         background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)" 
         color="var(--color-white)"
         >
-        <figure class="card-bio">
+        <div class="card-bio">
             <div class="bio-author">
                 <img class="bio-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
                 <div class="bio-info">
@@ -188,7 +188,7 @@
                     </div> 
                 </div>
             </div>
-            <figcaption class="bio-terminal"> 
+            <div class="bio-terminal"> 
                 <p class="typewrite" data-period="2500" data-type='[ 
                         " I like to build things – I love knowledge ", 
                         " and I strongly believe technology can ",
@@ -209,7 +209,7 @@
                         " let`s work together? "
                     ]'>
                 </p>
-            </figcaption>
+            </div>
             <nav class="bio-navgigation" aria-labelledby="navigation-card-bio-accesible-label">
                 <h6 id="navigation-card-bio-accesible-label">This is the navigation component nested in the card bio component</h6>
                 <ul>
@@ -238,7 +238,7 @@
             <el-button class="button-center">
                 <a slot="button" extended="button" theme="custom" href="#schedule-phone-call">Schedule a Phone Call</a>
             </el-button>
-        </figure>
+        </div>
     </el-section>
 </header>
     <div id="schedule-phone-call" class="modal-popup">
@@ -333,7 +333,7 @@
                         <use href="_assets/media/svg/sprites.svg#css"></use>
                     </svg>
                 </div>
-                <progress id="skillProgress" class="progress" value="100" max="100"></progress>
+                <progress class="progress" value="100" max="100"></progress>
                 CSS is the language for describing the presentation of Web pages, including <mark>colors, layout, and fonts.</mark> It allows one to adapt the presentation to different types of devices, such as large screens, small screens, or printers.
             </div>
         </el-column><el-column>
@@ -344,7 +344,7 @@
                         <use href="_assets/media/svg/sprites.svg#html"></use>
                     </svg>
                 </div>
-                <progress id="skillProgress" class="progress" value="100" max="100"></progress>
+                <progress class="progress" value="100" max="100"></progress>
                 &quot;With HTML, authors describe the structure of pages using markup. The elements of the language label pieces of content such as “paragraph,” “list,” “table,” and so on.&quot;
             </div>
         </el-column><el-column>
@@ -355,7 +355,7 @@
                         <use href="_assets/media/svg/sprites.svg#js"></use>
                     </svg>
                 </div>
-                <progress id="skillProgress" class="progress" value="85" max="100"></progress>
+                <progress class="progress" value="85" max="100"></progress>
                 JavaScript runs on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JavaScript is a powerful scripting language, widely used for controlling web page behavior
             </div>
         </el-column><el-column>
@@ -366,7 +366,7 @@
                         <use href="_assets/media/svg/sprites.svg#php"></use>
                     </svg>
                 </div>
-                <progress id="skillProgress" class="progress" value="45" max="100"></progress>
+                <progress class="progress" value="45" max="100"></progress>
                 PHP (Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML
             </div>
         </el-column><el-column>
@@ -377,7 +377,7 @@
                         <use href="_assets/media/svg/sprites.svg#uiux"></use>
                     </svg>
                 </div>
-                <progress id="skillProgress" class="progress" value="85" max="100"></progress>
+                <progress class="progress" value="85" max="100"></progress>
                 The “UI” in UI design stands for “user interface.” The user interface is the graphical layout of an application. It consists of the buttons users click on, the text they read, the images, sliders, text entry fields etc.
 “UX” or User experience is determined by how easy or difficult it is to interact with the user interface elements.
             </div>
@@ -389,7 +389,7 @@
                         <use href="_assets/media/svg/sprites.svg#wp"></use>
                     </svg>
                 </div>
-                <progress id="skillProgress" class="progress" value="75" max="100"></progress>
+                <progress class="progress" value="75" max="100"></progress>
                 WordPress is an excellent website platform for a variety of websites. From blogging to e-commerce to business and portfolio websites, WordPress is a versatile CMS.
             </div>
         </el-column><el-column>
@@ -400,7 +400,7 @@
                         <use href="_assets/media/svg/sprites.svg#embed"></use>
                     </svg>
                 </div>
-                <progress id="otherSkillProgress" class="progress" value="100" max="100"></progress>
+                <progress class="progress" value="100" max="100"></progress>
                 SEO <br>
 Clean code for high performance <br>
 Mobil first desing <br>
@@ -417,7 +417,7 @@ Knowlege on Legacy code <br>
                         <use href="_assets/media/svg/sprites.svg#tree"></use>
                     </svg>
                 </div>
-                <progress id="otherSkillProgress" class="progress" value="100" max="100"></progress>
+                <progress class="progress" value="100" max="100"></progress>
                 Problem solver<br>
 Critial thinking<br>
 Analitics<br>
@@ -430,7 +430,7 @@ Analitics<br>
                         <use href="_assets/media/svg/sprites.svg#cogs"></use>
                     </svg>
                 </div>
-                <progress id="otherSkillProgress" class="progress" value="100" max="100"></progress>
+                <progress class="progress" value="100" max="100"></progress>
                 JAM Stack <br>
 Github <br>
 Node.js<br>
@@ -448,9 +448,9 @@ Wordpress<br>
         <el-column grid="row">
             <h2>Recent Projects</h2>
         </el-column><el-column>
-            <figure class="card-minimal">
+            <div class="card-minimal">
                 <img src="/_assets/media/images/placeholder.png" alt="Cryptopandore Project Image">
-                <figcaption>
+                <div>
                     <h3>Cryptopandore</h3>
                     <h4 class="minimal-tags">
                         <span>Cryptocurrency</span>
@@ -460,7 +460,7 @@ Wordpress<br>
                         <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
                         Made with GASTBY/ReactJS
                     </h4>
-                </figcaption>
+                </div>
                 <ul>
                     <li>
                         <a href="https://andrewrico.com/" aria-label="live site project link">
@@ -478,7 +478,7 @@ Wordpress<br>
                         </a> CASE STUDY
                     </li>
                 </ul>
-            </figure>
+            </div>
         </el-column>
         
     </el-grid>
@@ -646,7 +646,7 @@ Wordpress<br>
         <el-column text-align="center">
 
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="100%" height="100%" id="usa-map" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="174 100 959 593">
+<svg width="100%" height="100%" id="usa-map" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="174 100 959 593">
 	<title>"Andrew's Rico current location</title>
     <path id="HI" fill="#D3D3D3" d="M407.1,619.3l1.9-3.6l2.3-0.3l0.3,0.8l-2.1,3.1H407.1z M417.3,615.6l6.1,2.6l2.1-0.3l1.6-3.9   l-0.6-3.4l-4.2-0.5l-4,1.8L417.3,615.6z M448,625.6l3.7,5.5l2.4-0.3l1.1-0.5l1.5,1.3l3.7-0.2l1-1.5l-2.9-1.8l-1.9-3.7l-2.1-3.6   l-5.8,2.9L448,625.6z M468.2,634.5l1.3-1.9l4.7,1l0.6-0.5l6.1,0.6l-0.3,1.3l-2.6,1.5l-4.4-0.3L468.2,634.5z M473.5,639.7l1.9,3.9   l3.1-1.1l0.3-1.6l-1.6-2.1l-3.7-0.3V639.7z M480.5,638.5l2.3-2.9l4.7,2.4l4.4,1.1l4.4,2.7v1.9l-3.6,1.8l-4.8,1l-2.4-1.5   L480.5,638.5z M497.1,654.1l1.6-1.3l3.4,1.6l7.6,3.6l3.4,2.1l1.6,2.4l1.9,4.4l4,2.6l-0.3,1.3l-3.9,3.2l-4.2,1.5l-1.5-0.6l-3.1,1.8   l-2.4,3.2l-2.3,2.9l-1.8-0.2l-3.6-2.6l-0.3-4.5l0.6-2.4l-1.6-5.7l-2.1-1.8l-0.2-2.6l2.3-1l2.1-3.1l0.5-1l-1.6-1.8L497.1,654.1z"/>
 	<path id="AK" fill="#D3D3D3" d="M332.1,553.7l-0.3,85.4l1.6,1l3.1,0.2l1.5-1.1h2.6l0.2,2.9l7,6.8l0.5,2.6l3.4-1.9l0.6-0.2l0.3-3.1   l1.5-1.6l1.1-0.2l1.9-1.5l3.1,2.1l0.6,2.9l1.9,1.1l1.1,2.4l3.9,1.8l3.4,6l2.7,3.9l2.3,2.7l1.5,3.7l5,1.8l5.2,2.1l1,4.4l0.5,3.1   l-1,3.4l-1.8,2.3l-1.6-0.8l-1.5-3.1l-2.7-1.5l-1.8-1.1l-0.8,0.8l1.5,2.7l0.2,3.7l-1.1,0.5l-1.9-1.9l-2.1-1.3l0.5,1.6l1.3,1.8   l-0.8,0.8c0,0-0.8-0.3-1.3-1c-0.5-0.6-2.1-3.4-2.1-3.4l-1-2.3c0,0-0.3,1.3-1,1c-0.6-0.3-1.3-1.5-1.3-1.5l1.8-1.9l-1.5-1.5v-5h-0.8   l-0.8,3.4l-1.1,0.5l-1-3.7l-0.6-3.7l-0.8-0.5l0.3,5.7v1.1l-1.5-1.3l-3.6-6l-2.1-0.5l-0.6-3.7l-1.6-2.9l-1.6-1.1v-2.3l2.1-1.3   l-0.5-0.3l-2.6,0.6l-3.4-2.4l-2.6-2.9l-4.8-2.6l-4-2.6l1.3-3.2v-1.6l-1.8,1.6l-2.9,1.1l-3.7-1.1l-5.7-2.4h-5.5l-0.6,0.5l-6.5-3.9   l-2.1-0.3l-2.7-5.8l-3.6,0.3l-3.6,1.5l0.5,4.5l1.1-2.9l1,0.3l-1.5,4.4l3.2-2.7l0.6,1.6l-3.9,4.4l-1.3-0.3l-0.5-1.9l-1.3-0.8   l-1.3,1.1l-2.7-1.8l-3.1,2.1l-1.8,2.1l-3.4,2.1l-4.7-0.2l-0.5-2.1l3.7-0.6v-1.3l-2.3-0.6l1-2.4l2.3-3.9v-1.8l0.2-0.8l4.4-2.3l1,1.3   h2.7l-1.3-2.6l-3.7-0.3l-5,2.7l-2.4,3.4l-1.8,2.6l-1.1,2.3l-4.2,1.5l-3.1,2.6l-0.3,1.6l2.3,1l0.8,2.1l-2.7,3.2l-6.5,4.2l-7.8,4.2   l-2.1,1.1l-5.3,1.1l-5.3,2.3l1.8,1.3l-1.5,1.5l-0.5,1.1l-2.7-1l-3.2,0.2l-0.8,2.3h-1l0.3-2.4l-3.6,1.3l-2.9,1l-3.4-1.3l-2.9,1.9   h-3.2l-2.1,1.3l-1.6,0.8l-2.1-0.3l-2.6-1.1l-2.3,0.6l-1,1l-1.6-1.1v-1.9l3.1-1.3l6.3,0.6l4.4-1.6l2.1-2.1l2.9-0.6l1.8-0.8l2.7,0.2   l1.6,1.3l1-0.3l2.3-2.7l3.1-1l3.4-0.6l1.3-0.3l0.6,0.5h0.8l1.3-3.7l4-1.5l1.9-3.7l2.3-4.5l1.6-1.5l0.3-2.6l-1.6,1.3l-3.4,0.6   l-0.6-2.4l-1.3-0.3l-1,1l-0.2,2.9l-1.5-0.2l-1.5-5.8l-1.3,1.3l-1.1-0.5l-0.3-1.9l-4,0.2l-2.1,1.1l-2.6-0.3l1.5-1.5l0.5-2.6   l-0.6-1.9l1.5-1l1.3-0.2l-0.6-1.8v-4.4l-1-1l-0.8,1.5h-6.1l-1.5-1.3l-0.6-3.9l-2.1-3.6v-1l2.1-0.8l0.2-2.1l1.1-1.1l-0.8-0.5   l-1.3,0.5l-1.1-2.7l1-5l4.5-3.2l2.6-1.6l1.9-3.7l2.7-1.3l2.6,1.1l0.3,2.4l2.4-0.3l3.2-2.4l1.6,0.6l1,0.6h1.6l2.3-1.3l0.8-4.4   c0,0,0.3-2.9,1-3.4c0.6-0.5,1-1,1-1l-1.1-1.9l-2.6,0.8l-3.2,0.8l-1.9-0.5l-3.6-1.8l-5-0.2l-3.6-3.7l0.5-3.9l0.6-2.4l-2.1-1.8   l-1.9-3.7l0.5-0.8l6.8-0.5h2.1l1,1h0.6l-0.2-1.6l3.9-0.6l2.6,0.3l1.5,1.1l-1.5,2.1l-0.5,1.5l2.7,1.6l5,1.8l1.8-1l-2.3-4.4l-1-3.2   l1-0.8l-3.4-1.9l-0.5-1.1l0.5-1.6l-0.8-3.9l-2.9-4.7l-2.4-4.2l2.9-1.9h3.2l1.8,0.6l4.2-0.2l3.7-3.6l1.1-3.1l3.7-2.4l1.6,1l2.7-0.6   l3.7-2.1l1.1-0.2l1,0.8l4.5-0.2l2.7-3.1h1.1l3.6,2.4l1.9,2.1l-0.5,1.1l0.6,1.1l1.6-1.6l3.9,0.3l0.3,3.7l1.9,1.5l7.1,0.6l6.3,4.2   l1.5-1l5.2,2.6l2.1-0.6l1.9-0.8l4.8,1.9L332.1,553.7z M217,582.6l2.1,5.3l-0.2,1l-2.9-0.3l-1.8-4l-1.8-1.5H210l-0.2-2.6l1.8-2.4   l1.1,2.4l1.5,1.5L217,582.6z M214.4,616.1l3.7,0.8l3.7,1l0.8,1l-1.6,3.7l-3.1-0.2l-3.4-3.6L214.4,616.1z M193.7,602l1.1,2.6   l1.1,1.6l-1.1,0.8l-2.1-3.1V602H193.7z M180,675.1l3.4-2.3l3.4-1l2.6,0.3l0.5,1.6l1.9,0.5l1.9-1.9l-0.3-1.6l2.7-0.6l2.9,2.6   l-1.1,1.8l-4.4,1.1l-2.7-0.5l-3.7-1.1l-4.4,1.5l-1.6,0.3L180,675.1z M228.9,670.6l1.6,1.9l2.1-1.6l-1.5-1.3L228.9,670.6z    M231.8,673.6l1.1-2.3l2.1,0.3l-0.8,1.9H231.8z M255.4,671.7l1.5,1.8l1-1.1l-0.8-1.9L255.4,671.7z M264.2,659.2l1.1,5.8l2.9,0.8   l5-2.9l4.4-2.6l-1.6-2.4l0.5-2.4l-2.1,1.3l-2.9-0.8l1.6-1.1l1.9,0.8l3.9-1.8l0.5-1.5l-2.4-0.8l0.8-1.9l-2.7,1.9l-4.7,3.6l-4.8,2.9   L264.2,659.2z M306.5,639.4l2.4-1.5l-1-1.8l-1.8,1L306.5,639.4z"/>
