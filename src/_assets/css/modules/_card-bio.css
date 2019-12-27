@@ -48,6 +48,8 @@
   margin: 0;
   font-family: var(--font-family-title);
 }
+
+
 .bio-author h2 {
   font-size: 1em;
   font-family: var(--font-family-content);
@@ -56,16 +58,15 @@
   text-align: center;
 }
 
+.bio-info > h2{
+  font-size: 0.7em;
+  text-align: left!important;
+}
 .bio-author h4 {
   font-size: 12.25px;
   margin: 0;
 }
 
-.bio-author p {
-  font-size: 0.7em;
-  margin: 0;
-  padding: 0;
-}
 
 @media(min-width:1024px) {
   .bio-author h2 {

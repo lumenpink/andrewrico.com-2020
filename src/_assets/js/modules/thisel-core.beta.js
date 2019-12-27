@@ -880,7 +880,6 @@ customElements.define('el-drawer',
 				width: 128px;
 				height: 56px;
 				font-size:24px;
-				font-family: var(--drawer-brand-font-family);
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
@@ -890,12 +889,12 @@ customElements.define('el-drawer',
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center;
-				color: var(--drawer-hightlight-color, var(--color-black, #000))!important;
 				-webkit-transition: ease-in-out opacity .3s;
 				transition: ease-in-out opacity .3s;
 				white-space: nowrap;
 				text-decoration: none;
 				background: transparent;
+				font-family: var(--drawer-brand-font-family);
 				color: var(--drawer-brand-color, var(--color-black, #000))
 			}
 			@media(min-width:768px) {
@@ -913,7 +912,14 @@ customElements.define('el-drawer',
 			:host .brand:hover {
 				opacity:0.8;
 			}
-			
+
+			:host strong.brand-name ,
+			:host h1.brand-name {
+				font-family: var(--drawer-brand-font-family);
+				color: var(--drawer-brand-color, var(--color-black, #000))
+				font-size: 16px!important;
+
+			}
 			:host #navbar {
 				-webkit-box-shadow: 0 7px 5px -7px #111;
 				box-shadow: 0 7px 5px -7px #111;
@@ -1036,7 +1042,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="navbar-brand">
-						<strong>${_elDrawerSiteName}</strong>
+						<strong class="brand-name">${_elDrawerSiteName}</strong>
 					</slot>
 				</a>
 				<div class="navbar-menu">
@@ -1057,7 +1063,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="drawer-brand">
-						<strong>${_elDrawerSiteName}</strong>
+						<h1 class="brand-name">${_elDrawerSiteName}</h1>
 					</slot>
 				</a>
 			</div>

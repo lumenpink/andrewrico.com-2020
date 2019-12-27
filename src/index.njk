@@ -156,7 +156,7 @@ layout: "layouts/layout-homepage.njk"
                     <li>
                         <article class="card-article">
                             <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
-                            <h2> {{ article.data.title }} </h2>
+                            <h3> {{ article.data.title }} </h3>
                             {% excerpt article %}
                             <el-button class="button-center">
                                 <a slot="button" extended="button" theme="quaternary" href="{{ article.url | url }}">Read more</a>
