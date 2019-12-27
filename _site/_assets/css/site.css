@@ -125,13 +125,14 @@ figcaption {
 /*
 USA MAP 
 */
-#usa-map {
+
+#svg-usa-map {
+  display: block;
   align-self: center;
-  display: flex;
 }
 
-#usa-map>path:hover,
-circle:hover {
+#svg-usa-map>path:hover,
+#svg-usa-map>circle:hover {
   stroke: var(--color-primary) !important;
   stroke-width: 2px;
   stroke-linejoin: round;
@@ -140,7 +141,7 @@ circle:hover {
 }
 
 
-#FL {
+#svg-usa-map>#FL {
   stroke: var(--color-primary) !important;
   stroke-width: 2px;
   stroke-linejoin: round;

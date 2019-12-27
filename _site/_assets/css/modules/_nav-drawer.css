@@ -1,6 +1,6 @@
 el-drawer {
 	--drawer-padding: 0.6rem;
-	--drawer-brand-font-size: 28px;
+	--drawer-brand-font-size: 24px;
 	--drawer-brand-font-family: 'Dancing Script', cursive;
 	--drawer-link-font-size: 1rem;
 	--drawer-hover-color: rgba(232, 232, 232, 0.69);
@@ -18,6 +18,7 @@ el-drawer ul {
 }
 
 el-drawer a {
+	font-family: var(--font-family-content);
 	font-size: var(--drawer-link-font-size, 1rem);
 	color: var(--drawer-text-color, var(--color-black, #000))!important;
 	display: -webkit-box;
@@ -26,6 +27,7 @@ el-drawer a {
 	white-space: nowrap;
 	cursor: pointer;
 	text-decoration: none;
+	font-weight: 300;
 }
 
 el-drawer a:hover,
@@ -79,6 +81,7 @@ el-drawer h2 {
 	color: var(--color-gray, #000);
 	font-weight: 200;
 	font-size: 1.6rem;
+	font-family: var(--font-family-content);
 	margin: 0;
 	margin-top: 1rem;
 	white-space: nowrap;

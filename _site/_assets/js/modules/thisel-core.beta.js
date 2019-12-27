@@ -895,6 +895,7 @@ customElements.define('el-drawer',
 				text-decoration: none;
 				background: transparent;
 				font-family: var(--drawer-brand-font-family);
+				font-size: var(---brand-font-size, 16px);
 				color: var(--drawer-brand-color, var(--color-black, #000))
 			}
 			@media(min-width:768px) {
@@ -903,21 +904,14 @@ customElements.define('el-drawer',
 					margin:0 16px;
 				}
 			}
-			@media(min-width:1268px) {
-				::slotted(.brand) ,
-				:host .brand {
-					font-size: var(--drawer-brand-font-size, 1rem);
-				}
-			}
 			:host .brand:hover {
 				opacity:0.8;
 			}
 
-			:host strong.brand-name ,
 			:host h1.brand-name {
+				font-size: var(--drawer-brand-font-size, 16px);
 				font-family: var(--drawer-brand-font-family);
-				color: var(--drawer-brand-color, var(--color-black, #000))
-				font-size: 16px!important;
+				color: var(--drawer-brand-color, var(--color-black, #000));
 
 			}
 			:host #navbar {
@@ -1004,12 +998,22 @@ customElements.define('el-drawer',
 				justify-content:space-between;
 				margin-right: 48px;
 				margin-left: 48px;
+				text-indent:24px;
 				padding: var(--drawer-padding, 0px) 0rem;
 			}
 
-			:host .drawer-header .brand {
-				margin:auto;
+			@media(min-width:1024px) {
+				:host .drawer-header {
+					text-indent:0;/*binded to moboil state*/
+					justify-content:flex-start;
+				
+				}
 			}
+
+			:host #drawer-menu a {
+				font-weight: 100;
+			}
+
 			
 			:host #drawer-menu {
 				display: -webkit-box;
@@ -1042,7 +1046,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="navbar-brand">
-						<strong class="brand-name">${_elDrawerSiteName}</strong>
+						<h1 class="brand-name">${_elDrawerSiteName}</h1>
 					</slot>
 				</a>
 				<div class="navbar-menu">
@@ -1063,7 +1067,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="drawer-brand">
-						<strong class="brand-name">${_elDrawerSiteName}</strong>
+						<h1 class="brand-name">${_elDrawerSiteName}</h1>
 					</slot>
 				</a>
 			</div>
