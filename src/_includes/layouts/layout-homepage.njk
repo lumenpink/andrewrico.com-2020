@@ -2,15 +2,14 @@
 PagePathToBanner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)"
 ---
 {% include "partials/partial-head.njk" %}
-<body>
     {% include "navigations/navigation-homepage.njk" %}
-    {% include "banners/banner-homepage.njk" %}
-    {% include "forms/form-scheduleCall.njk" %}
-    <main id="homepage">
-        {% block content %}
-            {{ content | safe }}
-        {% endblock content %}
-    </main>
-    {% include "partials/partial-footer.njk" %}
-</body>
+        {% include "banners/banner-homepage.njk" %}
+            {% include "forms/form-scheduleCall.njk" %}
+            <main id="homepage">
+                {% block content %}
+                    {{ content | safe }}
+                {% endblock content %}
+            </main>
+        {% include "partials/partial-footer.njk" %}
+    </body>
 </html>

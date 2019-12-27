@@ -29,7 +29,6 @@
 <body>
 <el-loading></el-loading>
 
-<body>
     <el-drawer site-title="Andrew Rico">
 	<nav class="drawer-menu" slot="drawer-menu">
     <ul>
@@ -163,7 +162,7 @@
 		</nav>
 	</el-dropdown>
 </el-drawer>
-     <header> 
+         <header> 
     <el-section 
         id="about" 
         class="homepage-banner"
@@ -241,7 +240,7 @@
         </div>
     </el-section>
 </header>
-    <div id="schedule-phone-call" class="modal-popup">
+            <div id="schedule-phone-call" class="modal-popup">
         <div class="modal-content">
             <a href="#about" title="CLOSE" class="backdrop-modal"></a>
         <div class="netliform popup-form">
@@ -258,58 +257,17 @@
                 data-netlify="true"
                 data-netlify-recaptcha="true"
                 >
-                <fieldset>
-                    <label for="name">NAME</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                        <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="email">E-MAIL</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                        <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="tel">PHONE</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="url">URL</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                        <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="time">TIME</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                        <input type="time" id="time" name="time" aria-label="phone" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="date">DATE</label>
-                    <label>
-                        <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                        <input type="date" id="date" name="date" aria-label="date" required />
-                    </label>
-                </fieldset>
-                <fieldset class="fullwidth">
-                    <label for="message">MESSAGE</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                        <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
-                    </label>
-                </fieldset>
+<label>NAME
+    <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+    <input type="text" name="name-schedule" placeholder="jhon due" aria-label="name" required />
+</label>
 
-                <div data-netlify-recaptcha="true"></div>
- 
+<label>E-MAIL
+    <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+    <input type="email" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
+</label>
+
+
                 <el-button class="button-center">
                     <button type="submit" slot="button" extended="button" theme="quaternary">
                         SCHEDULE
@@ -319,9 +277,12 @@
         </div>
      </div>
 </div>
-    <main id="homepage">
-        
-            <el-section id="skills">
+
+
+
+            <main id="homepage">
+                
+                    <el-section id="skills">
     <el-grid columns="3">
         <el-column grid="row">
             <h2>Skills</h2>
@@ -763,9 +724,9 @@ Wordpress<br>
 
 
 
-        
-    </main>
-     <nav id="navigation-panel" aria-labelledby="accesible-side-panel-navigation">
+                
+            </main>
+         <nav id="navigation-panel" aria-labelledby="accesible-side-panel-navigation">
     <h6 id="accesible-side-panel-navigation">This is the navigation component for the side panel</h6>
     <ul>
         <li>
@@ -888,5 +849,5 @@ Wordpress<br>
 </footer>
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
 <script src="/_assets/js/site.js"></script>
-</body>
+    </body>
 </html>

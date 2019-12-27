@@ -35,9 +35,9 @@ pagination:
             <ul>
                 {% for project in projects %}
                     <li>
-                        <figure class="card-minimal">
+                        <div class="card-minimal">
                             <img src="{{ project.data.ProjectPathToImage }}" alt="{{ project.data.ProjectImageMeta}}">
-                            <figcaption>
+                            <div>
                                 <h3>{{ project.data.title }}</h3>
                                 <h4 class="minimal-tags">
                                     <span>{{ project.data.ProjectStringCathegory }}</span>
@@ -47,7 +47,7 @@ pagination:
                                     <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
                                     {{ project.data.ProjectStringMade }}
                                 </h4>
-                            </figcaption>
+                            </div>
                             <ul>
                                 <li>
                                     <a href="{{ project.data.ProjectLinkToDemo }}" aria-label="live site project link">
@@ -65,7 +65,7 @@ pagination:
                                     </a> CASE STUDY
                                 </li>
                             </ul>
-                        </figure>
+                        </div>
                     </li>
                 {% endfor %}
             </ul>
@@ -75,9 +75,9 @@ pagination:
             <ul>
                 {%- for js in collections.js -%}
                     <li>
-                        <figure class="card-minimal">
+                        <div class="card-minimal">
                             <img src="{{ js.data.ProjectPathToImage }}" alt="{{ js.data.ProjectImageMeta}}">
-                            <figcaption>
+                            <div>
                                 <h3>{{ js.data.title }}</h3>
                                 <h4 class="minimal-tags">
                                     <span>{{ js.data.ProjectStringCathegory }}</span>
@@ -87,7 +87,7 @@ pagination:
                                     <svg> <use href="/_assets/media/svg/sprites.svg#commmas"></use></svg>
                                     {{ js.data.ProjectStringMade }}
                                 </h4>
-                            </figcaption>
+                            </div>
                             <ul>
                                 <li>
                                     <a href="{{ js.data.ProjectLinkToDemo }}" aria-label="live site project link">
@@ -105,7 +105,7 @@ pagination:
                                     </a> CASE STUDY
                                 </li>
                             </ul>
-                        </figure>
+                        </div>
                     </li>
                 {% endfor %}
             </ul>
