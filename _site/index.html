@@ -173,9 +173,9 @@
         <el-grid max-width="100" columns="1">
             <el-column grid="row">
                 <div class="card-bio">
-                    <figure class="bio-author">
+                    <div class="bio-author">
                         <img class="bio-avatar" src="/_assets/media/images/andrewrico.png" alt="Andrew Rico Avatar" title="Andrew Rico figure">
-                        <figcaption>
+                        <div>
                             <h1 class="bio-name"> Hello, I'am Andrew Rico </h1>
                             <h2 class="bio-location">
                                 <svg><use href="_assets/media/svg/sprites.svg#location"></use> </svg> Fort Lauderdale, FL USA
@@ -188,8 +188,8 @@
                             
                                 <h2 class="bio-title"> JAM stack specialist </h2> 
                             
-                        </figcaption> 
-                    </figure>
+                        </div> 
+                    </div>
                     <div class="bio-terminal"> 
                         <p class="typewrite" data-period="2500" data-type='[ 
                                 " I like to build things – I love knowledge ", 
@@ -213,7 +213,7 @@
                         </p>
                     </div>
                     <nav class="bio-navgigation" aria-labelledby="accesible-card-bio-navigation">
-                        <h3 id="accesible-card-bio-navigation">NAVIGATION: SOCIAL ICONS</h3>
+                        <h3 id="accesible-card-bio-navigation">Navigation: Social Icons</h3>
                         <ul>
                             <li> 
                                 <a href="https://www.linkedin.com/in/andrewrico-/" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a> 
@@ -238,7 +238,7 @@
                         </ul>
                     </nav>
                     <br>
-                    <el-button class="button-center">
+                    <el-button class="auto">
                         <a slot="button" class="el-btn el-btn-5" href="#schedule-phone-call">Schedule a Phone Call</a>
                     </el-button>
                 </div>
@@ -314,7 +314,7 @@
         <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
     </label>
 </fieldset>
-                <el-button class="button-center">
+                <el-button class="auto">
                     <button type="submit" slot="button" class="el-btn el-btn-4">
                         SCHEDULE
                     </button>
@@ -614,9 +614,7 @@ Submit a Code Challenge
                     </label>
                 </fieldset>
 
-                <div data-netlify-recaptcha="true"></div>
-
-                <el-button class="button-center">
+                <el-button class="auto">
                     <button type="submit" slot="button" class="el-btn el-btn-4">
                         Submit
                     </button>
@@ -638,7 +636,7 @@ Submit a Code Challenge
                             <time datetime="2019-12-03T00:00:00.000Z">December 2, 2019</time><br><br>
                             <h3> Build a web component </h3>
                             <p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements  whose functionality is encapsulated and thus completely separate from other code.</p>
-                            <el-button class="button-center">
+                            <el-button>
                                 <a slot="button" class="el-btn el-btn-4" href="/articles/2020/Build-a-web-component/">Read more</a>
                             </el-button>
                         </article>
@@ -720,7 +718,7 @@ Submit a Code Challenge
     <h3>
        <span class="hiddenByUX"> Form: </span>
         Send me a message
-        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
     </h3>
     <form 
         id="andrewrico-sendMessage-netlify" 
@@ -758,7 +756,7 @@ Submit a Code Challenge
                 <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
             </label>
         </fieldset>
-        <el-button class="button-center">
+        <el-button class="auto">
             <button type="submit" slot="button" class="el-btn el-btn-5">
                 Send Message
             </button>

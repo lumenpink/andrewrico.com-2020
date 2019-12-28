@@ -160,7 +160,7 @@ layout: "layouts/layout-homepage.njk"
                             <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
                             <h3> {{ article.data.title }} </h3>
                             {% excerpt article %}
-                            <el-button class="button-center">
+                            <el-button>
                                 <a slot="button" class="el-btn el-btn-4" href="{{ article.url | url }}">Read more</a>
                             </el-button>
                         </article>

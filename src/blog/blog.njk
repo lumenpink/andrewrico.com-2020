@@ -15,9 +15,9 @@ pagination:
 <el-section>
     <el-grid pixel-width="768" columns="1">
         <el-column grid="row" display="flex" flex-direction="column" justify-content="center" align-items="center" >
-            <figure id="author">
+            <div id="author">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
-                <figcaption>
+                <div>
                     <h2 class="author-name"> {{ site.author.name}} </h2>
                     {% for subtitles in site.author.subtitle %}
                         <h2 class="author-title"> {{ subtitles }} </h2>
@@ -25,10 +25,10 @@ pagination:
                     {% for titles in site.author.title %}
                         <h2 class="author-title"> {{ titles }} </h2> 
                     {% endfor %}
-                </figcaption>
-            </figure>
+                </div>
+            </div>
             <nav class="navigation-keywords" aria-labelledby="accesible-blog-keywords-navigation">
-                <h6 id="accesible-blog-keywords-navigation">This is the navigation keywords component</h6>
+                <h3 id="accesible-blog-keywords-navigation">This is the navigation keywords component</h3>
                 <ul class="article-keywords">
                     {% for item in keywords %}
                         <li><em class="keyword-tags">{{ item }}</em></li>
@@ -44,7 +44,7 @@ pagination:
                             <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
                             <h2> {{ article.data.title }} </h2>
                             {% excerpt article %}
-                            <el-button class="button-center">
+                            <el-button class="auto">
                                 <a slot="button" class="el-btn el-btn-4" href="{{ article.url | url }}">Read more</a>
                             </el-button>
                         </article>

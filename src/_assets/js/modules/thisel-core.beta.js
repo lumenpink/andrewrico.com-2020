@@ -354,6 +354,13 @@ const elButtonCSS = `
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);
 	--color-hover: #0080ff
 }
+:host(.auto) {
+	grid-column: 1 / -1;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
 
 :host:before {
     content: '';
@@ -406,20 +413,18 @@ const elButtonCSS = `
     -webkit-transition: ease-in-out .5s;
     -o-transition: ease-in-out .5s;
 	transition: ease-in-out .5s
-	
 	background: #ecececaa;
     color: gray !important;
     border: 1px solid #ecececaa
 }
 
-
-::slotted(:hover) {
+::slotted(*:hover) {
     background: #c8c8c8;
     color: var(--color-black, #000) !important;
     border: 1px solid var(--color-black, #000)
 }
 
-::slotted(:active) {
+::slotted(*:active) {
     background: #fff;
     color: var(--color-black, #000) !important;
     border: 1px solid var(--color-black, #000)
@@ -450,7 +455,6 @@ const elButtonCSS = `
     color: var(--color-primary, #fff) !important;
     border: 1px solid var(--color-primary, #000)!important;
 }
-
 
 ::slotted(.el-btn-2) {
     background: 0 0;
@@ -496,76 +500,22 @@ const elButtonCSS = `
     border: 1px solid var(--color-primary, #000)!important;
 }
 
-
-:host(.el-btn-au) {
+::slotted(.el-btn-au) {
     width: auto;
     min-width: auto;
     overflow: visible;
     height: auto
 }
-:host(.el-btn-sm) {
+::slotted(.el-btn-sm) {
     width: 150px
 }
-:host(.el-btn-md) {
+::slotted(.el-btn-md) {
     width: 250px
 }
 
-:host(.el-btn-lg) {
+::slotted(.el-btn-lg) {
     width: 300px
 }
-
-
-
-
-::slotted([extended=chip]) {
-    background: #f4f4f4;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: .7rem !important;
-    font-weight: 100;
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #000 !important;
-    border: 1px solid #cbcbcb;
-    -webkit-box-shadow: 0 1px #cbcbcb;
-    box-shadow: 0 1px #cbcbcb;
-    -webkit-transition: 0s;
-    -o-transition: 0s;
-    transition: 0s;
-    margin: 1rem
-}
-
-::slotted([extended=chip][size=small]) {
-    width: 2.25rem;
-    height: 2.25rem
-}
-
-::slotted([extended=chip][size=medium]) {
-    width: 2.5rem;
-    height: 2.5rem
-}
-
-::slotted([extended=chip][size=large]) {
-    width: 2.75rem;
-    height: 2.75rem
-}
-
-::slotted([extended=chip]:active) {
-    -webkit-transform: translateY(2px);
-    -ms-transform: translateY(2px);
-    transform: translateY(2px);
-    -webkit-box-shadow: 0 1px #666;
-    box-shadow: 0 1px #666
-}
-
 `;
 const elButtonHTML = `<slot name="button"></slot>`;
 const elButtonTemplate = document.createElement("template");

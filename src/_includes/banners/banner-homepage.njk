@@ -8,9 +8,9 @@
         <el-grid max-width="100" columns="1">
             <el-column grid="row">
                 <div class="card-bio">
-                    <figure class="bio-author">
+                    <div class="bio-author">
                         <img class="bio-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} figure">
-                        <figcaption>
+                        <div>
                             <h1 class="bio-name"> Hello, I'am {{ site.author.name }} </h1>
                             <h2 class="bio-location">
                                 <svg><use href="_assets/media/svg/sprites.svg#location"></use> </svg> {{ site.author.location }}
@@ -21,8 +21,8 @@
                             {% for titles in site.author.title %}
                                 <h2 class="bio-title"> {{ titles }} </h2> 
                             {% endfor %}
-                        </figcaption> 
-                    </figure>
+                        </div> 
+                    </div>
                     <div class="bio-terminal"> 
                         <p class="typewrite" data-period="2500" data-type='[ 
                                 " I like to build things – I love knowledge ", 
@@ -46,7 +46,7 @@
                         </p>
                     </div>
                     <nav class="bio-navgigation" aria-labelledby="accesible-card-bio-navigation">
-                        <h3 id="accesible-card-bio-navigation">NAVIGATION: SOCIAL ICONS</h3>
+                        <h3 id="accesible-card-bio-navigation">Navigation: Social Icons</h3>
                         <ul>
                             <li> 
                                 <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a> 
@@ -71,7 +71,7 @@
                         </ul>
                     </nav>
                     <br>
-                    <el-button class="button-center">
+                    <el-button class="auto">
                         <a slot="button" class="el-btn el-btn-5" href="#schedule-phone-call">Schedule a Phone Call</a>
                     </el-button>
                 </div>

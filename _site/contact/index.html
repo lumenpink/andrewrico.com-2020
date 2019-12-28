@@ -145,7 +145,7 @@
             </iframe>
         </el-column>
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center">
-            <figure id="author">
+            <div id="author">
                 <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Figure">
                 <nav class="navigation-social-icons" aria-labelledby="accesible-social-icons-navigation">
     <h3 id="accesible-social-icons-navigation">NAVIGATION: SOCIAL ICONS</h3>
@@ -176,7 +176,7 @@
         </li>
     </ul>
 </nav>
-                <figcaption>
+                <div>
                     <h2 class="author-name"> Andrew Rico </h2>
                     <h2 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> Fort Lauderdale, FL USA</h2>
                     
@@ -187,8 +187,8 @@
                     
                         <h2 class="author-title"> JAM stack specialist </h2> 
                     
-                </figcaption>                
-            </figure>
+                </div>                
+            </div>
         </el-column>
          <el-column>
             <div class="netliform simple-form sendMesseage-form">
@@ -196,7 +196,7 @@
     <h3>
        <span class="hiddenByUX"> Form: </span>
         Send me a message
-        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
     </h3>
     <form 
         id="andrewrico-sendMessage-netlify" 
@@ -234,7 +234,7 @@
                 <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
             </label>
         </fieldset>
-        <el-button class="button-center">
+        <el-button class="auto">
             <button type="submit" slot="button" class="el-btn el-btn-5">
                 Send Message
             </button>
