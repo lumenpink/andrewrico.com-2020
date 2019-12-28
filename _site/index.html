@@ -553,62 +553,56 @@ Submit a Code Challenge
                 <a href="#challenge" title="CLOSE" class="modal-icon-close">X</a>
     </h3>
             <form 
-                id="andrewrico-submitChallenge-netlify" 
-                name="andrewrico-submitChallenge-netlify" 
+                id="andrewrico-submit-netiId-57" 
+                name="andrewrico-submit-netiId-57" 
                 method="POST" 
                 action="/"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
                 >
-                <fieldset class="fullwidth">
-                    <label for="name">NAME</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                        <input type="text" id="name" name="name" placeholder="jhon due" aria-label="name" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="selection">I'AM A</label>
-                    <label>
+
+                <div class="form-field">
+                    <label for="netiId-57-selection">I'AM A</label>
+                    <div class="field-group">
                         <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
-                        <select id="selection" name="selection" aria-label="selection"  required>
+                        <select id="netiId-57-selection" name="netiId-57-selection" aria-label="selection"  required>
                             <option value="">Select one</option>
                             <option value="Recruiter">Recruiter</option>
                             <option value="Employer">Employer </option>
                             <option value="Prospect">Prospect </option>
-                        </select>
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="email">E-MAIL</label>
-                    <label>
+                        </select>                    
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="netiId-57-name">NAME</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                        <input type="text" id="netiId-57-name" name="netiId-57-name" placeholder="jhon due" aria-label="name" required />
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="netiId-57-email">E-MAIL</label>
+                    <div class="field-group">
                         <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                        <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <label for="tel">PHONE</label>
-                    <label>
-                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
-                    </label>
-                </fieldset>
-
-                <fieldset>
-                    <label for="url">URL</label>
-                    <label>
+                        <input type="email" id="netiId-57-email" name="netiId-57-email" placeholder="jhondue@mail.com" aria-label="email" required />
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="netiId-57-url">URL</label>
+                    <div class="field-group">
                         <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                        <input type="url" id="url" name="url" placeholder="https://www." aria-label="url"  required />
-                    </label>
-                </fieldset>
-
-                <fieldset class="fullwidth">
-                    <label for="message">MESSAGE</label>
-                    <label>
+                        <input type="text" id="netiId-57-url" name="netiId-57-url" placeholder="https://www." aria-label="url" required />
+                    </div>
+                </div>
+                <div class="form-field fullwidth">
+                    <label for="netiId-57-message">MESSAGE</label>
+                    <div class="field-group">
                         <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                        <input type="text" id="message" name="message" placeholder="In a few words, tell me about the rules"  aria-label="message" required/>
-                    </label>
-                </fieldset>
+                        <input type="text" id="netiId-57-message" name="netiId-57-message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
+                    </div>
+                </div>
+
 
                 <el-button class="auto">
                     <button type="submit" slot="button" class="el-btn el-btn-4">
@@ -717,41 +711,42 @@ Submit a Code Challenge
         <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
     </h3>
     <form 
-        id="andrewrico-sendMessage-netlify" 
-        name="andrewrico-sendMessage-netlify" 
+        id="andrewrico-message-netiId-56" 
+        name="andrewrico-message-netiId-56" 
         method="POST"
         action="/" 
         data-netlify="true"
         data-netlify-recaptcha="true"
         >
-        <fieldset>
-            <label for="name">NAME</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                <input type="text" id="name" name="name" placeholder="jhon due" aria-label="name" required/>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="email">E-MAIL</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required />
-            </label>
-        </fieldset>
-        <fieldset>
-            <label for="tel">PHONE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                <input type="tel" id="tel" name="tel" aria-label="phone" required/>
-            </label>
-        </fieldset>
-        <fieldset class="fullwidth">
-            <label for="message">MESSAGE</label>
-            <label>
-                <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
-            </label>
-        </fieldset>
+        <div class="form-field">
+                <label for="netiId-56-name">NAME</label>
+                <div class="field-group">
+                    <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                    <input type="text" id="netiId-56-name" name="netiId-56-name" placeholder="jhon due" aria-label="name" required />
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="netiId-56-email">E-MAIL</label>
+                <div class="field-group">
+                    <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                    <input type="email" id="netiId-56-email" name="netiId-56-email" placeholder="jhondue@mail.com" aria-label="email" required />
+                </div>
+            </div>
+            <div class="form-field">
+                <label for="netiId-56-phone">PHONE</label>
+                <div class="field-group">
+                    <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                    <input type="tel" id="netiId-56-phone" name="netiId-56-phone" placeholder="(565)-333-3333" aria-label="tel" required />
+                </div>
+            </div>
+            <div class="form-field fullwidth">
+                <label for="netiId-56-message">MESSAGE</label>
+                <div class="field-group">
+                    <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                    <input type="text" id="netiId-56-message" name="netiId-56-message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
+                </div>
+            </div>
         <el-button class="auto">
             <button type="submit" slot="button" class="el-btn el-btn-5">
                 Send Message
