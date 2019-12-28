@@ -261,10 +261,8 @@
             <form 
                 id="andrewrico-scheduleCall-netlify" 
                 name="andrewrico-scheduleCall-netlify"
-                method="GET" 
-                action="/"
+                method="POST" 
                 data-netlify="true"
-                data-netlify-recaptcha="true" 
                 >
                     <div class="field">
                         <label for="formScheduleName">NAME</label>
@@ -277,35 +275,35 @@
                         <label for="formScheduleMail">E-MAIL</label>
                         <div>
                             <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                            <input type="email" id="formScheduleMail" name="formScheduleMail" placeholder="jhondue@mail.com" aria-label="email" required />
+                            <input type="text" id="formScheduleMail" name="formScheduleMail" placeholder="jhondue@mail.com" aria-label="email" required />
                         </div>
                     </div>
                     <div class="field">
                         <label for="formSchedulePhone">PHONE</label>
                         <div>
                             <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                            <input type="tel" id="formSchedulePhone" name="formSchedulePhone" placeholder="(555)-333-3333" aria-label="tel" required />
+                            <input type="text" id="formSchedulePhone" name="formSchedulePhone" placeholder="(555)-333-3333" aria-label="tel" required />
                         </div>
                     </div>
                     <div class="field">
                         <label for="formScheduleURL">URL</label>
                         <div>
                             <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                            <input type="text" id="formScheduleURL" id="formScheduleURL" name="formScheduleURL" placeholder="https://www." aria-label="url" required />
+                            <input type="text" id="formScheduleURL" name="formScheduleURL" placeholder="https://www." aria-label="url" required />
                         </div>
                     </div>
                     <div class="field">
                         <label for="formScheduleTime">TIME</label>
                         <div>
                             <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                            <input type="time" id="formScheduleTime" name="formScheduleTime" aria-label="phone" required />
+                            <input type="text" id="formScheduleTime" name="formScheduleTime" aria-label="phone" required />
                         </div>
                     </div>
                     <div class="field">
                         <label for="formScheduleDate">DATE</label>
                         <div>
                             <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                            <input type="date" id="formScheduleDate" name="formScheduleDate" aria-label="date" required />
+                            <input type="text" id="formScheduleDate" name="formScheduleDate" aria-label="date" required />
                         </div>
                     </div>
                     <div class="field fullwidth">
