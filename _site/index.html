@@ -170,7 +170,7 @@
         background="radial-gradient(ellipse closest-side, #0f0e1680, #100e17), var(--color-tertiary)" 
         color="var(--color-white)"
         >
-        <el-grid max-width="100" columns="1">
+        <el-grid max-width="100">
             <el-column grid="row">
                 <div class="card-bio">
                     <div class="bio-author">
@@ -246,17 +246,18 @@
         </el-grid>
     </el-section>
 </header>
+<a href="#about" title="CLOSE" class="modal-icon-close">X</a>
+
             <div id="schedule-phone-call" class="modal-popup">
         <div class="modal-content">
             <a href="#about" title="CLOSE" class="backdrop-modal"></a>
         <div class="netliform popup-form">
             <p id="error-messsage"></p>
             <h3>
-       <span class="hiddenByUX"> Form: </span>
-        Schedule a Phone Call        
-        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
-        <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
-    </h3>
+                <span class="hiddenByUX"> Form: </span>
+                Schedule a Phone Call        
+                <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
+            </h3>
             <form 
                 id="andrewrico-scheduleCall-netlify" 
                 name="andrewrico-scheduleCall-netlify"
@@ -265,55 +266,55 @@
                 data-netlify="true"
                 data-netlify-recaptcha="true" 
                 >
-               <fieldset>
-    <label for="name">NAME</label>
-    <label>
-        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-        <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
-    </label>
-</fieldset>
-<fieldset>
-    <label for="email">E-MAIL</label>
-    <label>
-        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-        <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
-    </label>
-</fieldset>
-<fieldset>
-    <label for="tel">PHONE</label>
-    <label>
-        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
-    </label>
-</fieldset>
-<fieldset>
-    <label for="url">URL</label>
-    <label>
-        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-        <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
-    </label>
-</fieldset>
-<fieldset>
-    <label for="time">TIME</label>
-    <label>
-        <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-        <input type="time" id="time" name="time" aria-label="phone" required />
-    </label>
-</fieldset>
-<fieldset>
-    <label for="date">DATE</label>
-    <label>
-        <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-        <input type="date" id="date" name="date" aria-label="date" required />
-    </label>
-</fieldset>
-<fieldset class="fullwidth">
-    <label for="message">MESSAGE</label>
-    <label>
-        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-        <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
-    </label>
-</fieldset>
+                    <div class="field">
+                        <label for="nameCall">NAME</label>
+                        <div>
+                            <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                            <input type="text" id="nameCall" name="nameCall" placeholder="jhon due" aria-label="name" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="emailCall">E-MAIL</label>
+                        <div>
+                            <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                            <input type="email" id="emailCall" name="emailCall" placeholder="jhondue@mail.com" aria-label="email" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="telCall">PHONE</label>
+                        <div>
+                            <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                            <input type="tel" id="telCall" nametelCalltel" placeholder="(555)-333-3333" aria-label="tel" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="urlCall">URL</label>
+                        <div>
+                            <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+                            <input type="text" id="urlCall" id="urlCall" name="urlCall" placeholder="https://www." aria-label="url" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="timeCall">TIME</label>
+                        <div>
+                            <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
+                            <input type="time" id="timeCall" name="timeCall" aria-label="phone" required />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="dateCall">DATE</label>
+                        <div>
+                            <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
+                            <input type="date" id="dateCall" name="dateCall" aria-label="date" required />
+                        </div>
+                    </div>
+                    <div class="field fullwidth">
+                        <label for="messageCall">MESSAGE</label>
+                        <div>
+                            <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                            <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
+                        </div>
+                    </div>
                 <el-button class="auto">
                     <button type="submit" slot="button" class="el-btn el-btn-4">
                         SCHEDULE
@@ -553,7 +554,6 @@ Wordpress<br>
                      <h3>
        <span class="hiddenByUX"> Form: </span>
 Submit a Code Challenge        
-        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
                 <a href="#challenge" title="CLOSE" class="modal-icon-close">X</a>
     </h3>
             <form 

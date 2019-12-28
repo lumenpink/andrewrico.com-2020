@@ -81,29 +81,29 @@ option {
 	padding: 8em;
 }
 
-fieldset {
+.field {
 	position: relative;
 }
 
-fieldset label {
+.field label {
 	display: block;
 	font-size: 1rem;
 	color: var(--color-quaternary);
 }
 
-fieldset label:nth-child(2) {
+.field label:nth-child(2) {
 	display: flex;
 	align-items: center;
 	width: 100%;
 	margin: 1rem 0;
 }
 
-fieldset input {
+.field input {
 	padding-left: 2rem;
 	padding-top: 2rem;
 }
 
-fieldset svg {
+.field svg {
 	width: 16px;
 	height: 16px;
 	fill: #060606;
@@ -224,7 +224,7 @@ popup form
 }
 
 
-.popup-form fieldset {
+.popup-form .field {
 	padding: 0.5rem;
 	min-height: 5rem;
 	border: 1px solid var(--color-light);
@@ -255,7 +255,7 @@ subscriber form
 	padding: 0;
 }
 
-.subscriber-form fieldset {
+.subscriber-form .field {
 	width: 100%;
 	border: 1px solid var(--color-light);
 	background: white;

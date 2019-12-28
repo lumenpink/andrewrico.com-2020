@@ -30,8 +30,6 @@ partials ---------------------------------------
 pages ---------------------------------------
 */
 @import 'modules/_page-article.css';
-@import 'modules/_page-blog.css';
-@import 'modules/_page-portfolio.css';
 @import 'modules/_page-project.css';
 
 

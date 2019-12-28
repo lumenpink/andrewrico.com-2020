@@ -825,13 +825,9 @@ customElements.define('el-drawer',
 				align-items: center;
 			
 			}
-			
 			:host #close-drawer {
 				background: var(--drawer-hover-color, #000);
 			}
-			
-		
-			
 			::slotted(.brand) ,
 			:host .brand {
 				width: 128px;
@@ -856,8 +852,13 @@ customElements.define('el-drawer',
 				color: var(--drawer-brand-color, var(--color-black, #000))
 			}
 			@media(min-width:768px) {
+
+				::slotted(.brand) {
+					text-indent: 48px;
+				}
 				::slotted(.brand) ,
 				:host .brand {
+					text-indent: 0;
 					margin:0 16px;
 				}
 			}
@@ -961,9 +962,15 @@ customElements.define('el-drawer',
 				text-indent:24px;
 			}
 
+			:host  .drawer-header .brand {
+				margin-left:24px;
+			
+			}
+			
+
+
 			@media(min-width:1024px) {
 				:host .drawer-header {
-					text-indent:0;/*binded to moboil state*/
 					justify-content:flex-start;
 				
 				}
