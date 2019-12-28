@@ -10,7 +10,6 @@
   margin: auto;
   font-size: 0.9rem;
   text-align: center;
-  border: 0.5px solid var(--color-primary);
   background: rgba(0, 0, 0, 0);
   font-family: var(--font-family-content);
 }
@@ -27,6 +26,7 @@
 
 @media(min-width:768px) {
   .card-bio {
+    border: 0.5px solid var(--color-primary);
     text-align: initial;
     min-width: 500px;
   }

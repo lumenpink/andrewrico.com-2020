@@ -4,40 +4,20 @@
         <div class="netliform popup-form">
             <p id="error-messsage"></p>
             <h3>
-                Form: Schedule a Phone Call
-                 <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
-            </h3>
+       <span class="hiddenByUX"> Form: </span>
+Schedule a Phone Call        
+        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
+    </h3>
             <form 
                 id="andrewrico-scheduleCall-netlify" 
                 name="andrewrico-scheduleCall-netlify"
                 method="POST" 
                 action="/"
                 data-netlify="true"
-                data-netlify-recaptcha="true" >
-                <fieldset>         
-                    <label>NAME
-                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                        <input type="text" name="name-schedule" placeholder="jhon due" aria-label="name" required />
-                    </label>
-                    </fieldset>      
-                    <fieldset>      
-                    <label>E-MAIL
-                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                        <input type="email" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
-                    </label>
-                </fieldset> 
-                <el-button class="button-center">
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
-                        SCHEDULE
-                    </button>
-                </el-button>
-            </form>
-        </div>
-     </div>
-</div>
-
-
-{# <fieldset>
+                data-netlify-recaptcha="true" 
+                >
+               <fieldset>
     <label for="name">NAME</label>
     <label>
         <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
@@ -85,4 +65,15 @@
         <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
         <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
     </label>
-</fieldset> #}
+</fieldset>
+                <el-button class="button-center">
+                    <button type="submit" slot="button" class="el-btn el-btn-4">
+                        SCHEDULE
+                    </button>
+                </el-button>
+            </form>
+        </div>
+     </div>
+</div>
+
+

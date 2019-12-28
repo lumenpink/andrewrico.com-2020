@@ -155,7 +155,9 @@ USA MAP
   font-family: var(--font-family-content);
 }
 
-
+.hiddenByUX {
+  display: none;
+}
 
 /*
   font-family: 'Dancing Script', cursive;

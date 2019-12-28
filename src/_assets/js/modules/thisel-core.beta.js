@@ -334,7 +334,8 @@ customElements.define('el-loading',
 	}
 );
 // create el-button template.
-const elButtonCSS = `:host {
+const elButtonCSS = `
+:host {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -352,25 +353,6 @@ const elButtonCSS = `:host {
     --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);
 	--color-hover: #0080ff
-}
-
-:host([size=small]) {
-    width: 150px
-}
-
-:host([size=medium]) {
-    width: 250px
-}
-
-:host([size=large]) {
-    width: 300px
-}
-
-:host([size=chip]) {
-    width: auto;
-    min-width: auto;
-    overflow: visible;
-    height: auto
 }
 
 :host:before {
@@ -423,14 +405,13 @@ const elButtonCSS = `:host {
     cursor: pointer;
     -webkit-transition: ease-in-out .5s;
     -o-transition: ease-in-out .5s;
-    transition: ease-in-out .5s
-}
-
-::slotted(*) {
-    background: #ecececaa;
+	transition: ease-in-out .5s
+	
+	background: #ecececaa;
     color: gray !important;
     border: 1px solid #ecececaa
 }
+
 
 ::slotted(:hover) {
     background: #c8c8c8;
@@ -444,11 +425,97 @@ const elButtonCSS = `:host {
     border: 1px solid var(--color-black, #000)
 }
 
-::slotted([extended=button]) {
+::slotted(.el-btn) {
     background: 0 0;
     color: gray !important;
     border: 1px solid gray
 }
+::slotted(.el-btn:hover) {
+    color: var(--color-hover, #000) !important;
+    border: 1px solid var(--color-hover, #000) !important
+}
+
+::slotted(.el-btn:active) {
+    background-image: var(--color-active, #000) !important;
+    color: var(--color-white, #fff) !important
+}
+
+::slotted(.el-btn-1) {
+    background: var(--color-secondary, #000)!important;
+    color: var(--color-white, white) !important;
+    border: 1px solid var(--color-secondary, #000)
+}
+::slotted(.el-btn-1:hover) {
+    background: var(--color-hover, #000);
+    color: var(--color-primary, #fff) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
+
+
+::slotted(.el-btn-2) {
+    background: 0 0;
+    color: var(--color-secondary, #000) !important;
+    border: 1px solid var(--color-secondary, #000)
+}
+::slotted(.el-btn-2:hover) {
+    background: var(--color-hover, #000);
+    color: var(--color-white, #fff) !important;
+    border: 1px solid var(--color-primary, #000)
+}
+
+
+::slotted(.el-btn-3) {
+    background: var(--color-tertiary, #000)!important;
+    color: var(--color-primary, #000) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
+::slotted(.el-btn-3:hover) {
+    background: var(--color-hover, #000);
+    color: var(--color-white, #fff) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
+
+::slotted(.el-btn-4) {
+	background: 0 0;
+    color: var(--color-tertiary, #000) !important;
+    border: 1px solid var(--color-tertiary, #000)!important;
+}
+::slotted(.el-btn-4:hover) {
+	background: 0 0;
+    color: var(--color-tertiary, #000) !important;
+    border: 1px solid var(--color-tertiary, #000)!important;
+}
+
+::slotted(.el-btn-5) {
+	background: var(--color-quaternary, #000)!important;
+    color: var(--color-primary, #000) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
+::slotted(.el-btn-5:hover) {
+    color: var(--color-white, #fff) !important;
+    border: 1px solid var(--color-primary, #000)!important;
+}
+
+
+:host(.el-btn-au) {
+    width: auto;
+    min-width: auto;
+    overflow: visible;
+    height: auto
+}
+:host(.el-btn-sm) {
+    width: 150px
+}
+:host(.el-btn-md) {
+    width: 250px
+}
+
+:host(.el-btn-lg) {
+    width: 300px
+}
+
+
+
 
 ::slotted([extended=chip]) {
     background: #f4f4f4;
@@ -499,66 +566,6 @@ const elButtonCSS = `:host {
     box-shadow: 0 1px #666
 }
 
-::slotted([extended=button]:hover) {
-    color: var(--color-hover, #000) !important;
-    border: 1px solid var(--color-hover, #000) !important
-}
-
-::slotted([extended=button]:active) {
-    background-image: var(--color-active, #000) !important;
-    color: var(--color-white, #fff) !important
-}
-::slotted([theme=custom]) {
-	background: var(--color-quaternary, #000)!important;
-    color: var(--color-primary, #000) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted([theme=custom]:hover) {
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-::slotted([theme=primary]) {
-    background: var(--color-secondary, #000)!important;
-    color: var(--color-white, white) !important;
-    border: 1px solid var(--color-secondary, #000)
-}
-
-::slotted([theme=primary]:hover) {
-    background: var(--color-hover, #000);
-    color: var(--color-primary, #fff) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted([theme=secondary]) {
-    background: 0 0;
-    color: var(--color-secondary, #000) !important;
-    border: 1px solid var(--color-secondary, #000)
-}
-::slotted([theme=secondary]:hover) {
-    background: var(--color-hover, #000);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)
-}
-
-
-::slotted([theme=tertiary]) {
-    background: var(--color-tertiary, #000)!important;
-    color: var(--color-primary, #000) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted([theme=tertiary]:hover) {
-    background: var(--color-hover, #000);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted([theme=quaternary]) {
-	background: 0 0;
-    color: var(--color-tertiary, #000) !important;
-    border: 1px solid var(--color-tertiary, #000)!important;
-}
 `;
 const elButtonHTML = `<slot name="button"></slot>`;
 const elButtonTemplate = document.createElement("template");
@@ -995,11 +1002,11 @@ customElements.define('el-drawer',
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center;
-				justify-content:space-between;
-				margin-right: 48px;
-				margin-left: 48px;
-				text-indent:24px;
+				justify-content:flex-start;
 				padding: var(--drawer-padding, 0px) 0rem;
+				padding-right: 48px;
+				padding-left: 48px;
+				text-indent:24px;
 			}
 
 			@media(min-width:1024px) {
@@ -1008,6 +1015,7 @@ customElements.define('el-drawer',
 					justify-content:flex-start;
 				
 				}
+				
 			}
 
 			:host #drawer-menu a {

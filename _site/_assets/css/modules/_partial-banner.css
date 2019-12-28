@@ -5,8 +5,15 @@ header {
     padding: 0;
  }
 .homepage-banner el-grid {
-   height: 100vh;
+   min-height: 100vh;
+   padding-top: 64px;
+   padding-bottom: 64px;
 }
+
+.homepage-banner el-column {
+    padding-left:0!important;
+    padding-right:0!important;
+ }
 .base-banner {
     display: flex;
     justify-content: center;

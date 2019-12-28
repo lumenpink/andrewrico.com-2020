@@ -106,7 +106,7 @@ layout: "layouts/layout-homepage.njk"
                         <span>Ended:</span>{{ challenges.data.ended }}
                     </p>
                     <el-button>
-                        <a slot="button" extended="button" theme="primary" href="{{ challenges.data.url }}" rel="noopener" target="_blank"> See Results</a>
+                        <a slot="button" class="el-btn el-btn-1" href="{{ challenges.data.url }}" rel="noopener" target="_blank"> See Results</a>
                     </el-button>
                 </div>
             </div>
@@ -125,19 +125,19 @@ layout: "layouts/layout-homepage.njk"
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
-                            <span> Recruiter </span ><p>Searching for a talented developer</p>
+                            <p><b> Recruiter </b>Searching for a talented developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
-                            <span> Employer </span>  <p>Hiring a developer</p>
+                            <p><b> Employer </b> Hiring a developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
-                            <span> Propest </span> <p><i>Let's Build Something Together</i></p>
+                            <p><b> Propest </b><i>Let's Build Something Together</i></p>
                         </li>
                     </ol>
                 </div>
                 <div class="action-footer">
                     <el-button>
-                        <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
+                        <a slot="button" class="el-btn el-btn-2" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
             </div> 
@@ -147,7 +147,7 @@ layout: "layouts/layout-homepage.njk"
     {% include "forms/form-submitChallenge.njk" %}
 </el-section>
 
-<el-section id="articles" >
+<el-section id="articles">
     <el-grid columns="2">
         <el-column grid="row">
             <h2>Recent Articles</h2>
@@ -161,7 +161,7 @@ layout: "layouts/layout-homepage.njk"
                             <h3> {{ article.data.title }} </h3>
                             {% excerpt article %}
                             <el-button class="button-center">
-                                <a slot="button" extended="button" theme="quaternary" href="{{ article.url | url }}">Read more</a>
+                                <a slot="button" class="el-btn el-btn-4" href="{{ article.url | url }}">Read more</a>
                             </el-button>
                         </article>
                     </li>

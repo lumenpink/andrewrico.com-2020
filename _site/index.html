@@ -239,7 +239,7 @@
                     </nav>
                     <br>
                     <el-button class="button-center">
-                        <a slot="button" extended="button" theme="custom" href="#schedule-phone-call">Schedule a Phone Call</a>
+                        <a slot="button" class="el-btn el-btn-5" href="#schedule-phone-call">Schedule a Phone Call</a>
                     </el-button>
                 </div>
             </el-column>
@@ -252,30 +252,70 @@
         <div class="netliform popup-form">
             <p id="error-messsage"></p>
             <h3>
-                Form: Schedule a Phone Call
-                 <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
-            </h3>
+       <span class="hiddenByUX"> Form: </span>
+Schedule a Phone Call        
+        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
+    </h3>
             <form 
                 id="andrewrico-scheduleCall-netlify" 
                 name="andrewrico-scheduleCall-netlify"
                 method="POST" 
                 action="/"
                 data-netlify="true"
-                data-netlify-recaptcha="true" >
-                <fieldset>         
-                    <label>NAME
-                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                        <input type="text" name="name-schedule" placeholder="jhon due" aria-label="name" required />
-                    </label>
-                    </fieldset>      
-                    <fieldset>      
-                    <label>E-MAIL
-                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                        <input type="email" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
-                    </label>
-                </fieldset> 
+                data-netlify-recaptcha="true" 
+                >
+               <fieldset>
+    <label for="name">NAME</label>
+    <label>
+        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+        <input type="text" id="name-schedule" name="name-schedule" placeholder="jhon due" aria-label="name" required />
+    </label>
+</fieldset>
+<fieldset>
+    <label for="email">E-MAIL</label>
+    <label>
+        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+        <input type="email" id="email-schedule" name="email-schedule" placeholder="jhondue@mail.com" aria-label="email" required />
+    </label>
+</fieldset>
+<fieldset>
+    <label for="tel">PHONE</label>
+    <label>
+        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+        <input type="tel" id="tel" name="tel" placeholder="(555)-333-3333" aria-label="tel" required />
+    </label>
+</fieldset>
+<fieldset>
+    <label for="url">URL</label>
+    <label>
+        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+        <input type="text" id="url" id="name" name="url" placeholder="https://www." aria-label="url" required />
+    </label>
+</fieldset>
+<fieldset>
+    <label for="time">TIME</label>
+    <label>
+        <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
+        <input type="time" id="time" name="time" aria-label="phone" required />
+    </label>
+</fieldset>
+<fieldset>
+    <label for="date">DATE</label>
+    <label>
+        <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
+        <input type="date" id="date" name="date" aria-label="date" required />
+    </label>
+</fieldset>
+<fieldset class="fullwidth">
+    <label for="message">MESSAGE</label>
+    <label>
+        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+        <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
+    </label>
+</fieldset>
                 <el-button class="button-center">
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                    <button type="submit" slot="button" class="el-btn el-btn-4">
                         SCHEDULE
                     </button>
                 </el-button>
@@ -472,7 +512,7 @@ Wordpress<br>
                         <span>Ended:</span>Jan/01/2020
                     </p>
                     <el-button>
-                        <a slot="button" extended="button" theme="primary" href="https://www.hackerrank.com/andrewric86?hr_r=1" rel="noopener" target="_blank"> See Results</a>
+                        <a slot="button" class="el-btn el-btn-1" href="https://www.hackerrank.com/andrewric86?hr_r=1" rel="noopener" target="_blank"> See Results</a>
                     </el-button>
                 </div>
             </div>
@@ -488,19 +528,19 @@ Wordpress<br>
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
-                            <span> Recruiter </span ><p>Searching for a talented developer</p>
+                            <p><b> Recruiter </b>Searching for a talented developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
-                            <span> Employer </span>  <p>Hiring a developer</p>
+                            <p><b> Employer </b> Hiring a developer</p>
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
-                            <span> Propest </span> <p><i>Let's Build Something Together</i></p>
+                            <p><b> Propest </b><i>Let's Build Something Together</i></p>
                         </li>
                     </ol>
                 </div>
                 <div class="action-footer">
                     <el-button>
-                        <a slot="button" extended="button" theme="secondary" href="#submit-challenge">Submit </a>
+                        <a slot="button" class="el-btn el-btn-2" href="#submit-challenge">Submit </a>
                     </el-button>
                 </div>
             </div> 
@@ -510,10 +550,12 @@ Wordpress<br>
         <a href="#chanllenge" title="CLOSE" class="backdrop-modal"></a>
         <div class="netliform popup-form">
             <p id="error-messsge"></p>
-            <h3>
-                Form: Submit a Code Challenge
+                     <h3>
+       <span class="hiddenByUX"> Form: </span>
+Submit a Code Challenge        
+        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
                 <a href="#challenge" title="CLOSE" class="modal-icon-close">X</a>
-            </h3>
+    </h3>
             <form 
                 id="andrewrico-submitChallenge-netlify" 
                 name="andrewrico-submitChallenge-netlify" 
@@ -575,7 +617,7 @@ Wordpress<br>
                 <div data-netlify-recaptcha="true"></div>
 
                 <el-button class="button-center">
-                    <button type="submit" slot="button" extended="button" theme="quaternary">
+                    <button type="submit" slot="button" class="el-btn el-btn-4">
                         Submit
                     </button>
                 </el-button>
@@ -585,7 +627,7 @@ Wordpress<br>
 </div>
 </el-section>
 
-<el-section id="articles" >
+<el-section id="articles">
     <el-grid columns="2">
         <el-column grid="row">
             <h2>Recent Articles</h2>
@@ -597,7 +639,7 @@ Wordpress<br>
                             <h3> Build a web component </h3>
                             <p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements  whose functionality is encapsulated and thus completely separate from other code.</p>
                             <el-button class="button-center">
-                                <a slot="button" extended="button" theme="quaternary" href="/articles/2020/Build-a-web-component/">Read more</a>
+                                <a slot="button" class="el-btn el-btn-4" href="/articles/2020/Build-a-web-component/">Read more</a>
                             </el-button>
                         </article>
                     </li>
@@ -676,8 +718,9 @@ Wordpress<br>
             <div class="netliform simple-form sendMesseage-form">
     <p id="error-message"></p>
     <h3>
-        Form: Send me a message
-        <svg width="24" height="24" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#rocket"></use></svg>
+       <span class="hiddenByUX"> Form: </span>
+        Send me a message
+        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
     </h3>
     <form 
         id="andrewrico-sendMessage-netlify" 
@@ -715,11 +758,8 @@ Wordpress<br>
                 <input type="text" id="message" name="message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required/>
             </label>
         </fieldset>
-
-        <div data-netlify-recaptcha="true"></div>
-
         <el-button class="button-center">
-            <button type="submit" slot="button" extended="button" theme="custom">
+            <button type="submit" slot="button" class="el-btn el-btn-5">
                 Send Message
             </button>
         </el-button>
