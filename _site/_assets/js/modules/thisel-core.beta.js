@@ -262,7 +262,7 @@ customElements.define('el-column',
 
 // create el-copyright template.
 const elCopyrightFullYear = new Date().getFullYear();
-const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:'Source Code Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:0.8rem; text-decoration:none;}:host h1{ white-space: nowrap; margin:0;font-family:sans-serif; font-size:0.8rem;font-weight:100; }`;
+const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:inherit; font-size:0.8rem; text-decoration:none;}:host h1{ white-space: nowrap; margin:0;font-family:sans-serif; font-size:0.8rem;font-weight:100; }`;
 const elCopyrightHTML = `<h1> ©  ${elCopyrightFullYear} <slot name="copyright"> copyright </slot> </h1>`;
 const elCopyrightTemplate = document.createElement("template");
 elCopyrightTemplate.innerHTML = `<style>`.concat(elCopyrightCSS, `</style>`).concat(elCopyrightHTML);
@@ -915,8 +915,10 @@ customElements.define('el-drawer',
 				opacity:0.8;
 			}
 
+			::slotted(.brand-name),
 			:host h1.brand-name {
-				font-size: var(--drawer-brand-font-size, 16px);
+				font-weight:600!important;
+				font-size:28px!important;
 				font-family: var(--drawer-brand-font-family);
 				color: var(--drawer-brand-color, var(--color-black, #000));
 

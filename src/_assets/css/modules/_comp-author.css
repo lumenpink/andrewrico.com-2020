@@ -14,6 +14,12 @@
   border-radius: 50%;
 }
 
+#author figure {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  font-weight: 600;
+}
 .author-name {
   font-family: var(--font-family-title);
   font-size: 2rem;
@@ -26,14 +32,7 @@
   padding: 16px 0;
 }
 
-.author-titles {
-  margin: 0;
-  padding: 0;
-  align-self: center;
-  font-weight: 600;
-}
-
-.author-titles h2 {
+.author-title {
   font-size: 1rem;
   font-weight: 400;
   font-family: var(--font-family-content);

@@ -1,6 +1,10 @@
 <div class="netliform subscriber-form">
     {# <p id="error"></p> #}
-    <h3>Form: Newslatters</h3>
+     <h3>
+       <span class="hiddenByUX"> Form: </span>
+        Newslatters       
+        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+    </h3>
     <form 
         id="andrewrico-subscribe-netlify" 
         name="andrewrico-subscribe-netlify" 
@@ -16,9 +20,6 @@
                 <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required/>
             </label>
         </fieldset>
-
-        <div data-netlify-recaptcha="true"></div>
-
         <el-button class="button-center">
             <button type="submit" slot="button" class="el-btn">
                 SUBSCRIBRE 

@@ -106,13 +106,3 @@ el-drawer span {
 el-drawer hr {
 	border: 1px solid #fafafa;
 }
-
-el-drawer .site-name {
-	font-kerning: normal;
-	font-stretch: extra-expanded;
-	font-weight: 600;
-	font-size-adjust: initial;
-	font-style: normal;
-	/* font-size: 1.6rem; */
-	background: none;
-}

@@ -29,8 +29,9 @@
 <body>
 <el-loading></el-loading>
 
-    <el-drawer site-title="Andrew Rico">
-    <nav class="drawer-menu" slot="drawer-menu">
+    <el-drawer>
+    <h1 class="brand-name" slot="drawer-brand"> Andrew Rico</h1>
+<nav class="drawer-menu" slot="drawer-menu">
     <h2>Brand</h2>
     <ul>
         <li>
@@ -91,6 +92,7 @@
         </li>
     </ul>
 </nav>
+<p class="brand-name" slot="navbar-brand"> Andrew Rico</p>
 
 </el-drawer>
         <main id="404-page"> 
@@ -111,7 +113,7 @@
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <strong class="site-name">Andrew Rico</strong>
+                <h1 class="site-name">Andrew Rico</h1>
             </el-column>
             <el-column>
                 <h3>About</h3>

@@ -29,8 +29,9 @@
 <body>
 <el-loading></el-loading>
 
-    <el-drawer site-title="Andrew Rico">
-    <nav class="drawer-menu" slot="drawer-menu">
+    <el-drawer>
+    <h1 class="brand-name" slot="drawer-brand"> Andrew Rico</h1>
+<nav class="drawer-menu" slot="drawer-menu">
     <h2>Brand</h2>
     <ul>
         <li>
@@ -91,6 +92,7 @@
         </li>
     </ul>
 </nav>
+<p class="brand-name" slot="navbar-brand"> Andrew Rico</p>
 
     <nav slot="navbar-menu"> 
         <ul class="menu-navbar">
@@ -129,17 +131,17 @@
         <el-column grid="row" display="flex" flex-direction="column" justify-content="center" align-items="center" >
             <figure id="author">
                 <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
-                <h2 class="author-name"> Andrew Rico </h2>
-                <div class="author-titles">
+                <figcaption>
+                    <h2 class="author-name"> Andrew Rico </h2>
                     
-                        <h2> WEB DEVELOPER </h2>
+                        <h2 class="author-title"> WEB DEVELOPER </h2>
                     
-                        <h2> UI/UX ENGINEER </h2>
+                        <h2 class="author-title"> UI/UX ENGINEER </h2>
                     
                     
-                        <h2> JAM stack specialist </h2> 
+                        <h2 class="author-title"> JAM stack specialist </h2> 
                     
-                </div>
+                </figcaption>
             </figure>
             <nav class="navigation-keywords" aria-labelledby="accesible-blog-keywords-navigation">
                 <h6 id="accesible-blog-keywords-navigation">This is the navigation keywords component</h6>
@@ -161,7 +163,7 @@
                             <h2> Build a web component </h2>
                             <p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements  whose functionality is encapsulated and thus completely separate from other code.</p>
                             <el-button class="button-center">
-                                <a slot="button" extended="button" theme="quaternary" href="/articles/2020/Build-a-web-component/">Read more</a>
+                                <a slot="button" class="el-btn el-btn-4" href="/articles/2020/Build-a-web-component/">Read more</a>
                             </el-button>
                         </article>
                     </li>
@@ -175,7 +177,11 @@
         <el-column grid="row">
             <div class="netliform subscriber-form">
     
-    <h3>Form: Newslatters</h3>
+     <h3>
+       <span class="hiddenByUX"> Form: </span>
+        Newslatters       
+        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+    </h3>
     <form 
         id="andrewrico-subscribe-netlify" 
         name="andrewrico-subscribe-netlify" 
@@ -191,9 +197,6 @@
                 <input type="email" id="email" name="email" placeholder="jhondue@mail.com" aria-label="email" required/>
             </label>
         </fieldset>
-
-        <div data-netlify-recaptcha="true"></div>
-
         <el-button class="button-center">
             <button type="submit" slot="button" class="el-btn">
                 SUBSCRIBRE 
@@ -213,7 +216,7 @@
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <strong class="site-name">Andrew Rico</strong>
+                <h1 class="site-name">Andrew Rico</h1>
             </el-column>
             <el-column>
                 <h3>About</h3>

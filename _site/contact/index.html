@@ -29,8 +29,9 @@
 <body>
 <el-loading></el-loading>
 
-    <el-drawer site-title="Andrew Rico">
-    <nav class="drawer-menu" slot="drawer-menu">
+    <el-drawer>
+    <h1 class="brand-name" slot="drawer-brand"> Andrew Rico</h1>
+<nav class="drawer-menu" slot="drawer-menu">
     <h2>Brand</h2>
     <ul>
         <li>
@@ -91,6 +92,7 @@
         </li>
     </ul>
 </nav>
+<p class="brand-name" slot="navbar-brand"> Andrew Rico</p>
 
     <nav slot="navbar-menu">
         <ul class="menu-navbar">
@@ -146,9 +148,7 @@
         </el-column>
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center">
             <figure id="author">
-                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Avatar">
-                <h2 class="author-name"> Andrew Rico </h2>
-                <h4 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> Fort Lauderdale, FL USA</h4>
+                <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Figure">
                 <nav class="navigation-social-icons" aria-labelledby="accesible-social-icons-navigation">
     <h3 id="accesible-social-icons-navigation">NAVIGATION: SOCIAL ICONS</h3>
     <ul>
@@ -178,14 +178,16 @@
         </li>
     </ul>
 </nav>
-                <figcaption class="author-titles">
+                <figcaption>
+                    <h2 class="author-name"> Andrew Rico </h2>
+                    <h2 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> Fort Lauderdale, FL USA</h2>
                     
-                        <h2> WEB DEVELOPER </h2>
+                        <h2 class="author-title"> WEB DEVELOPER </h2>
                     
-                        <h2> UI/UX ENGINEER </h2>
+                        <h2 class="author-title"> UI/UX ENGINEER </h2>
                     
                     
-                        <h2> JAM stack specialist </h2> 
+                        <h2 class="author-title"> JAM stack specialist </h2> 
                     
                 </figcaption>                
             </figure>
@@ -196,7 +198,7 @@
     <h3>
        <span class="hiddenByUX"> Form: </span>
         Send me a message
-        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
     </h3>
     <form 
         id="andrewrico-sendMessage-netlify" 
@@ -250,7 +252,7 @@
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <strong class="site-name">Andrew Rico</strong>
+                <h1 class="site-name">Andrew Rico</h1>
             </el-column>
             <el-column>
                 <h3>About</h3>

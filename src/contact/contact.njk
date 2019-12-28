@@ -18,16 +18,16 @@ PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstrac
         </el-column>
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center">
             <figure id="author">
-                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
-                <h2 class="author-name"> {{ site.author.name}} </h2>
-                <h4 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h4>
+                <img class="author-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.author }} Avatar" title="{{ site.author.author }} Figure">
                 {% include "navigations/navigation-social.njk" %}
-                <figcaption class="author-titles">
+                <figcaption>
+                    <h2 class="author-name"> {{ site.author.name}} </h2>
+                    <h2 class="author-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h2>
                     {% for subtitles in site.author.subtitle %}
-                        <h2> {{ subtitles }} </h2>
+                        <h2 class="author-title"> {{ subtitles }} </h2>
                     {% endfor %}
                     {% for titles in site.author.title %}
-                        <h2> {{ titles }} </h2> 
+                        <h2 class="author-title"> {{ titles }} </h2> 
                     {% endfor %}
                 </figcaption>                
             </figure>

@@ -13,16 +13,16 @@ pagination:
     <el-grid columns="1">
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center" >
             <figure id="author">
-                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
-                <h2 class="author-name"> {{ site.author.name}} </h2>
-                <div class="author-titles">
+                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author }} Avatar" title="{{ site.author.author }} Figure">
+                <figcaption>
+                    <h2 class="author-name"> {{ site.author.name}} </h2>
                     {% for subtitles in site.author.subtitle %}
-                        <h2> {{ subtitles }} </h2>
+                        <h2 class="author-title"> {{ subtitles }} </h2>
                     {% endfor %}
                     {% for titles in site.author.title %}
-                        <h2> {{ titles }} </h2> 
+                        <h2 class="author-title"> {{ titles }} </h2> 
                     {% endfor %}
-                </div>                
+                </figcaption>                
             </figure>
         </el-column>
     </el-grid>
@@ -117,7 +117,7 @@ pagination:
     <el-grid max-width="100">
         <el-column grid="row">
             <el-button class="button-center button-large">
-                <a slot="button" extended="button" size="large" theme="quaternary" href="/contact">
+                <a slot="button" class="el-btn el-btn-4 el-btn-lg" href="/contact">
                     LET'S BUILD SOMETHING TOGETHER
                 </a>
             </el-button>

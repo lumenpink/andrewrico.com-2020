@@ -17,15 +17,15 @@ pagination:
         <el-column grid="row" display="flex" flex-direction="column" justify-content="center" align-items="center" >
             <figure id="author">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
-                <h2 class="author-name"> {{ site.author.name}} </h2>
-                <div class="author-titles">
+                <figcaption>
+                    <h2 class="author-name"> {{ site.author.name}} </h2>
                     {% for subtitles in site.author.subtitle %}
-                        <h2> {{ subtitles }} </h2>
+                        <h2 class="author-title"> {{ subtitles }} </h2>
                     {% endfor %}
                     {% for titles in site.author.title %}
-                        <h2> {{ titles }} </h2> 
+                        <h2 class="author-title"> {{ titles }} </h2> 
                     {% endfor %}
-                </div>
+                </figcaption>
             </figure>
             <nav class="navigation-keywords" aria-labelledby="accesible-blog-keywords-navigation">
                 <h6 id="accesible-blog-keywords-navigation">This is the navigation keywords component</h6>
@@ -45,7 +45,7 @@ pagination:
                             <h2> {{ article.data.title }} </h2>
                             {% excerpt article %}
                             <el-button class="button-center">
-                                <a slot="button" extended="button" theme="quaternary" href="{{ article.url | url }}">Read more</a>
+                                <a slot="button" class="el-btn el-btn-4" href="{{ article.url | url }}">Read more</a>
                             </el-button>
                         </article>
                     </li>

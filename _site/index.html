@@ -29,8 +29,9 @@
 <body>
 <el-loading></el-loading>
 
-    <el-drawer site-title="Andrew Rico">
-	<nav class="drawer-menu" slot="drawer-menu">
+    <el-drawer>
+	<h1 class="brand-name" slot="drawer-brand"> Andrew Rico</h1>
+<nav class="drawer-menu" slot="drawer-menu">
     <h2>Brand</h2>
     <ul>
         <li>
@@ -91,6 +92,7 @@
         </li>
     </ul>
 </nav>
+<p class="brand-name" slot="navbar-brand"> Andrew Rico</p>
 
 	<nav slot="navbar-menu" >
 		<ul class="menu-navbar">
@@ -173,23 +175,23 @@
         <el-grid max-width="100" columns="1">
             <el-column grid="row">
                 <div class="card-bio">
-                    <div class="bio-author">
-                        <img class="bio-avatar" src="/_assets/media/images/andrewrico.png" alt="Andrew Rico Avatar" title="Andrew Rico Avatar">
-                        <div class="bio-info">
-                            <h1> Hello, I'am <b> Andrew Rico </b>  </h1>
-                            <h2 class="bio-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> Fort Lauderdale, FL USA</h2>
-                            <div class="bio-titles">
-                                
-                                    <h2> WEB DEVELOPER </h2>
-                                
-                                    <h2> UI/UX ENGINEER </h2>
-                                
-                                
-                                    <h2> JAM stack specialist </h2> 
-                                
-                            </div> 
-                        </div>
-                    </div>
+                    <figure class="bio-author">
+                        <img class="bio-avatar" src="/_assets/media/images/andrewrico.png" alt="Andrew Rico Avatar" title="Andrew Rico figure">
+                        <figcaption>
+                            <h1 class="bio-name"> Hello, I'am Andrew Rico </h1>
+                            <h2 class="bio-location">
+                                <svg><use href="_assets/media/svg/sprites.svg#location"></use> </svg> Fort Lauderdale, FL USA
+                            </h2>
+                            
+                                <h2 class="bio-title"> WEB DEVELOPER </h2>
+                            
+                                <h2 class="bio-title"> UI/UX ENGINEER </h2>
+                            
+                            
+                                <h2 class="bio-title"> JAM stack specialist </h2> 
+                            
+                        </figcaption> 
+                    </figure>
                     <div class="bio-terminal"> 
                         <p class="typewrite" data-period="2500" data-type='[ 
                                 " I like to build things – I love knowledge ", 
@@ -253,8 +255,8 @@
             <p id="error-messsage"></p>
             <h3>
        <span class="hiddenByUX"> Form: </span>
-Schedule a Phone Call        
-        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        Schedule a Phone Call        
+        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
         <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
     </h3>
             <form 
@@ -553,7 +555,7 @@ Wordpress<br>
                      <h3>
        <span class="hiddenByUX"> Form: </span>
 Submit a Code Challenge        
-        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
                 <a href="#challenge" title="CLOSE" class="modal-icon-close">X</a>
     </h3>
             <form 
@@ -720,7 +722,7 @@ Submit a Code Challenge
     <h3>
        <span class="hiddenByUX"> Form: </span>
         Send me a message
-        <svg style="margin:0 16px;" width="48" height="48" fill="var(--color-quaternary)"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
+        <svg style="margin:0 16px;" width="48" height="48"><use href="/_assets/media/svg/sprites.svg#form-pencil"></use></svg>
     </h3>
     <form 
         id="andrewrico-sendMessage-netlify" 
@@ -777,7 +779,7 @@ Submit a Code Challenge
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <strong class="site-name">Andrew Rico</strong>
+                <h1 class="site-name">Andrew Rico</h1>
             </el-column>
             <el-column>
                 <h3>About</h3>

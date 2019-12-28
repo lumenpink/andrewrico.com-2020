@@ -8,21 +8,21 @@
         <el-grid max-width="100" columns="1">
             <el-column grid="row">
                 <div class="card-bio">
-                    <div class="bio-author">
-                        <img class="bio-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Avatar">
-                        <div class="bio-info">
-                            <h1> Hello, I'am <b> {{ site.author.name }} </b>  </h1>
-                            <h2 class="bio-location"><svg width="12" height="12" fill="white"><use href="_assets/media/svg/sprites.svg#location"></use></svg> {{ site.author.location }}</h2>
-                            <div class="bio-titles">
-                                {% for subtitles in site.author.subtitle %}
-                                    <h2> {{ subtitles }} </h2>
-                                {% endfor %}
-                                {% for titles in site.author.title %}
-                                    <h2> {{ titles }} </h2> 
-                                {% endfor %}
-                            </div> 
-                        </div>
-                    </div>
+                    <figure class="bio-author">
+                        <img class="bio-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} figure">
+                        <figcaption>
+                            <h1 class="bio-name"> Hello, I'am {{ site.author.name }} </h1>
+                            <h2 class="bio-location">
+                                <svg><use href="_assets/media/svg/sprites.svg#location"></use> </svg> {{ site.author.location }}
+                            </h2>
+                            {% for subtitles in site.author.subtitle %}
+                                <h2 class="bio-title"> {{ subtitles }} </h2>
+                            {% endfor %}
+                            {% for titles in site.author.title %}
+                                <h2 class="bio-title"> {{ titles }} </h2> 
+                            {% endfor %}
+                        </figcaption> 
+                    </figure>
                     <div class="bio-terminal"> 
                         <p class="typewrite" data-period="2500" data-type='[ 
                                 " I like to build things – I love knowledge ", 

@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 100%;
   position: relative;
   justify-content: space-between;
 }
@@ -45,50 +46,49 @@
   background: var(--color-light);
 }
 
-.bio-author h1 {
+.bio-author figcaption {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.bio-name {
   font-size: 1.4rem;
   margin: 0;
   font-family: var(--font-family-title);
 }
 
+.bio-location {
+  font-size: 12.25px;
+  margin: 16px 0;
+}
 
-.bio-author h2 {
+.bio-location>svg {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+}
+
+.bio-title {
   font-size: 1em;
   font-family: var(--font-family-content);
   margin: 0;
   padding: 0;
   text-align: center;
 }
-.bio-info > h2{
-  font-size: 0.7em;
-}
-
-.bio-author h4 {
-  font-size: 12.25px;
-  margin: 0;
-}
-
 
 @media(min-width:1024px) {
-  .bio-author h2 {
+  .bio-title {
     text-align: right;
   }
 
-  .bio-info > h2{
-    font-size: 0.7em;
-    text-align: left!important;
+  .bio-location {
+    font-size: 12.25px;
+    text-align: left !important;
+    margin: 8px 0;
   }
 }
 
-.bio-info {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-.bio-titles {
-  padding: 1rem 0;
-}
 /*termianl*/
 .bio-terminal {
   margin: 1rem auto;
@@ -128,11 +128,13 @@
   letter-spacing: 0.5px;
   font-weight: 100;
 }
+
 @media(min-width:1024px) {
   .bio-navgigation ul li {
     font-size: 1rem;
   }
 }
+
 .bio-navgigation svg {
   width: 24px;
   height: 24px;
@@ -145,6 +147,4 @@
   fill: var(--color-primary);
   transition: transform ease 0.6s;
   transform: translateY(-0.24rem);
-} 
-
-
+}
