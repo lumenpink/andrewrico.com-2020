@@ -1,4 +1,4 @@
-#footer h1 {
+#footer strong {
 	color:var(--color-white);
 	background: transparent;
 	font-size: 28px;
@@ -6,7 +6,7 @@
 }
 
 @media(min-width: 1268px) {
-	#footer h1 {
+	#footer strong {
 		font-size: 48px;
 	}
 }

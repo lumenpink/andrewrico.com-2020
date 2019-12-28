@@ -73,11 +73,8 @@ el-drawer .drawer-menu ul svg {
 	width: 24px;
 	height: 24px;
 }
-el-drawer h2:first-child {
-	opacity: 0;
-	height: 0;
-}
-el-drawer h2 {
+
+el-drawer .h3 {
 	color: var(--color-gray, #000);
 	font-weight: 200;
 	font-size: 1.6rem;
@@ -88,7 +85,6 @@ el-drawer h2 {
 	margin-right: 48px;
 	margin-left: 48px;
 }
-
 
 el-drawer span {
 	display: -webkit-box;

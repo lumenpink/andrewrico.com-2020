@@ -786,7 +786,7 @@ customElements.define('el-drawer',
 			});
 			// create el-Drawer template.
 
-			const _elDrawerSiteName = this.getAttribute("site-title");
+			const _elDrawerSiteName = this.getAttribute("site");
 
 			const elDrawerCSS = `:host {
 				display: block
@@ -916,7 +916,7 @@ customElements.define('el-drawer',
 			}
 
 			::slotted(.brand-name),
-			:host h1.brand-name {
+			:host .brand-name {
 				font-weight:600!important;
 				font-size:28px!important;
 				font-family: var(--drawer-brand-font-family);
@@ -1056,7 +1056,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="navbar-brand">
-						<h1 class="brand-name">${_elDrawerSiteName}</h1>
+						<strong class="brand-name">${_elDrawerSiteName}</strong>
 					</slot>
 				</a>
 				<div class="navbar-menu">
@@ -1077,7 +1077,7 @@ customElements.define('el-drawer',
 				</button>
 				<a class="brand" href="/">
 					<slot name="drawer-brand">
-						<h1 class="brand-name">${_elDrawerSiteName}</h1>
+						<strong class="brand-name">${_elDrawerSiteName}</strong>
 					</slot>
 				</a>
 			</div>
@@ -1144,13 +1144,13 @@ customElements.define('el-drawer',
 			if (oldValue === newValue) {
 				return;
 			}
-			if (_name === 'site-name') {
+			if (_name === 'site') {
 				this._elDrawerSiteName = newValue;
 			}
 		}
 		// observe statics attributes
 		static get observedAttributes() {
-			return ['site-name'];
+			return ['site'];
 		}
 
 

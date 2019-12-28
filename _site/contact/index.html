@@ -29,10 +29,9 @@
 <body>
 <el-loading></el-loading>
 
-    <el-drawer>
-    <h1 class="brand-name" slot="drawer-brand"> Andrew Rico</h1>
-<nav class="drawer-menu" slot="drawer-menu">
-    <h2>Brand</h2>
+     <el-drawer site="Andrew Rico">
+    <nav class="drawer-menu" slot="drawer-menu">
+    <b class="h3 hiddenByUX">Brand</b>
     <ul>
         <li>
             <a href="/">
@@ -52,7 +51,7 @@
         </li>
     </ul>
 
-    <hr><h2>Sources</h2>
+    <hr><b class="h3">Sources</b>
     <ul>
         <li>
             <a href="/blog">
@@ -64,7 +63,7 @@
         </li>
     </ul>
 
-    <hr><h2>Contact</h2>
+    <hr><b class="h3">Contact</b>
     <ul>
         <li>
             <a href="" target="_blank" rel="noopener">
@@ -92,7 +91,6 @@
         </li>
     </ul>
 </nav>
-<p class="brand-name" slot="navbar-brand"> Andrew Rico</p>
 
     <nav slot="navbar-menu">
         <ul class="menu-navbar">
@@ -252,7 +250,7 @@
     <el-section id="footer" padding-top="2" padding-bottom="6" background="var(--color-quaternary)" color="white">
         <el-grid columns="4">
             <el-column align-items="center" justify-content="center">
-                <h1 class="site-name">Andrew Rico</h1>
+                <strong class="site-name">Andrew Rico</strong>
             </el-column>
             <el-column>
                 <h3>About</h3>
