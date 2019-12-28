@@ -1,68 +1,67 @@
 <div id="schedule-phone-call" class="modal-popup">
-        <div class="modal-content">
-            <a href="#about" title="CLOSE" class="backdrop-modal"></a>
+    <div class="modal-content">
+        <a href="#about" title="CLOSE" class="backdrop-modal"></a>
         <div class="netliform popup-form">
-            <p id="error-messsage"></p>
             <h3>
-                <span class="hiddenByUX"> Form: </span>
-                Schedule a Phone Call        
+                Schedule a Phone Call
                 <a href="#about" title="CLOSE" class="modal-icon-close">X</a>
             </h3>
-            <form 
-                id="andrewrico-scheduleCall-netlify" 
-                name="andrewrico-scheduleCall-netlify"
+            <form id="andrewrico-schedule-netiId-55" 
+                name="andrewricos-schedule-netiId-55"
                 method="POST" 
                 data-netlify="true"
                 >
-                    <div class="field">
-                        <label for="formScheduleName">NAME</label>
-                        <div>
-                            <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
-                            <input type="text" id="formScheduleName" name="formScheduleName" placeholder="jhon due" aria-label="name" required />
-                        </div>
+
+                <div class="form-field">
+                    <label for="netiId-55-name">NAME</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                        <input type="text" id="netiId-55-name" name="netiId-55-name" placeholder="jhon due" aria-label="name" required />
                     </div>
-                    <div class="field">
-                        <label for="formScheduleMail">E-MAIL</label>
-                        <div>
-                            <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
-                            <input type="text" id="formScheduleMail" name="formScheduleMail" placeholder="jhondue@mail.com" aria-label="email" required />
-                        </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="netiId-55-email">E-MAIL</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                        <input type="email" id="netiId-55-email" name="netiId-55-email" placeholder="jhondue@mail.com" aria-label="email" required />
                     </div>
-                    <div class="field">
-                        <label for="formSchedulePhone">PHONE</label>
-                        <div>
-                            <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
-                            <input type="text" id="formSchedulePhone" name="formSchedulePhone" placeholder="(555)-333-3333" aria-label="tel" required />
-                        </div>
+                </div>
+                <div class="form-field">
+                    <label for="netiId-55-phone">PHONE</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                        <input type="tel" id="netiId-55-phone" name="netiId-55-phone" placeholder="(555)-333-3333" aria-label="tel" required />
                     </div>
-                    <div class="field">
-                        <label for="formScheduleURL">URL</label>
-                        <div>
-                            <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
-                            <input type="text" id="formScheduleURL" name="formScheduleURL" placeholder="https://www." aria-label="url" required />
-                        </div>
+                </div>
+                <div class="form-field">
+                    <label for="netiId-55-url">URL</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#www"></use></svg>
+                        <input type="text" id="netiId-55-url" name="netiId-55-url" placeholder="https://www." aria-label="url" required />
                     </div>
-                    <div class="field">
-                        <label for="formScheduleTime">TIME</label>
-                        <div>
-                            <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
-                            <input type="text" id="formScheduleTime" name="formScheduleTime" aria-label="phone" required />
-                        </div>
+                </div>
+                <div class="form-field">
+                    <label for="netiId-55-time">TIME</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#clock"></use></svg>
+                        <input type="text" id="netiId-55-time" name="netiId-55-time" placeholder="9:30 am" aria-label="phone" required />
                     </div>
-                    <div class="field">
-                        <label for="formScheduleDate">DATE</label>
-                        <div>
-                            <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
-                            <input type="text" id="formScheduleDate" name="formScheduleDate" aria-label="date" required />
-                        </div>
+                </div>
+                <div class="form-field">
+                    <label for="netiId-55-date">DATE</label>
+                    <div class="field-group">
+                        <svg><use href="/_assets/media/svg/sprites.svg#calendar"></use></svg>
+                        <input type="text" id="netiId-55-date" name="netiId-55-date" placeholder="01/Jan/2020" aria-label="date" required />
                     </div>
-                    <div class="field fullwidth">
-                        <label for="formScheduleMessage">MESSAGE</label>
-                        <div>
-                            <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
-                            <input type="text" id="formScheduleMessage" name="formScheduleMessage" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
-                        </div>
+                </div>
+                <div class="form-field fullwidth">
+                    <label for="netiId-55-message">MESSAGE</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#quill"></use></svg>
+                        <input type="text" id="netiId-55-message" name="netiId-55-message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
                     </div>
+                </div>
                 <el-button class="auto">
                     <button type="submit" slot="button" class="el-btn el-btn-4">
                         SCHEDULE
@@ -70,7 +69,7 @@
                 </el-button>
             </form>
         </div>
-     </div>
+    </div>
 </div>
 
 

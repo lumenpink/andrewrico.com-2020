@@ -25,6 +25,8 @@ input {
 	font-size: 1em;
 	padding: 0.5rem;
 	border-radius: 2px;
+	border: 1px solid var(--color-light);
+
 }
 
 input:focus {
@@ -81,29 +83,30 @@ option {
 	padding: 8em;
 }
 
-.field {
+.form-field {
+	padding: 8px;
 	position: relative;
 }
 
-.field label {
+.form-field label {
 	display: block;
 	font-size: 1rem;
 	color: var(--color-quaternary);
 }
 
-.field label:nth-child(2) {
+.form-field .field-group {
 	display: flex;
 	align-items: center;
 	width: 100%;
 	margin: 1rem 0;
 }
 
-.field input {
+.field-group input {
 	padding-left: 2rem;
 	padding-top: 2rem;
 }
 
-.field svg {
+.field-group svg {
 	width: 16px;
 	height: 16px;
 	fill: #060606;
@@ -130,19 +133,10 @@ netliform
 	overflow-y: auto;
 }
 
-.netliform #error-message {
-	display: none;
-	position: absolute;
-	top: 0;
-	color: white;
-	background: red;
-	z-index: 6000;
-}
-
 .netliform .fullwidth {
 	grid-column: 1 / -1;
 }
-.netliform  h3 {
+.netliform h3 {
 	display: flex;
 	align-items:center ;
 	align-self: flex-start;
