@@ -13,7 +13,7 @@ layout: "/layouts/layout-article.njk"
                     <div>
                         <h2 class="author-name"> {{ site.author.name}} </h2>   
                         <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time>  <br> 
-                        <em>Updated:  <time datetime="{{ update | dateIso }}">  {{ update | dateReadable }}  </time>  </em> 
+                        <em class="article-update">Updated:  <time datetime="{{ update | dateIso }}">  {{ update | dateReadable }}  </time>  </em> 
                     </div> 
                 </div>
                 <nav class="navigation-keywords" aria-labelledby="accesible-article-keywords-navigation">
