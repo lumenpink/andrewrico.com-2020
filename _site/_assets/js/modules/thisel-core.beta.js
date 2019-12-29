@@ -487,7 +487,7 @@ const elButtonCSS = `
 }
 ::slotted(.el-btn-4:hover) {
 	background: 0 0;
-    color: var(--color-tertiary, #000) !important;
+    color: var(--color-white, #000) !important;
     border: 1px solid var(--color-tertiary, #000)!important;
 }
 
@@ -508,14 +508,14 @@ const elButtonCSS = `
     height: auto
 }
 ::slotted(.el-btn-sm) {
-    width: 150px
+    min-width: 150px
 }
 ::slotted(.el-btn-md) {
-    width: 250px
+    min-width: 250px
 }
 
 ::slotted(.el-btn-lg) {
-    width: 300px
+    min-width: 300px
 }
 `;
 const elButtonHTML = `<slot name="button"></slot>`;
@@ -559,7 +559,6 @@ const elDropdownCSS = `:host {
 	}
 	
 	.dropcontent {
-		
 		display: none;
 		position: absolute;
 		background-color: #fafafa;
@@ -659,7 +658,7 @@ const elDropdownCSS = `:host {
 		box-shadow: 0 1px #666
 	}`;
 const elDropdownHTML = `<div id="backdrop"></div>
-	<div class="dropdown">
+	<div aria-label="Dropdown" class="dropdown">
 	<button aria-label="Dropdown Button" class="chip" id="chip">
 	<slot name="dropdown-icon">
 		<svg fill="var(--color-black, #262626)" height="16" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60.123 60.123">
@@ -742,7 +741,6 @@ customElements.define('el-drawer',
 			const elDrawerCSS = `:host {
 				display: block
 			}
-			
 			:host #drawer-backdrop {
 				position: fixed;
 				height: 100vh;
@@ -755,7 +753,6 @@ customElements.define('el-drawer',
 				z-index: 10;
 				cursor: not-allowed
 			}
-			
 			.button-drawer {
 				max-width:100%;
 				height:auto;
@@ -779,7 +776,6 @@ customElements.define('el-drawer',
 				-webkit-transition-duration: 100ms;
 				transition-duration: 100ms;
 			}
-			
 			.button-drawer:before {
 				content: "";
 				position: absolute;
@@ -799,14 +795,12 @@ customElements.define('el-drawer',
 				-webkit-transition-timing-function: linear;
 				transition-timing-function: linear;
 			}
-			
 			.button-drawer:hover:before,
 			.button-drawer:focus:before,
 			.button-drawer:active:before {
 				-webkit-transform: scale(2);
 				transform: scale(2);
 			}
-			
 			:host button[id*="-drawer"] {
 				z-index: 10;
 				width: 60px;
@@ -866,14 +860,12 @@ customElements.define('el-drawer',
 			:host .brand:hover {
 				opacity:0.8;
 			}
-
 			::slotted(.brand-name),
 			:host .brand-name {
 				font-weight:600!important;
 				font-size:28px!important;
 				font-family: var(--drawer-brand-font-family);
 				color: var(--drawer-brand-color, var(--color-black, #000));
-
 			}
 			:host #navbar {
 				-webkit-box-shadow: 0 7px 5px -7px #111;
@@ -886,13 +878,11 @@ customElements.define('el-drawer',
 				top:0!important;
 				z-index: 5;
 			}
-
 			:host svg {
 				fill:#000;
 				width:24px;
 				height:24px
 			}
-			
 			:host #navbar-container {
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -906,7 +896,6 @@ customElements.define('el-drawer',
 				margin-right: 48px;
 				margin-left: 48px;
 			}
-			
 			:host .navbar-menu {
 				display: none;
 				margin: 0;
@@ -915,13 +904,11 @@ customElements.define('el-drawer',
 				max-width: 100%;
 				margin-left: auto
 			}
-			
 			@media(min-width:1024px) {
 				:host .navbar-menu {
 					display: flex
 				}
 			}
-			
 			:host #drawer {
 				background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
 				height: 100%;
@@ -935,20 +922,16 @@ customElements.define('el-drawer',
 				-webkit-transition: all .2s;
 				transition: all .2s
 			}
-			
 			:host #drawer::-webkit-scrollbar {
 				width: .5em
 			}
-			
 			:host #drawer::-webkit-scrollbar-track {
 				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .46)
 			}
-			
 			:host #drawer::-webkit-scrollbar-thumb {
 				background-color: var(--drawer-text-color, var(--color-black, #000)) !important;
 				outline: 1px solid var(--drawer-background-color, var(--color-black, #000)) !important
 			}
-			
 			:host .drawer-header {
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -962,27 +945,17 @@ customElements.define('el-drawer',
 				padding-left: 48px;
 				text-indent:24px;
 			}
-
 			:host  .drawer-header .brand {
 				margin-left:24px;
-			
 			}
-			
-
-
 			@media(min-width:1024px) {
 				:host .drawer-header {
 					justify-content:flex-start;
-				
 				}
-				
 			}
-
 			:host #drawer-menu a {
 				font-weight: 100;
 			}
-
-			
 			:host #drawer-menu {
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -992,7 +965,6 @@ customElements.define('el-drawer',
 				-ms-flex-direction: column;
 				flex-direction: column
 			}
-			
 			:host .mobil-menu {
 				display: -webkit-box;
 				display: -ms-flexbox;
@@ -1000,30 +972,30 @@ customElements.define('el-drawer',
 				justify-content: center;
 				align-items: center;
 			}
-			`
-			;
+			
+			`;
 			const elDrawerHTML = `
 			<div id="drawer-backdrop"></div>
-			<div id="navbar" aria-label="this is the body of the navbar Landmark">
-			<div id="navbar-container">
-				<button id="open-drawer" class="button-drawer" aria-label="open drawer icon">
-					<svg viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg/">
-						<title>Drawer Navigation Menu Icon Open| SVG Icon</title>
-						<path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" />
-					</svg>
-				</button>
-				<a class="brand" href="/">
-					<slot name="navbar-brand">
-						<strong class="brand-name">${_elDrawerSiteName}</strong>
-					</slot>
-				</a>
-				<div class="navbar-menu">
-					<slot name="navbar-menu"></slot>
+			<div id="navbar" aria-label="Navbar Landmark">
+				<div id="navbar-container">
+					<button id="open-drawer" class="button-drawer" aria-label="open drawer icon">
+						<svg viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg/">
+							<title>Drawer Navigation Menu Icon Open| SVG Icon</title>
+							<path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" />
+						</svg>
+					</button>
+					<a class="brand" href="/">
+						<slot name="navbar-brand">
+							<strong class="brand-name">${_elDrawerSiteName}</strong>
+						</slot>
+					</a>
+					<div class="navbar-menu">
+						<slot name="navbar-menu"></slot>
+					</div>
+					<div class="mobil-menu">
+						<slot name="mobil-menu"></slot>
+					</div>
 				</div>
-				<div class="mobil-menu">
-					<slot name="mobil-menu"></slot>
-				</div>
-			</div>
 			</div>
 			<aside id="drawer">
 			<div class="drawer-header">
