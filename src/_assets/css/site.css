@@ -108,7 +108,7 @@ figcaption {
 }
 
 /*hiden navigation title*/
-[id*="labelledby-"] {
+*[id*="accesible-"] {
   opacity: 0;
   margin: 0;
   padding: 0;
