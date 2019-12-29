@@ -46,26 +46,6 @@ el-grid {
 
 
 
-el-grid>el-column>h2 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2em;
-  font-family: var(--font-family-headline);
-}
-
-@media(min-width:1024px) {
-  el-grid>el-column>h2 {
-    font-size: 3.4em;
-  }
-}
-
-@media(min-width: 1268px) {
-  el-grid>el-column>h2 {
-    text-align: initial;
-  }
-
-}
-
 
 
 el-button {
@@ -87,4 +67,23 @@ el-button:hover {
 
 el-loading {
   background: var(--color-gradient);
+}
+
+el-grid>el-column>h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  font-family: var(--font-family-headline);
+}
+
+@media(min-width:1024px) {
+  el-grid>el-column>h2 {
+    font-size: 3.4em;
+  }
+}
+
+@media(min-width: 1268px) {
+  el-grid>el-column>h2 {
+    text-align: initial;
+  }
 }

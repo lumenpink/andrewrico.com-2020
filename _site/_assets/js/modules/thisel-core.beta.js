@@ -353,6 +353,7 @@ const elButtonCSS = `
     --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
     --color-active: linear-gradient(to bottom, #2948ff, #396afc);
 	--color-hover: #0080ff
+	
 }
 :host(.auto) {
 	grid-column: 1 / -1;

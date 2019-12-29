@@ -28,7 +28,7 @@ input {
 }
 
 input:focus {
-	outline: 0;
+	/* outline: 0; */
 }
 
 input::placeholder {
@@ -107,10 +107,10 @@ netliform
 
 .netliform h3 {
 	display: flex;
-	align-items:center ;
+	align-items: center;
 	align-self: flex-start;
 	padding: 0;
-	color:var(--color-quaternary);
+	color: var(--color-quaternary);
 }
 
 .form-field {
@@ -216,7 +216,7 @@ popup form
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	grid-gap: 1rem;
+	grid-gap: 16px;
 	grid-template-columns: 1fr 1fr;
 }
 
@@ -241,7 +241,7 @@ subscriber form
 
 .subscriber-form h3 {
 	display: flex;
-	align-items:center ;
+	align-items: center;
 	align-self: flex-start;
 	padding: 0;
 }

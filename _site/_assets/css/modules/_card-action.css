@@ -80,13 +80,12 @@ p.action-number {
 }
 .action-content p {
     text-transform: uppercase;
- 
   }
+
 .action-content li p {
    margin: 8px 0;
    font-size: 14px;
    text-transform: capitalize;
-   text-align: right;
 
  }
 .action-content b {
