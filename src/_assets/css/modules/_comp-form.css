@@ -25,7 +25,6 @@ input {
 	font-size: 1em;
 	padding: 0.5rem;
 	border-radius: 2px;
-
 }
 
 input:focus {
@@ -82,38 +81,6 @@ option {
 	padding: 8em;
 }
 
-.form-field {
-	padding: 8px;
-	position: relative;
-}
-
-.form-field label {
-	display: block;
-	font-size: 1rem;
-	color: var(--color-quaternary);
-}
-
-.form-field .field-group {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	margin: 1rem 0;
-}
-
-.field-group input {
-	padding-left: 2rem;
-	padding-top: 2rem;
-	border: 1px solid var(--color-light);
-
-}
-
-.field-group svg {
-	width: 16px;
-	height: 16px;
-	fill: #060606;
-	z-index: 4;
-}
-
 /*
 netliform
 ----------------------------------
@@ -137,19 +104,51 @@ netliform
 .netliform .fullwidth {
 	grid-column: 1 / -1;
 }
+
 .netliform h3 {
 	display: flex;
 	align-items:center ;
 	align-self: flex-start;
 	padding: 0;
+	color:var(--color-quaternary);
 }
+
+.form-field {
+	padding: 8px;
+	position: relative;
+	border: 1px solid var(--color-light);
+}
+
+.form-field label {
+	display: block;
+	font-size: 1rem;
+	color: var(--color-quaternary);
+}
+
+.field-group {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 1rem 0;
+}
+
+.field-group input {
+	padding-left: 2rem;
+	padding-top: 2rem;
+}
+
+.field-group svg {
+	width: 16px;
+	height: 16px;
+	fill: var(--color-quaternary);
+	z-index: 4;
+}
+
+
 /*
 simple form
 ----------------------------------
 */
-.simple-form form {
-	padding: 0rem;
-}
 
 .simple-form h3 {
 	margin: 0;
@@ -160,9 +159,8 @@ simple form
 	align-self: center;
 }
 
-.simple-form el-button {
-	margin: auto;
-
+.simple-form form {
+	padding: 0rem;
 }
 
 .simple-form .form-field {
@@ -170,6 +168,10 @@ simple form
 	padding: 0.5rem;
 	border: 0;
 	box-shadow: 0px 0px 6px -2px rgba(0, 0, 0, 0.56);
+}
+
+.simple-form el-button {
+	margin: auto;
 }
 
 @media(min-width:768px) {
@@ -187,6 +189,17 @@ simple form
 popup form
 ----------------------------------
 */
+
+.popup-form h3 {
+	margin: 0;
+	padding: 0 1rem;
+	font-size: 1rem;
+	text-transform: uppercase;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 .popup-form form {
 	position: relative;
@@ -207,18 +220,6 @@ popup form
 	grid-template-columns: 1fr 1fr;
 }
 
-.popup-form h3 {
-	margin: 0;
-	padding: 0 1rem;
-	font-size: 1rem;
-	text-transform: uppercase;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-
 .popup-form .form-field {
 	padding: 0.5rem;
 	min-height: 5rem;
@@ -234,13 +235,8 @@ popup form
 subscriber form
 ---------------------------------- 
 */
-
-.subscriber-form form {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	min-height: 200px;
+.subscriber-form {
+	background: #fafafa !important
 }
 
 .subscriber-form h3 {
@@ -250,14 +246,18 @@ subscriber form
 	padding: 0;
 }
 
+.subscriber-form form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 200px;
+}
+
 .subscriber-form .form-field {
 	width: 100%;
 	border: 1px solid var(--color-light);
 	background: white;
-}
-
-.subscriber-form {
-	background: #fafafa !important
 }
 
 /*
