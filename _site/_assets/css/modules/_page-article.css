@@ -119,12 +119,10 @@ article keywords
 
 .preface {
     border-radius: 4px;
-    line-height: 2.3 !important;
     font-weight: 100;
     font-family: var(--font-family-content);
     font-size: 1rem;
     font-style: italic;
-    letter-spacing: 1.6px;
     word-spacing: 1.6px;
     padding: 1rem;
     color: #000000;
@@ -140,7 +138,7 @@ article keywords
 
 @media(min-width:1024px) {
     .preface {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 #article .codepencil {

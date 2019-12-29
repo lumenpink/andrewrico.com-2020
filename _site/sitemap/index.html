@@ -100,6 +100,13 @@
                     <el-column grid="row">
                     
                         <h1>What are web components?</h1>
+<h4>Custom elements</h4>
+<p>A set of JavaScript APIs that allow you to define custom elements and their behaviour, which can then be used as desired in your user interface.</p>
+<h4>Shadow DOM</h4>
+<p>A set of JavaScript APIs for attaching an encapsulated &quot;shadow&quot; DOM tree to an element — which is rendered separately from the main document DOM — and controlling associated functionality. In this way, you can keep an element's features private, so they can be scripted and styled without the fear of collision with other parts of the document.</p>
+<h4>HTML templates</h4>
+<p>The template and slot elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.</p>
+<h1>What are web components?</h1>
 <h2>webcomponents.org</h2>
 <p>Web Components are a set of different technologies that allow you to build reusable, encapsulated and interoperable HTML elements, that can be used in web applications. Features, built on the Web Component standards, can be used with (or without) any JavaScript library or framework (i.e. Angular, React and Vue) and will work across all modern browsers.</p>
 <p>Web Components are based on four core technologies:
@@ -129,23 +136,10 @@ These are what make up the Web Components specification.</p>
 <p>Let’s take a quick look at each of those first three. We’ll dive deeper into them in other articles in this series.</p>
 <h2>MDN</h2>
 <p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements whose functionality is encapsulated and thus completely separate from other code.</p>
-<p>Concept and application
-It is generally accepted among software developers to reuse code as far as possible. As is known, this was not so easy for custom markup structures. Just think of the complex HTML (as well as CSS and script) conglomerate that was sometimes necessary to create custom UI controls; and how the multiple use of such custom elements on a page can lead to a completely opaque confusion if you are not very careful.</p>
+<h3>Concept and application</h3>
+<p>It is generally accepted among software developers to reuse code as far as possible. As is known, this was not so easy for custom markup structures. Just think of the complex HTML (as well as CSS and script) conglomerate that was sometimes necessary to create custom UI controls; and how the multiple use of such custom elements on a page can lead to a completely opaque confusion if you are not very careful.</p>
 <p>Web components aim to solve these problems. Consisting of three main technologies that can be used together to create different and versatile custom elements with self-contained functionality that can be reused as often as you want without fear of different code interfering or interfering:</p>
-<h3>Specifications</h3>
-<p><mark>Web components</mark> are based on four main specifications:</p>
-<h4>Custom Elements</h4>
-<p>The Custom Elements specification lays the foundation for designing and using new types of DOM elements.</p>
-<h4>Shadow DOM</h4>
-<p>The shadow DOM specification defines how to use encapsulated style and markup in web components.</p>
-<h4>ES Modules</h4>
-<p>The ES Modules specification defines the inclusion and reuse of JS documents in a standards based, modular, performant way.</p>
-<h4>HTML Template</h4>
-<p>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.</p>
-<h3>How do I use a web component?</h3>
-<p>The components on this site provide new HTML elements that you can use in your web pages and web applications.</p>
-<p>Using a custom element is as simple as importing it, and using the new tags in an HTML document. For example, to use the paper-button element:</p>
-<div class="codepencil">
+<div aria-label="Codebox Component to display actual code" class="codepencil">
 <pre><code>
 <pre><code>&lt;script type=&quot;module&quot; src=&quot;node_modules/@polymer/paper-button/paper-button.js&quot;&gt;&lt;/script&gt;
 
@@ -154,20 +148,6 @@ It is generally accepted among software developers to reuse code as far as possi
 <p></code></pre></p>
 </div>
 <button>copy</button>
-<p>There are a number of ways to install custom elements. When you find an element you want to use, look at its README for the commands to install it. Most elements today can be installed with NPM. NPM also handles installing the components' dependencies. For more information on NPM, see npmjs.com.
-For example, the paper-button overview describes the install process with npm:</p>
-<h2># Title</h2>
-<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside</p>
-<h3>Title</h3>
-<p>we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
-<h2># Title</h2>
-<h3>Subitle</h3>
-<p><strong>strong</strong> <br>
-<mark>mark</mark> <br>
-<em>em</em> <br>
-<i> i tag</i><br>
-<b> b tag </b><br>
-<a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.</p>
 
                     
                     </el-column>

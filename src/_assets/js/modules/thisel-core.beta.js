@@ -436,12 +436,12 @@ const elButtonCSS = `
     color: gray !important;
     border: 1px solid gray
 }
-::slotted(.el-btn:hover) {
+::slotted([class*="el-btn"]:hover) {
     color: var(--color-hover, #000) !important;
     border: 1px solid var(--color-hover, #000) !important
 }
 
-::slotted(.el-btn:active) {
+::slotted([class*="el-btn"]:active)  {
     background-image: var(--color-active, #000) !important;
     color: var(--color-white, #fff) !important
 }
@@ -487,8 +487,11 @@ const elButtonCSS = `
 }
 ::slotted(.el-btn-4:hover) {
 	background: 0 0;
-    color: var(--color-white, #000) !important;
+    color: var(--color-tertiary, #000) !important;
     border: 1px solid var(--color-tertiary, #000)!important;
+}
+::slotted(.el-btn-4:active) {
+    color: var(--color-white, #000) !important;
 }
 
 ::slotted(.el-btn-5) {
@@ -513,7 +516,6 @@ const elButtonCSS = `
 ::slotted(.el-btn-md) {
     min-width: 250px
 }
-
 ::slotted(.el-btn-lg) {
     min-width: 300px
 }

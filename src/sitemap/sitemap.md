@@ -4,6 +4,33 @@ description: "This is the Site Map page"
 layout: "layouts/layout-simple.njk"
 eleventyExcludeFromCollections: true
 ---
+
+
+
+
+
+
+
+
+# What are web components?
+
+
+#### Custom elements 
+A set of JavaScript APIs that allow you to define custom elements and their behaviour, which can then be used as desired in your user interface.
+
+#### Shadow DOM 
+A set of JavaScript APIs for attaching an encapsulated "shadow" DOM tree to an element — which is rendered separately from the main document DOM — and controlling associated functionality. In this way, you can keep an element's features private, so they can be scripted and styled without the fear of collision with other parts of the document.
+
+#### HTML templates
+The template and slot elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.
+
+
+
+
+
+
+
+
 # What are web components?
 ## webcomponents.org
 Web Components are a set of different technologies that allow you to build reusable, encapsulated and interoperable HTML elements, that can be used in web applications. Features, built on the Web Component standards, can be used with (or without) any JavaScript library or framework (i.e. Angular, React and Vue) and will work across all modern browsers.
@@ -45,37 +72,12 @@ Let’s take a quick look at each of those first three. We’ll dive deeper into
 ## MDN
 Web components are a group of web technologies that make it possible to create custom, reusable HTML elements whose functionality is encapsulated and thus completely separate from other code.
 
-Concept and application
+### Concept and application
 It is generally accepted among software developers to reuse code as far as possible. As is known, this was not so easy for custom markup structures. Just think of the complex HTML (as well as CSS and script) conglomerate that was sometimes necessary to create custom UI controls; and how the multiple use of such custom elements on a page can lead to a completely opaque confusion if you are not very careful.
 
 Web components aim to solve these problems. Consisting of three main technologies that can be used together to create different and versatile custom elements with self-contained functionality that can be reused as often as you want without fear of different code interfering or interfering:
  
-
-
-
-
-### Specifications
-<mark>Web components</mark> are based on four main specifications:
-
-#### Custom Elements
-The Custom Elements specification lays the foundation for designing and using new types of DOM elements.
-
-#### Shadow DOM
-The shadow DOM specification defines how to use encapsulated style and markup in web components.
-
-#### ES Modules
-The ES Modules specification defines the inclusion and reuse of JS documents in a standards based, modular, performant way.
-
-#### HTML Template
-The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.
-
-
-### How do I use a web component?
-The components on this site provide new HTML elements that you can use in your web pages and web applications.
-
-Using a custom element is as simple as importing it, and using the new tags in an HTML document. For example, to use the paper-button element:
-
-<div class="codepencil">
+<div aria-label="Codebox Component to display actual code" class="codepencil">
 <pre><code>
 
     <script type="module" src="node_modules/@polymer/paper-button/paper-button.js"></script>
@@ -85,27 +87,6 @@ Using a custom element is as simple as importing it, and using the new tags in a
 </code></pre>
 </div>
 <button>copy</button>
-
-There are a number of ways to install custom elements. When you find an element you want to use, look at its README for the commands to install it. Most elements today can be installed with NPM. NPM also handles installing the components' dependencies. For more information on NPM, see npmjs.com.
-For example, the paper-button overview describes the install process with npm:
-
-
-## # Title
-we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside
-
-###  Title
-we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
-
-
-## # Title 
-###  Subitle 
-<strong>strong</strong> <br>
-<mark>mark</mark> <br>
-<em>em</em> <br>
-<i> i tag</i><br>
-<b> b tag </b><br>
-<a class="link" href="/">in this link</a><br> we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside.
-
 
 
 
