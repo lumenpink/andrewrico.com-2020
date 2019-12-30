@@ -19,7 +19,7 @@ layout: "layouts/layout-homepage.njk"
                     </svg>
                 </div>
                 <progress class="progress" value="{{skill.data.percentage}}" max="100"></progress>
-                {% excerpt skill %}
+                <p>{% excerpt skill %}</p>
             </div>
         </el-column>
         {%- endfor -%}
@@ -33,7 +33,7 @@ layout: "layouts/layout-homepage.njk"
                     </svg>
                 </div>
                 <progress class="progress" value="{{otherskill.data.percentage}}" max="100"></progress>
-                {% excerpt otherskill %}
+                <p>{% excerpt otherskill %}</p>
             </div>
         </el-column>
         {%- endfor -%}
@@ -125,13 +125,13 @@ layout: "layouts/layout-homepage.njk"
                     <p>Submit a Code Chanllenge only if you are a:</p>
                     <ol>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#searching-person"></use></svg>
-                            <p><b> Recruiter </b>Searching for a talented developer</p>
+                            <b> Recruiter </b>Searching for a talented developer
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#contract"></use></svg>
-                            <p><b> Employer </b> Hiring a developer</p>
+                            <b> Employer </b> Hiring a developer
                         </li>
                         <li><svg width="56" height="56" fill="var(--color-light)"> <use href="_assets/media/svg/sprites.svg#handshake"></use></svg>
-                            <p><b> Propest </b><i>Let's Build Something Together</i></p>
+                            <b> Propest </b >Let's Build Something Together
                         </li>
                     </ol>
                 </div>
@@ -144,7 +144,7 @@ layout: "layouts/layout-homepage.njk"
         </el-column>
         {%- endfor -%}
     </el-grid>
-    {% include "forms/form-submitChallenge.njk" %}
+    {% include "forms/form-submit.njk" %}
 </el-section>
 
 <el-section id="articles">
@@ -237,7 +237,7 @@ layout: "layouts/layout-homepage.njk"
 
         </el-column>
         <el-column>
-            {% include "forms/form-sendMessage.njk" %}
+            {% include "forms/form-message.njk" %}
         </el-column>
     </el-grid>
 </el-section>

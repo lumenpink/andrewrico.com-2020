@@ -12,12 +12,10 @@ Submit a Code Challenge
                 id="andrewrico-submit-netiId-57" 
                 name="andrewrico-submit-netiId-57" 
                 method="POST" 
-                action="/"
                 data-netlify="true"
-                data-netlify-recaptcha="true"
                 >
 
-                <div class="form-field">
+                <div class="form-field fullwidth">
                     <label for="netiId-57-selection">I'AM A</label>
                     <div class="field-group">
                         <svg> <use href="/_assets/media/svg/sprites.svg#businessman"></use></svg>
@@ -29,14 +27,23 @@ Submit a Code Challenge
                         </select>                    
                     </div>
                 </div>
+
                 <div class="form-field">
                     <label for="netiId-57-name">NAME</label>
                     <div class="field-group">
-                        <svg> <use href="/_assets/media/svg/sprites.svg#user"></use></svg>
+                        <svg><use href="/_assets/media/svg/sprites.svg#user"></use></svg>
                         <input type="text" id="netiId-57-name" name="netiId-57-name" placeholder="jhon due" aria-label="name" required />
                     </div>
                 </div>
 
+                <div class="form-field">
+                    <label for="netiId-55-phone">PHONE</label>
+                    <div class="field-group">
+                        <svg> <use href="/_assets/media/svg/sprites.svg#phone"></use></svg>
+                        <input type="tel" id="netiId-55-phone" name="netiId-55-phone" placeholder="(555)-333-3333" aria-label="tel" required />
+                    </div>
+                </div>
+                
                 <div class="form-field">
                     <label for="netiId-57-email">E-MAIL</label>
                     <div class="field-group">
@@ -58,8 +65,6 @@ Submit a Code Challenge
                         <input type="text" id="netiId-57-message" name="netiId-57-message" placeholder="In a few words, tell me about your inquiry" aria-label="message" required />
                     </div>
                 </div>
-
-
                 <el-button class="auto">
                     <button type="submit" slot="button" class="el-btn el-btn-4">
                         Submit
