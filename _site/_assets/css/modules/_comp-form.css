@@ -205,21 +205,15 @@ popup form
 
 .popup-form form {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: 1fr 1fr;
 	background: var(--color-white);
 	min-width: 350px;
 	max-width: 768px;
-	margin: auto;
-	padding: 1rem;
+	padding: 16px;
 	font-size: 0.9rem;
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	grid-gap: 16px;
-	grid-template-columns: 1fr 1fr;
+	
 }
 
 .popup-form .form-field {
