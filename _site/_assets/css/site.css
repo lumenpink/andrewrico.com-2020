@@ -29,6 +29,7 @@ html {
   --color-white: #ffffff;
   --color-black: #000000;
   --color-blue: #2462ff;
+  --color-royalblue: #3d81db;
   --color-green: #00ffae;
   --color-orange: #ffa500;
   --color-red: #ff1010;
@@ -103,9 +104,7 @@ figcaption {
 
 
 /*el-button class*/
-.button-center {
- 
-}
+.button-center {}
 
 /*hiden navigation title*/
 *[id*="accesible-"] {
@@ -152,6 +151,25 @@ USA MAP
   display: none;
 }
 
+
+
+/* .support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 12.5px;
+  max-width: 3.2rem;
+  height: 3.2rem;
+}
+.support.stable {
+  color:#000000;
+  background: rgb(98, 255, 98);
+}
+.support.pollyfill {
+  color:#fff;
+  background: rgb(255, 68, 0);
+} */
 /*
   font-family: 'Dancing Script', cursive;
   font-family: 'Coda Caption', sans-serif;

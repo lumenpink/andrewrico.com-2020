@@ -17,7 +17,7 @@ Web components are a group of web technologies that make it possible to create c
 
 <!-- Excerpt End -->
 
-## # What are WebComponents? 
+## # What are Web Components? 
 Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
 
 Web components are based on existing 3 web standards, custom elements, shadow DOM and HTML templates. Features to support web components are currently being added to the HTML and DOM specs, letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.
@@ -44,27 +44,289 @@ An important aspect of web components is encapsulation — being able to keep th
 #### HTML Templates
 Templates are useful on their own, but they work even better with web components. 
 The template and slot elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.
-<hr >
 
-#### The basic approach for implementing a web component generally looks something like this:
 
-<em>Create a class or a function in which you specify your web component functionality. If using a class, use the ECMAScript 2015 class syntax (see Classes for more information). </em>
+## # Browser Support for Web Components in 2020 
 
-<em>Register your new custom element using the CustomElementRegistry.define() method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.</em>
+<table>
+  <tr>
+    <th>Broser Support</th>
+    <th>CROME</th>
+    <th>SAFARI</th>
+    <th>FIREFOX</th>
+    <th>OPERA</th>
+    <th>EDGE</th>
+  </tr>
+  <tr>
+    <td>Custom Element API</td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+  </tr>
+  <tr>
+    <td>Shadow DOM API</td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="pollyfill">❌</span></td>
+  </tr>
+  <tr>
+    <td>Shadow DOM API</td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="stable">✅</span></td>
+    <td><span class="pollyfill">❌</span></td>
+  </tr>
+</table>
 
-<em>If required, attach a shadow DOM to the custom element using Element.attachShadow() method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.</em>
 
-<em>If required, define an HTML template using templat and slot. Again use regular DOM methods to clone the template and attach it to your shadow DOM.</em>
+This example shows you one of the many diferent ways when building web component
 
-<em>Use your custom element wherever you like on your page, just like you would any regular HTML element.</em>
+The basic approach for implementing a web component generally looks something like this:
+
+1. Create a class or a function in which you specify your web component functionality. If using a class, use the ECMAScript 2015 class syntax (see Classes for more information).
+
+2. Register your new custom element using the CustomElementRegistry.define() method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
+
+3. If required, attach a shadow DOM to the custom element using Element.attachShadow() method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
+
+4. If required, define an HTML template using templat and slot. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
+
+5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
+
+
+
+## # How to build a Web Component with vanilla Javascript?
+This example shows one of the many diferent approach out there when creating web compoentns
+
+<em>index.html</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    <lead-title title="I'am a H1 tag and they call me main title"></lead-title>
+
+</code>
+</pre>
+</div>
+<button>copy</button>
+
+
+<br>
+
+### 1. Cloning the template
+Cloning contents from a template element is more performant than using innerHTML because it avoids addtional HTML parse costs.
+1.  Create custom tag template
+2.  stylesheet template
+3.  html template
+4.  Conect both templates in a single template
+
+<em>lead-title.js</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    const CustomSEOTitleTemplate = document.createElement("template");
+    const CustomSEOTitleCSS = `:host {display: block;}`;
+    const CustomSEOTitleHTML = `<slot></slot>`;
+    CustomSEOTitleTemplate.innerHTML = `<style>`.concat(CustomSEOTitleCSS, `</style>`).concat(CustomSEOTitleHTML);
+    
+</code>
+</pre>
+</div>
+
+
+### 2. Define and Extends
+connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
+
+<em>lead-title.js</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    const CustomSEOTitleTemplate = document.createElement("template");
+    const CustomSEOTitleCSS = `:host {display: block;}`;
+    const CustomSEOTitleHTML = `<slot></slot>`;
+    CustomSEOTitleTemplate.innerHTML = `<style>`.concat(CustomSEOTitleCSS, `</style>`).concat(CustomSEOTitleHTML);
+<span class="highligh-code">
+customElements.define('seo-title',
+    class extends HTMLElement {
+
+        }
+    );
+</span>  
+</code>
+</pre>
+</div>
+
+
+### 3. The element's constructor. Alway call super first
+connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
+
+<em>lead-title.js</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    const SEOTitleCSS = `:host {display: block;color:red;}`;
+    const SEOTitleHTML = `<h1><slot></slot></h1>`;
+    const SEOTitleTemplate = document.createElement("template");
+    SEOTitleTemplate.innerHTML = `<style>`.concat(SEOTitleCSS, `</style>`).concat(SEOTitleHTML);
+
+    customElements.define('seo-title',
+        class extends HTMLElement {
+<span class="highligh-code">
+        constructor() {
+                super();
+            }
+</span>  
+    }
+);
+
+</code>
+</pre>
+</div>
+
+### 4. Open Shadow DOM
+connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
+
+<em>lead-title.js</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    const SEOTitleCSS = `:host {display: block;color:red;}`;
+    const SEOTitleHTML = `<h1><slot></slot></h1>`;
+    const SEOTitleTemplate = document.createElement("template");
+    SEOTitleTemplate.innerHTML = `<style>`.concat(SEOTitleCSS, `</style>`).concat(SEOTitleHTML);
+
+    customElements.define('seo-title',
+        class extends HTMLElement {
+
+            constructor() {
+                super();
+<span class="highligh-code">
+            const shadowRoot = this.attachShadow({
+                mode: "open"
+            });
+</span>
+        }
+    }
+);
+    
+</code>
+</pre>
+</div>
+
+### 5. Properties and attribues
+<em>lead-title.js</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    const SEOTitleCSS = `:host {display: block;color:red;}`;
+    const SEOTitleHTML = `<h1><slot></slot></h1>`;
+    const SEOTitleTemplate = document.createElement("template");
+    SEOTitleTemplate.innerHTML = `<style>`.concat(SEOTitleCSS, `</style>`).concat(SEOTitleHTML);
+
+    customElements.define('seo-title',
+        class extends HTMLElement {
+
+            constructor() {
+                super();
+
+                const shadowRoot = this.attachShadow({
+                    mode: "open"
+                });
+<span class="highligh-code">
+            this.textContent = this.getAttribute('text');
+    </span>
+        }
+    }
+);
+    
+</code>
+</pre>
+</div>
+<button>copy</button>
+
+### 6. Return the cloned temnplate
+<em>lead-title.js</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    const SEOTitleCSS = `:host {display: block;color:red;}`;
+    const SEOTitleHTML = `<h1><slot></slot></h1>`;
+    const SEOTitleTemplate = document.createElement("template");
+    SEOTitleTemplate.innerHTML = `<style>`.concat(SEOTitleCSS, `</style>`).concat(SEOTitleHTML);
+
+    customElements.define('seo-title',
+        class extends HTMLElement {
+
+            constructor() {
+                super();
+
+                const shadowRoot = this.attachShadow({
+                    mode: "open"
+                });
+
+                this.textContent = this.getAttribute('text');
+<span class="highligh-code">
+            shadowRoot.appendChild(SEOTitleTemplate.content.cloneNode(!0));
+            return this;
+</span>
+        }
+    }
+);
+    
+</code>
+</pre>
+</div>
+<button>copy</button>
+
+<br>
+
+
+
+### 6. Displaying Our web Component in the DOM 
+<em>index.html</em>
+<div aria-label="Codebox Component to display actual code" class="codepencil">
+<pre>
+<code>
+
+    <script src="lead-title.js"></script>
+
+</code>
+</pre>
+</div>
+<button>copy</button>
+
+###  LIVE DEMO 
+
+
+<p class="codepen" data-height="500" data-theme-id="default" data-default-tab="js,result" data-user="andrewrico" data-slug-hash="abzLLmq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Web Component API with Vanilla JS">
+  <span>See the Pen <a href="https://codepen.io/andrewrico/pen/abzLLmq">
+  Web Component API with Vanilla JS</a> by andrew rico  (<a href="https://codepen.io/andrewrico">@andrewrico</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## SOURCES:
 
-<a href="https://www.webcomponents.org/introduction"> webcomponents.org</a>
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"> developer.mozilla.org</a>
+<div class="article-sources">
 
-<a href="https://developers.google.com/web/fundamentals/web-components"> developers.google.com</a>
+[webcomponents.org](https://www.webcomponents.org/introduction)
+
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+
+[developers.google.com](https://developers.google.com/web/fundamentals/web-components)
+</div>
 
 
 

@@ -538,6 +538,7 @@ customElements.define('el-button',
 			return _thisElButton;
 		}
 		connectedCallback() {
+
 			const _elButtons = document.querySelectorAll('el-button');
 			// inject ripple effect
 			[].map.call(_elButtons, elButton => {
