@@ -171,7 +171,7 @@ Web Components aims to solve such problems — it consists of three main technol
                     <!-- Excerpt Start -->
 <p>Web components are a group of web technologies that make it possible to create custom, reusable HTML elements  whose functionality is encapsulated and thus completely separate from other code.</p>
 <!-- Excerpt End -->
-<h2># What are Web Components?</h2>
+<h2>What are Web Components?</h2>
 <p>Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.</p>
 <p>Web components are based on existing 3 web standards, custom elements, shadow DOM and HTML templates. Features to support web components are currently being added to the HTML and DOM specs, letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.</p>
 <h3>Custom Elements</h3>
@@ -187,7 +187,7 @@ Web Components aims to solve such problems — it consists of three main technol
 <h3>HTML Templates</h3>
 <p>Templates are useful on their own, but they work even better with web components.
 The template and slot elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.</p>
-<h2># Browser Support for Web Components in 2020</h2>
+<h2>Browser Support for Web Components in 2020</h2>
 <table>
   <tr>
     <th>Broser Support</th>
@@ -222,7 +222,7 @@ The template and slot elements enable you to write markup templates that are not
     <td><span class="pollyfill">❌</span></td>
   </tr>
 </table>
-<h2># How to build a Web Component with vanilla Javascript?</h2>
+<h2>How to build a Web Component with vanilla Javascript?</h2>
 <p>This example shows one of the many diferent approach out there when creating web compoentns</p>
 <p>The basic approach for implementing a web component generally looks something like this:</p>
 <ol>
@@ -439,6 +439,32 @@ customElements.define('seo-title',
 
                 
             </article>
+            <div class="mailbar"></div>
+<div class="netliform subscriber-form">
+     <h3>
+       <span class="hiddenByUX"> Form: </span>
+        Newslatters       
+    </h3>
+    <form 
+        id="andrewrico-subscribe-netliId-59" 
+        name="andrewrico-subscribe-netliId-59" 
+        method="POST" 
+        data-netlify="true"
+        >
+        <div class="form-field">
+            <label for="netliId-59-email">E-MAIL</label>
+            <div class="field-group">
+                <svg> <use href="/_assets/media/svg/sprites.svg#mail"></use></svg>
+                <input type="email" id="netliId-59-email" name="netliId-59-email" placeholder="jhondue@mail.com" aria-label="email" required/>
+            </div>
+        </div>
+        <el-button class="auto">
+            <button type="submit" slot="button" class="el-btn">
+                SUBSCRIBRE 
+            </button>
+        </el-button>
+    </form>
+</div>
         </el-column>
         <el-column>
              <aside>
@@ -516,10 +542,11 @@ customElements.define('seo-title',
                 <span><a href="/terms"> Disclaimer </a></span>
                 <span><a href="/privacy"> Privacy </a></span>
                 <span><a href="/sitemap"> Site Map </a></span>
+                <span><a href="/freuently-ask-questions"> FAQ </a></span>
             </el-column>
             <el-column>
                 <el-copyright>
-                    <span id="copyright" slot="copyright"> andrewrico.com All rights reserved </span>
+                    <span id="copyright" slot="copyright"> <a href="/archives">andrewrico.com</a> All rights reserved </span>
                 </el-copyright>
             </el-column>
         </el-grid>

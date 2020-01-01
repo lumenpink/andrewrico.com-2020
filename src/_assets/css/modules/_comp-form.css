@@ -229,6 +229,12 @@ subscriber form
 	background: #fafafa !important
 }
 
+
+.mailbar {
+	height: 12px;
+	width: 100%;
+	background: var(--theme-ui-colors-newsletter-background,#ffffff) repeating-linear-gradient( 135deg,var(--theme-ui-colors-newsletter-stripeColorA,#ff5a54),var(--theme-ui-colors-newsletter-stripeColorA,#ff5a54) 20px,#0000 20px,#0000 40px,var(--theme-ui-colors-newsletter-stripeColorB,#3fa9f5) 40px,var(--theme-ui-colors-newsletter-stripeColorB,#3fa9f5) 60px,#0000 60px,#0000 80px );
+}
 .subscriber-form h3 {
 	display: flex;
 	align-items: center;

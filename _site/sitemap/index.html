@@ -103,6 +103,17 @@
 </nav>
 
 </el-drawer>
+        <header class="simple-header">
+            <el-section class="simple-banner">
+                <el-grid pixel-width="768">
+                    <el-column grid="row">  
+                        <h1>
+                            Site Map
+                        </h1>
+                    </el-column>  
+                </el-grid>
+            </el-section>
+        </header>
         <main class="simple-page"> 
             <el-section>
                 <el-grid pixel-width="768">
@@ -230,10 +241,11 @@ These are what make up the Web Components specification.</p>
                 <span><a href="/terms"> Disclaimer </a></span>
                 <span><a href="/privacy"> Privacy </a></span>
                 <span><a href="/sitemap"> Site Map </a></span>
+                <span><a href="/freuently-ask-questions"> FAQ </a></span>
             </el-column>
             <el-column>
                 <el-copyright>
-                    <span id="copyright" slot="copyright"> andrewrico.com All rights reserved </span>
+                    <span id="copyright" slot="copyright"> <a href="/archives">andrewrico.com</a> All rights reserved </span>
                 </el-copyright>
             </el-column>
         </el-grid>

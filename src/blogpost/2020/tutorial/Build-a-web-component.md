@@ -4,8 +4,8 @@ description: "This is the Build a web component page"
 keywords: ["javascript", "webComponents "]
 date: 2019-12-03
 update: 2019-12-03
-layout: "/page/article.njk"
-tags: [ "article" ]
+layout: "/page/blogpost.njk"
+tags: [ "article", "tuts" ]
 PagePathToBanner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-4.jpg)"
 preface: "As developers, we all know that reusing code as much as possible is a good idea. This has traditionally not been so easy for custom markup structures — think of the complex HTML (and associated style and script) you've sometimes had to write to render custom UI controls, and how using them multiple times can turn your page into a mess if you are not careful.
 
@@ -17,12 +17,12 @@ Web components are a group of web technologies that make it possible to create c
 
 <!-- Excerpt End -->
 
-## # What are Web Components? 
+## What are Web Components? 
 Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
 
 Web components are based on existing 3 web standards, custom elements, shadow DOM and HTML templates. Features to support web components are currently being added to the HTML and DOM specs, letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.
 
-#### Custom Elements 
+### Custom Elements 
 A set of JavaScript APIs that allow you to define custom elements and their behaviour, which can then be used as desired in your user interface.
 
 With Custom Elements, web developers can create new HTML tags, beef-up existing HTML tags, or extend the components other developers have authored. The API is the foundation of web components. It brings a web standards-based way to create reusable components using nothing more than vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in our apps.
@@ -31,7 +31,7 @@ Custom elements provide a way for authors to build their own fully-featured DOM 
 
 Custom elements are part of a larger effort to "rationalise the platform", by explaining existing platform features (like the elements of HTML) in terms of lower-level author-exposed extensibility points (like custom element definition). Although today there are many limitations on the capabilities of custom elements—both functionally and semantically—that prevent them from fully explaining the behaviors of HTML's existing elements, we hope to shrink this gap over time.
 
-#### Shadow DOM 
+### Shadow DOM 
 
 Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an exorbitant number of tools to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. Subtle bugs creep up, CSS specificity becomes a huge issue (!important all the things!), style selectors grow out of control, and performance can suffer. The list goes on.
 
@@ -41,12 +41,12 @@ A set of JavaScript APIs for attaching an encapsulated "shadow" DOM tree to an e
 
 An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.
 
-#### HTML Templates
+### HTML Templates
 Templates are useful on their own, but they work even better with web components. 
 The template and slot elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.
 
 
-## # Browser Support for Web Components in 2020 
+## Browser Support for Web Components in 2020 
 
 <table>
   <tr>
@@ -83,28 +83,19 @@ The template and slot elements enable you to write markup templates that are not
   </tr>
 </table>
 
-
-This example shows you one of the many diferent ways when building web component
-
-The basic approach for implementing a web component generally looks something like this:
-
-1. Create a class or a function in which you specify your web component functionality. If using a class, use the ECMAScript 2015 class syntax (see Classes for more information).
-
-2. Register your new custom element using the CustomElementRegistry.define() method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
-
-3. If required, attach a shadow DOM to the custom element using Element.attachShadow() method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
-
-4. If required, define an HTML template using templat and slot. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
-
-5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
-
-
-
-## # How to build a Web Component with vanilla Javascript?
+## How to build a Web Component with vanilla Javascript?
 This example shows one of the many diferent approach out there when creating web compoentns
 
-<em>index.html</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+The basic approach for implementing a web component generally looks something like this:
+1. Create a class or a function in which you specify your web component functionality. If using a class, use the ECMAScript 2015 class syntax (see Classes for more information).
+2. Register your new custom element using the CustomElementRegistry.define() method, passing it the element name to be defined, the class or function in which its functionality is specified, and optionally, what element it inherits from.
+3. If required, attach a shadow DOM to the custom element using Element.attachShadow() method. Add child elements, event listeners, etc., to the shadow DOM using regular DOM methods.
+4. If required, define an HTML template using templat and slot. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
+5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
+
+<span class="code-file">index.html</span>
+<div class="codepencil">
+<p class="code-lang">html</p>
 <pre>
 <code>
 
@@ -125,8 +116,9 @@ Cloning contents from a template element is more performant than using innerHTML
 3.  html template
 4.  Conect both templates in a single template
 
-<em>lead-title.js</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+<span class="code-file">seo-title.js</span>
+<div class="codepencil">
+<p class="code-lang">javascript</p>
 <pre>
 <code>
 
@@ -143,8 +135,9 @@ Cloning contents from a template element is more performant than using innerHTML
 ### 2. Define and Extends
 connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
 
-<em>lead-title.js</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+<span class="code-file">seo-title.js</span>
+<div class="codepencil">
+<p class="code-lang">javascript</p>
 <pre>
 <code>
 
@@ -167,8 +160,9 @@ customElements.define('seo-title',
 ### 3. The element's constructor. Alway call super first
 connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
 
-<em>lead-title.js</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+<span class="code-file">seo-title.js</span>
+<div class="codepencil">
+<p class="code-lang">javascript</p>
 <pre>
 <code>
 
@@ -194,8 +188,9 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 ### 4. Open Shadow DOM
 connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
 
-<em>lead-title.js</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+<span class="code-file">seo-title.js</span>
+<div class="codepencil">
+<p class="code-lang">javascript</p>
 <pre>
 <code>
 
@@ -223,8 +218,10 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </div>
 
 ### 5. Properties and attribues
-<em>lead-title.js</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+
+<span class="code-file">seo-title.js</span>
+<div class="codepencil">
+<p class="code-lang">javascript</p>
 <pre>
 <code>
 
@@ -255,8 +252,10 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 <button>copy</button>
 
 ### 6. Return the cloned temnplate
-<em>lead-title.js</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+
+<span class="code-file">seo-title.js</span>
+<div class="codepencil">
+<p class="code-lang">javascript</p>
 <pre>
 <code>
 
@@ -283,7 +282,6 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
         }
     }
 );
-    
 </code>
 </pre>
 </div>
@@ -293,13 +291,19 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 
 
 
-### 6. Displaying Our web Component in the DOM 
-<em>index.html</em>
-<div aria-label="Codebox Component to display actual code" class="codepencil">
+### 7. Displaying Our web Component in the DOM 
+<span class="code-file">index.html</span>
+<div class="codepencil">
+<p class="code-lang">html</p>
 <pre>
 <code>
 
-    <script src="lead-title.js"></script>
+    <seo-title text="I'am a H1 tag and they call me main title"></lead-title>
+<span class="highligh-code">
+
+    <script src="seo-title.js"></script>
+</span>
+
 
 </code>
 </pre>
