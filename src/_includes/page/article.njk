@@ -16,19 +16,18 @@ layout: "/layouts/layout-article.njk"
                         <em class="article-update">Updated:  <time datetime="{{ update | dateIso }}">  {{ update | dateReadable }}  </time>  </em> 
                     </div> 
                 </div>
-                <nav class="navigation-keywords" aria-labelledby="accesible-article-keywords-navigation">
-                    <h3 id="accesible-article-keywords-navigation">This is the navigation keywords component</h3>
+                <div class="navigation-keywords">
                     <ul class="article-keywords">
                         {% for item in keywords %}
-                            <li><em class="keyword-tags">{{ item }}</em></li>
+                            <li><h4 class="keyword-tags">{{ item }}</h4></li>
                         {% endfor %}
                     </ul>
-                </nav>
+                </div>
             </aside>
         </el-column>
     </el-grid>
 </el-section>
-<el-section padding-top="0">
+<el-section padding-top="4">
     <el-grid> 
         <el-column>
             <article id="article">

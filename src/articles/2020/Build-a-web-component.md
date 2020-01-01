@@ -74,7 +74,7 @@ The template and slot elements enable you to write markup templates that are not
     <td><span class="pollyfill">❌</span></td>
   </tr>
   <tr>
-    <td>Shadow DOM API</td>
+    <td>HTML Templates</td>
     <td><span class="stable">✅</span></td>
     <td><span class="stable">✅</span></td>
     <td><span class="stable">✅</span></td>

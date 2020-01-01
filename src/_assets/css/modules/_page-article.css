@@ -79,19 +79,17 @@ article keywords
 
 .article-keywords .keyword-tags {
     display: inline-flex;
-    background: #fafafa;
+    background: #e6e6e6;
     color: var(--color-black);
     padding: 4px 16px;
     margin-right: 16px;
     border-radius: 2px;
     font-size: 14px;
     text-decoration: none;
-    border: 1px solid gray;
 }
 
 .article-keywords .keyword-tags:hover {
     background: var(--color-light);
-    border: 1px solid #000;
 }
 
 
@@ -264,7 +262,7 @@ article keywords
 
 
 table {
-    font-size: 16px;
+    font-size: 12.5px;
     text-align: left;
     border-collapse: collapse;
     border-spacing: 0;
@@ -282,18 +280,10 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    color: transparent;
   }
   
-  .stable {
-  }
-  
-  .pollyfill {
-  }
-  
+
   th {
-  
     background: #fafafa;
   }
   

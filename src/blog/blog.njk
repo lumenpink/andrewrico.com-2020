@@ -14,7 +14,7 @@ pagination:
 ---
 <el-section>
     <el-grid pixel-width="768" columns="1">
-        <el-column grid="row" display="flex" flex-direction="column" justify-content="center" align-items="center" >
+        <el-column grid="row" display="flex" flex-direction="column" justify-content="center" align-items="center">
             <div id="author">
                 <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.author}} Avatar" title="{{ site.author.author}} Avatar">
                 <div>
@@ -27,23 +27,22 @@ pagination:
                     {% endfor %}
                 </div>
             </div>
-            <nav class="navigation-keywords" aria-labelledby="accesible-blog-keywords-navigation">
-                <h3 id="accesible-blog-keywords-navigation">This is the navigation keywords component</h3>
+            <div class="navigation-keywords">
                 <ul class="article-keywords">
                     {% for item in keywords %}
-                        <li><em class="keyword-tags">{{ item }}</em></li>
+                        <li><h4 class="keyword-tags">{{ item }}</h4></li>
                     {% endfor %}
                 </ul>
-            </nav>
+            </div>
         </el-column>
         <el-column grid="row">
             <ul>
                 {% for article in articles %}
                     <li>
                         <article class="card-article">
-                            <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
+                            <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br>
                             <h2> {{ article.data.title }} </h2>
-                            {% excerpt article %}
+                            <p>{% excerpt article %}</p>
                             <el-button class="auto">
                                 <a slot="button" class="el-btn el-btn-4" href="{{ article.url | url }}">Read more</a>
                             </el-button>
