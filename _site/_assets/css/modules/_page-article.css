@@ -188,7 +188,7 @@ article keywords
     margin-right: 0;
     margin-top: 128px;
     margin-bottom: 32px;
-    line-height: 1;
+    line-height: 1.2;
     font-size: 32px;
     font-weight: 800;
     font-family: inherit;
@@ -197,13 +197,10 @@ article keywords
     color: #000;
 
 }
-
-#article h2:before {
-    content: ' \0023';
-    font-size: 56px;
-    margin-right: 8px;
-    margin-left: -32px;
+#article h2::first-letter {
+    margin-left: 12px;
 }
+
 
 #article h3 {
     margin: 0;

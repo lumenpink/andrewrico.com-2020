@@ -17,7 +17,7 @@ Web components are a group of web technologies that make it possible to create c
 
 <!-- Excerpt End -->
 
-## What are Web Components? 
+## # What are Web Components? 
 Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers, and can be used with any JavaScript library or framework that works with HTML.
 
 Web components are based on existing 3 web standards, custom elements, shadow DOM and HTML templates. Features to support web components are currently being added to the HTML and DOM specs, letting web developers easily extend HTML with new elements with encapsulated styling and custom behavior.
@@ -46,7 +46,7 @@ Templates are useful on their own, but they work even better with web components
 The template and slot elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.
 
 
-## Browser Support for Web Components in 2020 
+## # Browser Support for Web Components in 2020 
 
 <table>
   <tr>
@@ -83,7 +83,7 @@ The template and slot elements enable you to write markup templates that are not
   </tr>
 </table>
 
-## How to build a Web Component with vanilla Javascript?
+## # How to build a Web Component with vanilla Javascript?
 This example shows one of the many diferent approach out there when creating web compoentns
 
 The basic approach for implementing a web component generally looks something like this:
