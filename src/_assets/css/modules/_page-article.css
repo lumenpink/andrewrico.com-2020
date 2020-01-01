@@ -184,28 +184,21 @@ article keywords
 
 #article h2 {
     padding: 0;
-    margin-left: 0;
-    margin-right: 0;
     margin-top: 128px;
     margin-bottom: 32px;
     line-height: 1.2;
-    font-size: 32px;
+    font-size: 24px;
+    word-wrap: none;
     font-weight: 800;
-    font-family: inherit;
     font-family: var(--font-family-content);
     text-transform: uppercase;
     color: #000;
 
 }
-#article h2::first-letter {
-    margin-left: 12px;
-}
-
-
 #article h3 {
     margin: 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
     color: #000;
@@ -214,11 +207,37 @@ article keywords
 #article h4 {
     margin: 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 19px;
     font-weight: 600;
     color: #000;
     text-transform: capitalize;
 }
+
+
+
+@media(min-width:768px) {
+    #article h2 {
+        font-size: 28px; 
+    }
+    #article h3 {
+        font-size: 22px; 
+    }
+    #article h4 {
+        font-size: 22px; 
+    }
+}
+@media(min-width:1268px) {
+    #article h2 {
+        font-size: 32px; 
+    }
+    #article h3 {
+        font-size: 24px; 
+    }
+    #article h4 {
+        font-size: 24px; 
+    }
+}
+
 
 #article h3,
 #article h4 {

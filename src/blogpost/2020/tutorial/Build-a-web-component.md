@@ -83,7 +83,7 @@ The template and slot elements enable you to write markup templates that are not
   </tr>
 </table>
 
-## # How to build a Web Component with vanilla Javascript?
+## #How to build a Web Component with vanilla Javascript?
 This example shows one of the many diferent approach out there when creating web compoentns
 
 The basic approach for implementing a web component generally looks something like this:
@@ -320,7 +320,7 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-## SOURCES:
+##  SOURCES:
 
 
 <div class="article-sources">
