@@ -1,14 +1,14 @@
 ---
-title: "Cryptopandore"
-description: "This is the Cryptopandore project page"
+title: "Churchill Exotics"
+description: "This is the Churchill Exotics project page"
 keywords: ["car dealership"]
-tags: [ "projects", "js"]
+tags: [ "projects", "wordpress"]
 layout: "/page/project.njk"
 PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
-ProjectPathToImage: "/_assets/media/images/placeholder.png"
-ProjectImageMeta: "Cryptopandore Project Image"
-ProjectStringCathegory: "Cryptocurrency"
-ProjectStringType: "Info"
+ProjectPathToImage: "/_assets/media/images/churchill-exotics-mockup.png"
+ProjectImageMeta: "Churchill Exotics Project Image"
+ProjectStringCathegory: "Car Dealership"
+ProjectStringType: "Exotic cars"
 ProjectStringMade: "Made with GASTBY/ReactJS"
 ProjectLinkToDemo: "https://andrewrico.com/"
 ProjectLinkToCode: "https://github.com/"

@@ -249,7 +249,6 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
-<button>copy</button>
 
 ### 6. Return the cloned temnplate
 
@@ -285,7 +284,6 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
-<button>copy</button>
 
 <br>
 
@@ -308,10 +306,8 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
-<button>copy</button>
 
 ###  LIVE DEMO 
-
 
 <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="js,result" data-user="andrewrico" data-slug-hash="abzLLmq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Web Component API with Vanilla JS">
   <span>See the Pen <a href="https://codepen.io/andrewrico/pen/abzLLmq">
@@ -321,7 +317,6 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ##  SOURCES:
-
 
 <div class="article-sources">
 

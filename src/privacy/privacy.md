@@ -3,7 +3,6 @@ title: "Privacy Policy"
 description: "This is the Privacy Policy page"
 layout: "layouts/layout-simple.njk"
 ---
-<h1>Privacy Policy</h1>
 <p>Last updated: January 27, 2019</p>
 <h4>PERSONALLY IDENTIFIABLE INFORMATION</h4>
 <p>Information that could identify you, such as your name, birth date, contact information, and health and financial information is your Personally Identifiable Information. Some information standing alone, such as your zip code are not Personally Identifiable Information, but when they are combined with other information, they can become so—for example, your last name, birthdate and zip code.</p>
