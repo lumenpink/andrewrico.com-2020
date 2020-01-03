@@ -1,7 +1,7 @@
 ---
 title: "Build a web component"
 description: "This is the Build a web component page"
-keywords: ["javascript", "webComponents "]
+keywords: ["#javascript", "#webComponents "]
 date: 2019-12-03
 update: 2019-12-03
 layout: "/page/blogpost.njk"
@@ -93,6 +93,8 @@ The basic approach for implementing a web component generally looks something li
 4. If required, define an HTML template using templat and slot. Again use regular DOM methods to clone the template and attach it to your shadow DOM.
 5. Use your custom element wherever you like on your page, just like you would any regular HTML element.
 
+<div class="article-section code-sample">
+
 <span class="code-file">index.html</span>
 <div class="codepencil">
 <p class="code-lang">html</p>
@@ -104,10 +106,9 @@ The basic approach for implementing a web component generally looks something li
 </code>
 </pre>
 </div>
-<button>copy</button>
+</div>
 
-
-<br>
+<div class="article-section code-sample">
 
 ### 1. Cloning the template
 Cloning contents from a template element is more performant than using innerHTML because it avoids addtional HTML parse costs.
@@ -130,7 +131,9 @@ Cloning contents from a template element is more performant than using innerHTML
 </code>
 </pre>
 </div>
+</div>
 
+<div class="article-section code-sample">
 
 ### 2. Define and Extends
 connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
@@ -155,7 +158,9 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
+</div>
 
+<div class="article-section code-sample">
 
 ### 3. The element's constructor. Alway call super first
 connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
@@ -184,6 +189,9 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
+</div>
+
+<div class="article-section code-sample">
 
 ### 4. Open Shadow DOM
 connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.
@@ -216,6 +224,9 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
+</div>
+
+<div class="article-section code-sample">
 
 ### 5. Properties and attribues
 
@@ -249,6 +260,10 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
+</div>
+
+
+<div class="article-section code-sample">
 
 ### 6. Return the cloned temnplate
 
@@ -284,10 +299,9 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
+</div>
 
-<br>
-
-
+<div class="article-section code-sample">
 
 ### 7. Displaying Our web Component in the DOM 
 <span class="code-file">index.html</span>
@@ -306,6 +320,9 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 </code>
 </pre>
 </div>
+</div>
+
+<div class="article-section live">
 
 ###  LIVE DEMO 
 
@@ -315,22 +332,16 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<div class="article-section sources">
 
 ##  SOURCES:
-
-<div class="article-sources">
 
 [webcomponents.org](https://www.webcomponents.org/introduction)
 
 [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
 [developers.google.com](https://developers.google.com/web/fundamentals/web-components)
+
 </div>
-
-
-
-
-
-
-
-

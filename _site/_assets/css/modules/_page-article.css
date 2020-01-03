@@ -185,7 +185,7 @@ article keywords
 
 #article h2 {
     padding: 0;
-    margin-top: 128px;
+    margin-top: 64px;
     margin-bottom: 32px;
     line-height: 1.2;
     font-size: 24px;
@@ -299,6 +299,9 @@ article keywords
     font-weight: 600;
 }
 
+.article-section {
+padding: 32px 0;
+}
 
 .line-through {
     text-decoration-line: line-through;

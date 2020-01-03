@@ -7,11 +7,11 @@ layout: "/page/project.njk"
 PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
 ProjectPathToImage: "/_assets/media/images/churchill-exotics-mockup.png"
 ProjectImageMeta: "Churchill Exotics Project Image"
-ProjectStringCathegory: "Car Dealership"
-ProjectStringType: "Exotic cars"
+ProjectStringCathegory: "#Car Dealership"
+ProjectStringType: "#Exotic Cars"
 ProjectStringMade: "Made with Wordpress"
-ProjectLinkToDemo: "https://www.churchill-exotics.com/"
-ProjectLinkToCode: "https://github.com/"
+ProjectLinkToDemo: "https://www.churchillexotics.com/"
+ProjectLinkToCode: "https://github.com/Andrewrico"
 PagePathToCaseStudyImage: "/_assets/media/images/placeholder.png"
 PageCaseStudyImageMeta: "Case Study Section Image"
 PagePathToSituationImage: "/_assets/media/images/placeholder.png"
@@ -34,7 +34,7 @@ title="{{PageCaseStudyImageMeta}}" />
 <div id="case-study">
 
 ## Case Study 
-In this section i talk about the story od the business or person
+I have a client that wanted to build a car dealership website
 
 </div>
 
@@ -82,8 +82,7 @@ In this section i talk about the finaal words of the projects.
 
 </div>
 
-
-
+<a href="/">GO BACK TO HOMEPAGE</a>
 
 
 

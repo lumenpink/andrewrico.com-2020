@@ -10,7 +10,7 @@
 
   <meta name="author" content="Andrew Rico">
   <meta name="description" content="This is the Build a web component page" />
-  <meta name="keywords" content="javascript,webComponents " />
+  <meta name="keywords" content="#javascript,#webComponents " />
 
   <meta name="theme-color" content="#000" />
 
@@ -153,9 +153,9 @@ Web Components aims to solve such problems — it consists of three main technol
                 <div class="navigation-keywords">
                     <ul class="article-keywords">
                         
-                            <li><h4 class="keyword-tags">javascript</h4></li>
+                            <li><h4 class="keyword-tags">#javascript</h4></li>
                         
-                            <li><h4 class="keyword-tags">webComponents </h4></li>
+                            <li><h4 class="keyword-tags">#webComponents </h4></li>
                         
                     </ul>
                 </div>
@@ -232,6 +232,7 @@ The template and slot elements enable you to write markup templates that are not
 <li>If required, define an HTML template using templat and slot. Again use regular DOM methods to clone the template and attach it to your shadow DOM.</li>
 <li>Use your custom element wherever you like on your page, just like you would any regular HTML element.</li>
 </ol>
+<div class="article-section code-sample">
 <p><span class="code-file">index.html</span></p>
 <div class="codepencil">
 <p class="code-lang">html</p>
@@ -242,8 +243,8 @@ The template and slot elements enable you to write markup templates that are not
 </code>
 </pre>
 </div>
-<button>copy</button>
-<br>
+</div>
+<div class="article-section code-sample">
 <h3>1. Cloning the template</h3>
 <p>Cloning contents from a template element is more performant than using innerHTML because it avoids addtional HTML parse costs.</p>
 <ol>
@@ -265,6 +266,8 @@ CustomSEOTitleTemplate.innerHTML = `&lt;style&gt;`.concat(CustomSEOTitleCSS, `&l
 </code>
 </pre>
 </div>
+</div>
+<div class="article-section code-sample">
 <h3>2. Define and Extends</h3>
 <p>connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.</p>
 <p><span class="code-file">seo-title.js</span></p>
@@ -287,6 +290,8 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
+</div>
+<div class="article-section code-sample">
 <h3>3. The element's constructor. Alway call super first</h3>
 <p>connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.</p>
 <p><span class="code-file">seo-title.js</span></p>
@@ -312,6 +317,8 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
+</div>
+<div class="article-section code-sample">
 <h3>4. Open Shadow DOM</h3>
 <p>connectedCallback() fires when the element is inserted into the DOM. It's a good place to set the initial role, tabindex, internal state, and install event listeners.</p>
 <p><span class="code-file">seo-title.js</span></p>
@@ -341,6 +348,8 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
+</div>
+<div class="article-section code-sample">
 <h3>5. Properties and attribues</h3>
 <p><span class="code-file">seo-title.js</span></p>
 <div class="codepencil">
@@ -371,6 +380,8 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
+</div>
+<div class="article-section code-sample">
 <h3>6. Return the cloned temnplate</h3>
 <p><span class="code-file">seo-title.js</span></p>
 <div class="codepencil">
@@ -404,7 +415,8 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
-<br>
+</div>
+<div class="article-section code-sample">
 <h3>7. Displaying Our web Component in the DOM</h3>
 <p><span class="code-file">index.html</span></p>
 <div class="codepencil">
@@ -420,6 +432,8 @@ customElements.define('seo-title',
 </code>
 </pre>
 </div>
+</div>
+<div class="article-section live">
 <h3>LIVE DEMO</h3>
 <p class="codepen" data-height="500" data-theme-id="default" data-default-tab="js,result" data-user="andrewrico" data-slug-hash="abzLLmq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Web Component API with Vanilla JS">
   <span>See the Pen <a href="https://codepen.io/andrewrico/pen/abzLLmq">
@@ -427,8 +441,9 @@ customElements.define('seo-title',
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+<div class="article-section sources">
 <h2>SOURCES:</h2>
-<div class="article-sources">
 <p><a href="https://www.webcomponents.org/introduction">webcomponents.org</a></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">developer.mozilla.org</a></p>
 <p><a href="https://developers.google.com/web/fundamentals/web-components">developers.google.com</a></p>
@@ -514,13 +529,18 @@ customElements.define('seo-title',
             </a>
         </li>
         <li>
-            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to codepen andrew's rico profile">
+            <a href="https://codepen.io/andrewrico" target="_blank" rel="noopener" aria-label="link to codepen andrew's rico profile">
                 <svg><use href="/_assets/media/svg/sprites.svg#codepen"></use></svg> 
             </a>
         </li>
         <li>
-            <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
+            <a href="https://stackoverflow.com/users/11423357/andrew-rico/" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
                 <svg><use href="/_assets/media/svg/sprites.svg#Stackoverflow"></use></svg> 
+            </a>
+        </li>
+        <li>
+            <a href="https://dribbble.com/andrew64596/" target="_blank" rel="noopener" aria-label="link to stackoverflow andrew's rico profile">
+                <svg><use href="/_assets/media/svg/sprites.svg#dribble"></use></svg> 
             </a>
         </li>
     </ul>

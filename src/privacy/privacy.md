@@ -49,3 +49,5 @@ layout: "layouts/layout-simple.njk"
 <p>If you are resident of California, you have the right to obtain from us a list of what personal information we shared with a third party for direct marketing in the preceding year. The law, California Civil Code Section 1798.83, is called the “Shine The Light” law.</p>
 <p>You may make your request once a year. It is free of charge. Under Section 1798.83, we currently do not share any personal information with third parties for their direct marketing purposes.
 </p>
+
+<a href="/">GO BACK TO HOMEPAGE</a>

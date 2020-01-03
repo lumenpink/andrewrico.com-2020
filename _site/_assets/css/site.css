@@ -147,6 +147,20 @@ USA MAP
   font-family: var(--font-family-content);
 }
 
+.simple-page h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: var(--font-family-content);
+  margin: 0;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.simple-page ol {
+  list-style: square;
+}
+.simple-page ol li {
+ margin:8px 0;
+}
 .hiddenByUX {
   display: none;
 }

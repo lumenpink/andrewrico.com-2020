@@ -3,8 +3,6 @@ title: "Term Of Use"
 description: "This is the Term Of Use page"
 layout: "layouts/layout-simple.njk"
 ---
-
-# Terms Of Use
 Last updated: January 27, 2019
 
 ### Welcome
@@ -84,3 +82,4 @@ CERTAIN STATE LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSI
 ### Legal Jurisdictions Only
 The sale of insurance products is governed by laws that differ from state to state. The products and services on our site are intended only for those persons in states and jurisdictions where these products and services may be legally sold. Nothing on our site shall be considered a solicitation to buy or an offer to sell any products or services to any person in any jurisdiction where such an offer, solicitation, purchase or sale would be unlawful.
 
+<a href="/">GO BACK TO HOMEPAGE</a>
