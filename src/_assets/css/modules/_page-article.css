@@ -386,3 +386,9 @@ td:first-child {
 .cp_embed_wrapper iframe {
     min-height: 50vh;
 }
+
+
+.article-section.sources p{
+font-style: italic;
+margin: 0;
+}

@@ -34,13 +34,11 @@ pagination:
                     {% endfor %}
                 </div>
             </div>
-            <div class="navigation-keywords">
-                <ul class="article-keywords">
-                    {% for item in keywords %}
-                        <li><h4 class="keyword-tags">{{ item }}</h4></li>
-                    {% endfor %}
-                </ul>
-            </div>
+            <ul class="article-keywords">
+                {% for item in keywords %}
+                    <li><h4 class="keyword-tags">{{ item }}</h4></li>
+                {% endfor %}
+            </ul>
         </el-column>
         <el-column grid="row">
             <ul>
@@ -59,6 +57,7 @@ pagination:
             </ul>
         </el-column>
          <el-column grid="row">
+            <hr style="margin:72px 0; border:1px solid #fafafa;">
             {% include "forms/form-subscribe.njk" %}
         </el-column>
     </el-grid>

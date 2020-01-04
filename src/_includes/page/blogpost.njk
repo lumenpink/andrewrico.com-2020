@@ -7,23 +7,19 @@ layout: "/layouts/layout-article.njk"
             <h4 class="preface">{{ preface }}</h4>
         </el-column>
         <el-column>
-             <aside>
-                <div id="bio-article">
-                    <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Figure">
-                    <div>
-                        <h2 class="author-name"> {{ site.author.name}} </h2>   
-                        <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time>  <br> 
-                        <em class="article-update">Updated:  <time datetime="{{ update | dateIso }}">  {{ update | dateReadable }}  </time>  </em> 
-                    </div> 
-                </div>
-                <div class="navigation-keywords">
-                    <ul class="article-keywords">
-                        {% for item in keywords %}
-                            <li><h4 class="keyword-tags">{{ item }}</h4></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </aside>
+            <div id="bio-article">
+                <img class="author-avatar" src="{{ site.author.avatar}}" alt="{{ site.author.name }} Avatar" title="{{ site.author.name }} Figure">
+                <div>
+                    <h2 class="author-name"> {{ site.author.name}} </h2>   
+                    <time datetime="{{ date | dateIso }}">  {{ date | dateReadable }}  </time>  <br> 
+                    <em class="article-update">Updated:  <time datetime="{{ update | dateIso }}">  {{ update | dateReadable }}  </time>  </em> 
+                </div> 
+            </div>
+            <ul class="article-keywords">
+                {% for item in keywords %}
+                    <li><h4 class="keyword-tags">{{ item }}</h4></li>
+                {% endfor %}
+            </ul>
         </el-column>
     </el-grid>
 </el-section>
@@ -35,6 +31,7 @@ layout: "/layouts/layout-article.njk"
                     {{ content | safe }}
                 {% endblock content %}
             </article>
+            <hr style="margin:72px 0; border:1px solid #fafafa;">
             {% include "forms/form-subscribe.njk" %}
         </el-column>
         <el-column>

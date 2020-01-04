@@ -45,9 +45,11 @@ window.onscroll = () => {
 _hideOnscroll = () => {
 	if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
 		document.getElementById("navigation-panel").style.right = "0px";
+		document.getElementById("navigation-panel").style.display = "block";
 	} else {
 
 		document.getElementById("navigation-panel").style.right = "-200px";
+		document.getElementById("navigation-panel").style.display = "none";
 	}
 }
 
