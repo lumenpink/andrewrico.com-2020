@@ -389,7 +389,7 @@ const elButtonCSS = `
 
 ::slotted(*) {
     outline: 0;
-    padding: .75rem;
+    padding: 1rem;
     cursor: pointer;
     width: 100%;
     display: -webkit-inline-box;

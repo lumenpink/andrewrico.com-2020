@@ -2,6 +2,7 @@
 title: "Term Of Use"
 description: "This is the Term Of Use page"
 layout: "layouts/layout-simple.njk"
+tags: ["page"]
 ---
 Last updated: January 27, 2019
 

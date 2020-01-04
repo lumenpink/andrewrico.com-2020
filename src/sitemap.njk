@@ -1,0 +1,27 @@
+---
+permalink: /sitemap.xml
+sitemapIgnore: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{# {%- for page in collections.page %}
+    <url>
+      <loc>{{ page.url }}</loc>
+    </url>
+{%- endfor %} #}
+
+{%- for page in collections.all %}
+{%- if page.data.sitemapIgnore !== true %}
+  <url>
+    <loc>{{ page.url  }}</loc>
+    {% if page.data.premier.date -%}
+    <lastmod>{{ page.data.premier.date }}</lastmod>
+    {%- else -%}
+    <lastmod>{{ page.date }}</lastmod>
+    {%- endif %}
+    <changefreq>{{ page.data.changefreq }}</changefreq>
+    <priority>{{ page.data.priority }}</priority>
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>

@@ -2,6 +2,7 @@
 title: Frequently Ask Questions
 description: "This is the FAQ page"
 layout: "layouts/layout-simple.njk"
+tags: ["page"]
 ---
 
 ## What is andrewrico.com?

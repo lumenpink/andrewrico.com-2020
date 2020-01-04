@@ -161,6 +161,14 @@ USA MAP
 .simple-page ol li {
  margin:8px 0;
 }
+
+#project-page ol {
+  list-style: decimal;
+}
+#project-page ol li {
+  margin:8px 0;
+ }
+
 .hiddenByUX {
   display: none;
 }

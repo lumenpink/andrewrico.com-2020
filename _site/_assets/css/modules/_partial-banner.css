@@ -1,19 +1,22 @@
 header {
     display: block;
 }
-.homepage-banner  {
+
+.homepage-banner {
     padding: 0;
- }
+}
+
 .homepage-banner el-grid {
-   min-height: 100vh;
-   padding-top: 64px;
-   padding-bottom: 64px;
+    min-height: 100vh;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .homepage-banner el-column {
-    padding-left:0!important;
-    padding-right:0!important;
- }
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .base-banner {
     display: flex;
     justify-content: center;
@@ -42,8 +45,6 @@ header {
     padding: 1rem;
 }
 
-
-
 @media(min-width:768px) {
     .base-banner {
         height: 50vh;
@@ -55,9 +56,16 @@ header {
     }
 }
 
-
-.simple-header h1{
+.simple-banner h1 {
     font-family: var(--font-family-content);
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
     margin: 0;
+}
+
+@media(min-width:768px) {
+    .simple-banner h1 {
+        font-size: 3rem;
+        text-align: left;
+    }
 }

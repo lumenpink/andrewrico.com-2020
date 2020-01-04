@@ -1,0 +1,37 @@
+---
+title: Archives
+description: "This is the Archives page"
+layout: "layouts/layout-simple.njk"
+---
+<h2>andrewrico.com</h2>
+1. www.andrewrico.com 2017<br>
+2. www.andrewrico.com 2018<br>
+3. www.andrewrico.com 2019<br>
+4. www.andrewrico.com 2020<br>
+<br>
+<h2>Projects</h2>
+<ul>
+{%- for archivedproject in collections.archivedproject -%}
+    <li>
+        <a href="{{ archivedproject.url |  url }}">
+            {{ archivedproject.data.title }}
+        </a> 
+    </li>
+{% endfor %}
+</ul>
+
+<br>
+<h2>Blogposts</h2>
+<ul>
+    {%- for archivedblogpost in collections.archivedblogpost -%}
+    <li>
+        <a href="{{ archivedblogpost.url | url }}">
+            {{ archivedblogpost.data.title }}
+        </a>  
+    </li>
+    {% endfor %}
+</ul>
+
+<br>
+
+<a href="/">GO BACK TO HOMEPAGE</a>

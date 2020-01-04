@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>/portfolio/</loc>
+    <lastmod>Sun Nov 24 2019 14:44:04 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>/contact/</loc>
+    <lastmod>Sun Nov 24 2019 14:45:00 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/</loc>
+    <lastmod>Sun Nov 24 2019 23:37:47 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>Mon Nov 25 2019 20:43:08 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>/terms/</loc>
+    <lastmod>Mon Nov 25 2019 20:44:11 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/privacy/</loc>
+    <lastmod>Mon Nov 25 2019 20:44:20 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/blogpost/2020/tutorial/Build-a-web-component/</loc>
+    <lastmod>Mon Dec 02 2019 19:00:00 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>/projects/wordpress/churchillexotics/</loc>
+    <lastmod>Mon Dec 02 2019 19:00:00 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/css/</loc>
+    <lastmod>Fri Dec 06 2019 09:42:18 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority>2</priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/html/</loc>
+    <lastmod>Fri Dec 06 2019 09:42:18 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/js/</loc>
+    <lastmod>Fri Dec 06 2019 09:42:18 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/php/</loc>
+    <lastmod>Fri Dec 06 2019 09:42:18 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/ui-ux/</loc>
+    <lastmod>Fri Dec 06 2019 09:42:18 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/wordpress/</loc>
+    <lastmod>Fri Dec 06 2019 09:42:18 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/challenges/21-Days-Code-Challenge-By-Hacker-Rank/</loc>
+    <lastmod>Sun Dec 08 2019 12:29:45 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/challenges/sumit1/</loc>
+    <lastmod>Sun Dec 08 2019 12:30:26 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/best-practices/</loc>
+    <lastmod>Mon Dec 23 2019 10:41:52 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/soft-skills/</loc>
+    <lastmod>Mon Dec 23 2019 10:48:55 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/homepage/skills/workflow/</loc>
+    <lastmod>Mon Dec 23 2019 18:00:23 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/archives/</loc>
+    <lastmod>Wed Jan 01 2020 11:46:42 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
+    <loc>/FAQ/</loc>
+    <lastmod>Wed Jan 01 2020 11:47:52 GMT-0500 (Eastern Standard Time)</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+</urlset>

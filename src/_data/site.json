@@ -16,5 +16,8 @@
     "path": {
         "stylesheet": "/_assets/css/stylesheets.css",
         "fonts": "https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Sans+Pro&display=swap"
+    },
+    "metadata":{
+        "url": "https://www.andrewrico.com"
     }
 }

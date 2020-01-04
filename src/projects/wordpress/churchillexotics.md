@@ -2,8 +2,18 @@
 title: "Churchill Exotics"
 description: "This is the Churchill Exotics project page"
 keywords: ["car dealership"]
-tags: [ "projects", "wordpress"]
+
 layout: "/page/project.njk"
+tags: 
+- page
+- projects
+- recent
+- wordpress
+- archivedproject
+date: 2019-12-03
+changefreq: weekly
+priority: 1
+
 PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
 ProjectPathToImage: "/_assets/media/images/churchill-exotics-mockup.png"
 ProjectImageMeta: "Churchill Exotics Project Image"
@@ -34,7 +44,7 @@ title="{{PageCaseStudyImageMeta}}" />
 <div id="case-study">
 
 ## Case Study 
-I have a client that wanted to build a car dealership website
+Churchill Exotics is a car dealership based in South Florida USA,
 
 </div>
 
@@ -48,7 +58,10 @@ title="{{PageSituationImageMeta}}" />
 <div id="situation">
 
 ## The Situation 
-In this section i talk about the situation and problems i faced during the initial part
+The Churchill Exotics had to be build from the ground up, so i had to come up with the following steps:
+1. Build the website
+2. Branding
+3. SEO
 
 </div>
 
@@ -62,8 +75,10 @@ title="{{PageApproachImage}}" />
 <div id="approach">
 
 ## The Approach
-In this section i talk about the how i approached posible issues or problems about the project
-also talk about the kind of fonts and images or assets that i use.
+Before i started to build the website, i had to look to our competitors websites and see what kind of plataform they were using to build their website.
+ 1. In this project i decided to use Wordpress
+ 2. For the font i use "Pt Sans", one of my favorite fonts
+ 3. I designed the logo with Illustrator  
 
 </div>
 
@@ -78,11 +93,11 @@ title="{{PageConclutionImageMeta}}" />
 <div id="conclution">
 
 ## The Conclution
-In this section i talk about the finaal words of the projects.
+Today Churchill Exotics in one of the most important car dealership in the city and they are able to get to close deals every day thanks to the work that was done in this project.
 
 </div>
 
-<a href="/">GO BACK TO HOMEPAGE</a>
+
 
 
 

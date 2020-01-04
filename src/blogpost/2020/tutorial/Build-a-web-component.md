@@ -1,14 +1,20 @@
 ---
 title: "Build a web component"
 description: "This is the Build a web component page"
-keywords: ["#javascript", "#webComponents "]
+keywords: ["javascript", "webComponents "]
+layout: "/page/blogpost.njk"
+tags: 
+    - page 
+    - archivedblogpost
+    - article
+    - tuts
 date: 2019-12-03
 update: 2019-12-03
-layout: "/page/blogpost.njk"
-tags: [ "article", "tuts" ]
+changefreq: weekly
+priority: 1
+
 PagePathToBanner: "radial-gradient(ellipse closest-side, #0f0e1680, #100e17), url(/_assets/media/images/abstract-4.jpg)"
 preface: "As developers, we all know that reusing code as much as possible is a good idea. This has traditionally not been so easy for custom markup structures — think of the complex HTML (and associated style and script) you've sometimes had to write to render custom UI controls, and how using them multiple times can turn your page into a mess if you are not careful.
-
 Web Components aims to solve such problems — it consists of three main technologies, which can be used together to create versatile custom elements with encapsulated functionality that can be reused wherever you like without fear of code collisions."
 ---
 

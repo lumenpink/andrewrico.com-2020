@@ -6,5 +6,19 @@ layout: "layouts/layout-project.njk"
         {% block content  %}
             {{ content | safe }}
         {% endblock content %}
+        {%- for project in collections.projects -%}
+            <ul>
+                <li>
+                    <el-button>
+                        <a slot="button" class="el-btn" href="{{ project.data.ProjectLinkToDemo }}"> LIVE SITE </a>
+                    </el-button>
+                </li>
+                <li>
+                    <el-button>
+                        <a slot="button" class="el-btn" href="{{ project.data.ProjectLinkToCode }}"> SHOW ME THE CODE </a>
+                    </el-button>
+                </li>
+            </ul>
+        {% endfor %}
     </el-grid>
 </el-section>
