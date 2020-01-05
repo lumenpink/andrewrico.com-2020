@@ -70,7 +70,6 @@ a {
   color: var(--color-quaternary);
 }
 
-ol,
 ul {
   list-style: none;
   margin: 0;
@@ -104,7 +103,6 @@ figcaption {
 
 
 /*el-button class*/
-.button-center {}
 
 /*hiden navigation title*/
 *[id*="accesible-"] {
@@ -172,29 +170,3 @@ USA MAP
 .hiddenByUX {
   display: none;
 }
-
-
-
-/* .support {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 12.5px;
-  max-width: 3.2rem;
-  height: 3.2rem;
-}
-.support.stable {
-  color:#000000;
-  background: rgb(98, 255, 98);
-}
-.support.pollyfill {
-  color:#fff;
-  background: rgb(255, 68, 0);
-} */
-/*
-  font-family: 'Dancing Script', cursive;
-  font-family: 'Coda Caption', sans-serif;
-  font-family: 'Didact Gothic', sans-serif;
-
-*/

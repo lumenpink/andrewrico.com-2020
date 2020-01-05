@@ -1,7 +1,6 @@
- <header> 
+ <header class="homepage-banner"> 
     <el-section 
         id="about" 
-        class="homepage-banner"
         background="{{ PagePathToBanner }}" 
         color="var(--color-white)"
         >
@@ -45,31 +44,7 @@
                             ]'>
                         </p>
                     </div>
-                    <nav class="bio-navgigation" aria-labelledby="accesible-card-bio-navigation">
-                        <h3 id="accesible-card-bio-navigation">Navigation: Social Icons</h3>
-                        <ul>
-                            <li> 
-                                <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="link to linkedin andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#linkedin"></use></svg></a> 
-                                LinkedIn 
-                            </li> 
-                            <li>
-                                <a href="{{ site.author.github }}" target="_blank" rel="noopener" aria-label="link to github andrew's rico profile"><svg fill="white"><use href="_assets/media/svg/sprites.svg#github"></use></svg></a>
-                                Github 
-                            </li> 
-                            <li>
-                                <a href="/portfolio" aria-label="link to andrew's rico portfolio page"><svg fill="white"><use href="_assets/media/svg/sprites.svg#icon-portfolio"></use></svg></a>
-                                Porfolio 
-                            </li> 
-                            <li>
-                                <a href="/blog" aria-label="link to andrew's rico blog page"><svg fill="white"><use href="_assets/media/svg/sprites.svg#icon-blog"></use></svg></a>
-                                Blog 
-                            </li> 
-                            <li>
-                                <a href="/contact" aria-label="link to andrew's rico contact page"><svg fill="white"><use href="_assets/media/svg/sprites.svg#icon-contact"></use></svg></a>
-                                Contact 
-                            </li> 
-                        </ul>
-                    </nav>
+                    {% include "navigations/navigation-landmark-bio.njk" %}
                     <br>
                     <el-button class="auto">
                         <a slot="button" class="el-btn el-btn-5" href="#schedule-phone-call">Schedule a Phone Call</a>

@@ -8,12 +8,13 @@
 
 #project-page p {
     font-size: 1.2rem;
-    margin-bottom: 4rem;
+
 }
 
 #project-page img {
     max-width: 100%;
-    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 #case-study {
@@ -51,8 +52,6 @@
 .project-grid div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 @media(max-width:1024px) {
@@ -75,7 +74,7 @@
 
 @media(min-width:1024px) {
     .project-grid {
-        grid-gap: 4rem;
+        grid-gap: 6rem;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'case-study case-study-image'
@@ -83,4 +82,24 @@
             'approach approach-image'
             'conclution-image conclution ';
     }
+}
+
+.overlay-left {
+    padding: 1rem;
+    background: #fff;
+    -webkit-box-shadow: -18px -18px 0px 4px #ddd; 
+    box-shadow: -18px -18px 0px 4px #ddd;
+    border:1px solid #ddd;
+}
+
+.overlay-right {
+    padding: 1rem;
+    background: #fff;
+    -webkit-box-shadow: 18px -18px 0px 4px #ddd; 
+    box-shadow: 18px -18px 0px 4px #ddd;
+    border:1px solid #ddd;
+}
+
+.project-grid ol{
+
 }

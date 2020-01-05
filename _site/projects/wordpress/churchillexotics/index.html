@@ -8,8 +8,7 @@
   <meta name="Author" content="Andrew Rico">
   <meta name="Description" content="This is the Churchill Exotics project page" />
   <meta name="Keywords" content="car dealership" />
-  <meta name="theme-color" content="#000" />
-  <link rel="self" href="https://www.andrewrico.com">
+  <meta name="theme-color" content="" />
   <link rel="apple-touch-icon" href="/_assets/media/images/andrewrico.png">
   <link rel="stylesheet" href="/_assets/css/stylesheets.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Sans+Pro&amp;display=swap">
@@ -20,7 +19,7 @@
 
     <el-drawer site="Andrew Rico">
     <nav class="drawer-menu" slot="drawer-menu">
-    <b class="h3 hiddenByUX">Brand</b>
+    <p class="h3 hiddenByUX">Brand</p>
     <ul>
         <li>
             <a href="/">
@@ -39,8 +38,8 @@
             </a>
         </li>
     </ul>
-
-    <hr><b class="h3">Sources</b>
+    <hr>
+    <p class="h3">Sources</p>
     <ul>
         <li>
             <a href="/blog">
@@ -51,8 +50,8 @@
             </a>
         </li>
     </ul>
-
-    <hr><b class="h3">Contact</b>
+    <hr>
+    <p class="h3">Contact</p>
     <ul>
         <li>
             <a href="" target="_blank" rel="noopener">
@@ -79,19 +78,40 @@
             </a>
         </li>
     </ul>
-
 </nav>
 
-    <nav slot="navbar-menu">
-        <ul class="menu-navbar">
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <a href="#case-study">
+                Case Study
+            </a>
+        </li>
+        <li>
+            <a href="#challenges">
+                Challenges
+            </a>
+        </li>
+        <li>
+            <a href="#approach">
+                Approach
+            </a>
+        </li>
+        <li>
+            <a href="#conclution">
+                Conslution
+            </a>
+        </li>
+    </ul>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
             <li>
                 <a href="#case-study">
                     Case Study
                 </a>
             </li>
             <li>
-                <a href="#situation">
-                    Situation
+                <a href="#challenges">
+                    Challenges
                 </a>
             </li>
             <li>
@@ -105,36 +125,10 @@
                 </a>
             </li>
         </ul>
-    </nav>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <nav slot="dropdown">
-            <ul>
-                <li>
-                    <a href="#case-study">
-                        Case Study
-                    </a>
-                </li>
-                <li>
-                    <a href="#situation">
-                        Situation
-                    </a>
-                </li>
-                <li>
-                    <a href="#approach">
-                        Approach
-                    </a>
-                </li>
-                <li>
-                    <a href="#conclution">
-                        Conslution
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </el-dropdown>
 </el-drawer>
         <header>
-    <el-section class="base-banner" background="var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)">
+    <el-section class="base-banner" background="var(--color-banner-shadow), url(/_assets/media/images/churchillexotics-image-1.jpg)">
         <el-grid>
             <el-column grid="row">  
                 <h1>
@@ -153,20 +147,25 @@
 ================================ -->
 <!-- Case Study
 ================================ -->
-<p><img id="case-study-image" src="/_assets/media/images/placeholder.png" 
+<p><img 
+id="case-study-image" 
+src="/_assets/media/images/churchillexotics-image-1.jpg" 
 alt="Case Study Section Image" 
 title="Case Study Section Image" /></p>
-<div id="case-study">
+<div class="overlay-left" id="case-study">
 <h2>Case Study</h2>
-<p>Churchill Exotics is a car dealership based in South Florida USA,</p>
+<p>Churchill Exotics is a car dealership based in South Florida USA, we deal across the globe and can look after your car buying requirements wherever you are located. We also export to South America, Europe, the Middle East, Far East and Russia.
+Churchill Exotics, offers a wide range of pre-owned and exotic vehicles like Aston Martin, Ferrari, Lamborghini, Porsche, Mercedes-Benz, BMW, Bentley, Audi, and American cars, all provided from our luxury car dealership. Apart from a wide range of physical cars, we can offer shorter lead times on short supply vehicles as well as current market prices for all prestige brands. Put us to the test, and let us know which car you are interested in?</p>
 </div>
 <!-- problem
 ================================ -->
-<p><img id="conclution-image" src="/_assets/media/images/placeholder.png" 
-alt="Situation Section Image" 
-title="Situation Section Image" /></p>
-<div id="situation">
-<h2>The Situation</h2>
+<p><img 
+id="challenges-image" 
+src="/_assets/media/images/churchillexotics-mockup.png" 
+alt="Challenges Section Image" 
+title="Challenges Section Image" /></p>
+<div class="overlay-right" id="challenges">
+<h2>The Challenges</h2>
 <p>The Churchill Exotics had to be build from the ground up, so i had to come up with the following steps:</p>
 <ol>
 <li>Build the website</li>
@@ -176,10 +175,12 @@ title="Situation Section Image" /></p>
 </div>
 <!-- approch
 ================================ -->
-<p><img id="approach-image" src="/_assets/media/images/placeholder.png" 
+<p><img 
+id="approach-image" 
+src="/_assets/media/images/churchillexotics-image-3.png" 
 alt="" 
 title="" /></p>
-<div id="approach">
+<div class="overlay-left" id="approach">
 <h2>The Approach</h2>
 <p>Before i started to build the website, i had to look to our competitors websites and see what kind of plataform they were using to build their website.</p>
 <ol>
@@ -190,26 +191,17 @@ title="" /></p>
 </div>
 <!-- conclution
 ================================ -->
-<p><img id="conclution-image" src="/_assets/media/images/placeholder.png" 
+<p><img 
+id="conclution-image" 
+src="/_assets/media/images/churchillexotics-image-2.png" 
 alt="Conclution Section Image" 
 title="Conclution Section Image" /></p>
-<div id="conclution">
+<div class="overlay-right" id="conclution">
 <h2>The Conclution</h2>
 <p>Today Churchill Exotics in one of the most important car dealership in the city and they are able to get to close deals every day thanks to the work that was done in this project.</p>
 </div>
+<p><a href="/portfolio">&lt; &lt; GO BACK TO PORTFOLIO</a></p>
 
-        <ul>
-                <li>
-                    <el-button>
-                        <a slot="button" class="el-btn" href="https://www.churchillexotics.com/"> LIVE SITE </a>
-                    </el-button>
-                </li>
-                <li>
-                    <el-button>
-                        <a slot="button" class="el-btn" href="https://github.com/Andrewrico"> SHOW ME THE CODE </a>
-                    </el-button>
-                </li>
-            </ul>
         
     </el-grid>
 </el-section>
@@ -239,8 +231,8 @@ title="Conclution Section Image" /></p>
                 <ul>
                     <li><a href="/contact">Get In Touch</a></li>
                 </ul>
-                <nav class="navigation-social-icons" aria-labelledby="accesible-social-icons-navigation">
-    <h3 id="accesible-social-icons-navigation"> Navigation Menu | Social Icons </h3>
+                <nav class="navigation-social-icons" aria-labelledby="accesible-sin">
+    <h3 id="accesible-sin"> Navigation Menu | Social Icons </h3>
     <ul>
         <li>
             <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
@@ -284,10 +276,15 @@ title="Conclution Section Image" /></p>
                 <span> Built with <a href="https://www.thisel.com/" target="_blank" rel="noopener"> thiselJS </a></span>
             </el-column>
             <el-column>
-                <span><a href="/terms"> Disclaimer </a></span>
-                <span><a href="/privacy"> Privacy </a></span>
-                <span><a href="/sitemap.xml" target="_blank"> Site Map </a></span>
-                <span><a href="/FAQ"> FAQ </a></span>
+             <ul>
+                <li>  <a href="/terms"> Disclaimer </a>  </li>
+
+                <li>  <a href="/sitemap.xml" target="_blank"> Sitemap </a>  </li>
+
+                <li>  <a href="/privacy"> Privacy </a>  </li>
+
+                <li>  <a href="/FAQ"> FAQ </a>  </li>
+            </ul>
             </el-column>
             <el-column>
                 <el-copyright>
@@ -297,50 +294,50 @@ title="Conclution Section Image" /></p>
         </el-grid>
     </el-section>
 </footer>
- <nav id="navigation-panel" aria-labelledby="accesible-side-panel-navigation">
-    <h3 id="accesible-side-panel-navigation">NAVIGATION: SIDE PANEL</h3>
-    <ul>
-        <li>
-            <a href="/" aria-label="link to andrew's rico homepage">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
-                </svg>
-                <span class="tooltip"><span>HOMEPAGE</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
-                </svg>
-                <span class="tooltip"><span>PORTFOLIO</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/blog" aria-label="link to andrew's rico blog page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
-                </svg>
-                <span class="tooltip"><span>BLOG</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/contact" aria-label="link to andrew's rico contact page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
-                </svg>
-                <span class="tooltip"><span>CONTACT</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" aria-label="scroll up to top of the window button">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
-                </svg>
-                <span class="tooltip"><span>SCROLL UP</span></span>
-            </a>
-        </li>
-    </ul>
+<nav id="navigation-panel" aria-labelledby="accesible-spn">
+<h3 id="accesible-spn"> Navigation Menu | Side Panel </h3>
+<ul>
+    <li>
+        <a href="/" aria-label="link to andrew's rico homepage">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
+            </svg>
+            <span class="tooltip"><span>HOMEPAGE</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
+            </svg>
+            <span class="tooltip"><span>PORTFOLIO</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="/blog" aria-label="link to andrew's rico blog page">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
+            </svg>
+            <span class="tooltip"><span>BLOG</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="/contact" aria-label="link to andrew's rico contact page">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
+            </svg>
+            <span class="tooltip"><span>CONTACT</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="#" aria-label="scroll up to top of the window button">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
+            </svg>
+            <span class="tooltip"><span>SCROLL UP</span></span>
+        </a>
+    </li>
+</ul>
 </nav>
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
 <script src="/_assets/js/site.js"></script>

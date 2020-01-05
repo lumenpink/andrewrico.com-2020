@@ -1,0 +1,17 @@
+ <el-drawer site="Andrew Rico">
+    {% include "navigations/navigation-landmark-drawer.njk" %}
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <el-button>
+                <a slot="button" class="el-btn" href="/blog"> BLOG </a>
+            </el-button>
+        </li>
+    </ul>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
+            <li>
+                <a href="/blog"> BLOG </a>
+            </li>
+        </ul>
+    </el-dropdown>
+</el-drawer>

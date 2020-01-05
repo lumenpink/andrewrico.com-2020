@@ -1,34 +1,35 @@
 ---
 title: "Churchill Exotics"
 description: "This is the Churchill Exotics project page"
-keywords: ["car dealership"]
-
-layout: "/page/project.njk"
+keywords: 
+- car dealership
 tags: 
 - page
 - projects
 - recent
 - wordpress
 - archivedproject
+layout: "/page/project.njk"
+
 date: 2019-12-03
 changefreq: weekly
 priority: 1
 
-PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/abstract-1.jpg)"
-ProjectPathToImage: "/_assets/media/images/churchill-exotics-mockup.png"
+PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/churchillexotics-image-1.jpg)"
+ProjectPathToImage: "/_assets/media/images/churchillexotics-mockup.png"
 ProjectImageMeta: "Churchill Exotics Project Image"
 ProjectStringCathegory: "#Car Dealership"
 ProjectStringType: "#Exotic Cars"
 ProjectStringMade: "Made with Wordpress"
 ProjectLinkToDemo: "https://www.churchillexotics.com/"
 ProjectLinkToCode: "https://github.com/Andrewrico"
-PagePathToCaseStudyImage: "/_assets/media/images/placeholder.png"
+PagePathToCaseStudyImage: "/_assets/media/images/churchillexotics-image-1.jpg"
 PageCaseStudyImageMeta: "Case Study Section Image"
-PagePathToSituationImage: "/_assets/media/images/placeholder.png"
-PageSituationImageMeta: "Situation Section Image"
-PagePathToApproachImage: "/_assets/media/images/placeholder.png"
+PagePathToChallengesImage: "/_assets/media/images/churchillexotics-mockup.png"
+PageChallengesImageMeta: "Challenges Section Image"
+PagePathToApproachImage: "/_assets/media/images/churchillexotics-image-3.png"
 PageApproachImageMeta: "Approach Section Image"
-PagePathToConclutionImage: "/_assets/media/images/placeholder.png"
+PagePathToConclutionImage: "/_assets/media/images/churchillexotics-image-2.png"
 PageConclutionImageMeta: "Conclution Section Image"
 ---
 
@@ -37,27 +38,32 @@ PageConclutionImageMeta: "Conclution Section Image"
 
 <!-- Case Study
 ================================ -->
-<img id="case-study-image" src="{{PagePathToCaseStudyImage}}" 
+<img 
+id="case-study-image" 
+src="{{PagePathToCaseStudyImage}}" 
 alt="{{PageCaseStudyImageMeta}}" 
 title="{{PageCaseStudyImageMeta}}" />
 
-<div id="case-study">
+<div class="overlay-left" id="case-study">
 
 ## Case Study 
-Churchill Exotics is a car dealership based in South Florida USA,
+Churchill Exotics is a car dealership based in South Florida USA, we deal across the globe and can look after your car buying requirements wherever you are located. We also export to South America, Europe, the Middle East, Far East and Russia.
+Churchill Exotics, offers a wide range of pre-owned and exotic vehicles like Aston Martin, Ferrari, Lamborghini, Porsche, Mercedes-Benz, BMW, Bentley, Audi, and American cars, all provided from our luxury car dealership. Apart from a wide range of physical cars, we can offer shorter lead times on short supply vehicles as well as current market prices for all prestige brands. Put us to the test, and let us know which car you are interested in?
 
 </div>
 
 <!-- problem
 ================================ -->
 
-<img id="conclution-image" src="{{PagePathToSituationImage}}" 
-alt="{{PageSituationImageMeta}}" 
-title="{{PageSituationImageMeta}}" />
+<img 
+id="challenges-image" 
+src="{{PagePathToChallengesImage}}" 
+alt="{{PageChallengesImageMeta}}" 
+title="{{PageChallengesImageMeta}}" />
 
-<div id="situation">
+<div class="overlay-right" id="challenges">
 
-## The Situation 
+## The Challenges 
 The Churchill Exotics had to be build from the ground up, so i had to come up with the following steps:
 1. Build the website
 2. Branding
@@ -68,11 +74,13 @@ The Churchill Exotics had to be build from the ground up, so i had to come up wi
 <!-- approch
 ================================ -->
 
-<img id="approach-image" src="{{PagePathToApproachImage}}" 
+<img 
+id="approach-image" 
+src="{{PagePathToApproachImage}}" 
 alt="{{PageApproachImage}}" 
 title="{{PageApproachImage}}" />
 
-<div id="approach">
+<div class="overlay-left" id="approach">
 
 ## The Approach
 Before i started to build the website, i had to look to our competitors websites and see what kind of plataform they were using to build their website.
@@ -86,11 +94,13 @@ Before i started to build the website, i had to look to our competitors websites
 <!-- conclution
 ================================ -->
 
-<img id="conclution-image" src="{{PagePathToConclutionImage}}" 
+<img 
+id="conclution-image" 
+src="{{PagePathToConclutionImage}}" 
 alt="{{PageConclutionImageMeta}}" 
 title="{{PageConclutionImageMeta}}" />
 
-<div id="conclution">
+<div class="overlay-right" id="conclution">
 
 ## The Conclution
 Today Churchill Exotics in one of the most important car dealership in the city and they are able to get to close deals every day thanks to the work that was done in this project.
@@ -104,7 +114,7 @@ Today Churchill Exotics in one of the most important car dealership in the city 
 
 
 
-
+<a href="/portfolio">< < GO BACK TO PORTFOLIO</a>
 
 
 

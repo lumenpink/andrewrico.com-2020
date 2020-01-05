@@ -8,8 +8,7 @@
   <meta name="Author" content="Andrew Rico">
   <meta name="Description" content="This is the Contact page" />
   <meta name="Keywords" content="" />
-  <meta name="theme-color" content="#000" />
-  <link rel="self" href="https://www.andrewrico.com">
+  <meta name="theme-color" content="" />
   <link rel="apple-touch-icon" href="/_assets/media/images/andrewrico.png">
   <link rel="stylesheet" href="/_assets/css/stylesheets.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Sans+Pro&amp;display=swap">
@@ -20,7 +19,7 @@
 
      <el-drawer site="Andrew Rico">
     <nav class="drawer-menu" slot="drawer-menu">
-    <b class="h3 hiddenByUX">Brand</b>
+    <p class="h3 hiddenByUX">Brand</p>
     <ul>
         <li>
             <a href="/">
@@ -39,8 +38,8 @@
             </a>
         </li>
     </ul>
-
-    <hr><b class="h3">Sources</b>
+    <hr>
+    <p class="h3">Sources</p>
     <ul>
         <li>
             <a href="/blog">
@@ -51,8 +50,8 @@
             </a>
         </li>
     </ul>
-
-    <hr><b class="h3">Contact</b>
+    <hr>
+    <p class="h3">Contact</p>
     <ul>
         <li>
             <a href="" target="_blank" rel="noopener">
@@ -79,34 +78,29 @@
             </a>
         </li>
     </ul>
-
 </nav>
 
-    <nav slot="navbar-menu">
-        <ul class="menu-navbar">
+    <ul slot="navbar-menu" class="menu-navbar">
+        <li>
+            <el-button>
+                <a slot="button" class="el-btn" href="/portfolio"> PORTFOLIO </a>
+            </el-button>
+        </li>
+        <li>
+            <el-button>
+                <a slot="button" class="el-btn" href="/blog"> BLOG </a>
+            </el-button>
+        </li>
+    </ul>
+    <el-dropdown slot="mobil-menu" id="mobil-menu">
+        <ul slot="dropdown">
             <li>
-                <el-button>
-                    <a slot="button" class="el-btn" href="/portfolio"> PORTFOLIO </a>
-                </el-button>
+                <a href="/portfolio"> PORTFOLIO </a>
             </li>
             <li>
-                <el-button>
-                    <a slot="button" class="el-btn" href="/blog"> BLOG </a>
-                </el-button>
+                <a href="/blog"> BLOG </a>
             </li>
         </ul>
-    </nav>
-    <el-dropdown slot="mobil-menu" id="mobil-menu">
-        <nav slot="dropdown">
-            <ul>
-                <li>
-                    <a href="/portfolio"> PORTFOLIO </a>
-                </li>
-                <li>
-                    <a href="/blog"> BLOG </a>
-                </li>
-            </ul>
-        </nav>
     </el-dropdown>
 </el-drawer>
         <header>
@@ -137,8 +131,8 @@
         <el-column display="flex" flex-direction="column" justify-content="center" align-items="center">
             <div id="author">
                 <img class="author-avatar" src="/_assets/media/images/andrewrico.png" alt=" Avatar" title=" Figure">
-                <nav class="navigation-social-icons" aria-labelledby="accesible-social-icons-navigation">
-    <h3 id="accesible-social-icons-navigation"> Navigation Menu | Social Icons </h3>
+                <nav class="navigation-social-icons" aria-labelledby="accesible-sin">
+    <h3 id="accesible-sin"> Navigation Menu | Social Icons </h3>
     <ul>
         <li>
             <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
@@ -262,8 +256,8 @@
                 <ul>
                     <li><a href="/contact">Get In Touch</a></li>
                 </ul>
-                <nav class="navigation-social-icons" aria-labelledby="accesible-social-icons-navigation">
-    <h3 id="accesible-social-icons-navigation"> Navigation Menu | Social Icons </h3>
+                <nav class="navigation-social-icons" aria-labelledby="accesible-sin">
+    <h3 id="accesible-sin"> Navigation Menu | Social Icons </h3>
     <ul>
         <li>
             <a href="andrewric@gmail.com" target="_blank" rel="noopener" aria-label="link to foward email to andrews rico directly">
@@ -307,10 +301,15 @@
                 <span> Built with <a href="https://www.thisel.com/" target="_blank" rel="noopener"> thiselJS </a></span>
             </el-column>
             <el-column>
-                <span><a href="/terms"> Disclaimer </a></span>
-                <span><a href="/privacy"> Privacy </a></span>
-                <span><a href="/sitemap.xml" target="_blank"> Site Map </a></span>
-                <span><a href="/FAQ"> FAQ </a></span>
+             <ul>
+                <li>  <a href="/terms"> Disclaimer </a>  </li>
+
+                <li>  <a href="/sitemap.xml" target="_blank"> Sitemap </a>  </li>
+
+                <li>  <a href="/privacy"> Privacy </a>  </li>
+
+                <li>  <a href="/FAQ"> FAQ </a>  </li>
+            </ul>
             </el-column>
             <el-column>
                 <el-copyright>
@@ -320,50 +319,50 @@
         </el-grid>
     </el-section>
 </footer>
- <nav id="navigation-panel" aria-labelledby="accesible-side-panel-navigation">
-    <h3 id="accesible-side-panel-navigation">NAVIGATION: SIDE PANEL</h3>
-    <ul>
-        <li>
-            <a href="/" aria-label="link to andrew's rico homepage">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
-                </svg>
-                <span class="tooltip"><span>HOMEPAGE</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
-                </svg>
-                <span class="tooltip"><span>PORTFOLIO</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/blog" aria-label="link to andrew's rico blog page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
-                </svg>
-                <span class="tooltip"><span>BLOG</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="/contact" aria-label="link to andrew's rico contact page">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
-                </svg>
-                <span class="tooltip"><span>CONTACT</span></span>
-            </a>
-        </li>
-        <li>
-            <a href="#" aria-label="scroll up to top of the window button">
-                <svg>
-                    <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
-                </svg>
-                <span class="tooltip"><span>SCROLL UP</span></span>
-            </a>
-        </li>
-    </ul>
+<nav id="navigation-panel" aria-labelledby="accesible-spn">
+<h3 id="accesible-spn"> Navigation Menu | Side Panel </h3>
+<ul>
+    <li>
+        <a href="/" aria-label="link to andrew's rico homepage">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-home"></use>
+            </svg>
+            <span class="tooltip"><span>HOMEPAGE</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="/portfolio" aria-label="link to andrew's rico portfolio page">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-portfolio"></use>
+            </svg>
+            <span class="tooltip"><span>PORTFOLIO</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="/blog" aria-label="link to andrew's rico blog page">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-blog"></use>
+            </svg>
+            <span class="tooltip"><span>BLOG</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="/contact" aria-label="link to andrew's rico contact page">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#icon-contact"></use>
+            </svg>
+            <span class="tooltip"><span>CONTACT</span></span>
+        </a>
+    </li>
+    <li>
+        <a href="#" aria-label="scroll up to top of the window button">
+            <svg>
+                <use href="/_assets/media/svg/sprites.svg#arrowUp"></use>
+            </svg>
+            <span class="tooltip"><span>SCROLL UP</span></span>
+        </a>
+    </li>
+</ul>
 </nav>
 <script src="/_assets/js/modules/thisel-core.beta.js"></script>
 <script src="/_assets/js/site.js"></script>

@@ -118,3 +118,8 @@
 #footer-bottom el-column:nth-child(1) {
 	font-size: 0.9rem;
 }
+
+#footer-bottom ul {
+	display: flex;
+	flex-wrap: wrap;
+}

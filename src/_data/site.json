@@ -10,14 +10,15 @@
         "dribble": "https://dribbble.com/andrew64596/",
         "stackoverflow": "https://stackoverflow.com/users/11423357/andrew-rico/",
         "title": ["JAM Stack Specialist"],
-        "subtitle": ["WEB DEVELOPER", "UI/UX ENGINEER"],
-        "theme_color": "#000"
+        "subtitle": ["WEB DEVELOPER", "UI/UX ENGINEER"]
+        
     },
     "path": {
         "stylesheet": "/_assets/css/stylesheets.css",
         "fonts": "https://fonts.googleapis.com/css?family=Dancing+Script|Coda+Caption:800|Source+Sans+Pro&display=swap"
     },
     "metadata":{
-        "url": "https://www.andrewrico.com"
+        "url": "https://www.andrewrico.com",
+        "themeColor": "#000"
     }
 }
