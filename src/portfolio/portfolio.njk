@@ -35,7 +35,7 @@ pagination:
 
 <el-section padding-top="0">
     <el-grid columns="3">
-        <el-column id="recent" margin-top="0" grid="row"> <h2>Recent Projects</h2></el-column>
+        <el-column id="projects" margin-top="0" grid="row"> <h2>Recent Projects</h2></el-column>
         <el-column>
             <ul>
                 {% for project in projects %}
@@ -75,7 +75,7 @@ pagination:
                 {% endfor %}
             </ul>
         </el-column>
-        <el-column id="Javascript" margin-top="6" grid="row"> <h2>Javascript Projects</h2></el-column>
+        {# <el-column id="Javascript" margin-top="6" grid="row"> <h2>Javascript Projects</h2></el-column>
         <el-column>
             <ul>
                 {%- for js in collections.js -%}
@@ -114,7 +114,7 @@ pagination:
                     </li>
                 {% endfor %}
             </ul>
-        </el-column>
+        </el-column> #}
     </el-grid>
 </el-section>
 
