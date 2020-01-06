@@ -1,8 +1,9 @@
 ---
 title: "Privacy Policy"
-description: "This is the Privacy Policy page"
+description: "Privacy Policy Page"
 layout: "layouts/layout-simple.njk"
-tags: ["page"]
+tags: 
+- page
 ---
 <p>Last updated: January 27, 2019</p>
 <h4>PERSONALLY IDENTIFIABLE INFORMATION</h4>

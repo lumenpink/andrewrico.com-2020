@@ -1,6 +1,6 @@
 ---
 title: "Term Of Use"
-description: "This is the Term Of Use page"
+description: "Term Of Use Page"
 layout: "layouts/layout-simple.njk"
 tags: ["page"]
 ---

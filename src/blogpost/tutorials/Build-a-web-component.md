@@ -1,13 +1,16 @@
 ---
-title: "Build a web component"
-description: "This is the Build a web component page"
-keywords: ["javascript", "webComponents "]
-layout: "/page/blogpost.njk"
+title: "Building a web component"
+description: "Blogpost Page Building a web component"
+keywords: 
+- javascript
+- webComponents
 tags: 
-    - page 
-    - archivedblogpost
-    - article
-    - tuts
+- page 
+- archivedblogpost
+- article
+- tuts
+layout: "/page/blogpost.njk"
+
 date: 2019-12-03
 update: 2019-12-03
 changefreq: weekly

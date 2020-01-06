@@ -1,6 +1,6 @@
 ---
 title: "Churchill Exotics"
-description: "This is the Churchill Exotics project page"
+description: "Project Page Churchill Exotics"
 keywords: 
 - car dealership
 tags: 
@@ -47,8 +47,8 @@ title="{{PageCaseStudyImageMeta}}" />
 <div class="overlay-left" id="case-study">
 
 ## Case Study 
-Churchill Exotics is a car dealership based in South Florida USA, we deal across the globe and can look after your car buying requirements wherever you are located. We also export to South America, Europe, the Middle East, Far East and Russia.
-Churchill Exotics, offers a wide range of pre-owned and exotic vehicles like Aston Martin, Ferrari, Lamborghini, Porsche, Mercedes-Benz, BMW, Bentley, Audi, and American cars, all provided from our luxury car dealership. Apart from a wide range of physical cars, we can offer shorter lead times on short supply vehicles as well as current market prices for all prestige brands. Put us to the test, and let us know which car you are interested in?
+Churchill Exotics is a car dealership based in South Florida USA, they deal across the globe and can look after your car buying requirements wherever you are located. They export to South America, Europe, the Middle East, Far East and Russia.
+Churchill Exotics, offers a wide range of pre-owned and exotic vehicles like Aston Martin, Ferrari, Lamborghini, Porsche, Mercedes-Benz, BMW, Bentley, Audi, and American cars, all provided from their luxury car dealership. Apart from a wide range of physical cars, they can offer shorter lead times on short supply vehicles as well as current market prices for all prestige brands.
 
 </div>
 
@@ -106,13 +106,6 @@ title="{{PageConclutionImageMeta}}" />
 Today Churchill Exotics in one of the most important car dealership in the city and they are able to get to close deals every day thanks to the work that was done in this project.
 
 </div>
-
-
-
-
-
-
-
 
 <a href="/portfolio">< < GO BACK TO PORTFOLIO</a>
 
