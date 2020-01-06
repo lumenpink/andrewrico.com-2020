@@ -41,12 +41,12 @@
     grid-area: approach-image;
 }
 
-#conclution {
-    grid-area: conclution;
+#results {
+    grid-area: results;
 }
 
-#conclution-image {
-    grid-area: conclution-image;
+#results-image {
+    grid-area: results-image;
 }
 
 /* .project-grid div {
@@ -67,8 +67,8 @@
             'challenges-image'
             'approach'
             'approach-image'
-            'conclution'
-            'conclution-image';
+            'results'
+            'results-image';
     }
 }
 
@@ -78,9 +78,9 @@
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'case-study case-study-image'
-            'challeges-image challeges'
+            'challenges-image challenges'
             'approach approach-image'
-            'conclution-image conclution ';
+            'results-image results ';
     }
 }
 
@@ -98,8 +98,4 @@
     -webkit-box-shadow: 18px -18px 0px 4px #ddd; 
     box-shadow: 18px -18px 0px 4px #ddd;
     border:1px solid #ddd;
-}
-
-.project-grid ol{
-
 }
