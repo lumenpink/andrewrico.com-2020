@@ -1,3 +1,19 @@
+/*
+
+https://github.com/Andrewrico/thisel.git
+https://andrewrico.com/
+
+# Released under MIT License
+Copyright (c) 2020 Andrew Rico.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNEC
+*/
+
+
 // create el-section template.
 const elSectionCSS = `:host {  display: block;width:100%; } :host > * { color:inherit; } :host > section { display:block; }`;
 const elSectionHTML = `<section><slot></slot></section>`;
@@ -62,27 +78,9 @@ customElements.define('el-section',
 		}
 	}
 );
+
 // create el-grid template.
-const elGridCSS = `:host {
-	--el-grid-gutter: 0;
-    --el-grid-max-width: 1366px;
-    --el-grid-width: 100%;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: var(--el-grid-gutter, 025rem);
-    margin: var(--el-grid-gutter, 0) auto;
-    max-width: var(--el-grid-max-width, 1366px);
-	width: var(--el-grid-width, 100%)
-
-}
-
-@media(max-width:768px) {
-    :host {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important
-    }
-}
-
-`;
+const elGridCSS = `:host{--el-grid-gutter:0;--el-grid-max-width:1366px;--el-grid-width:100%;display:-ms-grid;display:grid;grid-gap:var(--el-grid-gutter,025rem);margin:var(--el-grid-gutter,0) auto;max-width:var(--el-grid-max-width,1366px);width:var(--el-grid-width,100%)}@media(max-width:768px){:host{grid-template-columns:repeat(auto-fit,minmax(100%,1fr))!important}}`;
 const elGridHTML = "<slot></slot>";
 const elGridTemplate = document.createElement("template");
 elGridTemplate.innerHTML = `<style>`.concat(elGridCSS, `</style>`).concat(elGridHTML);
@@ -142,32 +140,9 @@ customElements.define('el-grid',
 		}
 	}
 );
+
 // create el-column template.
-const elColumnCSS = `:host {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: var(--el-grid-gutter, 0);
-    margin: var(--el-grid-gutter, 0);
-    padding: var(--el-grid-gutter, 0)
-}
-
-:host([grid="row"]) {
-    grid-column: 1/-1;
-}
-
-@media(max-width:768px) {
-    ::slotted([attr=auto-fit]),
-    :host([attr=auto-fit]) {
-        display: -ms-grid;
-        display: grid;
-        grid-gap: 0;
-        margin: 0;
-		grid-template-columns: 1fr!important;
-    }
-}
-`;
+const elColumnCSS = `:host{display:-ms-grid;display:grid;-ms-grid-columns:1fr;grid-template-columns:repeat(1,1fr);grid-gap:var(--el-grid-gutter,0);margin:var(--el-grid-gutter,0);padding:var(--el-grid-gutter,0)}:host([grid=row]){grid-column:1/-1}@media(max-width:768px){::slotted([attr=auto-fit]),:host([attr=auto-fit]){display:-ms-grid;display:grid;grid-gap:0;margin:0;grid-template-columns:1fr!important}}`;
 const elColumnHTML = "<slot></slot>";
 const elColumnTemplate = document.createElement("template");
 elColumnTemplate.innerHTML = `<style>`.concat(elColumnCSS, `</style>`).concat(elColumnHTML);
@@ -259,7 +234,6 @@ customElements.define('el-column',
 	}
 );
 
-
 // create el-copyright template.
 const elCopyrightFullYear = new Date().getFullYear();
 const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:inherit; font-size:inherit; text-decoration:none;}:host p{ white-space: inherit nowrap; margin:0; }`;
@@ -333,193 +307,9 @@ customElements.define('el-loading',
 		}
 	}
 );
+
 // create el-button template.
-const elButtonCSS = `
-:host {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-	border-radius: 2px;
-    min-width: 150px;
-    width: 100%;
-    max-width: 300px;
-    height: 50px;
-    font-family: var(--font-family-content);
-    --color-active: #396afc;
-    --color-active: -webkit-linear-gradient(to bottom, #2948ff, #396afc);
-    --color-active: linear-gradient(to bottom, #2948ff, #396afc);
-	--color-hover: #0080ff
-	
-}
-:host(.auto) {
-	grid-column: 1 / -1;
-	margin: auto;
-	text-align: center;
-	width: 100%;
-	height: 100%;
-}
-
-:host:before {
-    content: '';
-    position: absolute;
-    display: block;
-    background: var(--color-ripple, #fff);
-    border-radius: 50%;
-    pointer-events: none;
-    top: calc(var(--y) * 1px);
-    left: calc(var(--x) * 1px);
-    width: calc(var(--d) * 1px);
-    height: calc(var(--d) * 1px);
-    opacity: calc(var(--o, 1) * var(--ripple-opacity, .6));
-    -webkit-transition: calc(var(--t, 0) * var(--ripple-duration, 100ms)) var(--ripple-easing, linear);
-    -webkit-transition: calc(var(--t, 0) * var(--ripple-duration, 400ms)) var(--ripple-easing, linear);
-    -o-transition: calc(var(--t, 0) * var(--ripple-duration, 400ms)) var(--ripple-easing, linear);
-    transition: calc(var(--t, 0) * var(--ripple-duration, 400ms)) var(--ripple-easing, linear);
-    -webkit-transform: translate(-50%, -50%) scale(var(--s, 1));
-    -ms-transform: translate(-50%, -50%) scale(var(--s, 1));
-    transform: translate(-50%, -50%) scale(var(--s, 1));
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center
-}
-
-::slotted(*) {
-    outline: 0;
-    padding: 1rem;
-    cursor: pointer;
-    width: 100%;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-rendering: auto;
-    text-decoration: none;
-    text-align: inherit;
-    text-transform: uppercase!important;
-    font-weight: 700;
-    font-size: 1em;
-    white-space: normal;
-    cursor: pointer;
-    -webkit-transition: ease-in-out .5s;
-    -o-transition: ease-in-out .5s;
-	transition: ease-in-out .5s
-	background: #ecececaa;
-    color: gray !important;
-    border: 1px solid #ecececaa
-}
-
-::slotted(*:hover) {
-    background: #c8c8c8;
-    color: var(--color-black, #000) !important;
-    border: 1px solid var(--color-black, #000)
-}
-
-::slotted(*:active) {
-    background: #fff;
-    color: var(--color-black, #000) !important;
-    border: 1px solid var(--color-black, #000)
-}
-
-::slotted(.el-btn) {
-    background: 0 0;
-    color: gray !important;
-    border: 1px solid gray
-}
-::slotted([class*="el-btn"]:hover) {
-    color: var(--color-hover, #000) !important;
-    border: 1px solid var(--color-hover, #000) !important
-}
-
-::slotted([class*="el-btn"]:active)  {
-    background-image: var(--color-active, #000) !important;
-    color: var(--color-white, #fff) !important
-}
-
-::slotted(.el-btn-1) {
-    background: var(--color-secondary, #000)!important;
-    color: var(--color-white, white) !important;
-    border: 1px solid var(--color-secondary, #000)
-}
-::slotted(.el-btn-1:hover) {
-    background: var(--color-hover, #000);
-    color: var(--color-primary, #fff) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted(.el-btn-2) {
-    background: 0 0;
-    color: var(--color-secondary, #000) !important;
-    border: 1px solid var(--color-secondary, #000)
-}
-::slotted(.el-btn-2:hover) {
-    background: var(--color-hover, #000);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)
-}
-
-
-::slotted(.el-btn-3) {
-    background: var(--color-tertiary, #000)!important;
-    color: var(--color-primary, #000) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-::slotted(.el-btn-3:hover) {
-    background: var(--color-hover, #000);
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted(.el-btn-4) {
-	background: 0 0;
-    color: var(--color-tertiary, #000) !important;
-    border: 1px solid var(--color-tertiary, #000)!important;
-}
-::slotted(.el-btn-4:hover) {
-	background: 0 0;
-    color: var(--color-tertiary, #000) !important;
-    border: 1px solid var(--color-tertiary, #000)!important;
-}
-::slotted(.el-btn-4:active) {
-    color: var(--color-white, #000) !important;
-}
-
-::slotted(.el-btn-5) {
-	background: var(--color-quaternary, #000)!important;
-    color: var(--color-primary, #000) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-::slotted(.el-btn-5:hover) {
-    color: var(--color-white, #fff) !important;
-    border: 1px solid var(--color-primary, #000)!important;
-}
-
-::slotted(.el-btn-au) {
-    width: auto;
-    min-width: auto;
-    overflow: visible;
-    height: auto
-}
-::slotted(.el-btn-sm) {
-    min-width: 150px
-}
-::slotted(.el-btn-md) {
-    min-width: 250px
-}
-::slotted(.el-btn-lg) {
-    min-width: 300px
-}
-`;
+const elButtonCSS = `:host{display:-webkit-box;display:-ms-flexbox;display:flex;position:relative;overflow:hidden;top:0;left:0;border-radius:2px;min-width:150px;width:100%;max-width:300px;height:50px;font-family:var(--font-family-content);--color-active:#396afc;--color-active:-webkit-linear-gradient(to bottom, #2948ff, #396afc);--color-active:linear-gradient(to bottom, #2948ff, #396afc);--color-hover:#0080ff}:host(.auto){grid-column:1/-1;margin:auto;text-align:center;width:100%;height:100%}:host:before{content:'';position:absolute;display:block;background:var(--color-ripple,#fff);border-radius:50%;pointer-events:none;top:calc(var(--y) * 1px);left:calc(var(--x) * 1px);width:calc(var(--d) * 1px);height:calc(var(--d) * 1px);opacity:calc(var(--o,1) * var(--ripple-opacity,.6));-webkit-transition:calc(var(--t,0) * var(--ripple-duration,100ms)) var(--ripple-easing,linear);-webkit-transition:calc(var(--t,0) * var(--ripple-duration,400ms)) var(--ripple-easing,linear);-o-transition:calc(var(--t,0) * var(--ripple-duration,400ms)) var(--ripple-easing,linear);transition:calc(var(--t,0) * var(--ripple-duration,400ms)) var(--ripple-easing,linear);-webkit-transform:translate(-50%,-50%) scale(var(--s,1));-ms-transform:translate(-50%,-50%) scale(var(--s,1));transform:translate(-50%,-50%) scale(var(--s,1));-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center}::slotted(*){outline:0;padding:1rem;cursor:pointer;width:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;letter-spacing:normal;word-spacing:normal;text-rendering:auto;text-decoration:none;text-align:inherit;text-transform:uppercase!important;font-weight:700;font-size:1em;white-space:normal;cursor:pointer;-webkit-transition:ease-in-out .5s;-o-transition:ease-in-out .5s;transition:ease-in-out .5s background: #ecececaa;color:gray!important;border:1px solid #ecececaa}::slotted(:hover){background:#c8c8c8;color:var(--color-black,#000)!important;border:1px solid var(--color-black,#000)}::slotted(:active){background:#fff;color:var(--color-black,#000)!important;border:1px solid var(--color-black,#000)}::slotted(.el-btn){background:0 0;color:gray!important;border:1px solid gray}::slotted([class*=el-btn]:hover){color:var(--color-hover,#000)!important;border:1px solid var(--color-hover,#000)!important}::slotted([class*=el-btn]:active){background-image:var(--color-active,#000)!important;color:var(--color-white,#fff)!important}::slotted(.el-btn-1){background:var(--color-secondary,#000)!important;color:var(--color-white,#fff)!important;border:1px solid var(--color-secondary,#000)}::slotted(.el-btn-1:hover){background:var(--color-hover,#000);color:var(--color-primary,#fff)!important;border:1px solid var(--color-primary,#000)!important}::slotted(.el-btn-2){background:0 0;color:var(--color-secondary,#000)!important;border:1px solid var(--color-secondary,#000)}::slotted(.el-btn-2:hover){background:var(--color-hover,#000);color:var(--color-white,#fff)!important;border:1px solid var(--color-primary,#000)}::slotted(.el-btn-3){background:var(--color-tertiary,#000)!important;color:var(--color-primary,#000)!important;border:1px solid var(--color-primary,#000)!important}::slotted(.el-btn-3:hover){background:var(--color-hover,#000);color:var(--color-white,#fff)!important;border:1px solid var(--color-primary,#000)!important}::slotted(.el-btn-4){background:0 0;color:var(--color-tertiary,#000)!important;border:1px solid var(--color-tertiary,#000)!important}::slotted(.el-btn-4:hover){background:0 0;color:var(--color-tertiary,#000)!important;border:1px solid var(--color-tertiary,#000)!important}::slotted(.el-btn-4:active){color:var(--color-white,#000)!important}::slotted(.el-btn-5){background:var(--color-quaternary,#000)!important;color:var(--color-primary,#000)!important;border:1px solid var(--color-primary,#000)!important}::slotted(.el-btn-5:hover){color:var(--color-white,#fff)!important;border:1px solid var(--color-primary,#000)!important}::slotted(.el-btn-au){width:auto;min-width:auto;overflow:visible;height:auto}::slotted(.el-btn-sm){min-width:150px}::slotted(.el-btn-md){min-width:250px}::slotted(.el-btn-lg){min-width:300px}`;
 const elButtonHTML = `<slot name="button"></slot>`;
 const elButtonTemplate = document.createElement("template");
 elButtonTemplate.innerHTML = `<style>`.concat(elButtonCSS, `</style>`).concat(elButtonHTML);
@@ -556,124 +346,8 @@ customElements.define('el-button',
 );
 
 // create el-video template (inside).
-const elDropdownCSS = `:host {
-		position: relative;
-		display: inline-flex;
-	}
-	
-	.dropcontent {
-		display: none;
-		position: absolute;
-		background-color: #fafafa;
-		justify-content: flex-start;
-		align-items: flex-start;
-		top: 3.6rem;
-		left: -160%;
-		width: 8rem;
-		overflow: visible;
-		padding: 1rem;
-		border: .5px solid #c3c3c3;
-		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
-		z-index: 5000;
-		transition: all .3s ease-out;
-		animation: top .4s;
-		opacity: 1
-	}
-	.dropdown .arrow {
-		background: #fafafa;
-		position: absolute;
-		left: calc(50% - 0%);
-		top: -4px;
-		border: solid #b5b5b5;
-		border-width: 0 1.3px 1.3px 0;
-		padding: 3px;
-		transform: rotate(-135deg);
-		-webkit-transform: rotate(-135deg)
-	}
-	
-	#chip-dropdown {
-		transition: all .3s ease-out;
-		animation: top .4s
-	}
-	
-	#backdrop {
-		position: fixed;
-		height: 100vh;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		display: none;
-		background: rgba(0, 0, 0, 0);
-		z-index: 1000;
-		cursor: auto
-	}
-	
-	@keyframes top {
-		0% {
-			top: 2.6rem;
-			opacity: 0
-		}
-	
-		80% {
-			top: 3.6rem;
-			opacity: 1
-		}
-	}
-	
-	
-	.dropdown .dropcontent a {
-		text-decoration: none;
-		font-size: .8rem;
-		text-transform: uppercase;
-		padding: .5rem;
-		color: #000 !important
-	}
-	
-	.dropdown .dropcontent a:hover {
-		background: #f3f3f3 !important
-	}
-	
-	.chip {
-		position: relative;
-		background: #f4f4f4;
-		width: 2.5rem;
-		height: 2.5rem;
-		font-size: .7rem !important;
-		font-weight: 100;
-		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: #000 !important;
-		border: 1px solid #cbcbcb;
-		box-shadow: 0 1px #cbcbcb;
-		cursor: pointer;
-		transition: .3s;
-		z-index: 1
-	}
-	
-	.chip:hover {
-		background: #fafafafa
-	}
-	
-	.chip:active {
-		transform: translateY(2px);
-		box-shadow: 0 1px #666
-	}`;
-const elDropdownHTML = `<div id="backdrop"></div>
-	<div aria-label="Dropdown" class="dropdown">
-	<button aria-label="Dropdown Button" class="chip" id="chip">
-	<slot name="dropdown-icon">
-		<svg fill="var(--color-black, #262626)" height="16" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60.123 60.123">
-			<title>Dropdown Mobil Menu Icon</title>
-			<path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z"/><path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3 C60.124,31.719,58.781,33.062,57.124,33.062z"/><path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z"/><circle cx="4.029" cy="11.463" r="4.029"/><circle cx="4.029" cy="30.062" r="4.029"/><circle cx="4.029" cy="48.661" r="4.029"/>
-		</svg>
-	</slot>
-	</button>
-		<div aria-label="Dropdown Content"  id="chip-dropdown" class="dropcontent"><i class="arrow"></i>
-			<slot name="dropdown"> <a href="/">dropdown</a> </slot>
-		</div>
-	</div>`;
+const elDropdownCSS = `:host{position:relative;display:inline-flex}.dropcontent{display:none;position:absolute;background-color:#fafafa;justify-content:flex-start;align-items:flex-start;top:3.6rem;left:-160%;width:8rem;overflow:visible;padding:1rem;border:.5px solid #c3c3c3;box-shadow:0 1px 3px 0 rgba(0,0,0,.2);z-index:5000;transition:all .3s ease-out;animation:top .4s;opacity:1}.dropdown .arrow{background:#fafafa;position:absolute;left:calc(50% - 0%);top:-4px;border:solid #b5b5b5;border-width:0 1.3px 1.3px 0;padding:3px;transform:rotate(-135deg);-webkit-transform:rotate(-135deg)}#chip-dropdown{transition:all .3s ease-out;animation:top .4s}#backdrop{position:fixed;height:100vh;left:0;bottom:0;width:100%;display:none;background:rgba(0,0,0,0);z-index:1000;cursor:auto}@keyframes top{0%{top:2.6rem;opacity:0}80%{top:3.6rem;opacity:1}}.dropdown .dropcontent a{text-decoration:none;font-size:.8rem;text-transform:uppercase;padding:.5rem;color:#000!important}.dropdown .dropcontent a:hover{background:#f3f3f3!important}.chip{position:relative;background:#f4f4f4;width:2.5rem;height:2.5rem;font-size:.7rem!important;font-weight:100;border-radius:50%;display:flex;justify-content:center;align-items:center;color:#000!important;border:1px solid #cbcbcb;box-shadow:0 1px #cbcbcb;cursor:pointer;transition:.3s;z-index:1}.chip:hover{background:#fafafafa}.chip:active{transform:translateY(2px);box-shadow:0 1px #666}`;
+const elDropdownHTML = `<div id="backdrop"></div><div aria-label="Dropdown" class="dropdown"><button aria-label="Dropdown Button" class="chip" id="chip"><slot name="dropdown-icon"><svg fill="var(--color-black, #262626)" height="16" width="16" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 60.123 60.123"><title>Dropdown Mobil Menu Icon</title><path d="M57.124,51.893H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,51.893,57.124,51.893z"/><path d="M57.124,33.062H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3 C60.124,31.719,58.781,33.062,57.124,33.062z"/><path d="M57.124,14.231H16.92c-1.657,0-3-1.343-3-3s1.343-3,3-3h40.203c1.657,0,3,1.343,3,3S58.781,14.231,57.124,14.231z"/><circle cx="4.029" cy="11.463" r="4.029"/><circle cx="4.029" cy="30.062" r="4.029"/><circle cx="4.029" cy="48.661" r="4.029"/></svg></slot></button><div aria-label="Dropdown Content" id="chip-dropdown" class="dropcontent"><i class="arrow"></i><slot name="dropdown"> <a href="/">dropdown</a> </slot></div></div>`;
 const elDropdownTemplate = document.createElement("template");
 elDropdownTemplate.innerHTML = `<style>`.concat(elDropdownCSS, `</style>`).concat(elDropdownHTML);
 // defines el-dropdown tag.
@@ -722,9 +396,6 @@ customElements.define('el-dropdown',
 	}
 );
 
-
-
-
 // define el-Drawer tag.
 customElements.define('el-drawer',
 	class elDrawer extends HTMLElement {
@@ -738,287 +409,9 @@ customElements.define('el-drawer',
 				mode: "open"
 			});
 			// create el-Drawer template.
-
 			const _elDrawerSiteName = this.getAttribute("site");
-
-			const elDrawerCSS = `:host {
-				display: block
-			}
-			:host #drawer-backdrop {
-				position: fixed;
-				height: 100vh;
-				left: 0;
-				right:0;
-				bottom: 0;
-				width: 100%;
-				display: none;
-				background: rgba(0, 0, 0, .72);
-				z-index: 10;
-				cursor: not-allowed
-			}
-			.button-drawer {
-				max-width:100%;
-				height:auto;
-				cursor: pointer;
-				-ms-touch-action: auto;
-				touch-action: auto;
-				background: #e1e1e1;
-				border:0;
-				text-decoration: none;
-				color: #666;
-				-webkit-tap-highlight-color: #0000;
-				display: inline-block;
-				vertical-align: middle;
-				-webkit-transform: perspective(1px) translateZ(0);
-				transform: perspective(1px) translateZ(0);
-				box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-				position: relative;
-				overflow: hidden;
-				-webkit-transition-property: color;
-				transition-property: color;
-				-webkit-transition-duration: 100ms;
-				transition-duration: 100ms;
-			}
-			.button-drawer:before {
-				content: "";
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background: var(--drawer-hover-color, #000);
-				border-radius: 100%;
-				-webkit-transform: scale(0);
-				transform: scale(0);
-				-webkit-transition-property: transform;
-				transition-property: transform;
-				-webkit-transition-duration: 200ms;
-				transition-duration: 200ms;
-				-webkit-transition-timing-function: linear;
-				transition-timing-function: linear;
-			}
-			.button-drawer:hover:before,
-			.button-drawer:focus:before,
-			.button-drawer:active:before {
-				-webkit-transform: scale(2);
-				transform: scale(2);
-			}
-			:host button[id*="-drawer"] {
-				z-index: 10;
-				width: 60px;
-				height: 60px;
-				-ms-touch-action: auto;
-				touch-action: auto;
-				background: 0 0;
-				border-radius:50%;
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: center;
-				-ms-flex-pack: center;
-				justify-content: center;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-			
-			}
-			:host #close-drawer {
-				background: var(--drawer-hover-color, #000);
-			}
-			::slotted(.brand) ,
-			:host .brand {
-				width: 128px;
-				height: 56px;
-				font-size:24px;
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-pack: center;
-				-ms-flex-pack: center;
-				justify-content: center;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				-webkit-transition: ease-in-out opacity .3s;
-				transition: ease-in-out opacity .3s;
-				white-space: nowrap;
-				text-decoration: none;
-				background: transparent;
-				font-family: var(--drawer-brand-font-family);
-				font-size: var(---brand-font-size, 16px);
-				color: var(--drawer-brand-color, var(--color-black, #000))
-			}
-			@media(min-width:768px) {
-
-				::slotted(.brand) {
-					text-indent: 48px;
-				}
-				::slotted(.brand) ,
-				:host .brand {
-					text-indent: 0;
-					margin:0 16px;
-				}
-			}
-			:host .brand:hover {
-				opacity:0.8;
-			}
-			::slotted(.brand-name),
-			:host .brand-name {
-				font-weight:600!important;
-				font-size:28px!important;
-				font-family: var(--drawer-brand-font-family);
-				color: var(--drawer-brand-color, var(--color-black, #000));
-			}
-			:host #navbar {
-				-webkit-box-shadow: 0 7px 5px -7px #111;
-				box-shadow: 0 7px 5px -7px #111;
-				position: fixed;
-				left:0;
-				right:0;
-				background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
-				width: 100%;
-				top:0!important;
-				z-index: 5;
-			}
-			:host svg {
-				fill:#000;
-				width:24px;
-				height:24px
-			}
-			:host #navbar-container {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				justify-content: space-between;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				opacity: 1;
-				padding: var(--drawer-padding) 0rem;
-				margin-right: 48px;
-				margin-left: 48px;
-			}
-			:host .navbar-menu {
-				display: none;
-				margin: 0;
-				padding: 0;
-				list-style: none;
-				max-width: 100%;
-				margin-left: auto
-			}
-			@media(min-width:1024px) {
-				:host .navbar-menu {
-					display: flex
-				}
-			}
-			:host #drawer {
-				background: var(--drawer-background-color, var(--color-tertiary, #fafafa));
-				height: 100%;
-				width: 0;
-				max-width: 100%;
-				position: fixed;
-				z-index: 10;
-				top: 0;
-				left: 0;
-				overflow-x: hidden;
-				-webkit-transition: all .2s;
-				transition: all .2s
-			}
-			:host #drawer::-webkit-scrollbar {
-				width: .5em
-			}
-			:host #drawer::-webkit-scrollbar-track {
-				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .46)
-			}
-			:host #drawer::-webkit-scrollbar-thumb {
-				background-color: var(--drawer-text-color, var(--color-black, #000)) !important;
-				outline: 1px solid var(--drawer-background-color, var(--color-black, #000)) !important
-			}
-			:host .drawer-header {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				justify-content:flex-start;
-				padding: var(--drawer-padding, 0px) 0rem;
-				padding-right: 48px;
-				padding-left: 48px;
-				text-indent:24px;
-			}
-			:host  .drawer-header .brand {
-				margin-left:24px;
-			}
-			@media(min-width:1024px) {
-				:host .drawer-header {
-					justify-content:flex-start;
-				}
-			}
-			:host #drawer-menu a {
-				font-weight: 100;
-			}
-			:host #drawer-menu {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-orient: vertical;
-				-webkit-box-direction: normal;
-				-ms-flex-direction: column;
-				flex-direction: column
-			}
-			:host .mobil-menu {
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			
-			`;
-			const elDrawerHTML = `
-			<div id="drawer-backdrop"></div>
-			<div id="navbar" aria-label="Navbar Landmark">
-				<div id="navbar-container">
-					<button id="open-drawer" class="button-drawer" aria-label="open drawer icon">
-						<svg viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg/">
-							<title>Drawer Navigation Menu Icon Open| SVG Icon</title>
-							<path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z" />
-						</svg>
-					</button>
-					<a class="brand" href="/">
-						<slot name="navbar-brand">
-							<strong class="brand-name">${_elDrawerSiteName}</strong>
-						</slot>
-					</a>
-					<div class="navbar-menu">
-						<slot name="navbar-menu"></slot>
-					</div>
-					<div class="mobil-menu">
-						<slot name="mobil-menu"></slot>
-					</div>
-				</div>
-			</div>
-			<aside id="drawer">
-			<div class="drawer-header">
-				<button id="close-drawer" class="button-drawer" aria-label="close drawer icon" >
-					<svg viewBox="0 0 31.112 31.112" xmlns="http://www.w3.org/2000/svg" >
-						<title>Drawer Navigation Menu Icon Close | SVG Icon</title>
-						<polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97 29.698,31.112 31.112,29.698 16.97,15.556 " />
-					</svg>
-				</button>
-				<a class="brand" href="/">
-					<slot name="drawer-brand">
-						<strong class="brand-name">${_elDrawerSiteName}</strong>
-					</slot>
-				</a>
-			</div>
-			<div id="drawer-menu">
-				<slot name="drawer-menu"></slot>
-			</div>
-			</aside>
-			<slot></slot>`;
+			const elDrawerCSS = `:host{display:block}:host #drawer-backdrop{position:fixed;height:100vh;left:0;right:0;bottom:0;width:100%;display:none;background:rgba(0,0,0,.72);z-index:10;cursor:not-allowed}.button-drawer{max-width:100%;height:auto;cursor:pointer;-ms-touch-action:auto;touch-action:auto;background:#e1e1e1;border:0;text-decoration:none;color:#666;-webkit-tap-highlight-color:#0000;display:inline-block;vertical-align:middle;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);box-shadow:0 0 1px transparent;position:relative;overflow:hidden;-webkit-transition-property:color;transition-property:color;-webkit-transition-duration:.1s;transition-duration:.1s}.button-drawer:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;bottom:0;background:var(--drawer-hover-color,#000);border-radius:100%;-webkit-transform:scale(0);transform:scale(0);-webkit-transition-property:transform;transition-property:transform;-webkit-transition-duration:.2s;transition-duration:.2s;-webkit-transition-timing-function:linear;transition-timing-function:linear}.button-drawer:active:before,.button-drawer:focus:before,.button-drawer:hover:before{-webkit-transform:scale(2);transform:scale(2)}:host button[id*="-drawer"]{z-index:10;width:60px;height:60px;-ms-touch-action:auto;touch-action:auto;background:0 0;border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}:host #close-drawer{background:var(--drawer-hover-color,#000)}::slotted(.brand),:host .brand{width:128px;height:56px;font-size:24px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:ease-in-out opacity .3s;transition:ease-in-out opacity .3s;white-space:nowrap;text-decoration:none;background:0 0;font-family:var(--drawer-brand-font-family);font-size:var(---brand-font-size,16px);color:var(--drawer-brand-color,var(--color-black,#000))}@media(min-width:768px){::slotted(.brand){text-indent:48px}::slotted(.brand),:host .brand{text-indent:0;margin:0 16px}}:host .brand:hover{opacity:.8}::slotted(.brand-name),:host .brand-name{font-weight:600!important;font-size:28px!important;font-family:var(--drawer-brand-font-family);color:var(--drawer-brand-color,var(--color-black,#000))}:host #navbar{-webkit-box-shadow:0 7px 5px -7px #111;box-shadow:0 7px 5px -7px #111;position:fixed;left:0;right:0;background:var(--drawer-background-color,var(--color-tertiary,#fafafa));width:100%;top:0!important;z-index:5}:host svg{fill:#000;width:24px;height:24px}:host #navbar-container{display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;opacity:1;padding:var(--drawer-padding) 0;margin-right:48px;margin-left:48px}:host .navbar-menu{display:none;margin:0;padding:0;list-style:none;max-width:100%;margin-left:auto}@media(min-width:1024px){:host .navbar-menu{display:flex}}:host #drawer{background:var(--drawer-background-color,var(--color-tertiary,#fafafa));height:100%;width:0;max-width:100%;position:fixed;z-index:10;top:0;left:0;overflow-x:hidden;-webkit-transition:all .2s;transition:all .2s}:host #drawer::-webkit-scrollbar{width:.5em}:host #drawer::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.46)}:host #drawer::-webkit-scrollbar-thumb{background-color:var(--drawer-text-color,var(--color-black,#000))!important;outline:1px solid var(--drawer-background-color,var(--color-black,#000))!important}:host .drawer-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;justify-content:flex-start;padding:var(--drawer-padding,0) 0;padding-right:48px;padding-left:48px;text-indent:24px}:host .drawer-header .brand{margin-left:24px}@media(min-width:1024px){:host .drawer-header{justify-content:flex-start}}:host #drawer-menu a{font-weight:100}:host #drawer-menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}:host .mobil-menu{display:-webkit-box;display:-ms-flexbox;display:flex;justify-content:center;align-items:center}`;
+			const elDrawerHTML = `<div id="drawer-backdrop"></div><div id="navbar" aria-label="Navbar Landmark"><div id="navbar-container"><button id="open-drawer" class="button-drawer" aria-label="open drawer icon"><svg viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg/"><title>Drawer Navigation Menu Icon Open| SVG Icon</title><path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/></svg></button><a class="brand" href="/"><slot name="navbar-brand"><strong class="brand-name">${_elDrawerSiteName}</strong></slot></a><div class="navbar-menu"><slot name="navbar-menu"></slot></div><div class="mobil-menu"><slot name="mobil-menu"></slot></div></div></div><aside id="drawer"><div class="drawer-header"><button id="close-drawer" class="button-drawer" aria-label="close drawer icon" ><svg viewBox="0 0 31.112 31.112" xmlns="http://www.w3.org/2000/svg" ><title>Drawer Navigation Menu Icon Close | SVG Icon</title><polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97 29.698,31.112 31.112,29.698 16.97,15.556 "/></svg></button><a class="brand" href="/"><slot name="drawer-brand"><strong class="brand-name">${_elDrawerSiteName}</strong></slot></a></div><div id="drawer-menu"><slot name="drawer-menu"></slot></div></aside><slot></slot>`;
 			const elDrawerTemplate = document.createElement("template");
 			elDrawerTemplate.innerHTML = `<style>`.concat(elDrawerCSS, `</style>`).concat(elDrawerHTML);
 
@@ -1085,7 +478,5 @@ customElements.define('el-drawer',
 		static get observedAttributes() {
 			return ['site'];
 		}
-
-
 	}
 );
