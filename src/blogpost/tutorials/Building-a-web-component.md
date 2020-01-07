@@ -321,7 +321,7 @@ connectedCallback() fires when the element is inserted into the DOM. It's a good
 <pre>
 <code>
 
-    <seo-title text="I'am a H1 tag and they call me main title"></lead-title>
+    <seo-title text="Hello, You can call me h1 tag - custom element or web component"></lead-title>
 <span class="highligh-code">
 
     <script src="seo-title.js"></script>

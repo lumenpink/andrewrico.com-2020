@@ -10,7 +10,7 @@ Github <br>
 Node.js<br>
 Command Line <br>
 Visual Studio Code<br>
-Netliyfy<br>
+Netlify<br>
 HostGator<br>
 Wordpress<br>
 <!-- excerpt -->
