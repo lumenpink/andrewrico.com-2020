@@ -1,7 +1,7 @@
 ---
 tags: challenge
-title: 21 days code challenge
+title: Practical Design Patterns
 started: "In progress"
 ended: "waiting..."
-url: "https://www.hackerrank.com/andrewric86?hr_r=1"
+url: "https://codepen.io/challenges/2020/january/"
 ------
