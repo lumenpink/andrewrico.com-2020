@@ -15,6 +15,7 @@ date: 2019-12-03
 changefreq: weekly
 priority: 1
 
+
 PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/churchillexotics-image-1.jpg)"
 ProjectPathToImage: "/_assets/media/images/churchillexotics-mockup.png"
 ProjectImageMeta: "Churchill Exotics Project Image"
@@ -125,7 +126,7 @@ They also offer car rental for our customer in the USA.
 
 <a href="/portfolio">< < GO BACK TO PORTFOLIO</a>
 
-<a href="{{ project.data.ProjectLinkToDemo }}" aria-label="live site project link" target="_blank" rel="noopener">LIVE SITE > ></a> 
+<a href="{{ ProjectLinkToDemo }}" aria-label="live site project link" target="_blank" rel="noopener">LIVE SITE > ></a> 
 
 
 
