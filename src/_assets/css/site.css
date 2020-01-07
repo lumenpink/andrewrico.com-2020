@@ -126,7 +126,7 @@ USA MAP
   stroke: var(--color-primary) !important;
   stroke-width: 2px;
   stroke-linejoin: round;
-  fill: #002868 !important;
+  fill: #ff00ae !important;
   cursor: pointer;
 }
 
@@ -153,19 +153,22 @@ USA MAP
   margin-top: 32px;
   margin-bottom: 8px;
 }
+
 .simple-page ol {
   list-style: square;
 }
+
 .simple-page ol li {
- margin:8px 0;
+  margin: 8px 0;
 }
 
 #project-page ol {
   list-style: decimal;
 }
+
 #project-page ol li {
-  margin:8px 0;
- }
+  margin: 8px 0;
+}
 
 .hiddenByUX {
   display: none;
