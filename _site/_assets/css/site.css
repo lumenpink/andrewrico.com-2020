@@ -173,3 +173,13 @@ USA MAP
 .hiddenByUX {
   display: none;
 }
+
+#disqus_thread iframe {
+  padding:1rem;
+}
+
+
+.disqus-section {
+  height: 100%;
+  min-height: 300px;
+}

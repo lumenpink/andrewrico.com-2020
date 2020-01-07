@@ -117,7 +117,7 @@
 </header>
         <main id="article-page"> 
             
-               <el-section padding-bottom="0">
+               <el-section>
     <el-grid> 
         <el-column>
             <h4 class="preface">It&#39;s known to developers that reusing code as much as posible is always a good idea in order to save time and husle. This always has been difficult to achive — Redering an UI component always impling HTML along with CSS ans Javascript, think about how implementing them numerous times can make your code into a mess.
@@ -141,8 +141,6 @@ Web Components aims to solve such problems — it consists of three main technol
             </ul>
         </el-column>
     </el-grid>
-</el-section>
-<el-section padding-top="4">
     <el-grid> 
         <el-column>
             <article id="article">
@@ -462,10 +460,11 @@ customElements.define('seo-title',
                 <div id="ads"></div>
             </aside>
         </el-column>
-              <el-column grid="row">
-                <div id="disqus_thread"></div>
-                <script>
 
+         <el-column class="disqus-section">
+                <div id="disqus_thread"></div>
+
+                <script>
                 /**
                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -481,10 +480,11 @@ customElements.define('seo-title',
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
         </el-column>
     </el-grid>
+
 </el-section>
 
 
