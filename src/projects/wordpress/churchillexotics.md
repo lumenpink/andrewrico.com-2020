@@ -3,18 +3,17 @@ title: "Churchill Exotics"
 description: "Project Page Churchill Exotics"
 keywords: 
 - car dealership
+layout: "/page/project.njk"
 tags: 
 - page
 - projects
 - recent
 - wordpress
 - archivedproject
-layout: "/page/project.njk"
 
 date: 2019-12-03
 changefreq: weekly
 priority: 1
-
 
 PagePathToBanner: "var(--color-banner-shadow), url(/_assets/media/images/churchillexotics-image-1.jpg)"
 ProjectPathToImage: "/_assets/media/images/churchillexotics-mockup.png"
