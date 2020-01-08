@@ -4,6 +4,7 @@ tags: otherskills
 otherskillsClass: soft-skills
 svgPath: "_assets/media/svg/sprites.svg#tree"
 percentage: 100
+sitemapIgnore: true
 ---
 Creativity and Problem Solving  <br>
 organization and communication  <br>

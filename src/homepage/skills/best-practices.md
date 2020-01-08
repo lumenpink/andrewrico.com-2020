@@ -5,6 +5,7 @@ tags:
 otherskillsClass: practice-skills
 svgPath: "_assets/media/svg/sprites.svg#embed"
 percentage: 100
+sitemapIgnore: true
 ---
 SEO <br>
 Mobil first design <br>

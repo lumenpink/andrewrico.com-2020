@@ -4,6 +4,7 @@ tags: otherskills
 otherskillsClass: workflow-skills
 svgPath: "_assets/media/svg/sprites.svg#cogs"
 percentage: 100
+sitemapIgnore: true
 ---
 JAM Stack <br>
 Github <br>
