@@ -1,14 +1,11 @@
 ---
-title: "Term Of Use"
+title: "Terms Of Use"
 description: "Term Of Use Page"
 layout: "layouts/layout-simple.njk"
 tags: 
 - page
 ---
 Last updated: January 01, 2020
-
-### Welcome
-Thank you for visiting AgileHealthInsurance. Our goal is to help you find a health insurance plan that will meet your needs and fit your budget. We provide online tools so that you can find your best plan, make smart health insurance decisions, and save money.
 
 ### Your Agreement
 By using our website, you are agreeing to these Terms of Use. You will not use our website for any purpose that is unlawful or in violation of these Terms of Use. You also agree to our Privacy Policy, which covers how we handle your personal information.
@@ -48,4 +45,4 @@ CERTAIN STATE LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSI
 ### Legal Jurisdictions Only
 The sale of insurance products is governed by laws that differ from state to state. The products and services on our site are intended only for those persons in states and jurisdictions where these products and services may be legally sold. Nothing on our site shall be considered a solicitation to buy or an offer to sell any products or services to any person in any jurisdiction where such an offer, solicitation, purchase or sale would be unlawful.
 
-<a href="/">GO BACK TO HOMEPAGE</a>
+<a href="/"><< GO BACK TO HOMEPAGE</a>

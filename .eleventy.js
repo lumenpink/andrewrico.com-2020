@@ -1,12 +1,13 @@
 /* 
-For: moment
+for: moment
 /*--------------------------------------------- */
 const moment = require('moment');
 moment.locale('en');
 
 const CleanCSS = require("clean-css");
   
-/* For: eleventyConfig 
+/* 
+for: eleventyConfig 
 /*--------------------------------------------- */
 module.exports = function (eleventyConfig) {
 
@@ -49,13 +50,10 @@ module.exports = function (eleventyConfig) {
     templateFormats: ["html", "css", "js", "njk", "md"],
   };
 
-  
-
-  
 }
 
 /* 
-For: extractExcerpt article
+for: extractExcerpt article
 /*--------------------------------------------- */
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
@@ -86,5 +84,5 @@ function extractExcerpt(article) {
 }
 
 /* 
-For: CleanCSS
+for: CleanCSS
 /*--------------------------------------------- */

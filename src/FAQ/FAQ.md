@@ -9,10 +9,10 @@ tags: ["page"]
 The brand that Andrew rico Use to promote his producs and services
 
 ## Who is Andrew Rico?
-Andrew rico is a web developer based out Florida,  his sperties are on languges such Javascript, HTML and CSS
+Andrew rico is a web developer based in Florida, his expertise are on languages such Javascript, HTML and CSS
 
 
-## Is Andrew Rico available for hire??
+## Is Andrew Rico available for hire?
 Yes. In-house, Remote or Freelance
 
-<a href="/">GO BACK TO HOMEPAGE</a>
+<a href="/"><< GO BACK TO HOMEPAGE</a>

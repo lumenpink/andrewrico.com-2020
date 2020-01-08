@@ -38,4 +38,4 @@ Our site is not intended for, nor directed to, individuals under 18 years of age
 
 
 
-<a href="/">GO BACK TO HOMEPAGE</a>
+<a href="/"><< GO BACK TO HOMEPAGE</a> 
