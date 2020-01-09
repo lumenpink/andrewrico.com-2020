@@ -16,8 +16,6 @@ Some browsers have a “Do Not Track” preference that signals you do not want 
 ### INFORMATION WE SHARE
 We will only share your Personally Identifiable Information:
 
-WITH HPIH, our sister company. HPIH may be the administrator for your selected plan or perform other services including customer support and marketing products/services related to health insurance.
-
 IF you authorize us to. For example, if you fill out an application and request that it be submitted to a carrier or a carrier’s administrator for membership processing.
 
 IF we collaborate with or hire a company to perform services on our behalf. For example, we may hire a company to manage customer email marketing. We will not permit these companies to share your Personally Identifiable Information or market other services to you without your consent.
@@ -35,7 +33,6 @@ Our site is intended for a U.S. audience only and our Privacy Policy is designed
 By using our site, you are signaling that you accept our Privacy Policy. Please also see our Terms of Use
 
 Our site is not intended for, nor directed to, individuals under 18 years of age. If you believe that a child has provided information to us, please contact us.
-
 
 
 <a href="/"><< GO BACK TO HOMEPAGE</a> 

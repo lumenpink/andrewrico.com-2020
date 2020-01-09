@@ -236,8 +236,8 @@ customElements.define('el-column',
 
 // create el-copyright template.
 const elCopyrightFullYear = new Date().getFullYear();
-const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; font-family:inherit; font-size:inherit; text-decoration:none;}:host p{ white-space: inherit nowrap; margin:0; }`;
-const elCopyrightHTML = `<p> © ${elCopyrightFullYear} <slot name="copyright"> copyright </slot> </p>`;
+const elCopyrightCSS = `:host{ display: flex;justify-content:center; white-space: nowrap; text-decoration:none;font-family:var(--font-family-copyright); font-size:inherit;}:host p{ font-family:var(--font-family-copyright)!important; white-space: nowrap; margin:0; }`;
+const elCopyrightHTML = `<p> © ${elCopyrightFullYear} <slot name="copyright"> copyright </slot> </h4>`;
 const elCopyrightTemplate = document.createElement("template");
 elCopyrightTemplate.innerHTML = `<style>`.concat(elCopyrightCSS, `</style>`).concat(elCopyrightHTML);
 // defines el-copyright tag.

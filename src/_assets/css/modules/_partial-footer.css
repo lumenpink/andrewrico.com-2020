@@ -42,7 +42,6 @@
 }
 
 #footer a {
-	font-weight: 100;
 	padding: 0.5rem 1rem;
 	color: var(--color-primary) !important;
 	text-decoration: none;
@@ -93,10 +92,8 @@
 }
 
 #copyright {
-	font-family: 'Source Code Pro', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0rem 0.5rem;
 	padding: 0;
-	font-weight: 100;
 	color: var(--color-white);
 }
 
