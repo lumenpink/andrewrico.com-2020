@@ -2,14 +2,15 @@
 title: Frequently Ask Questions
 description: "This is the FAQ page"
 layout: "layouts/layout-simple.njk"
-tags: ["page"]
+tags: 
+- page
 ---
 
 ## What is andrewrico.com?
-The brand that Andrew rico Use to promote his producs and services
+andrewrico.com? is the the brand that Andrew rico uses to promote his producs and services
 
 ## Who is Andrew Rico?
-Andrew rico is a web developer based in Florida, his expertise are on languages such Javascript, HTML and CSS
+Andrew Rico is a web developer based in Florida, his expertise are on languages such Javascript, HTML and CSS
 
 
 ## Is Andrew Rico available for hire?
