@@ -54,21 +54,7 @@ Location: [ el-drawer]
 
 
 
-/* ---------------------------------------------
-Name: Hide on scroll (a)
-Function: Hide navigation panel when scroll down, show when scroll up 
-Location: [ Site ]
-/*--------------------------------------------- */
-// let prevOffset = window.pageYOffset;
-// window.onscroll = () => {
-// 	let currentOffset = window.pageYOffset;
-// 	if (prevOffset > currentOffset) {
-// 		document.getElementById("").style.right = "-60px";
-// 	} else {
-// 		document.getElementById("").style.right = "0px";
-// 	}
-// 	prevOffset = currentOffset;
-// }
+
 
 
 /* ---------------------------------------------

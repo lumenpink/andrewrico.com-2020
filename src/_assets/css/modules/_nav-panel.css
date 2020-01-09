@@ -1,7 +1,7 @@
 #navigation-panel {
 	position: fixed;
 	display: none;
-	top:300px;
+	bottom:0;
 	right: 0%;
 	z-index: 1;
 	width: 60px;
