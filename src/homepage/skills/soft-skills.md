@@ -12,7 +12,6 @@ positive attitude <br>
 analytical and problem-solving <br>
 Strong attention to detail <br>
 Ability to multi-task, follow up, and meet deadlines <br>
-Strong attention to detail <br>
 Ability to communicate effectively (verbal and written)<br>
 
 <!-- excerpt -->
