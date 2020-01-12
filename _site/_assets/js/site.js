@@ -51,12 +51,6 @@ Location: [ el-drawer]
 /*--------------------------------------------- */
 
 
-
-
-
-
-
-
 /* ---------------------------------------------
 Name: Hide on scroll (b)
 Function: Hide navigation panel when is window in on header  

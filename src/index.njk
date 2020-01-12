@@ -116,7 +116,7 @@ tags:
             </div>
         </el-column>
         {%- endfor -%}
-        {%- for challenges in collections.open -%}
+        {# {%- for challenges in collections.open -%}
         <el-column>
             <div class="card-action">
                 <div class="action-header">
@@ -146,7 +146,7 @@ tags:
                 </div>
             </div> 
         </el-column>
-        {%- endfor -%}
+        {%- endfor -%} #}
     </el-grid>
     {% include "forms/form-submit.njk" %}
 </el-section>
