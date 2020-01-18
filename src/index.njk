@@ -158,7 +158,7 @@ tags:
         </el-column>
         <el-column grid="row" max-width="768px" center="auto">
             <ul>
-                {%- for article in collections.article -%}
+                {%- for article in collections.articles -%}
                     <li>
                         <article class="card-article">
                             <time datetime="{{ article.date | dateIso }}">{{ article.date | dateReadable }}</time><br><br>
