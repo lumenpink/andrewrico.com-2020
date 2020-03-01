@@ -1,39 +1,25 @@
-/* 
-for: moment
-/*--------------------------------------------- */
 const moment = require('moment');
 moment.locale('en');
-
 const CleanCSS = require("clean-css");
-  
-/* 
-for: eleventyConfig 
-/*--------------------------------------------- */
-module.exports = function (eleventyConfig) {
 
+module.exports = function (eleventyConfig) {
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     excerpt_separator: "<!-- excerpt -->"
   });
-
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
-
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString();
   });
   eleventyConfig.addFilter('dateReadable', date => {
     return moment(date).format('LL'); 
   });
-
   eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article));
-
   eleventyConfig.setBrowserSyncConfig({
     notify: true
   });
-
-
   eleventyConfig.addPassthroughCopy("src/_assets");
   return {
     pathPrefix: "/",
@@ -49,12 +35,8 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: "njk",
     templateFormats: ["html", "css", "js", "njk", "md"],
   };
-
 }
 
-/* 
-for: extractExcerpt article
-/*--------------------------------------------- */
 function extractExcerpt(article) {
   if (!article.hasOwnProperty('templateContent')) {
     console.warn('Failed to extract excerpt: Document has no property "templateContent".');
@@ -62,7 +44,6 @@ function extractExcerpt(article) {
   }
   let excerpt = null;
   const content = article.templateContent;
-  // The start and end separators to try and match to extract the excerpt
   const separatorsList = [{
       start: '<!-- Excerpt Start -->',
       end: '<!-- Excerpt End -->'
@@ -77,12 +58,8 @@ function extractExcerpt(article) {
     const endPosition = content.lastIndexOf(separators.end);
     if (startPosition !== -1 && endPosition !== -1) {
       excerpt = content.substring(startPosition + separators.start.length, endPosition).trim();
-      return true; // Exit out of array loop on first match
+      return true;
     }
   });
   return excerpt;
 }
-
-/* 
-for: CleanCSS
-/*--------------------------------------------- */
