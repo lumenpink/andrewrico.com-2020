@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Andrewrico/portfolio2020-11ty#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0"
+    "@11ty/eleventy": "^0.12.0"
   },
   "devDependencies": {
     "moment": "^2.24.0"
